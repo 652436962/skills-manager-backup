@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=DTK Code Viewer
+Name[zh_CN]=DTK 代码查看器
+Comment=View source code and text files
+Comment[zh_CN]=查看源代码和文本文件
+GenericName=Code Viewer
+GenericName[zh_CN]=代码查看器
+Exec=dtk-codeviewer
+TryExec=dtk-codeviewer
+Icon=dtk-codeviewer
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Development;
+Keywords=code;source;text;viewer;DTK;
+X-Deepin-Vendor=deepin
+X-Deepin-Singleton=true

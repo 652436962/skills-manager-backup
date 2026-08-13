@@ -1,0 +1,38 @@
+{
+    "magic": "dsg.config.meta",
+    "version": "1.0",
+    "contents": {
+        "windowWidth": {
+            "value": 1000,
+            "permissions": "readwrite",
+            "visibility": "private",
+            "flags": [],
+            "name": "Window width",
+            "description": "Width of the main window in pixels"
+        },
+        "windowHeight": {
+            "value": 700,
+            "permissions": "readwrite",
+            "visibility": "private",
+            "flags": [],
+            "name": "Window height",
+            "description": "Height of the main window in pixels"
+        },
+        "fontPixelSize": {
+            "value": 14,
+            "permissions": "readwrite",
+            "visibility": "private",
+            "flags": [],
+            "name": "Editor font size",
+            "description": "Editor monospace font size in pixels"
+        },
+        "backgroundOpacity": {
+            "value": 80,
+            "permissions": "readwrite",
+            "visibility": "private",
+            "flags": [],
+            "name": "Background opacity",
+            "description": "Opacity of the shared window surface in percent"
+        }
+    }
+}

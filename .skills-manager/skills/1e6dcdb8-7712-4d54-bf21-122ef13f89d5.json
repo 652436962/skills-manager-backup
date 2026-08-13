@@ -6,7 +6,7 @@
   "enabled": true,
   "tags": [],
   "source": {
-    "type": "import",
+    "type": "local",
     "ref": null,
     "subpath": null,
     "branch": null

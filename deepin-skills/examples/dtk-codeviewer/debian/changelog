@@ -1,0 +1,8 @@
+dtk-codeviewer (1.0.0) unstable; urgency=medium
+
+  * Add desktop integration and install the application DCI icon.
+  * Add Debian packaging metadata.
+  * Add Simplified Chinese application translations.
+  * Use the default DTK application log path and format.
+
+ -- Deepin Packages Builder <packages@deepin.com>  Wed, 05 Aug 2026 00:00:00 +0800

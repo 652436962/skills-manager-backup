@@ -1,0 +1,4 @@
+interface:
+  display_name: "DTK 开发"
+  short_description: "使用 DTK5 或 DTK6 开发 v25 原生应用"
+  default_prompt: "使用 $dtk-development 开发或维护基于 DTK5/DTK6 的 deepin/UOS v25 原生桌面应用。"

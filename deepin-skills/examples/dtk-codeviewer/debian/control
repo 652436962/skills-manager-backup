@@ -1,0 +1,29 @@
+Source: dtk-codeviewer
+Section: devel
+Priority: optional
+Maintainer: Deepin Packages Builder <packages@deepin.com>
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake,
+ pkg-config,
+ qt6-base-dev,
+ qt6-tools-dev,
+ libdtk6core-dev,
+ libdtk6gui-dev,
+ libdtk6widget-dev
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+Homepage: https://github.com/linuxdeepin/dtk-codeviewer
+
+Package: dtk-codeviewer
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends}
+Description: DTK application development demonstration
+ A code and text file viewer developed as a companion example for the
+ dtk-development skill.
+ .
+ It provides tabs, asynchronous large-file loading, theme-aware DCI icons,
+ window blur and DTK controls, together with single-instance handling,
+ logging, translations, DConfig, desktop integration and Debian packaging.

@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/dsg/built-in-icons">
+        <file alias="dtk-codeviewer.dci">icons/dtk-codeviewer.dci</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "50231eaf-c951-4aab-b262-1f1447602b7c",
+  "path": "deepin-skills",
+  "path_key": "deepin-skills",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}
