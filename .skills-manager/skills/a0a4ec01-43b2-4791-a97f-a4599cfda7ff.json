@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "a0a4ec01-43b2-4791-a97f-a4599cfda7ff",
+  "path": "html2markdown",
+  "path_key": "html2markdown",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

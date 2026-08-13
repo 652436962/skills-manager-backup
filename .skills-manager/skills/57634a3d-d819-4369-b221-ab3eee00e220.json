@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "57634a3d-d819-4369-b221-ab3eee00e220",
+  "path": "force-zh-reply",
+  "path_key": "force-zh-reply",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

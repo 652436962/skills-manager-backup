@@ -9,3 +9,5 @@ Thumbs.db
 
 # Logs
 *.log
+*.tmp
+.skills-manager.lock

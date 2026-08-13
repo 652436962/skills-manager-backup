@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "1e6dcdb8-7712-4d54-bf21-122ef13f89d5",
+  "path": "easyeda-api",
+  "path_key": "easyeda-api",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}
