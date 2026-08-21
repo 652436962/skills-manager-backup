@@ -11,8 +11,14 @@ description: 使用 QtSerialAssist 的 MCP 工具（~/.mcp-manager/qt-serial-ass
 
 ## 前置检查（每次调试开始前）
 
-1. 确认 QtSerialAssist 正在运行且"AI 控制服务"已开启：调用 `get_device_status` 验证链路，失败则提示用户先启动程序并开启设置页的 AI 控制服务。
-2. 需要 Modbus 时先确认串口已打开（`serial_status`），组合工具要求串口已开。
+1. 确认 QtSerialAssist 正在运行且"AI 控制服务"已开启：调用 `get_device_status` 验证链路。
+2. 若 `get_device_status` 失败，自动启动 QtSerialAssist：
+   ```bash
+   nohup /opt/QtSerialAssist/QtSerialAssist.sh >/dev/null 2>&1 &
+   ```
+   等待 3 秒后重新调用 `get_device_status` 验证。
+3. 若仍失败，提示用户手动启动程序并开启设置页的 AI 控制服务。
+4. 需要 Modbus 时先确认串口已打开（`serial_status`），组合工具要求串口已开。
 
 ## 工作流决策
 
