@@ -1,6 +1,6 @@
 # 调试话术速查
 
-不需要用户记工具名，按场景把意图+参数说清即可。完整版见 `~/.mcp-manager/qt-serial-assist/USAGE.md`。
+不需要用户记工具名，按场景把意图+参数说清即可。完整版见 `/opt/QtSerialAssist/mcp-server/USAGE.md`。
 
 ## 场景例句
 

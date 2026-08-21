@@ -1,6 +1,6 @@
 ---
 name: qt-serial-debug
-description: 使用 QtSerialAssist 的 MCP 工具（~/.mcp-manager/qt-serial-assist/server.py）对串口/网络/Modbus 设备进行自动化调试。当需要枚举或打开串口、发送数据并等待设备回包、读写 Modbus 保持寄存器、终端登录 uboot/嵌入式设备、发送快捷命令、设置定时自动发送、或按 run_sequence 批量回归测试时使用。依赖 QtSerialAssist 正在运行且 AI 控制服务（127.0.0.1:45678）已开启。
+description: 使用 QtSerialAssist 的 MCP 工具（server.py 位于 /opt/QtSerialAssist/mcp-server/）对串口/网络/Modbus 设备进行自动化调试。当需要枚举或打开串口、发送数据并等待设备回包、读写 Modbus 保持寄存器、终端登录 uboot/嵌入式设备、发送快捷命令、设置定时自动发送、或按 run_sequence 批量回归测试时使用。依赖 QtSerialAssist 正在运行且 AI 控制服务（127.0.0.1:45678）已开启。
 ---
 
 # QtSerialAssist 调试
@@ -11,14 +11,8 @@ description: 使用 QtSerialAssist 的 MCP 工具（~/.mcp-manager/qt-serial-ass
 
 ## 前置检查（每次调试开始前）
 
-1. 确认 QtSerialAssist 正在运行且"AI 控制服务"已开启：调用 `get_device_status` 验证链路。
-2. 若 `get_device_status` 失败，自动启动 QtSerialAssist：
-   ```bash
-   nohup /opt/QtSerialAssist/QtSerialAssist.sh >/dev/null 2>&1 &
-   ```
-   等待 3 秒后重新调用 `get_device_status` 验证。
-3. 若仍失败，提示用户手动启动程序并开启设置页的 AI 控制服务。
-4. 需要 Modbus 时先确认串口已打开（`serial_status`），组合工具要求串口已开。
+1. 确认 QtSerialAssist 正在运行且"AI 控制服务"已开启：调用 `get_device_status` 验证链路，失败则提示用户先启动程序并开启设置页的 AI 控制服务。
+2. 需要 Modbus 时先确认串口已打开（`serial_status`），组合工具要求串口已开。
 
 ## 工作流决策
 
@@ -60,7 +54,7 @@ description: 使用 QtSerialAssist 的 MCP 工具（~/.mcp-manager/qt-serial-ass
 
 ### 6. 批量回归
 1. 用 `run_sequence(steps_json)`，支持 `serial.*`、`net.*`、`delay`、`modbus.frame`、`note` 等 action。
-2. 模板见 `~/.mcp-manager/qt-serial-assist/examples/regression_test.json`。
+2. 模板见 `/opt/QtSerialAssist/mcp-server/examples/regression_test.json`。
 3. 汇总输出每步 pass/fail 报告。
 
 ### 7. 快捷命令与定时发送
@@ -69,6 +63,6 @@ description: 使用 QtSerialAssist 的 MCP 工具（~/.mcp-manager/qt-serial-ass
 
 ## 资源
 
-- `references/tools.md`：20 个 MCP 工具签名与说明（含组合工具、run_sequence action 类型）
-- `references/usage.md`：按场景的"怎么说"例句、完整 SOP、常见坑对照表
-- 详细文档：`~/.mcp-manager/qt-serial-assist/README.md`（部署）与 `USAGE.md`（话术）
+- [reference.md](reference.md)：20 个 MCP 工具签名与说明（含组合工具、run_sequence action 类型）
+- [examples.md](examples.md)：按场景的"怎么说"例句、完整 SOP、常见坑对照表
+- 详细文档：`/opt/QtSerialAssist/mcp-server/README.md`（部署）与 `USAGE.md`（话术）

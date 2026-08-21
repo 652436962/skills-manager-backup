@@ -1,6 +1,6 @@
 # QtSerialAssist MCP 工具清单
 
-MCP server：`~/.mcp-manager/qt-serial-assist/server.py`（stdio）
+MCP server：`/opt/QtSerialAssist/mcp-server/server.py`（stdio）
 所有工具参数均为字符串/数字，由 FastMCP 自动转换。
 
 ## 原子工具
@@ -39,7 +39,7 @@ MCP server：`~/.mcp-manager/qt-serial-assist/server.py`（stdio）
 `net.open` / `net.close` / `net.send` / `net.await` / `net.read` / `net.clear`、
 `delay`（ms）、`modbus.frame`、`note`。
 
-模板：`~/.mcp-manager/qt-serial-assist/examples/regression_test.json`
+模板：`/opt/QtSerialAssist/mcp-server/examples/regression_test.json`
 
 ## 注意
 
