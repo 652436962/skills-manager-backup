@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "de7e3672-ab35-4f52-a14b-486e889bbc69",
+  "path": "qt-serial-debug",
+  "path_key": "qt-serial-debug",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}
