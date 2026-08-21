@@ -1,5 +1,5 @@
 ---
-name: "embedded_ai_skills"
+name: "embedded-ai-skills"
 description: "嵌入式 AI 开发技能集合入口 skill。自动索引全部子 skill，覆盖 ESP32、nRF528xx、STM32、ZMK 键盘固件以及辅助工具（EasyEDA、串口调试）的完整开发流程。当用户进行嵌入式开发（MCU 芯片、固件开发、烧录调试）时调用。"
 ---
 
