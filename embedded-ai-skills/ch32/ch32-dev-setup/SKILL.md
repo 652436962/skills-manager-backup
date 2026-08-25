@@ -62,6 +62,16 @@ which wchisp 2>/dev/null
 | 无 MRS + 工具链就绪 | **路径 B** | 纯 CLI，全部开源 |
 | 无 MRS + 工具链缺失 | **先装工具链 → 路径 B** | 按下方对应平台命令安装 |
 
+> ⚠️ **缺失处理（重要）**：`MRS_Toolchain_Linux_X64_V240` 压缩包约 393MB、解压后约 2.7GB，**禁止自动下载**。当 Pre-flight 检测到工具链缺失时，不要执行任何下载/安装命令，直接向用户输出以下提示，待用户手动安装完成后继续：
+>
+> ```
+> 未检测到 MRS_Toolchain_Linux_X64_V240 工具链，需要手动下载安装：
+> 1. 从 GitHub release（或 MRS 官方发行说明）下载 MRS_Toolchain_Linux_X64_V240.tar.xz（约 393MB）
+> 2. 解压：tar -xJf MRS_Toolchain_Linux_X64_V240.tar.xz -C ~
+> 3. 将 Toolchain/RISC-V Embedded GCC/bin 和 OpenOCD/OpenOCD/bin 加入 PATH
+> 安装完成后告诉我，我继续后续配置。
+> ```
+
 ---
 
 ## Step 1: 安装工具链（仅缺失项）
@@ -79,6 +89,8 @@ Linux 版解压后工具链路径通常为：
 ### 路径 B: 纯 CLI
 
 **工具链首选来源：`MRS_Toolchain_Linux_X64_V240`** —— MRS 官方 Linux x64 独立工具链包，含 `riscv-none-embed` 交叉编译链 + OpenOCD，无需安装完整 IDE。压缩包约 393MB（`.tar.xz`），解压后约 2.7GB，统一解压到 `~/MRS_Toolchain_Linux_X64_V240/`。
+
+> 体积较大，检测到缺失时仅**提示用户手动下载**（见 Pre-flight「缺失处理」），不要自动下载。
 
 **获取方式：**
 - 随 MRS 官方发布（官网 / 发行说明）
