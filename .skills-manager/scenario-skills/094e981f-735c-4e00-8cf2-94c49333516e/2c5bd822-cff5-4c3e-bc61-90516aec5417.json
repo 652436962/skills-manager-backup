@@ -4,11 +4,11 @@
   "skill_id": "2c5bd822-cff5-4c3e-bc61-90516aec5417",
   "sort_order": 5,
   "tools": {
-    "cline": true,
+    "cline": false,
     "codebuddy": true,
-    "gemini_cli": true,
+    "gemini_cli": false,
     "github_copilot": true,
-    "grok": true,
+    "grok": false,
     "opencode": true,
     "qoder": true,
     "uos_ai": true
