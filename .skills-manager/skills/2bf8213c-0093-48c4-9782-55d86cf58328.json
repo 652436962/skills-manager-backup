@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "2bf8213c-0093-48c4-9782-55d86cf58328",
+  "path": "embedded-ai-skills",
+  "path_key": "embedded-ai-skills",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}
