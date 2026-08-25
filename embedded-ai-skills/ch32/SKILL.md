@@ -11,7 +11,7 @@ description: "CH32 系列 RISC-V 单片机开发入口 skill。自动索引子 s
 
 | Skill | 文件 | 功能 |
 |-------|------|------|
-| **ch32-dev-setup** | [SKILL.md](ch32-dev-setup/SKILL.md) | 环境检测 + 工具链安装（riscv-none-embed gcc/cmake/ninja/WCH-Link/OpenOCD/wchisp），CLI/MRS 双路径支持 |
+| **ch32-dev-setup** | [SKILL.md](ch32-dev-setup/SKILL.md) | 环境检测 + 工具链配置（MRS_Toolchain_Linux_X64_V240 / MRS 内置 / xPack），缺失时提示手动下载；WCH-Link/OpenOCD/wchisp 支持，CLI/MRS 双路径 |
 | **ch32-project-init** | [SKILL.md](ch32-project-init/SKILL.md) | 芯片选型 → 开发模式（SPL 标准外设库/CMSIS 寄存器, C/C++）→ 外设配置 → CMakeLists 生成 → 编译 → 烧录 |
 | **ch32-debug** | [SKILL.md](ch32-debug/SKILL.md) | 串口日志 + WCH-Link/OpenOCD 调试，根因分析，RISC-V Trap/HardFault 排查 |
 
@@ -22,7 +22,7 @@ ch32-dev-setup               ch32-project-init             ch32-debug
 (环境安装)          ──→        (项目初始化)            ──→    (调试排错)
 ```
 
-1. **ch32-dev-setup**：检测 Shell 环境，安装交叉编译工具链、WCH-Link 调试器支持、OpenOCD/wchisp 烧录工具
+1. **ch32-dev-setup**：检测 Shell 环境与工具链，缺失时提示手动下载 `MRS_Toolchain_Linux_X64_V240`；配置 WCH-Link 调试器、OpenOCD/wchisp 烧录工具
 2. **ch32-project-init**：收集芯片型号、开发模式、时钟方案、外设需求，生成 CMake 项目
 3. **ch32-debug**：开发过程中排查编译错误、运行时 crash、外设驱动问题
 
