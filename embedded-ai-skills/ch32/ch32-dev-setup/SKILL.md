@@ -71,17 +71,33 @@ Linux 版解压后工具链路径通常为：
 
 ### 路径 B: 纯 CLI
 
+**工具链首选来源：`MRS_Toolchain_Linux_X64_V240`** —— MRS 官方 Linux x64 独立工具链包，含 `riscv-none-embed` 交叉编译链 + OpenOCD，无需安装完整 IDE。
+
+获取方式：
+- 随 MRS 官方发布（官网 / 发行说明中下载）
+- GitHub 仓库：`MRS_Toolchain_Linux_X64_V240`（用户维护，上传后补充链接）
+
+解压后目录结构：
+```
+MRS_Toolchain_Linux_X64_V240/
+├── riscv-none-embed-gcc/   # 或 RISC-V Embedded GCC
+│   └── bin/riscv-none-embed-gcc
+└── OpenOCD/
+    └── bin/openocd
+```
+
 | 平台 | 工具 | 安装方式 |
 |------|------|---------|
-| **Linux / macOS** | riscv-none-embed-gcc | 下载 xPack 发行版：https://github.com/xpack-dev-tools/riscv-none-embed-gcc-xpack/releases ，解压后加入 PATH |
-| **Linux (apt)** | riscv-none-embed-gcc | 无官方 apt 包，用上述 xPack 或 MRS 内置工具链 |
+| **Linux（推荐）** | riscv-none-embed-gcc | 下载 `MRS_Toolchain_Linux_X64_V240` 解压后加入 PATH；备选 xPack：https://github.com/xpack-dev-tools/riscv-none-embed-gcc-xpack/releases |
+| **macOS** | riscv-none-embed-gcc | xPack 发行版（同上），解压后加入 PATH |
 | **所有平台** | cmake / ninja | `apt install cmake ninja-build` / `brew install cmake ninja` |
 | **所有平台** | wchisp（烧录） | `cargo install wchisp`（需 Rust）或从 https://github.com/ch32-rs/wchisp/releases 下载预编译包 |
 
 **PATH 配置示例（Linux）：**
 
 ```bash
-export PATH="$HOME/ch32-tools/riscv-none-embed/bin:$PATH"
+export PATH="$HOME/MRS_Toolchain_Linux_X64_V240/riscv-none-embed-gcc/bin:$PATH"
+export PATH="$HOME/MRS_Toolchain_Linux_X64_V240/OpenOCD/bin:$PATH"
 ```
 
 ---
