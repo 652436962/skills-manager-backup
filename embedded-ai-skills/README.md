@@ -22,6 +22,7 @@
 | Skill | 描述 | 适用场景 |
 |--------|------|----------|
 | [stm32_dev](./stm32-dev/SKILL.md) | STM32 纯 CLI 开发指南 | STM32 ARM Cortex-M 系列芯片开发，无需 CubeMX / CubeIDE GUI |
+| [ch32](./ch32/SKILL.md) | CH32 系列 RISC-V 开发入口（环境/项目/调试） | 沁恒 CH32V003/103/203/208/303/305/307/317 开发，WCH-Link 调试 |
 
 ###  如何使用
 
@@ -68,6 +69,7 @@ Embedded development environment setup is notoriously tedious, with huge variati
 | Skill | Description | Use Case |
 |--------|-------------|----------|
 | [stm32_dev](./stm32-dev/SKILL.md) | STM32 Pure CLI Development Guide | STM32 ARM Cortex-M series, no CubeMX / CubeIDE GUI needed |
+| [ch32](./ch32/SKILL.md) | CH32 RISC-V Development Entry (setup/project/debug) | WCH CH32V003/103/203/208/303/305/307/317, WCH-Link debugging |
 
 ###  How to Use
 

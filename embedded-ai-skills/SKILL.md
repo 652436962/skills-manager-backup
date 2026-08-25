@@ -26,4 +26,5 @@ description: "嵌入式 AI 开发技能集合入口 skill。自动索引全部�
 - "ESP32 开发环境搭建" → 调用 `esp32` 下的 esp32-dev / esp32-dev-idf / esp32-dev-arduino
 - "nRF52840 项目初始化" → 调用 `nrf-528xx` 下的 nrf-connect-project-init
 - "STM32 编译报错" → 调用 `stm32` 下的 stm32-debug
+- "CH32V307 开发环境搭建" → 调用 `ch32` 下的 ch32-dev-setup
 - "创建 ZMK 键盘项目" → 调用 `zmk-project-init`
