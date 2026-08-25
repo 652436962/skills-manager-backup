@@ -83,7 +83,7 @@ riscv-none-embed-addr2line -e build/<APP>/<APP>.elf 0x0000012c
 |------|------|------|
 | `cannot open linker script` | SRC 路径错 | 检查顶层 CMakeLists 的 `SRC_DIR` |
 | 缺外设符号 | 静态库 `--gc-sections` 丢弃未引用 .c | 把对应 `.c` 直接加进 APP_SRCS |
-| `riscv-none-embed-gcc: No such file` | 工具链不在 PATH | 加 PATH 或用 MRS 内置工具链 |
+| `riscv-none-embed-gcc: No such file` | 工具链不在 PATH | 按 ch32-dev-setup 配置 PATH（MRS_Toolchain 或 MRS 内置工具链） |
 | 指令集 ABI 不匹配 | 不同文件 march/mabi 不一致 | 统一 `-march=rv32imac -mabi=ilp32` |
 
 ### 2. 运行时

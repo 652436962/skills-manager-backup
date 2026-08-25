@@ -38,7 +38,13 @@ ls -d "/c/MounRiver"*/MounRiver_Studio.exe 2>/dev/null
 ls -d "$HOME/MounRiver"* 2>/dev/null
 ```
 
-#### 2. 检测系统工具链（路径 B）
+#### 2. 检测独立工具链包 MRS_Toolchain（Linux）
+
+```bash
+ls -d "$HOME/MRS_Toolchain_Linux_X64_V240" 2>/dev/null
+```
+
+#### 3. 检测系统工具链（路径 B）
 
 ```bash
 riscv-none-embed-gcc --version 2>/dev/null | head -1
@@ -47,11 +53,12 @@ ninja --version 2>/dev/null
 which wchisp 2>/dev/null
 ```
 
-#### 3. 判断路径
+#### 4. 判断路径
 
 | 条件 | 路径 | 说明 |
 |------|------|------|
 | MRS 已安装 | **路径 A** | 取其内置 riscv-none-embed-gcc + OpenOCD |
+| 存在 `~/MRS_Toolchain_Linux_X64_V240` | **路径 B** | 用该独立工具链包（含 GCC + OpenOCD） |
 | 无 MRS + 工具链就绪 | **路径 B** | 纯 CLI，全部开源 |
 | 无 MRS + 工具链缺失 | **先装工具链 → 路径 B** | 按下方对应平台命令安装 |
 
@@ -71,34 +78,51 @@ Linux 版解压后工具链路径通常为：
 
 ### 路径 B: 纯 CLI
 
-**工具链首选来源：`MRS_Toolchain_Linux_X64_V240`** —— MRS 官方 Linux x64 独立工具链包，含 `riscv-none-embed` 交叉编译链 + OpenOCD，无需安装完整 IDE。
+**工具链首选来源：`MRS_Toolchain_Linux_X64_V240`** —— MRS 官方 Linux x64 独立工具链包，含 `riscv-none-embed` 交叉编译链 + OpenOCD，无需安装完整 IDE。压缩包约 393MB（`.tar.xz`），解压后约 2.7GB，统一解压到 `~/MRS_Toolchain_Linux_X64_V240/`。
 
-获取方式：
-- 随 MRS 官方发布（官网 / 发行说明中下载）
-- GitHub 仓库：`MRS_Toolchain_Linux_X64_V240`（用户维护，上传后补充链接）
+**获取方式：**
+- 随 MRS 官方发布（官网 / 发行说明）
+- GitHub 仓库 release（用户维护，上传后补充链接）
 
-解压后目录结构：
+#### 安装流程（Linux）
+
+```bash
+# 1. 下载 MRS_Toolchain_Linux_X64_V240.tar.xz 后解压
+tar -xJf MRS_Toolchain_Linux_X64_V240.tar.xz -C ~
+
+# 2. 配置 PATH（建议写入 ~/.bashrc / ~/.zshrc 持久化）
+export PATH="$HOME/MRS_Toolchain_Linux_X64_V240/Toolchain/RISC-V Embedded GCC/bin:$PATH"
+export PATH="$HOME/MRS_Toolchain_Linux_X64_V240/OpenOCD/OpenOCD/bin:$PATH"
+
+# 3. 验证
+riscv-none-embed-gcc --version | head -1
+openocd --version | head -1
 ```
-MRS_Toolchain_Linux_X64_V240/
-├── riscv-none-embed-gcc/   # 或 RISC-V Embedded GCC
-│   └── bin/riscv-none-embed-gcc
+
+#### 包内目录结构
+
+```
+~/MRS_Toolchain_Linux_X64_V240/
+├── Toolchain/
+│   ├── arm-none-eabi-gcc/
+│   ├── RISC-V Embedded GCC/          # riscv-none-embed 编译链
+│   │   └── bin/riscv-none-embed-gcc
+│   ├── RISC-V Embedded GCC12/
+│   ├── RISC-V Embedded GCC15/
+│   └── sub_manifest.json
 └── OpenOCD/
-    └── bin/openocd
+    └── OpenOCD/
+        └── bin/openocd
 ```
+
+> 提示：其他 GCC 版本（GCC12/GCC15）在同级目录，切换版本只需改 PATH 前缀；OpenOCD 的 wch-riscv 支持已内置，无需额外配置。
 
 | 平台 | 工具 | 安装方式 |
 |------|------|---------|
-| **Linux（推荐）** | riscv-none-embed-gcc | 下载 `MRS_Toolchain_Linux_X64_V240` 解压后加入 PATH；备选 xPack：https://github.com/xpack-dev-tools/riscv-none-embed-gcc-xpack/releases |
+| **Linux（推荐）** | riscv-none-embed-gcc | 上述 `MRS_Toolchain_Linux_X64_V240` 流程；备选 xPack：https://github.com/xpack-dev-tools/riscv-none-embed-gcc-xpack/releases |
 | **macOS** | riscv-none-embed-gcc | xPack 发行版（同上），解压后加入 PATH |
 | **所有平台** | cmake / ninja | `apt install cmake ninja-build` / `brew install cmake ninja` |
 | **所有平台** | wchisp（烧录） | `cargo install wchisp`（需 Rust）或从 https://github.com/ch32-rs/wchisp/releases 下载预编译包 |
-
-**PATH 配置示例（Linux）：**
-
-```bash
-export PATH="$HOME/MRS_Toolchain_Linux_X64_V240/riscv-none-embed-gcc/bin:$PATH"
-export PATH="$HOME/MRS_Toolchain_Linux_X64_V240/OpenOCD/bin:$PATH"
-```
 
 ---
 
