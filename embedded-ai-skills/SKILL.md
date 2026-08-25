@@ -1,6 +1,6 @@
 ---
 name: "embedded-ai-skills"
-description: "嵌入式 AI 开发技能集合入口 skill。自动索引全部子 skill，覆盖 ESP32、nRF528xx、STM32、ZMK 键盘固件以及辅助工具（EasyEDA、串口调试）的完整开发流程。当用户进行嵌入式开发（MCU 芯片、固件开发、烧录调试）时调用。"
+description: "嵌入式 AI 开发技能集合入口 skill。自动索引全部子 skill，覆盖 ESP32、nRF528xx、STM32、CH32（RISC-V）、ZMK 键盘固件以及辅助工具（EasyEDA、串口调试）的完整开发流程。当用户进行嵌入式开发（MCU 芯片、固件开发、烧录调试）时调用。"
 ---
 
 # Embedded AI Skills — 嵌入式开发技能集
@@ -15,6 +15,7 @@ description: "嵌入式 AI 开发技能集合入口 skill。自动索引全部�
 | **nrf-528xx** | [SKILL.md](nrf-528xx/SKILL.md) | nRF528xx 入口：SDK 安装、项目初始化、调试 |
 | **stm32** | [SKILL.md](stm32/SKILL.md) | STM32 入口：环境安装、项目初始化、调试 |
 | **stm32-dev** | [SKILL.md](stm32-dev/SKILL.md) | STM32 纯 CLI 开发指南（无需 CubeMX / CubeIDE GUI） |
+| **ch32** | [SKILL.md](ch32/SKILL.md) | CH32（沁恒 RISC-V）入口：环境安装、项目初始化、调试 |
 | **tools** | [SKILL.md](tools/SKILL.md) | 工具类：EasyEDA 原理图/PCB 设计、串口调试 |
 | **zmk-project-init** | [SKILL.md](zmk-project-init/SKILL.md) | ZMK 键盘固件项目创建/配置/编译/烧录 |
 
