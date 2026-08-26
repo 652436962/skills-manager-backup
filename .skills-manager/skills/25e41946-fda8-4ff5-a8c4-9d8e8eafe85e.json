@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "25e41946-fda8-4ff5-a8c4-9d8e8eafe85e",
+  "path": "esp32",
+  "path_key": "esp32",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

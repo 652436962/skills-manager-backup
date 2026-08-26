@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "5d2d685d-fd7c-4f56-b1a1-4ae5080fde76",
+  "path": "ch32",
+  "path_key": "ch32",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

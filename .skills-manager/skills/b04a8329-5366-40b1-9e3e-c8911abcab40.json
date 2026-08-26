@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "b04a8329-5366-40b1-9e3e-c8911abcab40",
+  "path": "nrf-528xx",
+  "path_key": "nrf-528xx",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "scenario_id": "094e981f-735c-4e00-8cf2-94c49333516e",
+  "skill_id": "e4e350d6-76f8-4564-86ce-a16938741d5d",
+  "sort_order": 6,
+  "tools": {
+    "cline": false,
+    "codebuddy": true,
+    "gemini_cli": false,
+    "github_copilot": true,
+    "grok": false,
+    "opencode": true,
+    "qoder": true,
+    "uos_ai": true
+  }
+}

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "skill_id": "2bf8213c-0093-48c4-9782-55d86cf58328",
-  "path": "embedded-ai-skills",
-  "path_key": "embedded-ai-skills",
+  "skill_id": "e4e350d6-76f8-4564-86ce-a16938741d5d",
+  "path": "stm32",
+  "path_key": "stm32",
   "enabled": true,
   "tags": [],
   "source": {
