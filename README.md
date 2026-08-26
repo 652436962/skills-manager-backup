@@ -20,7 +20,8 @@ skills/                      # ~/.skills-manager/skills（中央仓库根目录�
 ├── stm32/                   # STM32 系列开发技能集
 ├── ch32/                    # CH32 RISC-V（沁恒）开发技能集
 ├── nrf-528xx/               # nRF528xx（Nordic）开发技能集
-├── tools/                   # 嵌入式辅助工具（EasyEDA、串口调试）
+├── easyeda-api/             # EasyEDA Pro 原理图/PCB 设计 API
+├── emberinter/              # EmberInterDebugTool 串口调试
 ├── zmk-project-init/        # ZMK 键盘固件项目初始化
 ├── find-skills/             # 查找并安装 Agent Skill
 ├── force-zh-reply/          # 强制简体中文回复
@@ -39,16 +40,17 @@ skills/                      # ~/.skills-manager/skills（中央仓库根目录�
 | `stm32` | STM32 全系列开发入口：环境安装 / 项目初始化 / 调试排错全流程 | STM32、STM32F1/F4/L4/G0/H7、ST-Link |
 | `ch32` | CH32 RISC-V 系列开发入口：环境安装 / 项目初始化 / 调试排错全流程 | CH32V003/103/203/303/307/317、沁恒、WCH-Link |
 | `nrf-528xx` | nRF528xx 系列开发入口：SDK 安装 / 项目初始化 / 调试排错全流程 | nRF52、nRF52840、nRF52832、Nordic、Zephyr |
-| `tools` | 嵌入式辅助工具入口：EasyEDA 原理图/PCB 设计、串口调试 | EasyEDA、嘉立创 EDA、原理图、PCB、串口监视、AT 命令 |
+| `easyeda-api` | EasyEDA Pro API：原理图 / PCB 设计、封装/符号库管理、项目操作、EDA 内实时调试与扩展开发（含完整 API 参考与 WebSocket 桥接） | EasyEDA、嘉立创 EDA、原理图、PCB、封装、扩展开发 |
+| `emberinter` | EmberInterDebugTool CLI：串口监视、设备通信、固件验证、AT 命令测试、嵌入式日志分析 | 串口监视、AT 命令、固件验证、串口日志 |
 | `zmk-project-init` | ZMK 键盘固件项目：创建无线/有线键盘工程、添加自定义 shield、配置/编译/烧录 | ZMK、键盘固件、机械键盘、shield |
 | `find-skills` | 发现并安装 Agent Skill：当用户寻找能做某事的功能或表达扩展 Agent 能力的意愿时使用 | "我该如何做 X"、"帮我找一个能做 X 的 skill"、"有没有做 X 的 skill" |
 | `force-zh-reply` | 让 AI 在整个对话中主要使用简体中文回复，代码与专业英文术语保留原样，不受用户输入外文影响 | 常驻生效，无特定触发词 |
 
 ## 嵌入式开发技能集（平台级拆分）
 
-嵌入式开发技能按 **平台** 拆分为独立顶层 skill（esp32 / stm32 / ch32 / nrf-528xx / tools / zmk-project-init），每个平台内部再按 **任务** 组织子 skill（环境部署 / 项目初始化 / 调试排错）。这样每个入口的触发描述聚焦、按需加载，避免集合入口描述稀释导致误触发或冗余加载。
+嵌入式开发技能按 **平台** 拆分为独立顶层 skill（esp32 / stm32 / ch32 / nrf-528xx / easyeda-api / emberinter / zmk-project-init），每个平台内部再按 **任务** 组织子 skill（环境部署 / 项目初始化 / 调试排错）。这样每个入口的触发描述聚焦、按需加载，避免集合入口描述稀释导致误触发或冗余加载。
 
-> 该结构由原 `embedded-ai-skills` 集合入口按平台拆分而来，子技能文件全部保留原样。
+> 该结构由原 `embedded-ai-skills` 集合入口按平台拆分而来；辅助工具（`tools`）随后也拆分为 `easyeda-api` / `emberinter` 两个独立技能。子技能文件全部保留原样。
 
 ### 各平台内部结构
 
@@ -67,8 +69,8 @@ skills/                      # ~/.skills-manager/skills（中央仓库根目录�
 | **CH32**（沁恒 RISC-V） | `ch32/ch32-dev-setup` | 环境检测 + 工具链配置（MRS_Toolchain / MRS 内置 / xPack），WCH-Link/OpenOCD/wchisp 支持，CLI/MRS 双路径 |
 | | `ch32/ch32-project-init` | 项目初始化：芯片选型 → 开发模式（SPL/CMSIS, C/C++）→ 外设配置 → CMakeLists 生成 → 编译 → 烧录 |
 | | `ch32/ch32-debug` | 调试排错：串口日志 + WCH-Link/OpenOCD，RISC-V Trap/HardFault 排查 |
-| **辅助工具** | `tools/easyeda-api` | 嘉立创 EDA（EasyEDA Pro）原理图 / PCB 设计，支持 EDA 内实时调试与扩展开发 |
-| | `tools/emberinter` | EmberInterDebugTool CLI：串口监视、设备通信、固件验证、AT 命令测试 |
+| **辅助工具** | `easyeda-api` | 嘉立创 EDA（EasyEDA Pro）原理图 / PCB 设计，支持 EDA 内实时调试与扩展开发 |
+| | `emberinter` | EmberInterDebugTool CLI：串口监视、设备通信、固件验证、AT 命令测试 |
 | **其他平台** | `zmk-project-init` | ZMK 键盘固件项目：创建无线/有线键盘工程、添加自定义 shield、配置/编译/烧录 |
 
 ### 使用示例
@@ -77,7 +79,8 @@ skills/                      # ~/.skills-manager/skills（中央仓库根目录�
 - "nRF52840 项目初始化" → 调用 `nrf-528xx` 下的 `nrf-connect-project-init`
 - "STM32 编译报错" → 调用 `stm32` 下的 `stm32-debug`
 - "CH32V307 开发环境搭建" → 调用 `ch32` 下的 `ch32-dev-setup`
-- "用 EasyEDA 画原理图 / PCB 布局" → 调用 `tools` 下的 `easyeda-api`
+- "用 EasyEDA 画原理图 / PCB 布局" → 调用 `easyeda-api`
+- "串口监视 / AT 命令测试 / 固件验证" → 调用 `emberinter`
 - "创建 ZMK 键盘项目" → 调用 `zmk-project-init`
 
 ## Skills Manager 使用说明

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "skill_id": "4a084468-5e34-4a10-8b47-0d0fb13e7d6a",
-  "path": "tools",
-  "path_key": "tools",
+  "skill_id": "9ca0f12d-9b2e-4318-b24a-7b0e8573ff5f",
+  "path": "easyeda-api",
+  "path_key": "easyeda-api",
   "enabled": true,
   "tags": [],
   "source": {
