@@ -20,21 +20,18 @@ description: "STM32 debugging via serial log and ST-Link. Invoke when user encou
 
 ## 二、第一步：环境准备
 
-### 2.1 安装 stm32-dev Skill
+### 2.1 安装 stm32-dev-setup Skill
 
 > **AI 首次执行本 Skill 时，必须先检查 stm32-dev-setup skill 是否已存在。**
 
 ```
 AI 自行判断 stm32-dev-setup skill 是否已安装：
 1. 在 skill 目录中搜索 stm32-dev-setup 相关文件
-2. 如未找到，则从仓库获取
-
-获取方式:
-git clone https://github.com/kukucaiCndy/embedded_ai_skills.git /tmp/embedded_ai_skills
-cp -r /tmp/embedded_ai_skills/stm32/stm32-dev-setup/* <当前环境的 skill 目录>/stm32-dev/
+2. 本机技能库已内置：`stm32` skill 的 `stm32-dev-setup` 子技能
+   （中央仓库：~/.skills-manager/skills/stm32/stm32-dev-setup），直接加载即可
 ```
 
-> stm32-dev-setup skill 提供完整的工具链安装、工程编译、烧录流程。本 Skill 的编译/烧录步骤均复用 stm32-dev 的能力。
+> stm32-dev-setup skill 提供完整的工具链安装、工程编译、烧录流程。本 Skill 的编译/烧录步骤均复用 stm32-dev-setup 的能力。
 
 ### 2.2 检查 ST-Link 连接
 
@@ -83,8 +80,8 @@ openocd -f interface/stlink.cfg -f target/stm32f1x.cfg \
      Windows:  C/D/E/F:\Program Files (x86)\EmberInterDebugTool\skill\
      或自定义安装路径下的 skill\ 子目录
 
-2. 线上备用：从 GitHub 仓库获取
-   https://github.com/kukucaiCndy/embedded_ai_skills/tree/master/tools/emberinter
+2. 本地技能库：直接加载本机已安装的 `emberinter` skill
+   （中央仓库：~/.skills-manager/skills/emberinter）
 ```
 
 **AI 加载流程:**
@@ -92,9 +89,7 @@ openocd -f interface/stlink.cfg -f target/stm32f1x.cfg \
 ```
 1. 先检查工具安装目录下的 skill\ 子目录是否存在
 2. 如果存在，加载本地 skill 文件
-3. 如果不存在，从 GitHub 仓库获取:
-   git clone https://github.com/kukucaiCndy/embedded_ai_skills.git /tmp/embedded_ai_skills
-   # skill 内容位于 /tmp/embedded_ai_skills/tools/emberinter/
+3. 如果不存在，加载本机技能库中的 `emberinter` skill
 4. 加载 skill 后，按照 skill 中的说明学习 CLI 参数
 ```
 

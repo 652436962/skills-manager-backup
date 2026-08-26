@@ -143,8 +143,8 @@ echo -e "mdw 0x3FC9C000 4\nexit" | telnet localhost 4444
    常见路径:
      Windows:  C/D/E/F:\Program Files (x86)\EmberInterDebugTool\skill\
 
-2. 线上备用：从 GitHub 仓库获取
-   https://github.com/kukucaiCndy/embedded_ai_skills/tree/master/tools/emberinter
+2. 本地技能库：直接加载本机已安装的 `emberinter` skill
+   （中央仓库：~/.skills-manager/skills/emberinter）
 ```
 
 > **⚠️ 不要假设参数名。** 必须通过 skill 中的说明确认后再使用。
