@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "b673a0a4-d78a-4a2a-b83c-ef2e70c5b0b9",
+  "path": "embedded-device-versioning",
+  "path_key": "embedded-device-versioning",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}
