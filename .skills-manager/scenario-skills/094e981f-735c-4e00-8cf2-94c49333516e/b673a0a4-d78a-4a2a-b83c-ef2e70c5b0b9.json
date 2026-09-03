@@ -6,6 +6,7 @@
   "tools": {
     "cline": true,
     "codebuddy": true,
+    "deepseek_harness": true,
     "gemini_cli": true,
     "github_copilot": true,
     "grok": true,
