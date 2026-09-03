@@ -46,10 +46,32 @@ def fetch_html(url: str) -> str:
 
 def strip_tags(text: str) -> str:
     """去除 HTML 标签，保留纯文本。"""
+    # 移除 VitePress header-anchor（标题末尾的 # 链接）
+    text = re.sub(
+        r'<a[^>]*class="[^"]*header-anchor[^"]*"[^>]*>.*?</a>',
+        "",
+        text,
+        flags=re.DOTALL,
+    )
     text = re.sub(r"<[^>]+>", "", text)
     text = html.unescape(text)
     text = re.sub(r"\s+", " ", text).strip()
     return text
+
+
+def clean_code_block(code_html: str) -> str:
+    """清理代码块 HTML：保留行结构，去除高亮 span 等标签（适配微信每行一个 <code> 的结构）。"""
+    code_html = re.sub(r"<br\s*/?>", "\n", code_html, flags=re.IGNORECASE)
+    # 微信每行一个 <code>，行间补换行
+    code_html = re.sub(r"</code>", "\n", code_html, flags=re.IGNORECASE)
+    # 去除全部标签
+    code_html = re.sub(r"<[^>]+>", "", code_html)
+    code_html = html.unescape(code_html)
+    # 清理每行首尾空白，合并连续空行
+    lines = [ln.strip() for ln in code_html.split("\n")]
+    code_html = "\n".join(lines).strip()
+    code_html = re.sub(r"\n{3,}", "\n\n", code_html)
+    return code_html
 
 
 def extract_title(html_content: str) -> str:
@@ -65,7 +87,7 @@ def extract_title(html_content: str) -> str:
     if m:
         title = strip_tags(m.group(1))
         # 移除常见站点后缀
-        for suffix in ["博客园", "blog", "segmentfault", "企业博客"]:
+        for suffix in ["博客园", "blog", "segmentfault", "企业博客", "探索者"]:
             title = re.sub(rf"\s*[-–—|]\s*{suffix}\s*$", "", title).strip()
             title = re.sub(rf"\s*[-–—|]\s*.*?{suffix}\s*$", "", title).strip()
         if title:
@@ -79,8 +101,35 @@ def extract_title(html_content: str) -> str:
     return "Untitled"
 
 
+def extract_wechat_body(html_content: str) -> str:
+    """提取微信公众号文章正文（<div id="js_content">，用标签栈匹配闭合）。"""
+    m = re.search(r'<div[^>]*id="js_content"[^>]*>', html_content)
+    if not m:
+        return ""
+    start = m.end()
+    depth = 1
+    pos = start
+    while pos < len(html_content) and depth > 0:
+        open_m = re.search(r"<div[^>]*>", html_content[pos:])
+        close_m = re.search(r"</div>", html_content[pos:])
+        if not close_m:
+            break
+        if open_m and open_m.start() < close_m.start():
+            depth += 1
+            pos += open_m.end()
+        else:
+            depth -= 1
+            pos += close_m.end()
+    body = html_content[start : pos - len("</div>")]
+    return body if len(body) > 500 else ""
+
+
 def extract_post_body(html_content: str) -> str:
     """提取文章正文部分的 HTML（支持多种网站）。"""
+    # 微信公众号文章
+    wechat_body = extract_wechat_body(html_content)
+    if wechat_body:
+        return wechat_body
     # 博客园
     for pat in [
         r'id="cnblogs_post_body"(.*?)<div class="clear"></div>',
@@ -99,6 +148,26 @@ def extract_post_body(html_content: str) -> str:
                 return data["articleBody"]
         except Exception:
             pass
+    # VitePress / Docusaurus 等静态站点（<div class="vp-doc">，用标签栈匹配闭合）
+    m = re.search(r'<div[^>]*class="[^"]*\bvp-doc\b[^"]*"[^>]*>', html_content)
+    if m:
+        start = m.end()
+        depth = 1
+        pos = start
+        while pos < len(html_content) and depth > 0:
+            open_m = re.search(r"<div[^>]*>", html_content[pos:])
+            close_m = re.search(r"</div>", html_content[pos:])
+            if not close_m:
+                break
+            if open_m and open_m.start() < close_m.start():
+                depth += 1
+                pos += open_m.end()
+            else:
+                depth -= 1
+                pos += close_m.end()
+        body = html_content[start : pos - len("</div>")]
+        if len(body) > 500:
+            return body
     # 通用：尝试找 <article> 标签
     m = re.search(r"<article[^>]*>(.*?)</article>", html_content, re.DOTALL)
     if m:
@@ -113,10 +182,11 @@ def extract_post_body(html_content: str) -> str:
     return ""
 
 
-def extract_images(body_html: str) -> list:
+def extract_images(body_html: str, base_url: str = "") -> list:
     """
     从正文 HTML 中提取所有图片，返回 [(image_url, preceding_text), ...]
     preceding_text 是图片之前的最近一段文字，用于确定图片在文章中的位置。
+    base_url 用于把相对路径图片（如 /assets/xxx.png）补全为完整 URL。
     """
     # 找到所有 img 标签
     img_tags = list(re.finditer(r"<img[^>]*?>", body_html, re.IGNORECASE))
@@ -129,16 +199,22 @@ def extract_images(body_html: str) -> list:
         src = re.search(r'\ssrc="([^"]*)"', tag)
         url = data_src.group(1) if data_src else (src.group(1) if src else None)
 
-        if url and url.startswith("http"):
+        if url:
             # 解码 HTML 实体（&#x26; -> & 等），保留完整 URL 含查询参数
             url = html.unescape(url)
+            # 相对路径补全为完整 URL
+            if base_url and not url.startswith(("http://", "https://")):
+                from urllib.parse import urljoin
 
-            # 获取图片前 500 字符的文本，用于定位上下文
-            start = max(0, tag_match.start() - 500)
-            context = body_html[start : tag_match.start()]
-            preceding_text = strip_tags(context)[-200:]
+                url = urljoin(base_url, url)
 
-            results.append((url, preceding_text))
+            if url.startswith(("http://", "https://")):
+                # 获取图片前 500 字符的文本，用于定位上下文
+                start = max(0, tag_match.start() - 500)
+                context = body_html[start : tag_match.start()]
+                preceding_text = strip_tags(context)[-200:]
+
+                results.append((url, preceding_text))
 
     # 去重（保留首次出现的顺序）
     seen = set()
@@ -219,10 +295,11 @@ def classify_image(context_text: str) -> tuple:
     return ("other", "")
 
 
-def html_to_markdown(body_html: str, images: list) -> str:
+def html_to_markdown(body_html: str, images: list, base_url: str = "") -> str:
     """
     将正文 HTML 转换为 Markdown，并在对应位置插入图片。
     """
+    from urllib.parse import urljoin
 
     # 先按行处理 body_html，逐步构建 Markdown
     # 关键思路：在遇到图片位置时插入 Markdown 图片语法
@@ -239,8 +316,12 @@ def html_to_markdown(body_html: str, images: list) -> str:
         data_src = re.search(r'data-src="([^"]*)"', tag)
         src = re.search(r'\ssrc="([^"]*)"', tag)
         url = data_src.group(1) if data_src else (src.group(1) if src else None)
-        if url and url.startswith("http"):
-            tokens.append(("image", tag_match.start(), html.unescape(url)))
+        if url:
+            url = html.unescape(url)
+            if base_url and not url.startswith(("http://", "https://")):
+                url = urljoin(base_url, url)
+            if url.startswith(("http://", "https://")):
+                tokens.append(("image", tag_match.start(), url))
 
     # 收集标题位置
     for h_match in re.finditer(r"<(h[2-6])[^>]*>(.*?)</\1>", body_html, re.DOTALL):
@@ -249,20 +330,32 @@ def html_to_markdown(body_html: str, images: list) -> str:
         if text:
             tokens.append(("heading", h_match.start(), (level, text)))
 
-    # 收集 <p> 段落
-    for p_match in re.finditer(r"<p[^>]*>(.*?)</p>", body_html, re.DOTALL):
-        text = strip_tags(p_match.group(1))
+    # 收集 <p> 段落（压缩 HTML 可能省略 </p>，按块级元素边界分割，避免跨块粘连）
+    block_start = re.compile(
+        r"(?=<(?:p|div|pre|h[1-6]|ol|ul|table|blockquote|hr|figure|section)[\s>])",
+        re.IGNORECASE,
+    )
+    for p_match in re.finditer(r"<p[^>]*>", body_html, re.IGNORECASE):
+        start = p_match.end()
+        nxt = block_start.search(body_html, start)
+        end = nxt.start() if nxt else len(body_html)
+        raw = body_html[start:end]
+        # 跳过代码副本：微信正文中代码同时存在于 <p> 与 <pre>，<p> 版本无保留价值
+        if "code-snippet" in raw:
+            continue
+        text = strip_tags(raw)
         if text and len(text) > 5:
-            tokens.append(("paragraph", p_match.start(), text))
+            # 中文章节小标题识别（微信用 <p>/<strong> 实现，转为标题）
+            if re.match(r"^(?:[一二三四五六七八九十]+、|Step\s*\d+[：: ]|场景[一二三四五]|第[一二三四五六七八九十]+[部分章节]|步骤\s*\d+)", text):
+                tokens.append(("heading", p_match.start(), (2, text)))
+            else:
+                tokens.append(("paragraph", p_match.start(), text))
 
     # 收集代码块 <pre>
     for pre_match in re.finditer(
         r"<pre[^>]*>(.*?)</pre>", body_html, re.DOTALL
     ):
-        code = pre_match.group(1)
-        # 移除 <code> 标签
-        code = re.sub(r"</?code[^>]*>", "", code)
-        code = html.unescape(code).strip()
+        code = clean_code_block(pre_match.group(1))
         if code:
             tokens.append(("code", pre_match.start(), code))
 
@@ -275,17 +368,36 @@ def html_to_markdown(body_html: str, images: list) -> str:
             tokens.append(("blockquote", bq_match.start(), text))
 
     # 收集列表 <ul>/<ol>
+    list_items_texts = set()
     for list_match in re.finditer(
         r"<(ul|ol)[^>]*>(.*?)</\1>", body_html, re.DOTALL
     ):
         list_type = list_match.group(1)
         items = re.findall(r"<li[^>]*>(.*?)</li>", list_match.group(2), re.DOTALL)
         clean_items = [strip_tags(item) for item in items if strip_tags(item)]
+        list_items_texts.update(clean_items)
         if clean_items:
             tokens.append(("list", list_match.start(), (list_type, clean_items)))
 
+    # 微信常把列表内容同时渲染为 <p>，剔除与列表项重复的段落
+    tokens = [t for t in tokens
+              if not (t[0] == "paragraph" and t[2] in list_items_texts)]
+
     # 按位置排序
     tokens.sort(key=lambda x: x[1])
+
+    # 删除与紧随代码块内容重复的段落（VitePress 会把行内代码与代码块重复渲染）
+    def _compact(s: str) -> str:
+        return re.sub(r"\s+", "", s)
+
+    filtered = []
+    for i, token in enumerate(tokens):
+        if token[0] == "paragraph":
+            nxt = tokens[i + 1] if i + 1 < len(tokens) else None
+            if nxt and nxt[0] == "code" and _compact(token[2]) == _compact(nxt[2]):
+                continue
+        filtered.append(token)
+    tokens = filtered
 
     # 已使用的图片 URL（去重）
     used_images = set()
@@ -295,14 +407,9 @@ def html_to_markdown(body_html: str, images: list) -> str:
             url = data
             if url in used_images:
                 continue
-            # 去重：只保留没出现过的图片
-            already_used = False
-            for u in used_images:
-                # 比较文件名（图片通常同名）
-                if Path(u).name == Path(url).name:
-                    already_used = True
-                    break
-            if already_used:
+            # 去重：按完整 URL 判断（微信 CDN 图片路径均为 /640 同名，
+            # 若按文件名去重会误删同格式图片，必须比较完整 URL）
+            if url in used_images:
                 continue
             used_images.add(url)
 
@@ -346,13 +453,12 @@ def html_to_markdown(body_html: str, images: list) -> str:
 
 
 def deduplicate_images(images: list) -> list:
-    """按文件名去重，保留首次出现的顺序。"""
-    seen_names = set()
+    """按完整 URL 去重（微信 CDN 的 /640 路径同名，按文件名会误删），保留首次出现的顺序。"""
+    seen = set()
     result = []
     for url, context in images:
-        name = Path(url).name
-        if name not in seen_names:
-            seen_names.add(name)
+        if url not in seen:
+            seen.add(url)
             result.append((url, context))
     return result
 
@@ -366,11 +472,11 @@ def convert_from_html(html_content: str, url: str, output_path: str | None = Non
         print("❌ 无法提取文章正文，请检查 HTML 是否完整")
         sys.exit(1)
 
-    images = extract_images(body_html)
+    images = extract_images(body_html, url)
     images = deduplicate_images(images)
     print(f"🖼️  找到 {len(images)} 张图片")
 
-    markdown = html_to_markdown(body_html, images)
+    markdown = html_to_markdown(body_html, images, url)
     return _write_markdown(title, url, markdown, output_path)
 
 
