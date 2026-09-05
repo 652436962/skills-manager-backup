@@ -1,102 +1,102 @@
-# Extension Configuration File
+# 扩展配置文件
 
-In order to define the properties of an extension and the various functions that an extension can invoke, each extension should have an extension configuration file named `extension.json` in the root directory with the following default contents:
+为了定义扩展的属性以及扩展可以调用的各种功能，每个扩展的根目录下都应该拥有一个名为 `extension.json` 的扩展配置文件，它具有以下默认内容：
 
 <<< @/private/pro-api-sdk/extension.json{json}
 
 ## name <Badge type="tip" text="string" />
 
-Extension name. It can only contain lowercase English characters `a-z`, numbers `0-9`, and underscores `-`, and is `5-30` characters long.
+扩展名称。仅可包含小写英文字符 `a-z`、数字 `0-9` 与中划线 `-`，长度为 `5-30` 个字符。
 
 ## uuid <Badge type="tip" text="string" />
 
-UUID. A unique ID for the extension that can contain only lowercase English characters `a-z`, numbers `0-9`, and is `32` characters long.
+UUID。扩展的唯一 ID，仅可包含小写英文字符 `a-z`、数字 `0-9`，长度为 `32` 个字符。
 
 ## displayName <Badge type="tip" text="string" />
 
-Display name.
+展示名称。
 
 ## description <Badge type="tip" text="string" />
 
-Description.
+描述。
 
 ## version <Badge type="tip" text="string" />
 
-Version number. The format is `major.minor.patch`.
+语义化版本号。格式为 `major.minor.patch`。
 
 ## publisher <Badge type="tip" text="string" />
 
-Developer Information.
+开发者信息。
 
 ## engines <Badge type="tip" text="Object" /> <Badge type="warning" text="feature" />
 
-The engine to which the extension applies.
+扩展适配引擎。
 
 ### engines.eda <Badge type="tip" text="string" /> <Badge type="warning" text="feature" />
 
-Extended adapted version of EasyEDA Professional (online).
+扩展适配嘉立创 EDA 专业版（线上）版本。
 
 ## license <Badge type="tip" text="string" />
 
-Open-source licensing terms. It is recommended to go to [Choose a License](https://choosealicense.com/) to select the appropriate open source license for your project.
+开源协议。建议前往 [Choose a License](https://choosealicense.com/) 为项目选择适配的开源协议。
 
 ## repository <Badge type="tip" text="Object" /> <Badge type="warning" text="feature" /> <Badge type="info" text="in working" />
 
-Repository information for the source code of the extension.
+扩展源代码仓库信息。
 
 ### repository.type <Badge type="tip" text="string" /> <Badge type="warning" text="feature" /> <Badge type="info" text="in working" />
 
-The type of source code repository. Optional values are `extension-store` `git` `mercurial` `svn` `ftp` `github` `gitlab` `gitlab-selfhosted` `gitee` `gitea` `bitbucket` `coding` `gnu-savannah` ` gitbucket` `gogs`.
+源代码仓库类型。可选值为 `extension-store` `git` `mercurial` `svn` `ftp` `github` `gitlab` `gitlab-selfhosted` `gitee` `gitea` `bitbucket` `coding` `gnu-savannah` `gitbucket` `gogs`。
 
 ### repository.url <Badge type="tip" text="string" /> <Badge type="warning" text="feature" /> <Badge type="info" text="in working" />
 
-Source code repository URL.
+源代码仓库 URL。
 
 ## categories <Badge type="tip" text="string | Array<string>" />
 
-The extension's classification. Optional values are `Schematic` `Symbol` `PCB` `Footprint` `Panel` `Library` `Project` `Other`.
+扩展分类。可选值为 `Schematic` `Symbol` `PCB` `Footprint` `Panel` `Library` `Project` `Other`。
 
 ## keywords <Badge type="tip" text="Array<string>" />
 
-Keywords.
+关键词。
 
 ## images <Badge type="tip" text="Object" />
 
-Images.
+展示图。
 
 ### images.logo <Badge type="tip" text="string" />
 
-Logo. Size `1:1`, PNG/JPEG format. Logos can be drawn using an AI generation tool such as [AutoDraw](https://www.autodraw.com/) and a minimum size of `500×500` is recommended.
+图标。尺寸 `1:1`，PNG/JPEG 格式。绘制 LOGO 可以使用 [AutoDraw](https://www.autodraw.com/) 等 AI 生成工具，建议最少 `500×500` 大小。
 
 ### images.banner <Badge type="tip" text="string" /> <Badge type="warning" text="feature" />
 
-Banner. Size `64:27`, for presentation of extension's store page, JPEG format.
+横幅。尺寸 `64:27`，用于扩展商店页面的展示，JPEG 格式。
 
 ## homepage <Badge type="tip" text="string" />
 
-Project homepage.
+主页。
 
 ## bugs <Badge type="tip" text="string" />
 
-Vulnerability feedback channel. Please fill in a correct URI.
+漏洞反馈渠道。请填写一个正确的 URI。
 
 ## activationEvents <Badge type="tip" text="Object" /> <Badge type="warning" text="feature" /> <Badge type="info" text="in working" />
 
-Extension's activation event.
+扩展激活方式。
 
 ## entry <Badge type="tip" text="string" />
 
-Entry file. No modification is recommended, it is correctly defined within the SDK.
+入口文件。不建议修改，在 SDK 内已正确定义。
 
 ## dependentExtensions <Badge type="tip" text="Object" /> <Badge type="warning" text="feature" /> <Badge type="info" text="in working" />
 
-Dependencies on other extensions. Supports the use of 32-bit UUIDs of extensions in the Extension Store (automatic pulling supported), or user-defined extension names (manual upload required).
+依赖的其他扩展。支持使用扩展商店内扩展的 32 位 UUID（支持自动拉取），或用户自定义的扩展名称（需要手动上传）。
 
 ## headerMenus <Badge type="tip" text="Object" />
 
-The header menu registered when the extension is initialized.
+扩展初始化时注册的头部菜单。
 
-The header menu is currently supported to be configured separately according to the following pages:
+当前支持按照以下页面分别配置头部菜单：
 
 ```json
 {
@@ -116,20 +116,20 @@ The header menu is currently supported to be configured separately according to 
 
 ### headerMenus[].id <Badge type="tip" text="string" />
 
-Menu item ID. must be unique.
+菜单项 ID。必须唯一。
 
 ### headerMenus[].title <Badge type="tip" text="string" />
 
-Menu item title.
+菜单项标题。
 
 ### headerMenus[].menuItems <Badge type="tip" text="Object" />
 
-Menu item subitems. Up to two levels of subitems can be nested.
+菜单项子项。最多可以嵌套两层子项。
 
-`menuItems` conflicts with `registerFn`, only one of them is allowed to exist in the same level.
+`menuItems` 与 `registerFn` 冲突，同级项内只允许存在其一。
 
 ### headerMenus[].registerFn <Badge type="tip" text="string" />
 
-Menu associated registered method. The method here is associated with a method exported within the code of this extension, you need to export the specified method as an `ES Module` using `export` and fill in its method name here.
+菜单关联注册方法。此处的方法关联到在本扩展代码内导出的方法，你需要使用 `export` 将指定方法作为 `ES Module` 导出，并将其方法名填写于此处。
 
-`registerFn` conflicts with `menuItems`, only one of them is allowed to exist in the same level.
+`menuItems` 与 `registerFn` 冲突，同级项内只允许存在其一。

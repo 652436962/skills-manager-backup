@@ -2,27 +2,27 @@
 
 综合库 / 复用模块类
 
-## Signature
+## 签名
 
 ```typescript
 declare class LIB_Cbb 
 ```
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -148,31 +148,31 @@ Description
 
 # LIB\_Cbb.copy() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 复制复用模块
 
-## Signature
+## 签名
 
 ```typescript
 copy(cbbUuid: string, libraryUuid: string, targetLibraryUuid: string, targetClassification?: ILIB_ClassificationIndex | Array<string>, newCbbName?: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -236,7 +236,7 @@ targetClassification
 
 </td><td>
 
-_(Optional)_ 目标库内的分类
+_（可选）_ 目标库内的分类
 
 
 </td></tr>
@@ -252,7 +252,7 @@ string
 
 </td><td>
 
-_(Optional)_ 新复用模块名称，如若目标库内存在重名复用模块将导致复制失败
+_（可选）_ 新复用模块名称，如若目标库内存在重名复用模块将导致复制失败
 
 
 </td></tr>
@@ -260,7 +260,7 @@ _(Optional)_ 新复用模块名称，如若目标库内存在重名复用模块�
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -270,31 +270,31 @@ Promise&lt;string \| undefined&gt;
 
 # LIB\_Cbb.create() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 创建复用模块
 
-## Signature
+## 签名
 
 ```typescript
 create(libraryUuid: string, cbbName: string, classification?: ILIB_ClassificationIndex | Array<string>, description?: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -342,7 +342,7 @@ classification
 
 </td><td>
 
-_(Optional)_ 分类
+_（可选）_ 分类
 
 
 </td></tr>
@@ -358,7 +358,7 @@ string
 
 </td><td>
 
-_(Optional)_ 描述
+_（可选）_ 描述
 
 
 </td></tr>
@@ -366,7 +366,7 @@ _(Optional)_ 描述
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -376,31 +376,31 @@ Promise&lt;string \| undefined&gt;
 
 # LIB\_Cbb.delete() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 删除复用模块
 
-## Signature
+## 签名
 
 ```typescript
 delete(cbbUuid: string, libraryUuid: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -440,7 +440,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -450,31 +450,31 @@ Promise&lt;boolean&gt;
 
 # LIB\_Cbb.get() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取复用模块的所有属性
 
-## Signature
+## 签名
 
 ```typescript
 get(cbbUuid: string, libraryUuid?: string): Promise<ILIB_CbbItem | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -506,7 +506,7 @@ string
 
 </td><td>
 
-_(Optional)_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
+_（可选）_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
 
 
 </td></tr>
@@ -514,7 +514,7 @@ _(Optional)_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ILIB\_CbbItem](../interfaces/ILIB_CbbItem.md) \| undefined&gt;
 
@@ -524,31 +524,31 @@ Promise&lt;[ILIB\_CbbItem](../interfaces/ILIB_CbbItem.md) \| undefined&gt;
 
 # LIB\_Cbb.modify() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改复用模块
 
-## Signature
+## 签名
 
 ```typescript
 modify(cbbUuid: string, libraryUuid: string, cbbName?: string, classification?: ILIB_ClassificationIndex | Array<string> | null, description?: string | null): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -596,7 +596,7 @@ string
 
 </td><td>
 
-_(Optional)_ 复用模块名称
+_（可选）_ 复用模块名称
 
 
 </td></tr>
@@ -612,7 +612,7 @@ classification
 
 </td><td>
 
-_(Optional)_ 分类
+_（可选）_ 分类
 
 
 </td></tr>
@@ -628,7 +628,7 @@ string \| null
 
 </td><td>
 
-_(Optional)_ 描述
+_（可选）_ 描述
 
 
 </td></tr>
@@ -636,13 +636,13 @@ _(Optional)_ 描述
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 如希望清除某些属性，则将其的值设置为 `null`
 
@@ -650,31 +650,31 @@ Promise&lt;boolean&gt;
 
 # LIB\_Cbb.openProjectInEditor() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 在编辑器打开复用模块工程
 
-## Signature
+## 签名
 
 ```typescript
 openProjectInEditor(cbbUuid: string, libraryUuid: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -714,11 +714,11 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
-## Remarks
+## 备注
 
 本操作将会在 EDA 前端打开模块工程，如若原先已打开其它工程且有未保存的变更，执行本操作将直接丢失所有未保存的数据
 
@@ -726,31 +726,31 @@ Promise&lt;boolean&gt;
 
 # LIB\_Cbb.openSymbolInEditor() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 在编辑器打开复用模块符号
 
-## Signature
+## 签名
 
 ```typescript
 openSymbolInEditor(cbbUuid: string, libraryUuid: string, splitScreenId?: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -798,7 +798,7 @@ string
 
 </td><td>
 
-_(Optional)_ 分屏 ID，不填写则默认在最后输入焦点的分屏内打开，可以使用 [DMT\_EditorControl](./DMT_EditorControl.md) 内的接口获取
+_（可选）_ 分屏 ID，不填写则默认在最后输入焦点的分屏内打开，可以使用 [DMT\_EditorControl](./DMT_EditorControl.md) 内的接口获取
 
 
 </td></tr>
@@ -806,7 +806,7 @@ _(Optional)_ 分屏 ID，不填写则默认在最后输入焦点的分屏内打�
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -816,31 +816,31 @@ Promise&lt;string \| undefined&gt;
 
 # LIB\_Cbb.search() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 搜索复用模块
 
-## Signature
+## 签名
 
 ```typescript
 search(key: string, libraryUuid?: string, classification?: ILIB_ClassificationIndex | Array<string>, itemsOfPage?: number, page?: number): Promise<Array<ILIB_CbbSearchItem>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -872,7 +872,7 @@ string
 
 </td><td>
 
-_(Optional)_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
+_（可选）_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
 
 
 </td></tr>
@@ -888,7 +888,7 @@ classification
 
 </td><td>
 
-_(Optional)_ 分类，默认为全部
+_（可选）_ 分类，默认为全部
 
 
 </td></tr>
@@ -904,7 +904,7 @@ number
 
 </td><td>
 
-_(Optional)_ 一页搜索结果的数量
+_（可选）_ 一页搜索结果的数量
 
 
 </td></tr>
@@ -920,7 +920,7 @@ number
 
 </td><td>
 
-_(Optional)_ 页数
+_（可选）_ 页数
 
 
 </td></tr>
@@ -928,7 +928,7 @@ _(Optional)_ 页数
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[ILIB\_CbbSearchItem](../interfaces/ILIB_CbbSearchItem.md)<!-- -->&gt;&gt;
 

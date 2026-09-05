@@ -2,31 +2,31 @@
 
 原理图 &amp; 符号 / 生产资料类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SCH_ManufactureData 
 ```
 
-## Remarks
+## 备注
 
 获取当前原理图图页的生产资料文件及快捷下单
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -138,11 +138,11 @@ Description
 
 # SCH\_ManufactureData.getAssemblyVariantsConfigs() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取装配体变量配置列表
 
-## Signature
+## 签名
 
 ```typescript
 getAssemblyVariantsConfigs(): Promise<Array<{
@@ -152,7 +152,7 @@ getAssemblyVariantsConfigs(): Promise<Array<{
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;{ text: string; value: string; }&gt;&gt;
 
@@ -162,11 +162,11 @@ Promise&lt;Array&lt;{ text: string; value: string; }&gt;&gt;
 
 # SCH\_ManufactureData.getBomFile() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取 BOM 文件
 
-## Signature
+## 签名
 
 ```typescript
 getBomFile(fileName?: string, fileType?: 'xlsx' | 'csv', template?: string, filterOptions?: Array<{
@@ -178,21 +178,21 @@ getBomFile(fileName?: string, fileType?: 'xlsx' | 'csv', template?: string, filt
     }): Promise<File | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -208,7 +208,7 @@ string
 
 </td><td>
 
-_(Optional)_ 文件名
+_（可选）_ 文件名
 
 
 </td></tr>
@@ -224,7 +224,7 @@ fileType
 
 </td><td>
 
-_(Optional)_ 文件类型
+_（可选）_ 文件类型
 
 
 </td></tr>
@@ -240,7 +240,7 @@ string
 
 </td><td>
 
-_(Optional)_ 模板名称
+_（可选）_ 模板名称
 
 
 </td></tr>
@@ -256,7 +256,7 @@ Array&lt;{ property: string; includeValue: boolean \| string; }&gt;
 
 </td><td>
 
-_(Optional)_ 过滤规则，仅应包含需要启用的规则，`property` 为规则名称，`includeValue` 为匹配的值
+_（可选）_ 过滤规则，仅应包含需要启用的规则，`property` 为规则名称，`includeValue` 为匹配的值
 
 
 </td></tr>
@@ -272,7 +272,7 @@ Array&lt;string&gt;
 
 </td><td>
 
-_(Optional)_ 统计，包含所有需要启用的统计项的名称
+_（可选）_ 统计，包含所有需要启用的统计项的名称
 
 
 </td></tr>
@@ -288,7 +288,7 @@ Array&lt;string&gt;
 
 </td><td>
 
-_(Optional)_ 属性，包含所有需要启用的属性的名称
+_（可选）_ 属性，包含所有需要启用的属性的名称
 
 
 </td></tr>
@@ -304,7 +304,7 @@ Array&lt;[IPCB\_BomPropertiesTableColumns](../interfaces/IPCB_BomPropertiesTable
 
 </td><td>
 
-_(Optional)_ 列的属性及排序，`title`<!-- -->、`sort`<!-- -->、`group`<!-- -->、`orderWeight` 不传入则取默认值，`null` 代表 \*\*无\*\* 或 \*\*空\*\*
+_（可选）_ 列的属性及排序，`title`<!-- -->、`sort`<!-- -->、`group`<!-- -->、`orderWeight` 不传入则取默认值，`null` 代表 \*\*无\*\* 或 \*\*空\*\*
 
 
 </td></tr>
@@ -320,7 +320,7 @@ assemblyVariantsConfig
 
 </td><td>
 
-_(Optional)_ 装配体变量配置
+_（可选）_ 装配体变量配置
 
 
 </td></tr>
@@ -328,13 +328,13 @@ _(Optional)_ 装配体变量配置
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;File \| undefined&gt;
 
 BOM 文件数据
 
-## Remarks
+## 备注
 
 可以使用 [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统
 
@@ -342,11 +342,11 @@ BOM 文件数据
 
 # SCH\_ManufactureData.getExportDocumentFile() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取导出文档文件
 
-## Signature
+## 签名
 
 ```typescript
 getExportDocumentFile(fileName?: string, fileType?: ESCH_ExportDocumentFileType, typeSpecificParams?: {
@@ -364,21 +364,21 @@ getExportDocumentFile(fileName?: string, fileType?: ESCH_ExportDocumentFileType,
     }): Promise<File | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -394,7 +394,7 @@ string
 
 </td><td>
 
-_(Optional)_ 文件名
+_（可选）_ 文件名
 
 
 </td></tr>
@@ -410,7 +410,7 @@ fileType
 
 </td><td>
 
-_(Optional)_ 文件类型
+_（可选）_ 文件类型
 
 
 </td></tr>
@@ -426,7 +426,7 @@ typeSpecificParams
 
 </td><td>
 
-_(Optional)_ 类型特定参数
+_（可选）_ 类型特定参数
 
 
 </td></tr>
@@ -442,7 +442,7 @@ object
 
 </td><td>
 
-_(Optional)_ 对象
+_（可选）_ 对象
 
 
 </td></tr>
@@ -458,7 +458,7 @@ objectSpecificParams
 
 </td><td>
 
-_(Optional)_ 对象特定参数
+_（可选）_ 对象特定参数
 
 
 </td></tr>
@@ -466,13 +466,13 @@ _(Optional)_ 对象特定参数
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;File \| undefined&gt;
 
 导出文档文件数据（或压缩包）
 
-## Remarks
+## 备注
 
 可以使用 [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统
 
@@ -480,31 +480,31 @@ Promise&lt;File \| undefined&gt;
 
 # SCH\_ManufactureData.getNetlistFile() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取网表文件（Netlist）
 
-## Signature
+## 签名
 
 ```typescript
 getNetlistFile(fileName?: string, netlistType?: ESYS_NetlistType): Promise<File | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -520,7 +520,7 @@ string
 
 </td><td>
 
-_(Optional)_ 文件名
+_（可选）_ 文件名
 
 
 </td></tr>
@@ -536,7 +536,7 @@ netlistType
 
 </td><td>
 
-_(Optional)_ 网表类型
+_（可选）_ 网表类型
 
 
 </td></tr>
@@ -544,13 +544,13 @@ _(Optional)_ 网表类型
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;File \| undefined&gt;
 
 网表文件数据
 
-## Remarks
+## 备注
 
 可以使用 [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统
 
@@ -558,31 +558,31 @@ Promise&lt;File \| undefined&gt;
 
 # SCH\_ManufactureData.getSimulationNetlistFile() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取仿真网表文件
 
-## Signature
+## 签名
 
 ```typescript
 getSimulationNetlistFile(fileName?: string, netlistType?: ESCH_SimulationNetlistType): Promise<File | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -598,7 +598,7 @@ string
 
 </td><td>
 
-_(Optional)_ 文件名
+_（可选）_ 文件名
 
 
 </td></tr>
@@ -614,7 +614,7 @@ netlistType
 
 </td><td>
 
-_(Optional)_ 网表类型
+_（可选）_ 网表类型
 
 
 </td></tr>
@@ -622,13 +622,13 @@ _(Optional)_ 网表类型
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;File \| undefined&gt;
 
 仿真网表文件数据
 
-## Remarks
+## 备注
 
 可以使用 [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统
 
@@ -636,31 +636,31 @@ Promise&lt;File \| undefined&gt;
 
 # SCH\_ManufactureData.placeComponentsOrder() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 元件下单
 
-## Signature
+## 签名
 
 ```typescript
 placeComponentsOrder(interactive?: boolean, ignoreWarning?: boolean): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -676,7 +676,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否启用交互式检查
+_（可选）_ 是否启用交互式检查
 
 如若启用，则会存在弹窗等待用户进行交互，且无法使用 `ignoreWarning` 参数忽略警告， 即 `ignoreWarning` 参数将被忽略；
 
@@ -696,7 +696,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 在非交互式检查时忽略警告
+_（可选）_ 在非交互式检查时忽略警告
 
 如果设置为 `true`<!-- -->，将会忽略所有检查警告项并尽可能生成下单资料；
 
@@ -708,7 +708,7 @@ _(Optional)_ 在非交互式检查时忽略警告
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -718,31 +718,31 @@ Promise&lt;boolean&gt;
 
 # SCH\_ManufactureData.placeSmtComponentsOrder() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 SMT 元件下单
 
-## Signature
+## 签名
 
 ```typescript
 placeSmtComponentsOrder(interactive?: boolean, ignoreWarning?: boolean): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -758,7 +758,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否启用交互式检查
+_（可选）_ 是否启用交互式检查
 
 如若启用，则会存在弹窗等待用户进行交互，且无法使用 `ignoreWarning` 参数忽略警告， 即 `ignoreWarning` 参数将被忽略；
 
@@ -778,7 +778,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 在非交互式检查时忽略警告
+_（可选）_ 在非交互式检查时忽略警告
 
 如果设置为 `true`<!-- -->，将会忽略所有检查警告项并尽可能生成下单资料；
 
@@ -790,7 +790,7 @@ _(Optional)_ 在非交互式检查时忽略警告
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 

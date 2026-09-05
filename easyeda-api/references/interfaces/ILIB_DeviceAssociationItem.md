@@ -2,32 +2,32 @@
 
 器件关联符号、封装属性
 
-## Signature
+## 签名
 
 ```typescript
 interface ILIB_DeviceAssociationItem 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -46,7 +46,7 @@ Description
 
 </td><td>
 
-_(Optional)_ 封装
+_（可选）_ 封装
 
 
 </td></tr>
@@ -157,7 +157,7 @@ string
 
 封装
 
-## Signature
+## 签名
 
 ```typescript
 footprint?: {
@@ -170,13 +170,13 @@ footprint?: {
 
 # ILIB\_DeviceAssociationItem.footprintUuid property
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 请使用 [footprint](./ILIB_DeviceSearchItem.md) 替代
 
 封装 UUID
 
-## Signature
+## 签名
 
 ```typescript
 footprintUuid: string;
@@ -186,7 +186,7 @@ footprintUuid: string;
 
 # ILIB\_DeviceAssociationItem.images property
 
-## Signature
+## 签名
 
 ```typescript
 images?: Array<string>;
@@ -198,7 +198,7 @@ images?: Array<string>;
 
 符号
 
-## Signature
+## 签名
 
 ```typescript
 symbol: {
@@ -212,13 +212,13 @@ symbol: {
 
 # ILIB\_DeviceAssociationItem.symbolType property
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 请使用 [symbol](./ILIB_DeviceSearchItem.md) 替代
 
 符号类型
 
-## Signature
+## 签名
 
 ```typescript
 symbolType: ELIB_SymbolType;
@@ -228,13 +228,13 @@ symbolType: ELIB_SymbolType;
 
 # ILIB\_DeviceAssociationItem.symbolUuid property
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 请使用 [symbol](./ILIB_DeviceSearchItem.md) 替代
 
 符号 UUID
 
-## Signature
+## 签名
 
 ```typescript
 symbolUuid: string;

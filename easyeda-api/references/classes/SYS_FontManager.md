@@ -2,31 +2,31 @@
 
 系统 / 字体管理类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SYS_FontManager 
 ```
 
-## Remarks
+## 备注
 
 配置嘉立创 EDA 专业版允许调用的系统字体列表
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -84,27 +84,27 @@ Description
 
 添加字体到字体列表
 
-## Signature
+## 签名
 
 ```typescript
 addFont(fontName: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -128,7 +128,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -140,27 +140,27 @@ Promise&lt;boolean&gt;
 
 删除字体列表内的指定字体
 
-## Signature
+## 签名
 
 ```typescript
 deleteFont(fontName: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -184,7 +184,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -196,14 +196,14 @@ Promise&lt;boolean&gt;
 
 获取当前已经配置的字体列表
 
-## Signature
+## 签名
 
 ```typescript
 getFontsList(): Promise<Array<string>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;string&gt;&gt;
 

@@ -2,27 +2,27 @@
 
 PCB &amp; 封装 / 图层操作类
 
-## Signature
+## 签名
 
 ```typescript
 declare class PCB_Layer 
 ```
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -232,18 +232,18 @@ Description
 
 # PCB\_Layer.addCustomLayer() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 新增自定义层
 
-## Signature
+## 签名
 
 ```typescript
 addCustomLayer(): Promise<TPCB_LayersOfCustom | undefined>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[TPCB\_LayersOfCustom](../types/TPCB_LayersOfCustom.md) \| undefined&gt;
 
@@ -253,18 +253,18 @@ Promise&lt;[TPCB\_LayersOfCustom](../types/TPCB_LayersOfCustom.md) \| undefined&
 
 # PCB\_Layer.getAllLayers() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取所有图层的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getAllLayers(): Promise<Array<IPCB_LayerItem>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_LayerItem](../interfaces/IPCB_LayerItem.md)<!-- -->&gt;&gt;
 
@@ -274,31 +274,31 @@ Promise&lt;Array&lt;[IPCB\_LayerItem](../interfaces/IPCB_LayerItem.md)<!-- -->&g
 
 # PCB\_Layer.lockLayer() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 锁定层
 
-## Signature
+## 签名
 
 ```typescript
 lockLayer(layer?: TPCB_LayersInTheSelectable | Array<TPCB_LayersInTheSelectable>): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -314,7 +314,7 @@ layer
 
 </td><td>
 
-_(Optional)_ 层，如若不指定任何层则默认为所有层
+_（可选）_ 层，如若不指定任何层则默认为所有层
 
 
 </td></tr>
@@ -322,7 +322,7 @@ _(Optional)_ 层，如若不指定任何层则默认为所有层
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -332,11 +332,11 @@ Promise&lt;boolean&gt;
 
 # PCB\_Layer.modifyLayer() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改图层属性
 
-## Signature
+## 签名
 
 ```typescript
 modifyLayer(layer: TPCB_LayersInTheSelectable, property: {
@@ -347,21 +347,21 @@ modifyLayer(layer: TPCB_LayersInTheSelectable, property: {
     }): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -401,13 +401,13 @@ property
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 修改后的图层属性，如若为 `undefined` 则代表修改失败或图层不存在
 
-## Remarks
+## 备注
 
 仅内层和自定义层允许修改名称；仅内层允许修改类型, 透明度仅支持0-100之间的数
 
@@ -415,31 +415,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Layer.removeLayer() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 移除层
 
-## Signature
+## 签名
 
 ```typescript
 removeLayer(layer: TPCB_LayersOfCustom): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -463,13 +463,13 @@ layer
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 当前仅支持移除自定义层
 
@@ -479,27 +479,27 @@ Promise&lt;boolean&gt;
 
 选中图层
 
-## Signature
+## 签名
 
 ```typescript
 selectLayer(layer: TPCB_LayersInTheSelectable): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -523,7 +523,7 @@ layer
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -533,31 +533,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Layer.setInactiveLayerDisplayMode() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置非激活层展示模式
 
-## Signature
+## 签名
 
 ```typescript
 setInactiveLayerDisplayMode(displayMode?: EPCB_InactiveLayerDisplayMode): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -573,7 +573,7 @@ displayMode
 
 </td><td>
 
-_(Optional)_ 展示模式
+_（可选）_ 展示模式
 
 
 </td></tr>
@@ -581,7 +581,7 @@ _(Optional)_ 展示模式
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -591,31 +591,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Layer.setInactiveLayerTransparency() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置非激活层透明度
 
-## Signature
+## 签名
 
 ```typescript
 setInactiveLayerTransparency(transparency: number): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -639,7 +639,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -649,31 +649,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Layer.setLayerColorConfiguration() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置层颜色配置
 
-## Signature
+## 签名
 
 ```typescript
 setLayerColorConfiguration(colorConfiguration: EPCB_LayerColorConfiguration): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -697,7 +697,7 @@ colorConfiguration
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -707,31 +707,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Layer.setLayerInvisible() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将层设置为不可见
 
-## Signature
+## 签名
 
 ```typescript
 setLayerInvisible(layer?: TPCB_LayersInTheSelectable | Array<TPCB_LayersInTheSelectable>, setOtherLayerVisible?: boolean): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -747,7 +747,7 @@ layer
 
 </td><td>
 
-_(Optional)_ 层，如若不指定任何层则默认为所有层
+_（可选）_ 层，如若不指定任何层则默认为所有层
 
 
 </td></tr>
@@ -763,7 +763,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否将其它层设置为可见
+_（可选）_ 是否将其它层设置为可见
 
 
 </td></tr>
@@ -771,7 +771,7 @@ _(Optional)_ 是否将其它层设置为可见
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -781,31 +781,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Layer.setLayerVisible() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将层设置为可见
 
-## Signature
+## 签名
 
 ```typescript
 setLayerVisible(layer?: TPCB_LayersInTheSelectable | Array<TPCB_LayersInTheSelectable>, setOtherLayerInvisible?: boolean): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -821,7 +821,7 @@ layer
 
 </td><td>
 
-_(Optional)_ 层，如若不指定任何层则默认为所有层
+_（可选）_ 层，如若不指定任何层则默认为所有层
 
 
 </td></tr>
@@ -837,7 +837,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否将其它层设置为不可见
+_（可选）_ 是否将其它层设置为不可见
 
 
 </td></tr>
@@ -845,7 +845,7 @@ _(Optional)_ 是否将其它层设置为不可见
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -855,31 +855,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Layer.setPcbType() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置 PCB 类型
 
-## Signature
+## 签名
 
 ```typescript
 setPcbType(pcbType: EPCB_PcbPlateType): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -903,13 +903,13 @@ PCB 类型
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 此处主要是为了适配 FPC 软板的设计，如若将 PCB 类型设置为 FPC 软板，将会新增 FPC 补强层图层。
 
@@ -923,31 +923,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Layer.setTheNumberOfCopperLayers() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置铜箔层数
 
-## Signature
+## 签名
 
 ```typescript
 setTheNumberOfCopperLayers(numberOfLayers: 2 | 4 | 6 | 8 | 10 | 12 | 14 | 16 | 18 | 20 | 22 | 24 | 26 | 28 | 30 | 32): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -971,13 +971,13 @@ numberOfLayers
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 新建的 PCB 文档默认拥有两层铜箔层
 
@@ -985,31 +985,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Layer.unlockLayer() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 取消锁定层
 
-## Signature
+## 签名
 
 ```typescript
 unlockLayer(layer?: TPCB_LayersInTheSelectable | Array<TPCB_LayersInTheSelectable>): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1025,7 +1025,7 @@ layer
 
 </td><td>
 
-_(Optional)_ 层，如若不指定任何层则默认为所有层
+_（可选）_ 层，如若不指定任何层则默认为所有层
 
 
 </td></tr>
@@ -1033,7 +1033,7 @@ _(Optional)_ 层，如若不指定任何层则默认为所有层
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 

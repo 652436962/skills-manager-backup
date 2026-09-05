@@ -2,12 +2,12 @@
 
 语言数据键值对
 
-## Signature
+## 签名
 
 ```typescript
 interface ISYS_LanguageKeyValuePairs 
 ```
 
-## Remarks
+## 备注
 
 单一语言的数据

@@ -17,6 +17,8 @@ EDA 类的属性即为各模块的入口，如 `eda.dmt_Board`, `eda.pcb_Primiti
 
 文档树 / 板子管理类
 
+> 在当前打开的工程内进行板子管理的相关操作
+
 ```typescript
 declare class DMT_Board
 ```
@@ -34,6 +36,8 @@ declare class DMT_Board
 ## DMT_EditorControl
 
 文档树 / 编辑器控制类
+
+> 此处编辑器控制基于当前已打开的工程设计下的图页，其它任何 `documentUuid` 都将被认为是不存在的文档页
 
 ```typescript
 declare class DMT_EditorControl
@@ -83,6 +87,8 @@ declare class DMT_Folder
 
 文档树 / 面板管理类
 
+> 在当前打开的工程内进行面板管理的相关操作
+
 ```typescript
 declare class DMT_Panel
 ```
@@ -100,6 +106,8 @@ declare class DMT_Panel
 ## DMT_Pcb
 
 文档树 / PCB 管理类
+
+> 在当前打开的工程内进行 PCB 管理的相关操作
 
 ```typescript
 declare class DMT_Pcb
@@ -136,6 +144,8 @@ declare class DMT_Project
 
 文档树 / 原理图管理类
 
+> 在当前打开的工程内进行原理图管理的相关操作
+
 ```typescript
 declare class DMT_Schematic
 ```
@@ -163,6 +173,8 @@ declare class DMT_Schematic
 ## DMT_SelectControl
 
 文档树 / 选择控制类
+
+> 在文档树内进行选择焦点的查询、控制
 
 ```typescript
 declare class DMT_SelectControl
@@ -250,14 +262,12 @@ eda: EDA
 - **pcb_primitiveregion**: `pcb_PrimitiveRegion: PCB_PrimitiveRegion;`
 - **pcb_primitivestring**: `pcb_PrimitiveString: PCB_PrimitiveString;`
 - **pcb_primitivevia**: `pcb_PrimitiveVia: PCB_PrimitiveVia;`
-- **pcb_raytracerengine**: `pcb_RayTracerEngine: PCB_RayTracerEngine;`
 - **pcb_selectcontrol**: `pcb_SelectControl: PCB_SelectControl;`
 - **pnl_document**: `pnl_Document: PNL_Document;`
 - **sch_document**: `sch_Document: SCH_Document;`
 - **sch_drc**: `sch_Drc: SCH_Drc;`
 - **sch_event**: `sch_Event: SCH_Event;`
 - **sch_manufacturedata**: `sch_ManufactureData: SCH_ManufactureData;`
-- **sch_net**: `sch_Net: SCH_Net;`
 - **sch_netlist**: `sch_Netlist: SCH_Netlist;`
 - **sch_primitive**: `sch_Primitive: SCH_Primitive;`
 - **sch_primitivearc**: `sch_PrimitiveArc: SCH_PrimitiveArc;`
@@ -265,7 +275,6 @@ eda: EDA
 - **sch_primitivebus**: `sch_PrimitiveBus: SCH_PrimitiveBus;`
 - **sch_primitivecircle**: `sch_PrimitiveCircle: SCH_PrimitiveCircle;`
 - **sch_primitivecomponent**: `sch_PrimitiveComponent: SCH_PrimitiveComponent | SCH_PrimitiveComponent3;`
-- **sch_primitiveobject**: `sch_PrimitiveObject: SCH_PrimitiveObject;`
 - **sch_primitivepin**: `sch_PrimitivePin: SCH_PrimitivePin;`
 - **sch_primitivepolygon**: `sch_PrimitivePolygon: SCH_PrimitivePolygon;`
 - **sch_primitiverectangle**: `sch_PrimitiveRectangle: SCH_PrimitiveRectangle;`
@@ -307,6 +316,8 @@ eda: EDA
 
 复杂多边形
 
+> 复杂多边形可以包含多个单多边形，通过 [fill-rule](https://developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/fill-rule) 将其组合，以实现多边形的布尔运算。 目前嘉立创 EDA 专业版固定使用 [nonzero](https://developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/fill-rule#nonzero) 这个 fill-rule。
+
 ```typescript
 declare class IPCB_ComplexPolygon
 ```
@@ -332,6 +343,8 @@ declare class IPCB_Polygon
 ## IPCB_PrimitiveArc
 
 圆弧线图元
+
+> 直线和圆弧线均为导线，对应画布的线条走线和圆弧走线
 
 ```typescript
 declare class IPCB_PrimitiveArc implements IPCB_Primitive
@@ -431,13 +444,13 @@ declare class IPCB_PrimitiveComponent implements IPCB_Primitive
 - **done**: `done(): Promise<IPCB_PrimitiveComponent>;`
 - **getallpins**: `getAllPins(): Promise<Array<IPCB_PrimitiveComponentPad>>;`
 - **getstate_addintobom**: `getState_AddIntoBom(): boolean;`
-- **getstate_component**: `getState_Component(): {         libraryUuid: string;         uuid: string;         name?: string;     } | undefined;`
+- **getstate_component**: `getState_Component(): {         libraryUuid: string;         uuid: string;     };`
 - **getstate_designator**: `getState_Designator(): string | undefined;`
-- **getstate_footprint**: `getState_Footprint(): {         libraryUuid: string;         uuid: string;         name?: string;     } | undefined;`
+- **getstate_footprint**: `getState_Footprint(): {         libraryUuid: string;         uuid: string;     } | undefined;`
 - **getstate_layer**: `getState_Layer(): TPCB_LayersOfComponent;`
 - **getstate_manufacturer**: `getState_Manufacturer(): string | undefined;`
 - **getstate_manufacturerid**: `getState_ManufacturerId(): string | undefined;`
-- **getstate_model3d**: `getState_Model3D(): {         libraryUuid: string;         uuid: string;         name?: string;     } | undefined;`
+- **getstate_model3d**: `getState_Model3D(): {         libraryUuid: string;         uuid: string;     } | undefined;`
 - **getstate_name**: `getState_Name(): string | undefined;`
 - **getstate_otherproperty**: `getState_OtherProperty(): {         [key: string]: string | number | boolean;     } | undefined;`
 - **getstate_pads**: `getState_Pads(): Array<{         primitiveId: string;         net: string;         padNumber: string;     }> | undefined;`
@@ -474,6 +487,8 @@ declare class IPCB_PrimitiveComponent implements IPCB_Primitive
 ## IPCB_PrimitiveComponentPad
 
 器件焊盘图元
+
+> 器件焊盘图元是一个特殊的图元，它指的是在 PCB 画布上关联到封装的焊盘 你只能通过 [器件类的 getAllPinsByPrimitiveId 方法](./pro-api.pcb_primitivecomponent.getallpinsbyprimitiveid.md) 或 [器件图元的 getAllPads 方法](./pro-api.ipcb_primitivecomponent.getallpins.md) 获取到器件焊盘图元
 
 ```typescript
 declare class IPCB_PrimitiveComponentPad extends IPCB_PrimitivePad
@@ -592,6 +607,8 @@ declare class IPCB_PrimitiveImage implements IPCB_Primitive
 ## IPCB_PrimitiveLine
 
 直线图元
+
+> 直线和圆弧线均为导线，对应画布的线条走线和圆弧走线
 
 ```typescript
 declare class IPCB_PrimitiveLine implements IPCB_Primitive
@@ -1060,7 +1077,7 @@ declare class ISCH_PrimitiveCbbSymbolComponent extends ISCH_PrimitiveComponent
 ```
 
 - **getstate_cbb**: `getState_Cbb(): {         libraryUuid: string;         uuid: string;     };`
-- **getstate_cbbsymbol**: `getState_CbbSymbol(): {         libraryUuid: string;         cbbUuid: string;         uuid?: string;         name?: string;     };`
+- **getstate_cbbsymbol**: `getState_CbbSymbol(): {         libraryUuid: string;         cbbUuid: string;         uuid: string;         name?: string;     };`
 
 ---
 
@@ -1111,10 +1128,10 @@ declare class ISCH_PrimitiveComponent implements ISCH_Primitive
 - **done**: `done(): Promise<ISCH_PrimitiveComponent>;`
 - **getstate_addintobom**: `getState_AddIntoBom(): boolean | undefined;`
 - **getstate_addintopcb**: `getState_AddIntoPcb(): boolean | undefined;`
-- **getstate_component**: `getState_Component(): {         libraryUuid: string;         uuid: string;         name?: string;     } | undefined;`
+- **getstate_component**: `getState_Component(): {         libraryUuid: string;         uuid: string;     };`
 - **getstate_componenttype**: `getState_ComponentType(): ESCH_PrimitiveComponentType;`
 - **getstate_designator**: `getState_Designator(): string | undefined;`
-- **getstate_footprint**: `getState_Footprint(): {         libraryUuid: string;         uuid: string;         name?: string;     } | undefined;`
+- **getstate_footprint**: `getState_Footprint(): {         libraryUuid: string;         uuid: string;     } | undefined;`
 - **getstate_manufacturer**: `getState_Manufacturer(): string | undefined;`
 - **getstate_manufacturerid**: `getState_ManufacturerId(): string | undefined;`
 - **getstate_mirror**: `getState_Mirror(): boolean;`
@@ -1127,7 +1144,7 @@ declare class ISCH_PrimitiveComponent implements ISCH_Primitive
 - **getstate_subpartname**: `getState_SubPartName(): string | undefined;`
 - **getstate_supplier**: `getState_Supplier(): string | undefined;`
 - **getstate_supplierid**: `getState_SupplierId(): string | undefined;`
-- **getstate_symbol**: `getState_Symbol(): {         libraryUuid: string;         uuid: string;         name?: string;     } | undefined;`
+- **getstate_symbol**: `getState_Symbol(): {         libraryUuid: string;         uuid: string;     } | undefined;`
 - **getstate_uniqueid**: `getState_UniqueId(): string | undefined;`
 - **getstate_x**: `getState_X(): number;`
 - **getstate_y**: `getState_Y(): number;`
@@ -1164,6 +1181,8 @@ declare class ISCH_PrimitiveComponent implements ISCH_Primitive
 
 器件引脚图元
 
+> 器件引脚图元是一个特殊的图元，它指的是在原理图画布上关联到符号的引脚 器件引脚图元仅可更改 `pinNumber`、`noConnected` 属性，其它所有属性均为只读， 并且你只能通过 [器件类的 getAllPinsByPrimitiveId 方法](./pro-api.sch_primitivecomponent.getallpinsbyprimitiveid.md) 或 获取到器件引脚图元
+
 ```typescript
 declare class ISCH_PrimitiveComponentPin extends ISCH_PrimitivePin
 ```
@@ -1177,6 +1196,8 @@ declare class ISCH_PrimitiveComponentPin extends ISCH_PrimitivePin
 ## ISCH_PrimitivePin
 
 引脚图元
+
+> 引脚图元仅符号编辑器可用，在原理图图页内，关联到符号的引脚被称为 [器件引脚图元](./pro-api.isch_primitivecomponentpin.md)
 
 ```typescript
 declare class ISCH_PrimitivePin implements ISCH_Primitive
@@ -1445,7 +1466,6 @@ declare class LIB_Footprint
 - **create**: `create(libraryUuid: string, footprintName: string, classification?: ILIB_ClassificationIndex | Array<string>, description?: string): Promise<string | undefined>;`
 - **delete**: `delete(footprintUuid: string, libraryUuid: string): Promise<boolean>;`
 - **get**: `get(footprintUuid: string, libraryUuid?: string): Promise<ILIB_FootprintItem | undefined>;`
-- **getrenderimage**: `getRenderImage(source: {         footprintUuid: string;         libraryUuid: string;     }): Promise<Blob | undefined>;`
 - **modify**: `modify(footprintUuid: string, libraryUuid: string, footprintName?: string, classification?: ILIB_ClassificationIndex | Array<string> | null, description?: string | null): Promise<boolean>;`
 - **openineditor**: `openInEditor(footprintUuid: string, libraryUuid: string, splitScreenId?: string): Promise<string | undefined>;`
 - **search**: `search(key: string, libraryUuid?: string, classification?: ILIB_ClassificationIndex | Array<string>, itemsOfPage?: number, page?: number): Promise<Array<ILIB_FootprintSearchItem>>;`
@@ -1456,6 +1476,8 @@ declare class LIB_Footprint
 ## LIB_LibrariesList
 
 综合库 / 库列表类
+
+> 此处所有接口都基于编辑器当前工作区环境，如需切换到其他工作区，请使用 [DMT\_Workspace.toggleToWorkspace()](./pro-api.dmt_workspace.toggletoworkspace.md) 接口切换工作区
 
 ```typescript
 declare class LIB_LibrariesList
@@ -1511,7 +1533,6 @@ declare class LIB_Symbol
 - **create**: `create(libraryUuid: string, symbolName: string, classification?: ILIB_ClassificationIndex | Array<string>, symbolType?: ELIB_SymbolType, description?: string): Promise<string | undefined>;`
 - **delete**: `delete(symbolUuid: string, libraryUuid: string): Promise<boolean>;`
 - **get**: `get(symbolUuid: string, libraryUuid?: string): Promise<ILIB_SymbolItem | undefined>;`
-- **getrenderimage**: `getRenderImage(source: {         symbolUuid: string;         libraryUuid: string;         subPartName?: string;     }): Promise<Blob | undefined>;`
 - **modify**: `modify(symbolUuid: string, libraryUuid: string, symbolName?: string, classification?: ILIB_ClassificationIndex | Array<string> | null, description?: string | null): Promise<boolean>;`
 - **openineditor**: `openInEditor(symbolUuid: string, libraryUuid: string, splitScreenId?: string): Promise<string | undefined>;`
 - **search**: `search(key: string, libraryUuid?: string, classification?: ILIB_ClassificationIndex | Array<string>, symbolType?: ELIB_SymbolType, itemsOfPage?: number, page?: number): Promise<Array<ILIB_SymbolSearchItem>>;`
@@ -1522,6 +1543,8 @@ declare class LIB_Symbol
 ## PCB_Document
 
 PCB &amp; 封装 / 文档操作类
+
+> 对设计文档总体进行的操作
 
 ```typescript
 declare class PCB_Document
@@ -1551,6 +1574,8 @@ declare class PCB_Document
 ## PCB_Drc
 
 PCB &amp; 封装 / 设计规则检查（DRC）类
+
+> 检查、设定 DRC 规则
 
 ```typescript
 declare class PCB_Drc
@@ -1606,6 +1631,8 @@ declare class PCB_Drc
 
 PCB &amp; 封装 / 事件类
 
+> 注册事件回调
+
 ```typescript
 declare class PCB_Event
 ```
@@ -1648,6 +1675,8 @@ declare class PCB_Layer
 
 PCB &amp; 封装 / 生产资料类
 
+> 获取当前 PCB 的生产资料文件及快捷下单
+
 ```typescript
 declare class PCB_ManufactureData
 ```
@@ -1658,7 +1687,6 @@ declare class PCB_ManufactureData
 - **getaltiumdesignerfile**: `getAltiumDesignerFile(fileName?: string): Promise<File | undefined>;`
 - **getautolayoutjsonfile**: `getAutoLayoutJsonFile(fileName?: string): Promise<File | undefined>;`
 - **getautoroutejsonfile**: `getAutoRouteJsonFile(fileName?: string): Promise<File | undefined>;`
-- **getautoroutejsonfileforjrouter**: `getAutoRouteJsonFileForJRouter(fileName?: string): Promise<File | undefined>;`
 - **getbomfile**: `getBomFile(fileName?: string, fileType?: 'xlsx' | 'csv', template?: string, filterOptions?: Array<{         property: string;         includeValue: boolean | string;     }>, statistics?: Array<string>, property?: Array<string>, columns?: Array<IPCB_BomPropertiesTableColumns>): Promise<File | undefined>;`
 - **getbomtemplatefile**: `getBomTemplateFile(template: string): Promise<File | undefined>;`
 - **getbomtemplates**: `getBomTemplates(): Promise<Array<string>>;`
@@ -1710,27 +1738,22 @@ declare class PCB_Net
 ```
 
 - **getallnetname**: `getAllNetName(): Promise<Array<string>>;`
-- **getallnets**: `getAllNets(): Promise<Array<IPCB_NetInfo>>;`
 - **getallnetsname**: `getAllNetsName(): Promise<Array<string>>;`
 - **getallprimitivesbynet**: `getAllPrimitivesByNet(net: string, primitiveTypes?: Array<EPCB_PrimitiveType>): Promise<Array<IPCB_Primitive>>;`
-- **getnet**: `getNet(net: string): Promise<IPCB_NetInfo | undefined>;`
-- **getnetcolor**: `getNetColor(net: string): Promise<IPCB_NetInfo['color'] | undefined>;`
 - **getnetlength**: `getNetLength(net: string): Promise<number | undefined>;`
 - **getnetlist**: `getNetlist(type?: ESYS_NetlistType): Promise<string>;`
 - **highlightnet**: `highlightNet(net: string): Promise<boolean>;`
 - **selectnet**: `selectNet(net: string): Promise<boolean>;`
-- **setnetcolor**: `setNetColor(net: string, color: IPCB_NetInfo['color']): Promise<boolean>;`
 - **setnetlist**: `setNetlist(type: ESYS_NetlistType | undefined, netlist: string): Promise<boolean>;`
-- **unhighlightallnets**: `unhighlightAllNets(): Promise<boolean>;`
 - **unhighlightnet**: `unhighlightNet(net: string): Promise<boolean>;`
-- **unselectallnets**: `unselectAllNets(): Promise<boolean>;`
-- **unselectnet**: `unselectNet(net: string): Promise<boolean>;`
 
 ---
 
 ## PCB_Primitive
 
 PCB &amp; 封装 / 图元类
+
+> 图元的统一操作
 
 ```typescript
 declare class PCB_Primitive
@@ -1743,6 +1766,8 @@ declare class PCB_Primitive
 ## PCB_PrimitiveArc
 
 PCB &amp; 封装 / 圆弧线图元类
+
+> 直线和圆弧线均为导线，对应画布的线条走线和圆弧走线
 
 ```typescript
 declare class PCB_PrimitiveArc implements IPCB_PrimitiveAPI
@@ -1777,7 +1802,7 @@ PCB &amp; 封装 / 器件图元类
 declare class PCB_PrimitiveComponent implements IPCB_PrimitiveAPI
 ```
 
-- **create**: `create(component: {         libraryUuid: string;         uuid: string;     } | ILIB_DeviceItem | ILIB_DeviceSearchItem | {         libraryType: ELIB_LibraryType.FOOTPRINT;         libraryUuid: string;         uuid: string;     } | ILIB_FootprintItem | ILIB_FootprintSearchItem, layer: TPCB_LayersOfComponent, x: number, y: number, rotation?: number, primitiveLock?: boolean): Promise<IPCB_PrimitiveComponent | undefined>;`
+- **create**: `create(component: {         libraryUuid: string;         uuid: string;     } | ILIB_DeviceItem, layer: TPCB_LayersOfComponent, x: number, y: number, rotation?: number, primitiveLock?: boolean): Promise<IPCB_PrimitiveComponent | undefined>;`
 - **delete**: `delete(primitiveIds: string | IPCB_PrimitiveComponent | Array<string> | Array<IPCB_PrimitiveComponent>): Promise<boolean>;`
 - **get**: `get(primitiveIds: string): Promise<IPCB_PrimitiveComponent | undefined>;`
 - **get_1**: `get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitiveComponent>>;`
@@ -1785,7 +1810,6 @@ declare class PCB_PrimitiveComponent implements IPCB_PrimitiveAPI
 - **getallpinsbyprimitiveid**: `getAllPinsByPrimitiveId(primitiveId: string): Promise<Array<IPCB_PrimitiveComponentPad> | undefined>;`
 - **getallprimitiveid**: `getAllPrimitiveId(layer?: TPCB_LayersOfComponent, primitiveLock?: boolean): Promise<Array<string>>;`
 - **modify**: *(签名过长，请查看详细文档)*
-- **placecomponentwithmouse**: `placeComponentWithMouse(component: {         libraryUuid: string;         uuid: string;     } | ILIB_DeviceItem | ILIB_DeviceSearchItem): Promise<boolean>;`
 
 ---
 
@@ -1847,6 +1871,8 @@ declare class PCB_PrimitiveImage implements IPCB_PrimitiveAPI
 
 PCB &amp; 封装 / 直线图元类
 
+> 直线和圆弧线均为导线，对应画布的线条走线和圆弧走线
+
 ```typescript
 declare class PCB_PrimitiveLine implements IPCB_PrimitiveAPI
 ```
@@ -1864,6 +1890,8 @@ declare class PCB_PrimitiveLine implements IPCB_PrimitiveAPI
 ## PCB_PrimitiveObject
 
 PCB &amp; 封装 / 二进制内嵌对象图元类
+
+> 彩色丝印图像属于二进制内嵌对象，需要使用二进制内嵌对象的方法创建和修改
 
 ```typescript
 declare class PCB_PrimitiveObject implements IPCB_PrimitiveAPI
@@ -1996,20 +2024,11 @@ declare class PCB_PrimitiveVia implements IPCB_PrimitiveAPI
 
 ---
 
-## PCB_RayTracerEngine
-
-PCB &amp; 封装 / 光线追踪引擎类
-
-```typescript
-declare class PCB_RayTracerEngine
-```
-
-
----
-
 ## PCB_SelectControl
 
 PCB &amp; 封装 / 选择控制类
+
+> 获取或操作选择的元素
 
 ```typescript
 declare class PCB_SelectControl
@@ -2029,6 +2048,8 @@ declare class PCB_SelectControl
 
 面板 / 文档操作类
 
+> 对设计文档总体进行的操作
+
 ```typescript
 declare class PNL_Document
 ```
@@ -2040,6 +2061,8 @@ declare class PNL_Document
 ## SCH_Document
 
 原理图 &amp; 符号 / 文档操作类
+
+> 对设计文档总体进行的操作
 
 ```typescript
 declare class SCH_Document
@@ -2056,6 +2079,8 @@ declare class SCH_Document
 
 原理图 &amp; 符号 / 设计规则检查（DRC）类
 
+> 检查、设定 DRC 规则
+
 ```typescript
 declare class SCH_Drc
 ```
@@ -2068,6 +2093,8 @@ declare class SCH_Drc
 ## SCH_Event
 
 原理图 &amp; 符号 / 事件类
+
+> 注册事件回调
 
 ```typescript
 declare class SCH_Event
@@ -2085,6 +2112,8 @@ declare class SCH_Event
 
 原理图 &amp; 符号 / 生产资料类
 
+> 获取当前原理图图页的生产资料文件及快捷下单
+
 ```typescript
 declare class SCH_ManufactureData
 ```
@@ -2099,20 +2128,11 @@ declare class SCH_ManufactureData
 
 ---
 
-## SCH_Net
-
-原理图 &amp; 符号 / 网络类
-
-```typescript
-declare class SCH_Net
-```
-
-
----
-
 ## SCH_Netlist
 
 原理图 &amp; 符号 / 网表类
+
+> 获取、更新网表
 
 ```typescript
 declare class SCH_Netlist
@@ -2126,6 +2146,8 @@ declare class SCH_Netlist
 ## SCH_Primitive
 
 原理图 &amp; 符号 / 图元类
+
+> 图元的统一操作
 
 ```typescript
 declare class SCH_Primitive
@@ -2225,9 +2247,9 @@ declare class SCH_PrimitiveComponent implements ISCH_PrimitiveAPI
 - **getall**: `getAll(componentType?: ESCH_PrimitiveComponentType$1, allSchematicPages?: boolean): Promise<Array<ISCH_PrimitiveComponent$1>>;`
 - **getallpinsbyprimitiveid**: `getAllPinsByPrimitiveId(primitiveId: string): Promise<Array<ISCH_PrimitiveComponentPin> | undefined>;`
 - **getallprimitiveid**: `getAllPrimitiveId(componentType?: ESCH_PrimitiveComponentType$1, allSchematicPages?: boolean): Promise<Array<string>>;`
-- **getallpropertynames**: `getAllPropertyNames(): Promise<Array<string>>;`
+- **getallpropertynames**: `getAllPropertyNames(): Promise<string[]>;`
 - **modify**: *(签名过长，请查看详细文档)*
-- **placecomponentwithmouse**: `placeComponentWithMouse(component: {         libraryUuid: string;         uuid: string;     } | ILIB_DeviceItem | ILIB_DeviceSearchItem, subPartName?: string): Promise<boolean>;`
+- **placecomponentwithmouse**: `placeComponentWithMouse(component: {         libraryUuid: string;         uuid: string;     } | ILIB_DeviceItem, subPartName?: string): Promise<boolean>;`
 - **setnetflagcomponentuuid_analogground**: `setNetFlagComponentUuid_AnalogGround(component: {         libraryUuid: string;         uuid: string;     } | ILIB_DeviceItem | ILIB_DeviceSearchItem): Promise<boolean>;`
 - **setnetflagcomponentuuid_ground**: `setNetFlagComponentUuid_Ground(component: {         libraryUuid: string;         uuid: string;     } | ILIB_DeviceItem | ILIB_DeviceSearchItem): Promise<boolean>;`
 - **setnetflagcomponentuuid_power**: `setNetFlagComponentUuid_Power(component: {         libraryUuid: string;         uuid: string;     } | ILIB_DeviceItem | ILIB_DeviceSearchItem): Promise<boolean>;`
@@ -2238,20 +2260,11 @@ declare class SCH_PrimitiveComponent implements ISCH_PrimitiveAPI
 
 ---
 
-## SCH_PrimitiveObject
-
-原理图 &amp; 符号 / 二进制内嵌对象图元类
-
-```typescript
-declare class SCH_PrimitiveObject implements ISCH_PrimitiveAPI
-```
-
-
----
-
 ## SCH_PrimitivePin
 
 原理图 &amp; 符号 / 引脚图元类
+
+> 引脚图元仅符号编辑器可用，在原理图图页内，关联到符号的引脚被称为 [器件引脚图元](./pro-api.isch_primitivecomponentpin.md)
 
 ```typescript
 declare class SCH_PrimitivePin implements ISCH_PrimitiveAPI
@@ -2343,6 +2356,8 @@ declare class SCH_PrimitiveWire implements ISCH_PrimitiveAPI
 
 原理图 &amp; 符号 / 选择控制类
 
+> 获取或操作选择的元素
+
 ```typescript
 declare class SCH_SelectControl
 ```
@@ -2362,6 +2377,8 @@ declare class SCH_SelectControl
 ## SCH_SimulationEngine
 
 原理图 &amp; 符号 / 仿真引擎类
+
+> 控制仿真引擎的对接和交互
 
 ```typescript
 declare class SCH_SimulationEngine
@@ -2386,6 +2403,8 @@ declare class SCH_Utils
 
 系统 / 外部请求类
 
+> 向外部服务器发起安全的 cURL 请求
+
 ```typescript
 declare class SYS_ClientUrl
 ```
@@ -2397,6 +2416,8 @@ declare class SYS_ClientUrl
 ## SYS_Dialog
 
 系统 / 对话框类
+
+> 生成对话框窗口
 
 ```typescript
 declare class SYS_Dialog
@@ -2413,6 +2434,8 @@ declare class SYS_Dialog
 ## SYS_Environment
 
 系统 / 运行环境类
+
+> 获取嘉立创 EDA 专业版运行环境参数
 
 ```typescript
 declare class SYS_Environment
@@ -2484,6 +2507,8 @@ declare class SYS_FileSystem
 
 系统 / 字体管理类
 
+> 配置嘉立创 EDA 专业版允许调用的系统字体列表
+
 ```typescript
 declare class SYS_FontManager
 ```
@@ -2498,14 +2523,14 @@ declare class SYS_FontManager
 
 系统 / 格式转换（Chameleon）类
 
+> 与其它板级 EDA 软件进行交叉文件格式转换
+
 ```typescript
 declare class SYS_FormatConversion
 ```
 
 - **convertaltiumdesignerlibrariestoeasyedamultifiles**: `convertAltiumDesignerLibrariesToEasyEDAMultiFiles(file: File | Array<File>): Promise<Array<File>>;`
 - **convertaltiumdesignerlibrariestoeasyedasinglefile**: `convertAltiumDesignerLibrariesToEasyEDASingleFile(file: File | Array<File>): Promise<File | undefined>;`
-- **convertdisalibrariestoeasyedamultifiles**: `convertDisaLibrariesToEasyEDAMultiFiles(file: File | Array<File>): Promise<Array<File>>;`
-- **convertdisalibrariestoeasyedasinglefile**: `convertDisaLibrariesToEasyEDASingleFile(file: File | Array<File>): Promise<File | undefined>;`
 
 ---
 
@@ -2528,6 +2553,8 @@ declare class SYS_HeaderMenu
 ## SYS_I18n
 
 系统 / 多语言类
+
+> 使用多语言系统展示多语言文本
 
 ```typescript
 declare class SYS_I18n
@@ -2596,6 +2623,8 @@ declare class SYS_Log
 
 系统 / 消息通知类
 
+> 生成各种对用户的非侵入式提醒
+
 ```typescript
 declare class SYS_Message
 ```
@@ -2609,6 +2638,8 @@ declare class SYS_Message
 ## SYS_MessageBox
 
 系统 / 消息框类
+
+> 生成消息提示框
 
 ```typescript
 declare class SYS_MessageBox
@@ -2699,6 +2730,8 @@ declare class SYS_Setting
 
 系统 / 快捷键类
 
+> 注册与管理系统快捷键
+
 ```typescript
 declare class SYS_ShortcutKey
 ```
@@ -2712,6 +2745,8 @@ declare class SYS_ShortcutKey
 ## SYS_Storage
 
 系统 / 存储类
+
+> 可以进行扩展的用户配置存储、浏览器本地存储的操作接口
 
 ```typescript
 declare class SYS_Storage
@@ -2730,6 +2765,8 @@ declare class SYS_Storage
 
 系统 / 定时器类
 
+> 设置定时器
+
 ```typescript
 declare class SYS_Timer
 ```
@@ -2744,6 +2781,8 @@ declare class SYS_Timer
 ## SYS_ToastMessage
 
 系统 / 吐司消息类
+
+> 在屏幕的边缘弹出简短的消息提醒，会在一定时间后自动消除
 
 ```typescript
 declare class SYS_ToastMessage
@@ -2769,11 +2808,13 @@ declare class SYS_Tool
 
 系统 / 单位类
 
+> 控制系统数据单位与单位转换基础函数，当前系统数据单位跨度等效为 `mil`
+
 ```typescript
 declare class SYS_Unit
 ```
 
-- **getfrontenddataunit**: `getFrontendDataUnit(): Promise<ESYS_Unit | undefined>;`
+- **getsystemdataunit**: `getSystemDataUnit(): ESYS_Unit.MIL;`
 - **inchtomil**: `inchToMil(inch: number, numberOfDecimals?: number): number;`
 - **inchtomm**: `inchToMm(inch: number, numberOfDecimals?: number): number;`
 - **miltoinch**: `milToInch(mil: number, numberOfDecimals?: number): number;`
@@ -2786,6 +2827,8 @@ declare class SYS_Unit
 ## SYS_WebSocket
 
 系统 / WebSocket 类
+
+> 与 WebSocket 服务器交互
 
 ```typescript
 declare class SYS_WebSocket
@@ -2800,6 +2843,8 @@ declare class SYS_WebSocket
 ## SYS_Window
 
 系统 / 窗口类
+
+> 为了保证安全性，仅提供有限的窗口跳转与监听支持，更多操作请使用内联框架窗口 [SYS\_IFrame](./pro-api.sys_iframe.md)
 
 ```typescript
 declare class SYS_Window

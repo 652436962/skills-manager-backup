@@ -2,31 +2,31 @@
 
 系统 / 运行环境类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SYS_Environment 
 ```
 
-## Remarks
+## 备注
 
 获取嘉立创 EDA 专业版运行环境参数
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -196,14 +196,14 @@ Description
 
 获取编辑器编译日期
 
-## Signature
+## 签名
 
 ```typescript
 getEditorCompliedDate(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -215,14 +215,14 @@ string
 
 获取编辑器当前版本
 
-## Signature
+## 签名
 
 ```typescript
 getEditorCurrentVersion(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -234,7 +234,7 @@ string
 
 获取用户信息
 
-## Signature
+## 签名
 
 ```typescript
 getUserInfo(): {
@@ -247,7 +247,7 @@ getUserInfo(): {
 ```
 
 
-## Returns
+## 返回值
 
 \{ username?: string; nickname?: string; avatar?: string; uuid?: string; customerCode?: string; \}
 
@@ -259,14 +259,14 @@ getUserInfo(): {
 
 是否处于客户端环境
 
-## Signature
+## 签名
 
 ```typescript
 isClient(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -278,14 +278,14 @@ boolean
 
 是否为 EasyEDA Pro 版本
 
-## Signature
+## 签名
 
 ```typescript
 isEasyEDAProEdition(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -297,14 +297,14 @@ boolean
 
 是否为半离线模式
 
-## Signature
+## 签名
 
 ```typescript
 isHalfOfflineMode(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -316,14 +316,14 @@ boolean
 
 是否为 嘉立创EDA 专业版本
 
-## Signature
+## 签名
 
 ```typescript
 isJLCEDAProEdition(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -335,14 +335,14 @@ boolean
 
 是否为全离线模式
 
-## Signature
+## 签名
 
 ```typescript
 isOfflineMode(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -354,14 +354,14 @@ boolean
 
 是否为在线模式
 
-## Signature
+## 签名
 
 ```typescript
 isOnlineMode(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -373,14 +373,14 @@ boolean
 
 是否为私有化部署版本
 
-## Signature
+## 签名
 
 ```typescript
 isProPrivateEdition(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -392,14 +392,14 @@ boolean
 
 是否处于浏览器环境
 
-## Signature
+## 签名
 
 ```typescript
 isWeb(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 

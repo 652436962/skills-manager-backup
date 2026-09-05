@@ -2,31 +2,31 @@
 
 原理图 &amp; 符号 / 文档操作类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SCH_Document 
 ```
 
-## Remarks
+## 备注
 
 对设计文档总体进行的操作
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -96,11 +96,11 @@ Description
 
 # SCH\_Document.autoLayout() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 自动布局
 
-## Signature
+## 签名
 
 ```typescript
 autoLayout(props?: {
@@ -127,21 +127,21 @@ autoLayout(props?: {
     }): Promise<any>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -157,7 +157,7 @@ props
 
 </td><td>
 
-_(Optional)_ 自动布局参数
+_（可选）_ 自动布局参数
 
 
 </td></tr>
@@ -165,7 +165,7 @@ _(Optional)_ 自动布局参数
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;any&gt;
 
@@ -175,11 +175,11 @@ Promise&lt;any&gt;
 
 # SCH\_Document.autoRouting() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 自动布线
 
-## Signature
+## 签名
 
 ```typescript
 autoRouting(props?: {
@@ -206,21 +206,21 @@ autoRouting(props?: {
     }): Promise<any>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -236,7 +236,7 @@ props
 
 </td><td>
 
-_(Optional)_ 自动布线参数
+_（可选）_ 自动布线参数
 
 
 </td></tr>
@@ -244,7 +244,7 @@ _(Optional)_ 自动布线参数
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;any&gt;
 
@@ -256,14 +256,14 @@ Promise&lt;any&gt;
 
 从 PCB 导入变更
 
-## Signature
+## 签名
 
 ```typescript
 importChanges(): Promise<boolean>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -275,14 +275,14 @@ Promise&lt;boolean&gt;
 
 保存文档
 
-## Signature
+## 签名
 
 ```typescript
 save(): Promise<boolean>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 

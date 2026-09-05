@@ -2,13 +2,13 @@
 
 外部库用户索引
 
-## Signature
+## 签名
 
 ```typescript
 interface ILIB_ExtendLibraryUserIndex 
 ```
 
-## Remarks
+## 备注
 
 支持外部库使用名称或关联的嘉立创 EDA 系统内用户 UUID 作为用户的唯一 ID 索引
 
@@ -16,26 +16,26 @@ interface ILIB_ExtendLibraryUserIndex
 
 如若仅希望显示用户名称，可以传入 `name` 字段
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -54,7 +54,7 @@ string
 
 </td><td>
 
-_(Optional)_ 用户名称
+_（可选）_ 用户名称
 
 
 </td></tr>
@@ -73,7 +73,7 @@ string
 
 </td><td>
 
-_(Optional)_ 嘉立创 EDA 系统内的用户 UUID
+_（可选）_ 嘉立创 EDA 系统内的用户 UUID
 
 
 </td></tr>
@@ -89,7 +89,7 @@ _(Optional)_ 嘉立创 EDA 系统内的用户 UUID
 
 用户名称
 
-## Signature
+## 签名
 
 ```typescript
 name?: string;
@@ -101,7 +101,7 @@ name?: string;
 
 嘉立创 EDA 系统内的用户 UUID
 
-## Signature
+## 签名
 
 ```typescript
 uuid?: string;

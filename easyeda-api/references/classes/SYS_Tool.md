@@ -2,27 +2,27 @@
 
 系统 / 工具类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SYS_Tool 
 ```
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -50,11 +50,11 @@ Description
 
 # SYS\_Tool.netlistComparison() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 网表对比
 
-## Signature
+## 签名
 
 ```typescript
 netlistComparison(netlist1: string | {
@@ -71,21 +71,21 @@ netlistComparison(netlist1: string | {
     }>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -125,7 +125,7 @@ string \| { projectUuid: string; documentUuid: string; } \| File
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;{ type: 'Net' \| 'Component'; object: string; netlist1Name: Array&lt;string&gt;; netlist2Name: Array&lt;string&gt;; }&gt;&gt;
 

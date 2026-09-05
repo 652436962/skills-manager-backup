@@ -1,36 +1,36 @@
 # SYS\_ToastMessage class
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 即将移除吐司消息类，合并入 [消息通知类](./SYS_Message.md)
 
 系统 / 吐司消息类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SYS_ToastMessage 
 ```
 
-## Remarks
+## 备注
 
 在屏幕的边缘弹出简短的消息提醒，会在一定时间后自动消除
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -58,33 +58,33 @@ Description
 
 # SYS\_ToastMessage.showMessage() method
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 请使用 [SYS\_Message.showToastMessage()](./SYS_Message.md) 方法替代
 
 显示吐司消息
 
-## Signature
+## 签名
 
 ```typescript
 showMessage(message: string, messageType?: ESYS_ToastMessageType, timer?: number, bottomPanel?: ESYS_BottomPanelTab, buttonTitle?: string, buttonCallbackFn?: string): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -116,7 +116,7 @@ messageType
 
 </td><td>
 
-_(Optional)_ 消息类型
+_（可选）_ 消息类型
 
 
 </td></tr>
@@ -132,7 +132,7 @@ number
 
 </td><td>
 
-_(Optional)_ 自动关闭倒计时秒数，`0` 为不自动关闭
+_（可选）_ 自动关闭倒计时秒数，`0` 为不自动关闭
 
 
 </td></tr>
@@ -148,7 +148,7 @@ bottomPanel
 
 </td><td>
 
-_(Optional)_ 展开底部信息面板
+_（可选）_ 展开底部信息面板
 
 
 </td></tr>
@@ -164,7 +164,7 @@ string
 
 </td><td>
 
-_(Optional)_ 回调按钮标题
+_（可选）_ 回调按钮标题
 
 
 </td></tr>
@@ -180,7 +180,7 @@ string
 
 </td><td>
 
-_(Optional)_ 回调函数内容，字符串形式，会被自动解析并执行
+_（可选）_ 回调函数内容，字符串形式，会被自动解析并执行
 
 
 </td></tr>
@@ -188,6 +188,6 @@ _(Optional)_ 回调函数内容，字符串形式，会被自动解析并执行
 
 
 
-## Returns
+## 返回值
 
 void

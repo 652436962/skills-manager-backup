@@ -2,32 +2,32 @@
 
 焊盘对最短导线长度属性
 
-## Signature
+## 签名
 
 ```typescript
 interface IPCB_PadPairMinWireLengthItem 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -81,7 +81,7 @@ number
 
 最短导线长度
 
-## Signature
+## 签名
 
 ```typescript
 minWireLength: number;
@@ -93,7 +93,7 @@ minWireLength: number;
 
 焊盘对数组
 
-## Signature
+## 签名
 
 ```typescript
 padPair: [string, string];

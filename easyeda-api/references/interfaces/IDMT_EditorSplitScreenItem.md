@@ -2,36 +2,36 @@
 
 编辑器分屏属性
 
-## Signature
+## 签名
 
 ```typescript
 interface IDMT_EditorSplitScreenItem 
 ```
 
-## Remarks
+## 备注
 
 [tabs](./IDMT_EditorSplitScreenItem.md) 和 [children](./IDMT_EditorSplitScreenItem.md) 并不同时存在，当 [tabs](./IDMT_EditorSplitScreenItem.md) 存在时，代表不存在分屏，[children](./IDMT_EditorSplitScreenItem.md) 将为 `undefined`
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -50,7 +50,7 @@ Array&lt;[IDMT\_EditorSplitScreenItem](./IDMT_EditorSplitScreenItem.md)<!-- -->&
 
 </td><td>
 
-_(Optional)_ 子分屏
+_（可选）_ 子分屏
 
 
 </td></tr>
@@ -69,7 +69,7 @@ _(Optional)_ 子分屏
 
 </td><td>
 
-_(Optional)_ 分屏方向
+_（可选）_ 分屏方向
 
 
 </td></tr>
@@ -88,7 +88,7 @@ string
 
 </td><td>
 
-_(Optional)_ 父级分屏 ID
+_（可选）_ 父级分屏 ID
 
 
 </td></tr>
@@ -126,7 +126,7 @@ Array&lt;[IDMT\_EditorTabItem](./IDMT_EditorTabItem.md)<!-- -->&gt;
 
 </td><td>
 
-_(Optional)_ 分屏内标签页
+_（可选）_ 分屏内标签页
 
 
 </td></tr>
@@ -142,7 +142,7 @@ _(Optional)_ 分屏内标签页
 
 子分屏
 
-## Signature
+## 签名
 
 ```typescript
 children?: Array<IDMT_EditorSplitScreenItem>;
@@ -154,7 +154,7 @@ children?: Array<IDMT_EditorSplitScreenItem>;
 
 分屏方向
 
-## Signature
+## 签名
 
 ```typescript
 direction?: EDMT_EditorSplitScreenDirection;
@@ -166,7 +166,7 @@ direction?: EDMT_EditorSplitScreenDirection;
 
 父级分屏 ID
 
-## Signature
+## 签名
 
 ```typescript
 fatherId?: string;
@@ -178,7 +178,7 @@ fatherId?: string;
 
 分屏 ID
 
-## Signature
+## 签名
 
 ```typescript
 id: string;
@@ -190,7 +190,7 @@ id: string;
 
 分屏内标签页
 
-## Signature
+## 签名
 
 ```typescript
 tabs?: Array<IDMT_EditorTabItem>;

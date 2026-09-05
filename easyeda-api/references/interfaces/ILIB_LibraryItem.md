@@ -2,32 +2,32 @@
 
 库属性
 
-## Signature
+## 签名
 
 ```typescript
 interface ILIB_LibraryItem 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -65,7 +65,7 @@ string
 
 </td><td>
 
-_(Optional)_ 所属库 UUID
+_（可选）_ 所属库 UUID
 
 
 </td></tr>
@@ -100,7 +100,7 @@ UUID
 
 库类型
 
-## Signature
+## 签名
 
 ```typescript
 libraryType: ELIB_LibraryType;
@@ -112,7 +112,7 @@ libraryType: ELIB_LibraryType;
 
 所属库 UUID
 
-## Signature
+## 签名
 
 ```typescript
 libraryUuid?: string;
@@ -124,7 +124,7 @@ libraryUuid?: string;
 
 UUID
 
-## Signature
+## 签名
 
 ```typescript
 uuid: string;

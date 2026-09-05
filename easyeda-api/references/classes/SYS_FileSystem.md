@@ -2,30 +2,30 @@
 
 系统 / 文件系统交互类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SYS_FileSystem 
 ```
 
-## Remarks
+## 备注
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -207,31 +207,31 @@ Description
 
 # SYS\_FileSystem.deleteFileInFileSystem() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 删除文件系统内的文件
 
-## Signature
+## 签名
 
 ```typescript
 deleteFileInFileSystem(uri: string, force?: boolean): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -267,7 +267,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 强制删除文件夹（当欲删除的是文件夹且文件夹内有文件时，是否强制删除该文件夹）
+_（可选）_ 强制删除文件夹（当欲删除的是文件夹且文件夹内有文件时，是否强制删除该文件夹）
 
 
 </td></tr>
@@ -275,13 +275,13 @@ _(Optional)_ 强制删除文件夹（当欲删除的是文件夹且文件夹内�
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 删除操作是否成功
 
-## Remarks
+## 备注
 
 注意 1：本接口仅客户端有效，在浏览器环境内调用将始终 `throw Error`
 
@@ -291,24 +291,24 @@ Promise&lt;boolean&gt;
 
 # SYS\_FileSystem.getDocumentsPath() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取文档目录路径
 
-## Signature
+## 签名
 
 ```typescript
 getDocumentsPath(): Promise<string>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;string&gt;
 
 文档目录路径
 
-## Remarks
+## 备注
 
 返回的路径中，结尾不包含斜杠 `/`<!-- -->（或反斜杠 `\`<!-- -->）
 
@@ -320,24 +320,24 @@ Promise&lt;string&gt;
 
 # SYS\_FileSystem.getEdaPath() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取 EDA 文档目录路径
 
-## Signature
+## 签名
 
 ```typescript
 getEdaPath(): Promise<string>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;string&gt;
 
 EDA 文档目录路径
 
-## Remarks
+## 备注
 
 返回的路径中，结尾不包含斜杠 `/`<!-- -->（或反斜杠 `\`<!-- -->）
 
@@ -351,27 +351,27 @@ EDA 文档目录路径
 
 获取扩展内的文件
 
-## Signature
+## 签名
 
 ```typescript
 getExtensionFile(uri: string): Promise<File | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -395,7 +395,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;File \| undefined&gt;
 
@@ -405,24 +405,24 @@ File 格式文件
 
 # SYS\_FileSystem.getLibrariesPaths() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取库目录路径
 
-## Signature
+## 签名
 
 ```typescript
 getLibrariesPaths(): Promise<Array<string>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;string&gt;&gt;
 
 库目录路径数组
 
-## Remarks
+## 备注
 
 注意 1：本接口仅全离线客户端有效，在浏览器环境内调用将始终 `throw Error`
 
@@ -432,26 +432,26 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 # SYS\_FileSystem.getProjectsPaths() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取工程目录路径
 
-## Signature
+## 签名
 
 ```typescript
 getProjectsPaths(): Promise<Array<string>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;string&gt;&gt;
 
 工程目录路径数组
 
-## Remarks
+## 备注
 
-注意 1：本接口仅半、全离线客户端有效，在浏览器环境内调用将始终 `throw Error`
+注意 1：本接口仅离线客户端有效，在浏览器环境内调用将始终 `throw Error`
 
 注意 2：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`
 
@@ -459,31 +459,31 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 # SYS\_FileSystem.listFilesOfFileSystem() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 查看文件系统路径下的文件列表
 
-## Signature
+## 签名
 
 ```typescript
 listFilesOfFileSystem(folderPath: string, recursive?: boolean): Promise<Array<ISYS_FileSystemFileList>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -515,7 +515,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否递归获取所有子文件
+_（可选）_ 是否递归获取所有子文件
 
 
 </td></tr>
@@ -523,13 +523,13 @@ _(Optional)_ 是否递归获取所有子文件
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[ISYS\_FileSystemFileList](../interfaces/ISYS_FileSystemFileList.md)<!-- -->&gt;&gt;
 
 当前目录下的文件列表
 
-## Remarks
+## 备注
 
 注意 1：本接口仅客户端有效，在浏览器环境内调用将始终 `throw Error`
 
@@ -539,31 +539,31 @@ Promise&lt;Array&lt;[ISYS\_FileSystemFileList](../interfaces/ISYS_FileSystemFile
 
 # SYS\_FileSystem.openReadFileDialog() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 打开读入文件窗口
 
-## Signature
+## 签名
 
 ```typescript
 openReadFileDialog(filenameExtensions?: string | Array<string>, multiFiles?: true): Promise<Array<File> | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -579,7 +579,7 @@ string \| Array&lt;string&gt;
 
 </td><td>
 
-_(Optional)_ 文件扩展名
+_（可选）_ 文件扩展名
 
 
 </td></tr>
@@ -595,7 +595,7 @@ true
 
 </td><td>
 
-_(Optional)_ 是否允许读取多文件
+_（可选）_ 是否允许读取多文件
 
 
 </td></tr>
@@ -603,7 +603,7 @@ _(Optional)_ 是否允许读取多文件
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;File&gt; \| undefined&gt;
 
@@ -613,31 +613,31 @@ File 格式文件数组
 
 # SYS\_FileSystem.openReadFileDialog() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 打开读入文件窗口
 
-## Signature
+## 签名
 
 ```typescript
 openReadFileDialog(filenameExtensions?: string | Array<string>, multiFiles?: false): Promise<File | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -653,7 +653,7 @@ string \| Array&lt;string&gt;
 
 </td><td>
 
-_(Optional)_ 文件扩展名
+_（可选）_ 文件扩展名
 
 
 </td></tr>
@@ -669,7 +669,7 @@ false
 
 </td><td>
 
-_(Optional)_ 是否允许读取多文件
+_（可选）_ 是否允许读取多文件
 
 
 </td></tr>
@@ -677,7 +677,7 @@ _(Optional)_ 是否允许读取多文件
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;File \| undefined&gt;
 
@@ -687,31 +687,31 @@ File 格式文件
 
 # SYS\_FileSystem.readFileFromFileSystem() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 从文件系统读取文件
 
-## Signature
+## 签名
 
 ```typescript
 readFileFromFileSystem(uri: string): Promise<File | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -735,13 +735,13 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;File \| undefined&gt;
 
 File 格式文件
 
-## Remarks
+## 备注
 
 注意 1：本接口仅客户端有效，在浏览器环境内调用将始终 `throw Error`
 
@@ -753,27 +753,27 @@ File 格式文件
 
 保存文件
 
-## Signature
+## 签名
 
 ```typescript
 saveFile(fileData: File | Blob, fileName?: string): Promise<void>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -805,7 +805,7 @@ string
 
 </td><td>
 
-_(Optional)_ 文件名称
+_（可选）_ 文件名称
 
 
 </td></tr>
@@ -813,11 +813,11 @@ _(Optional)_ 文件名称
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;void&gt;
 
-## Remarks
+## 备注
 
 调用浏览器下载接口或 Electron 保存文件接口，将传入的文件流保存到本地
 
@@ -825,31 +825,31 @@ Promise&lt;void&gt;
 
 # SYS\_FileSystem.saveFileToFileSystem() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 向文件系统写入文件
 
-## Signature
+## 签名
 
 ```typescript
 saveFileToFileSystem(uri: string, fileData: File | Blob, fileName?: string, force?: boolean): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -901,7 +901,7 @@ string
 
 </td><td>
 
-_(Optional)_ 文件名称
+_（可选）_ 文件名称
 
 
 </td></tr>
@@ -917,7 +917,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 强制写入（文件存在则覆盖文件）
+_（可选）_ 强制写入（文件存在则覆盖文件）
 
 
 </td></tr>
@@ -925,13 +925,13 @@ _(Optional)_ 强制写入（文件存在则覆盖文件）
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 写入操作是否成功，如若不允许覆盖但文件已存在将返回 `false` 的结果
 
-## Remarks
+## 备注
 
 注意 1：本接口仅客户端有效，在浏览器环境内调用将始终 `throw Error`
 

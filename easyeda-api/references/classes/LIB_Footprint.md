@@ -2,27 +2,27 @@
 
 综合库 / 封装类
 
-## Signature
+## 签名
 
 ```typescript
 declare class LIB_Footprint 
 ```
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -79,20 +79,6 @@ Description
 </td><td>
 
 **_(BETA)_** 获取封装的所有属性
-
-
-</td></tr>
-<tr><td>
-
-[getRenderImage(source)](./LIB_Footprint.md)
-
-
-</td><td>
-
-
-</td><td>
-
-**_(BETA)_** 获取封装渲染图
 
 
 </td></tr>
@@ -162,31 +148,31 @@ Description
 
 # LIB\_Footprint.copy() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 复制封装
 
-## Signature
+## 签名
 
 ```typescript
 copy(footprintUuid: string, libraryUuid: string, targetLibraryUuid: string, targetClassification?: ILIB_ClassificationIndex | Array<string>, newFootprintName?: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -250,7 +236,7 @@ targetClassification
 
 </td><td>
 
-_(Optional)_ 目标库内的分类
+_（可选）_ 目标库内的分类
 
 
 </td></tr>
@@ -266,7 +252,7 @@ string
 
 </td><td>
 
-_(Optional)_ 新封装名称，如若目标库内存在重名封装将导致复制失败
+_（可选）_ 新封装名称，如若目标库内存在重名封装将导致复制失败
 
 
 </td></tr>
@@ -274,7 +260,7 @@ _(Optional)_ 新封装名称，如若目标库内存在重名封装将导致复�
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -284,31 +270,31 @@ Promise&lt;string \| undefined&gt;
 
 # LIB\_Footprint.create() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 创建封装
 
-## Signature
+## 签名
 
 ```typescript
 create(libraryUuid: string, footprintName: string, classification?: ILIB_ClassificationIndex | Array<string>, description?: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -356,7 +342,7 @@ classification
 
 </td><td>
 
-_(Optional)_ 分类
+_（可选）_ 分类
 
 
 </td></tr>
@@ -372,7 +358,7 @@ string
 
 </td><td>
 
-_(Optional)_ 描述
+_（可选）_ 描述
 
 
 </td></tr>
@@ -380,7 +366,7 @@ _(Optional)_ 描述
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -390,31 +376,31 @@ Promise&lt;string \| undefined&gt;
 
 # LIB\_Footprint.delete() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 删除封装
 
-## Signature
+## 签名
 
 ```typescript
 delete(footprintUuid: string, libraryUuid: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -454,7 +440,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -464,31 +450,31 @@ Promise&lt;boolean&gt;
 
 # LIB\_Footprint.get() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取封装的所有属性
 
-## Signature
+## 签名
 
 ```typescript
 get(footprintUuid: string, libraryUuid?: string): Promise<ILIB_FootprintItem | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -520,7 +506,7 @@ string
 
 </td><td>
 
-_(Optional)_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
+_（可选）_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
 
 
 </td></tr>
@@ -528,100 +514,41 @@ _(Optional)_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ILIB\_FootprintItem](../interfaces/ILIB_FootprintItem.md) \| undefined&gt;
 
 封装属性
 
-### getrenderimage
-
-# LIB\_Footprint.getRenderImage() method
-
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-获取封装渲染图
-
-## Signature
-
-```typescript
-getRenderImage(source: {
-        footprintUuid: string;
-        libraryUuid: string;
-    }): Promise<Blob | undefined>;
-```
-
-## Parameters
-
-<table><thead><tr><th>
-
-Parameter
-
-
-</th><th>
-
-Type
-
-
-</th><th>
-
-Description
-
-
-</th></tr></thead>
-<tbody><tr><td>
-
-source
-
-
-</td><td>
-
-\{ footprintUuid: string; libraryUuid: string; \}
-
-
-</td><td>
-
-
-</td></tr>
-</tbody></table>
-
-
-
-## Returns
-
-Promise&lt;Blob \| undefined&gt;
-
-封装渲染图
-
 ### modify
 
 # LIB\_Footprint.modify() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改封装
 
-## Signature
+## 签名
 
 ```typescript
 modify(footprintUuid: string, libraryUuid: string, footprintName?: string, classification?: ILIB_ClassificationIndex | Array<string> | null, description?: string | null): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -669,7 +596,7 @@ string
 
 </td><td>
 
-_(Optional)_ 封装名称
+_（可选）_ 封装名称
 
 
 </td></tr>
@@ -685,7 +612,7 @@ classification
 
 </td><td>
 
-_(Optional)_ 分类
+_（可选）_ 分类
 
 
 </td></tr>
@@ -701,7 +628,7 @@ string \| null
 
 </td><td>
 
-_(Optional)_ 描述
+_（可选）_ 描述
 
 
 </td></tr>
@@ -709,13 +636,13 @@ _(Optional)_ 描述
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 如希望清除某些属性，则将其的值设置为 `null`
 
@@ -723,31 +650,31 @@ Promise&lt;boolean&gt;
 
 # LIB\_Footprint.openInEditor() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 在编辑器打开文档
 
-## Signature
+## 签名
 
 ```typescript
 openInEditor(footprintUuid: string, libraryUuid: string, splitScreenId?: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -795,7 +722,7 @@ string
 
 </td><td>
 
-_(Optional)_ 分屏 ID，不填写则默认在最后输入焦点的分屏内打开，可以使用 [DMT\_EditorControl](./DMT_EditorControl.md) 内的接口获取
+_（可选）_ 分屏 ID，不填写则默认在最后输入焦点的分屏内打开，可以使用 [DMT\_EditorControl](./DMT_EditorControl.md) 内的接口获取
 
 
 </td></tr>
@@ -803,7 +730,7 @@ _(Optional)_ 分屏 ID，不填写则默认在最后输入焦点的分屏内打�
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -813,31 +740,31 @@ Promise&lt;string \| undefined&gt;
 
 # LIB\_Footprint.search() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 搜索封装
 
-## Signature
+## 签名
 
 ```typescript
 search(key: string, libraryUuid?: string, classification?: ILIB_ClassificationIndex | Array<string>, itemsOfPage?: number, page?: number): Promise<Array<ILIB_FootprintSearchItem>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -869,7 +796,7 @@ string
 
 </td><td>
 
-_(Optional)_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
+_（可选）_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
 
 
 </td></tr>
@@ -885,7 +812,7 @@ classification
 
 </td><td>
 
-_(Optional)_ 分类，默认为全部
+_（可选）_ 分类，默认为全部
 
 
 </td></tr>
@@ -901,7 +828,7 @@ number
 
 </td><td>
 
-_(Optional)_ 一页搜索结果的数量
+_（可选）_ 一页搜索结果的数量
 
 
 </td></tr>
@@ -917,7 +844,7 @@ number
 
 </td><td>
 
-_(Optional)_ 页数
+_（可选）_ 页数
 
 
 </td></tr>
@@ -925,7 +852,7 @@ _(Optional)_ 页数
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[ILIB\_FootprintSearchItem](../interfaces/ILIB_FootprintSearchItem.md)<!-- -->&gt;&gt;
 
@@ -935,31 +862,31 @@ Promise&lt;Array&lt;[ILIB\_FootprintSearchItem](../interfaces/ILIB_FootprintSear
 
 # LIB\_Footprint.updateDocumentSource() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 更新封装的文档源码
 
-## Signature
+## 签名
 
 ```typescript
 updateDocumentSource(footprintUuid: string, libraryUuid: string, documentSource: string): Promise<boolean | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1015,7 +942,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean \| undefined&gt;
 

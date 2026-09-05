@@ -2,32 +2,32 @@
 
 器件属性
 
-## Signature
+## 签名
 
 ```typescript
 interface ILIB_DeviceItem 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -65,7 +65,7 @@ Description
 
 </td><td>
 
-_(Optional)_ 器件分类
+_（可选）_ 器件分类
 
 
 </td></tr>
@@ -84,7 +84,7 @@ string
 
 </td><td>
 
-_(Optional)_ 描述
+_（可选）_ 描述
 
 
 </td></tr>
@@ -168,25 +168,6 @@ string
 </td></tr>
 <tr><td>
 
-[subPartNames](./ILIB_DeviceItem.md)
-
-
-</td><td>
-
-
-</td><td>
-
-\[\]
-
-
-</td><td>
-
-子部件名称数组
-
-
-</td></tr>
-<tr><td>
-
 [uuid](./ILIB_DeviceItem.md)
 
 
@@ -216,7 +197,7 @@ string
 
 关联
 
-## Signature
+## 签名
 
 ```typescript
 association: ILIB_DeviceAssociationItem;
@@ -228,7 +209,7 @@ association: ILIB_DeviceAssociationItem;
 
 器件分类
 
-## Signature
+## 签名
 
 ```typescript
 classification?: ILIB_ClassificationIndex | Array<string>;
@@ -240,7 +221,7 @@ classification?: ILIB_ClassificationIndex | Array<string>;
 
 描述
 
-## Signature
+## 签名
 
 ```typescript
 description?: string;
@@ -252,7 +233,7 @@ description?: string;
 
 库类型
 
-## Signature
+## 签名
 
 ```typescript
 readonly libraryType: ELIB_LibraryType.DEVICE;
@@ -264,7 +245,7 @@ readonly libraryType: ELIB_LibraryType.DEVICE;
 
 所属库 UUID
 
-## Signature
+## 签名
 
 ```typescript
 libraryUuid: string;
@@ -276,7 +257,7 @@ libraryUuid: string;
 
 器件名称
 
-## Signature
+## 签名
 
 ```typescript
 name: string;
@@ -288,22 +269,10 @@ name: string;
 
 扩展属性
 
-## Signature
+## 签名
 
 ```typescript
 property: ILIB_DeviceExtendPropertyItem;
-```
-
-### subpartnames
-
-# ILIB\_DeviceItem.subPartNames property
-
-子部件名称数组
-
-## Signature
-
-```typescript
-subPartNames: [];
 ```
 
 ### uuid
@@ -312,7 +281,7 @@ subPartNames: [];
 
 器件 UUID
 
-## Signature
+## 签名
 
 ```typescript
 uuid: string;

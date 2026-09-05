@@ -2,32 +2,32 @@
 
 系统 / 外部请求类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SYS_ClientUrl 
 ```
 
-## Remarks
+## 备注
 
 向外部服务器发起安全的 cURL 请求
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -57,7 +57,7 @@ Description
 
 发起即时请求
 
-## Signature
+## 签名
 
 ```typescript
 request(url: string, method?: 'GET' | 'POST' | 'HEAD' | 'PUT' | 'DELETE' | 'PATCH', data?: string | Blob | FormData | URLSearchParams, options?: {
@@ -68,21 +68,21 @@ request(url: string, method?: 'GET' | 'POST' | 'HEAD' | 'PUT' | 'DELETE' | 'PATC
     }, succeedCallFn?: (data: Response) => void | Promise<void>): Promise<Response>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -114,7 +114,7 @@ method
 
 </td><td>
 
-_(Optional)_ 请求方法
+_（可选）_ 请求方法
 
 
 </td></tr>
@@ -130,7 +130,7 @@ string \| Blob \| FormData \| URLSearchParams
 
 </td><td>
 
-_(Optional)_ 请求发送的数据，可以是直接数据或 [URLSearchParams](https://developer.mozilla.org/docs/Web/API/URLSearchParams) 对象，如果 method 为 `HEAD` 或 `GET`<!-- -->，本参数将被忽略
+_（可选）_ 请求发送的数据，可以是直接数据或 [URLSearchParams](https://developer.mozilla.org/docs/Web/API/URLSearchParams) 对象，如果 method 为 `HEAD` 或 `GET`<!-- -->，本参数将被忽略
 
 
 </td></tr>
@@ -146,7 +146,7 @@ options
 
 </td><td>
 
-_(Optional)_ 请求参数
+_（可选）_ 请求参数
 
 
 </td></tr>
@@ -162,7 +162,7 @@ succeedCallFn
 
 </td><td>
 
-_(Optional)_ 请求成功后回调的函数
+_（可选）_ 请求成功后回调的函数
 
 
 </td></tr>
@@ -170,13 +170,13 @@ _(Optional)_ 请求成功后回调的函数
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Response&gt;
 
 Fetch 的返回结果
 
-## Remarks
+## 备注
 
 请注意，需要在被请求的站点上允许跨源资源共享（CORS），否则接口将始终返回错误结果。
 

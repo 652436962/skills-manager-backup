@@ -2,32 +2,32 @@
 
 外部库搜索结果
 
-## Signature
+## 签名
 
 ```typescript
 interface ILIB_ExtendLibrarySearchResult<T> 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -138,7 +138,7 @@ number
 
 总条目数
 
-## Signature
+## 签名
 
 ```typescript
 count: number;
@@ -150,7 +150,7 @@ count: number;
 
 结果列表
 
-## Signature
+## 签名
 
 ```typescript
 lists: Array<T>;
@@ -162,7 +162,7 @@ lists: Array<T>;
 
 当前页数
 
-## Signature
+## 签名
 
 ```typescript
 page: number;
@@ -174,7 +174,7 @@ page: number;
 
 单页条目数
 
-## Signature
+## 签名
 
 ```typescript
 pageSize: number;
@@ -186,7 +186,7 @@ pageSize: number;
 
 总页数
 
-## Signature
+## 签名
 
 ```typescript
 totalPage: number;

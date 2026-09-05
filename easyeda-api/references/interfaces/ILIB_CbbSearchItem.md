@@ -2,32 +2,32 @@
 
 搜索到的复用模块属性
 
-## Signature
+## 签名
 
 ```typescript
 interface ILIB_CbbSearchItem 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -65,7 +65,7 @@ string
 
 </td><td>
 
-_(Optional)_ 分类
+_（可选）_ 分类
 
 
 </td></tr>
@@ -84,7 +84,7 @@ string
 
 </td><td>
 
-_(Optional)_ 描述
+_（可选）_ 描述
 
 
 </td></tr>
@@ -214,7 +214,7 @@ string
 
 归属
 
-## Signature
+## 签名
 
 ```typescript
 ascription: string;
@@ -226,7 +226,7 @@ ascription: string;
 
 分类
 
-## Signature
+## 签名
 
 ```typescript
 classification?: ILIB_ClassificationIndex | Array<string>;
@@ -238,7 +238,7 @@ classification?: ILIB_ClassificationIndex | Array<string>;
 
 描述
 
-## Signature
+## 签名
 
 ```typescript
 description?: string;
@@ -250,7 +250,7 @@ description?: string;
 
 前次修改者
 
-## Signature
+## 签名
 
 ```typescript
 lastModifiedBy: string;
@@ -262,7 +262,7 @@ lastModifiedBy: string;
 
 所属库 UUID
 
-## Signature
+## 签名
 
 ```typescript
 libraryUuid: string;
@@ -274,7 +274,7 @@ libraryUuid: string;
 
 复用模块名称
 
-## Signature
+## 签名
 
 ```typescript
 name: string;
@@ -286,7 +286,7 @@ name: string;
 
 排序
 
-## Signature
+## 签名
 
 ```typescript
 ordinal: number;
@@ -298,7 +298,7 @@ ordinal: number;
 
 更新时间戳
 
-## Signature
+## 签名
 
 ```typescript
 updateTimestamp: number;
@@ -310,7 +310,7 @@ updateTimestamp: number;
 
 复用模块 UUID
 
-## Signature
+## 签名
 
 ```typescript
 uuid: string;

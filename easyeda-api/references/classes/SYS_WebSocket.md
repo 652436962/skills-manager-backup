@@ -2,32 +2,32 @@
 
 系统 / WebSocket 类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SYS_WebSocket 
 ```
 
-## Remarks
+## 备注
 
 与 WebSocket 服务器交互
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -85,27 +85,27 @@ Description
 
 关闭 WebSocket 连接
 
-## Signature
+## 签名
 
 ```typescript
 close(id: string, code?: number, reason?: string, extensionUuid?: string): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -137,7 +137,7 @@ number
 
 </td><td>
 
-_(Optional)_ 数字状态码，对应 [WebSocket.CloseEvent](https://developer.mozilla.org/docs/Web/API/CloseEvent/code) 内允许的状态码
+_（可选）_ 数字状态码，对应 [WebSocket.CloseEvent](https://developer.mozilla.org/docs/Web/API/CloseEvent/code) 内允许的状态码
 
 
 </td></tr>
@@ -153,7 +153,7 @@ string
 
 </td><td>
 
-_(Optional)_ 一个人类可读的字符串，解释连接关闭的原因
+_（可选）_ 一个人类可读的字符串，解释连接关闭的原因
 
 
 </td></tr>
@@ -169,7 +169,7 @@ string
 
 </td><td>
 
-_(Optional)_ 扩展 UUID，一般不需要指定，仅当需要操作其它扩展建立的 WebSocket 连接时才需要指定为其它扩展的 UUID
+_（可选）_ 扩展 UUID，一般不需要指定，仅当需要操作其它扩展建立的 WebSocket 连接时才需要指定为其它扩展的 UUID
 
 
 </td></tr>
@@ -177,11 +177,11 @@ _(Optional)_ 扩展 UUID，一般不需要指定，仅当需要操作其它扩�
 
 
 
-## Returns
+## 返回值
 
 void
 
-## Remarks
+## 备注
 
 注意：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`
 
@@ -191,27 +191,27 @@ void
 
 注册 WebSocket 连接
 
-## Signature
+## 签名
 
 ```typescript
 register(id: string, serviceUri: string, receiveMessageCallFn?: (event: MessageEvent<any>) => void | Promise<void>, connectedCallFn?: () => void | Promise<void>, protocols?: string | Array<string>): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -259,7 +259,7 @@ receiveMessageCallFn
 
 </td><td>
 
-_(Optional)_ 接收到消息时的回调函数
+_（可选）_ 接收到消息时的回调函数
 
 
 </td></tr>
@@ -275,7 +275,7 @@ connectedCallFn
 
 </td><td>
 
-_(Optional)_ 连接建立时的回调函数
+_（可选）_ 连接建立时的回调函数
 
 
 </td></tr>
@@ -291,7 +291,7 @@ string \| Array&lt;string&gt;
 
 </td><td>
 
-_(Optional)_ 子协议
+_（可选）_ 子协议
 
 
 </td></tr>
@@ -299,11 +299,11 @@ _(Optional)_ 子协议
 
 
 
-## Returns
+## 返回值
 
 void
 
-## Remarks
+## 备注
 
 可以用来执行前检测 WebSocket 连接是否正常，但需要注意 \*\*不要尝试相同 ID 不同参数的连接\*\*，这会造成混乱： 如果存在指定 ID 且处于活跃状态中的 WebSocket 连接，那么其余参数的变更将不会被应用
 
@@ -315,27 +315,27 @@ void
 
 向 WebSocket 服务器发送数据
 
-## Signature
+## 签名
 
 ```typescript
 send(id: string, data: string | ArrayBuffer | Blob | ArrayBufferView, extensionUuid?: string): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -383,7 +383,7 @@ string
 
 </td><td>
 
-_(Optional)_ 扩展 UUID，一般不需要指定，仅当需要操作其它扩展建立的 WebSocket 连接时才需要指定为其它扩展的 UUID
+_（可选）_ 扩展 UUID，一般不需要指定，仅当需要操作其它扩展建立的 WebSocket 连接时才需要指定为其它扩展的 UUID
 
 
 </td></tr>
@@ -391,10 +391,10 @@ _(Optional)_ 扩展 UUID，一般不需要指定，仅当需要操作其它扩�
 
 
 
-## Returns
+## 返回值
 
 void
 
-## Remarks
+## 备注
 
 注意：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`

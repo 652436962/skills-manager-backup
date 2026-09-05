@@ -2,27 +2,27 @@
 
 PCB &amp; 封装 / 网络类
 
-## Signature
+## 签名
 
 ```typescript
 declare class PCB_Net 
 ```
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -37,20 +37,6 @@ Description
 </td><td>
 
 获取所有网络的网络名称
-
-
-</td></tr>
-<tr><td>
-
-[getAllNets()](./PCB_Net.md)
-
-
-</td><td>
-
-
-</td><td>
-
-**_(BETA)_** 获取所有网络的详细信息
 
 
 </td></tr>
@@ -79,34 +65,6 @@ Description
 </td><td>
 
 **_(BETA)_** 获取关联指定网络的所有图元
-
-
-</td></tr>
-<tr><td>
-
-[getNet(net)](./PCB_Net.md)
-
-
-</td><td>
-
-
-</td><td>
-
-**_(BETA)_** 获取指定网络的详细信息
-
-
-</td></tr>
-<tr><td>
-
-[getNetColor(net)](./PCB_Net.md)
-
-
-</td><td>
-
-
-</td><td>
-
-**_(BETA)_** 获取指定网络的颜色
 
 
 </td></tr>
@@ -168,20 +126,6 @@ Description
 </td></tr>
 <tr><td>
 
-[setNetColor(net, color)](./PCB_Net.md)
-
-
-</td><td>
-
-
-</td><td>
-
-**_(BETA)_** 设置指定网络的颜色
-
-
-</td></tr>
-<tr><td>
-
 [setNetlist(type, netlist)](./PCB_Net.md)
 
 
@@ -191,20 +135,6 @@ Description
 </td><td>
 
 更新网表
-
-
-</td></tr>
-<tr><td>
-
-[unhighlightAllNets()](./PCB_Net.md)
-
-
-</td><td>
-
-
-</td><td>
-
-**_(BETA)_** 取消高亮所有网络
 
 
 </td></tr>
@@ -222,34 +152,6 @@ Description
 
 
 </td></tr>
-<tr><td>
-
-[unselectAllNets()](./PCB_Net.md)
-
-
-</td><td>
-
-
-</td><td>
-
-**_(BETA)_** 取消选中所有网络
-
-
-</td></tr>
-<tr><td>
-
-[unselectNet(net)](./PCB_Net.md)
-
-
-</td><td>
-
-
-</td><td>
-
-**_(BETA)_** 取消选中网络
-
-
-</td></tr>
 </tbody></table>
 
 ---
@@ -260,45 +162,24 @@ Description
 
 # PCB\_Net.getAllNetName() method
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 请使用 [getAllNetsName](./PCB_Net.md) 替代
 
 获取所有网络的网络名称
 
-## Signature
+## 签名
 
 ```typescript
 getAllNetName(): Promise<Array<string>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;string&gt;&gt;
 
 网络名称数组
-
-### getallnets
-
-# PCB\_Net.getAllNets() method
-
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-获取所有网络的详细信息
-
-## Signature
-
-```typescript
-getAllNets(): Promise<Array<IPCB_NetInfo>>;
-```
-
-
-## Returns
-
-Promise&lt;Array&lt;[IPCB\_NetInfo](../interfaces/IPCB_NetInfo.md)<!-- -->&gt;&gt;
-
-所有网络的详细信息
 
 ### getallnetsname
 
@@ -306,14 +187,14 @@ Promise&lt;Array&lt;[IPCB\_NetInfo](../interfaces/IPCB_NetInfo.md)<!-- -->&gt;&g
 
 获取所有网络的网络名称
 
-## Signature
+## 签名
 
 ```typescript
 getAllNetsName(): Promise<Array<string>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;string&gt;&gt;
 
@@ -323,31 +204,31 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 # PCB\_Net.getAllPrimitivesByNet() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取关联指定网络的所有图元
 
-## Signature
+## 签名
 
 ```typescript
 getAllPrimitivesByNet(net: string, primitiveTypes?: Array<EPCB_PrimitiveType>): Promise<Array<IPCB_Primitive>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -379,7 +260,7 @@ Array&lt;[EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)<!-- -->&gt;
 
 </td><td>
 
-_(Optional)_ 图元类型数组，如若指定图元类型不存在网络属性，返回的数据将恒为空
+_（可选）_ 图元类型数组，如若指定图元类型不存在网络属性，返回的数据将恒为空
 
 
 </td></tr>
@@ -387,127 +268,11 @@ _(Optional)_ 图元类型数组，如若指定图元类型不存在网络属性�
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_Primitive](../interfaces/IPCB_Primitive.md)<!-- -->&gt;&gt;
 
 图元对象数组
-
-### getnet
-
-# PCB\_Net.getNet() method
-
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-获取指定网络的详细信息
-
-## Signature
-
-```typescript
-getNet(net: string): Promise<IPCB_NetInfo | undefined>;
-```
-
-## Parameters
-
-<table><thead><tr><th>
-
-Parameter
-
-
-</th><th>
-
-Type
-
-
-</th><th>
-
-Description
-
-
-</th></tr></thead>
-<tbody><tr><td>
-
-net
-
-
-</td><td>
-
-string
-
-
-</td><td>
-
-网络名称
-
-
-</td></tr>
-</tbody></table>
-
-
-
-## Returns
-
-Promise&lt;[IPCB\_NetInfo](../interfaces/IPCB_NetInfo.md) \| undefined&gt;
-
-网络的详细信息, `undefined` 为不存在该网络
-
-### getnetcolor
-
-# PCB\_Net.getNetColor() method
-
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-获取指定网络的颜色
-
-## Signature
-
-```typescript
-getNetColor(net: string): Promise<IPCB_NetInfo['color'] | undefined>;
-```
-
-## Parameters
-
-<table><thead><tr><th>
-
-Parameter
-
-
-</th><th>
-
-Type
-
-
-</th><th>
-
-Description
-
-
-</th></tr></thead>
-<tbody><tr><td>
-
-net
-
-
-</td><td>
-
-string
-
-
-</td><td>
-
-网络名称
-
-
-</td></tr>
-</tbody></table>
-
-
-
-## Returns
-
-Promise&lt;[IPCB\_NetInfo](../interfaces/IPCB_NetInfo.md)<!-- -->\['color'\] \| undefined&gt;
-
-网络颜色，`undefined` 为不存在该网络
 
 ### getnetlength
 
@@ -515,27 +280,27 @@ Promise&lt;[IPCB\_NetInfo](../interfaces/IPCB_NetInfo.md)<!-- -->\['color'\] \| 
 
 获取指定网络的长度
 
-## Signature
+## 签名
 
 ```typescript
 getNetLength(net: string): Promise<number | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -559,7 +324,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;number \| undefined&gt;
 
@@ -571,27 +336,27 @@ Promise&lt;number \| undefined&gt;
 
 获取网表
 
-## Signature
+## 签名
 
 ```typescript
 getNetlist(type?: ESYS_NetlistType): Promise<string>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -607,7 +372,7 @@ type
 
 </td><td>
 
-_(Optional)_ 网表格式
+_（可选）_ 网表格式
 
 
 </td></tr>
@@ -615,7 +380,7 @@ _(Optional)_ 网表格式
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string&gt;
 
@@ -625,31 +390,31 @@ Promise&lt;string&gt;
 
 # PCB\_Net.highlightNet() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 高亮网络
 
-## Signature
+## 签名
 
 ```typescript
 highlightNet(net: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -673,13 +438,13 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 本接口的返回值为结果导向，如果该网络原先已高亮，也将返回 `true`
 
@@ -687,31 +452,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Net.selectNet() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 选中网络
 
-## Signature
+## 签名
 
 ```typescript
 selectNet(net: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -735,85 +500,11 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
-
-### setnetcolor
-
-# PCB\_Net.setNetColor() method
-
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-设置指定网络的颜色
-
-## Signature
-
-```typescript
-setNetColor(net: string, color: IPCB_NetInfo['color']): Promise<boolean>;
-```
-
-## Parameters
-
-<table><thead><tr><th>
-
-Parameter
-
-
-</th><th>
-
-Type
-
-
-</th><th>
-
-Description
-
-
-</th></tr></thead>
-<tbody><tr><td>
-
-net
-
-
-</td><td>
-
-string
-
-
-</td><td>
-
-网络名称
-
-
-</td></tr>
-<tr><td>
-
-color
-
-
-</td><td>
-
-[IPCB\_NetInfo](../interfaces/IPCB_NetInfo.md)<!-- -->\['color'\]
-
-
-</td><td>
-
-网络颜色
-
-
-</td></tr>
-</tbody></table>
-
-
-
-## Returns
-
-Promise&lt;boolean&gt;
-
-是否设置成功, `false` 为不存在该网络
 
 ### setnetlist
 
@@ -821,27 +512,27 @@ Promise&lt;boolean&gt;
 
 更新网表
 
-## Signature
+## 签名
 
 ```typescript
 setNetlist(type: ESYS_NetlistType | undefined, netlist: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -881,60 +572,39 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
-
-### unhighlightallnets
-
-# PCB\_Net.unhighlightAllNets() method
-
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-取消高亮所有网络
-
-## Signature
-
-```typescript
-unhighlightAllNets(): Promise<boolean>;
-```
-
-
-## Returns
-
-Promise&lt;boolean&gt;
-
-操作是否成功
 
 ### unhighlightnet
 
 # PCB\_Net.unhighlightNet() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 取消高亮网络
 
-## Signature
+## 签名
 
 ```typescript
 unhighlightNet(net: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -958,95 +628,12 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 本接口的返回值为结果导向，如果该网络原先未高亮，也将返回 `true`
-
-### unselectallnets
-
-# PCB\_Net.unselectAllNets() method
-
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-取消选中所有网络
-
-## Signature
-
-```typescript
-unselectAllNets(): Promise<boolean>;
-```
-
-
-## Returns
-
-Promise&lt;boolean&gt;
-
-操作是否成功
-
-## Remarks
-
-如果希望取消选中所有图元，请使用 [PCB\_SelectControl.clearSelected()](./PCB_SelectControl.md) 接口
-
-### unselectnet
-
-# PCB\_Net.unselectNet() method
-
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-取消选中网络
-
-## Signature
-
-```typescript
-unselectNet(net: string): Promise<boolean>;
-```
-
-## Parameters
-
-<table><thead><tr><th>
-
-Parameter
-
-
-</th><th>
-
-Type
-
-
-</th><th>
-
-Description
-
-
-</th></tr></thead>
-<tbody><tr><td>
-
-net
-
-
-</td><td>
-
-string
-
-
-</td><td>
-
-网络名称
-
-
-</td></tr>
-</tbody></table>
-
-
-
-## Returns
-
-Promise&lt;boolean&gt;
-
-操作是否成功

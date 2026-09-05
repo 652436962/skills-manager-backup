@@ -2,31 +2,31 @@
 
 文档树 / 编辑器控制类
 
-## Signature
+## 签名
 
 ```typescript
 declare class DMT_EditorControl 
 ```
 
-## Remarks
+## 备注
 
 此处编辑器控制基于当前已打开的工程设计下的图页，其它任何 `documentUuid` 都将被认为是不存在的文档页
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -308,27 +308,27 @@ Description
 
 激活文档
 
-## Signature
+## 签名
 
 ```typescript
 activateDocument(tabId: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -352,13 +352,13 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 切换到指定文档的标签页，并将输入焦点置于其中
 
@@ -368,27 +368,27 @@ Promise&lt;boolean&gt;
 
 激活分屏
 
-## Signature
+## 签名
 
 ```typescript
 activateSplitScreen(splitScreenId: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -412,13 +412,13 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 使输入焦点
 
@@ -428,27 +428,27 @@ Promise&lt;boolean&gt;
 
 关闭文档
 
-## Signature
+## 签名
 
 ```typescript
 closeDocument(tabId: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -472,13 +472,13 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 如若文档尚未保存，执行此操作将会直接丢失所有未保存的数据，请在修改操作完成后首先执行 [SCH\_Document.save()](./SCH_Document.md)<!-- -->、[PCB\_Document.save()](./PCB_Document.md)<!-- -->、[PNL\_Document.save()](./PNL_Document.md) 保存数据
 
@@ -488,7 +488,7 @@ Promise&lt;boolean&gt;
 
 创建分屏
 
-## Signature
+## 签名
 
 ```typescript
 createSplitScreen(splitScreenType: EDMT_EditorSplitScreenDirection, tabId: string): Promise<{
@@ -497,21 +497,21 @@ createSplitScreen(splitScreenType: EDMT_EditorSplitScreenDirection, tabId: strin
     } | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -551,13 +551,13 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;{ sourceSplitScreenId: string; newSplitScreenId: string; } \| undefined&gt;
 
 分屏 ID，`sourceSplitScreenId` 代表源分屏，`newSplitScreenId` 代表新分屏
 
-## Remarks
+## 备注
 
 请确认 [tabId](./DMT_EditorControl.md) 对应的分屏存在两个以上的标签页，否则分屏将不会执行，并返回 `undefined`
 
@@ -565,11 +565,11 @@ Promise&lt;{ sourceSplitScreenId: string; newSplitScreenId: string; } \| undefin
 
 # DMT\_EditorControl.generateIndicatorMarkers() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 生成指示标记
 
-## Signature
+## 签名
 
 ```typescript
 generateIndicatorMarkers(markers: Array<IDMT_IndicatorMarkerShape>, color?: {
@@ -580,21 +580,21 @@ generateIndicatorMarkers(markers: Array<IDMT_IndicatorMarkerShape>, color?: {
     }, lineWidth?: number, zoom?: boolean, tabId?: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -626,7 +626,7 @@ color
 
 </td><td>
 
-_(Optional)_ 指示标记颜色
+_（可选）_ 指示标记颜色
 
 
 </td></tr>
@@ -642,7 +642,7 @@ number
 
 </td><td>
 
-_(Optional)_ 线宽
+_（可选）_ 线宽
 
 
 </td></tr>
@@ -658,7 +658,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否定位并缩放
+_（可选）_ 是否定位并缩放
 
 
 </td></tr>
@@ -674,7 +674,7 @@ string
 
 </td><td>
 
-_(Optional)_ 标签页 ID，如若未传入，则为最后输入焦点的画布
+_（可选）_ 标签页 ID，如若未传入，则为最后输入焦点的画布
 
 
 </td></tr>
@@ -682,13 +682,13 @@ _(Optional)_ 标签页 ID，如若未传入，则为最后输入焦点的画布
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 指示标记生成是否成功，`false` 表示画布不支持该操作或 `tabId` 不存在
 
-## Remarks
+## 备注
 
 指示标记外形数据中，原理图、符号画布坐标单位跨度为 0.01inch，PCB、封装画布坐标单位跨度为 mil
 
@@ -696,31 +696,31 @@ Promise&lt;boolean&gt;
 
 # DMT\_EditorControl.getCurrentRenderedAreaImage() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取画布渲染区域图像
 
-## Signature
+## 签名
 
 ```typescript
 getCurrentRenderedAreaImage(tabId?: string): Promise<Blob | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -736,7 +736,7 @@ string
 
 </td><td>
 
-_(Optional)_ 标签页 ID，如若未传入，则获取最后输入焦点的画布
+_（可选）_ 标签页 ID，如若未传入，则获取最后输入焦点的画布
 
 
 </td></tr>
@@ -744,7 +744,7 @@ _(Optional)_ 标签页 ID，如若未传入，则获取最后输入焦点的画�
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Blob \| undefined&gt;
 
@@ -756,27 +756,27 @@ Promise&lt;Blob \| undefined&gt;
 
 使用标签页 ID 获取分屏 ID
 
-## Signature
+## 签名
 
 ```typescript
 getSplitScreenIdByTabId(tabId: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -800,7 +800,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -812,14 +812,14 @@ Promise&lt;string \| undefined&gt;
 
 获取编辑器分屏属性树
 
-## Signature
+## 签名
 
 ```typescript
 getSplitScreenTree(): Promise<IDMT_EditorSplitScreenItem | undefined>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IDMT\_EditorSplitScreenItem](../interfaces/IDMT_EditorSplitScreenItem.md) \| undefined&gt;
 
@@ -831,27 +831,27 @@ Promise&lt;[IDMT\_EditorSplitScreenItem](../interfaces/IDMT_EditorSplitScreenIte
 
 获取指定分屏 ID 下的所有标签页
 
-## Signature
+## 签名
 
 ```typescript
 getTabsBySplitScreenId(splitScreenId: string): Promise<Array<IDMT_EditorTabItem>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -875,13 +875,13 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IDMT\_EditorTabItem](../interfaces/IDMT_EditorTabItem.md)<!-- -->&gt;&gt;
 
 标签页列表
 
-## Remarks
+## 备注
 
 如果指定分屏下不存在直接标签页（即它属下还存在 [children](../interfaces/IDMT_EditorSplitScreenItem.md)<!-- -->），则返回空数组
 
@@ -891,20 +891,20 @@ Promise&lt;Array&lt;[IDMT\_EditorTabItem](../interfaces/IDMT_EditorTabItem.md)<!
 
 合并所有分屏
 
-## Signature
+## 签名
 
 ```typescript
 mergeAllDocumentFromSplitScreen(): Promise<boolean>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 仅当存在子分屏时可用，将会取消所有子分屏，并将所有文档标签页合并到初始分屏内
 
@@ -914,27 +914,27 @@ Promise&lt;boolean&gt;
 
 将文档移动到指定分屏
 
-## Signature
+## 签名
 
 ```typescript
 moveDocumentToSplitScreen(tabId: string, splitScreenId: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -974,13 +974,13 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 移动文档后，编辑器分屏属性树可能会出现变化
 
@@ -990,27 +990,27 @@ Promise&lt;boolean&gt;
 
 打开文档
 
-## Signature
+## 签名
 
 ```typescript
 openDocument(documentUuid: string, splitScreenId?: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1042,7 +1042,7 @@ string
 
 </td><td>
 
-_(Optional)_ 分屏 ID，即 [DMT\_EditorControl.getSplitScreenTree()](./DMT_EditorControl.md) 方法获取到的 [IDMT\_EditorSplitScreenItem.id](../interfaces/IDMT_EditorSplitScreenItem.md)
+_（可选）_ 分屏 ID，即 [DMT\_EditorControl.getSplitScreenTree()](./DMT_EditorControl.md) 方法获取到的 [IDMT\_EditorSplitScreenItem.id](../interfaces/IDMT_EditorSplitScreenItem.md)
 
 
 </td></tr>
@@ -1050,7 +1050,7 @@ _(Optional)_ 分屏 ID，即 [DMT\_EditorControl.getSplitScreenTree()](./DMT_Edi
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -1060,31 +1060,31 @@ Promise&lt;string \| undefined&gt;
 
 # DMT\_EditorControl.openLibraryDocument() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 打开库符号、封装文档
 
-## Signature
+## 签名
 
 ```typescript
 openLibraryDocument(libraryUuid: string, libraryType: ELIB_LibraryType.SYMBOL | ELIB_LibraryType.FOOTPRINT, uuid: string, splitScreenId?: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1148,7 +1148,7 @@ string
 
 </td><td>
 
-_(Optional)_ 分屏 ID，即 [DMT\_EditorControl.getSplitScreenTree()](./DMT_EditorControl.md) 方法获取到的 [IDMT\_EditorSplitScreenItem.id](../interfaces/IDMT_EditorSplitScreenItem.md)
+_（可选）_ 分屏 ID，即 [DMT\_EditorControl.getSplitScreenTree()](./DMT_EditorControl.md) 方法获取到的 [IDMT\_EditorSplitScreenItem.id](../interfaces/IDMT_EditorSplitScreenItem.md)
 
 
 </td></tr>
@@ -1156,7 +1156,7 @@ _(Optional)_ 分屏 ID，即 [DMT\_EditorControl.getSplitScreenTree()](./DMT_Edi
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -1166,31 +1166,31 @@ Promise&lt;string \| undefined&gt;
 
 # DMT\_EditorControl.removeIndicatorMarkers() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 移除指示标记
 
-## Signature
+## 签名
 
 ```typescript
 removeIndicatorMarkers(tabId?: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1206,7 +1206,7 @@ string
 
 </td><td>
 
-_(Optional)_ 标签页 ID，如若未传入，则为最后输入焦点的画布
+_（可选）_ 标签页 ID，如若未传入，则为最后输入焦点的画布
 
 
 </td></tr>
@@ -1214,13 +1214,13 @@ _(Optional)_ 标签页 ID，如若未传入，则为最后输入焦点的画布
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 指示标记移除是否成功，`false` 表示画布不支持该操作或 `tabId` 不存在
 
-## Remarks
+## 备注
 
 本接口会移除所有已生成的指示标记
 
@@ -1230,20 +1230,20 @@ Promise&lt;boolean&gt;
 
 平铺所有文档
 
-## Signature
+## 签名
 
 ```typescript
 tileAllDocumentToSplitScreen(): Promise<boolean>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 仅当不存在子分屏时可用，将会自动为所有已打开的文档标签页创建分屏
 
@@ -1251,11 +1251,11 @@ Promise&lt;boolean&gt;
 
 # DMT\_EditorControl.zoomTo() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 缩放到坐标
 
-## Signature
+## 签名
 
 ```typescript
 zoomTo(x?: number, y?: number, scaleRatio?: number, tabId?: string): Promise<{
@@ -1266,21 +1266,21 @@ zoomTo(x?: number, y?: number, scaleRatio?: number, tabId?: string): Promise<{
     } | false>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1296,7 +1296,7 @@ number
 
 </td><td>
 
-_(Optional)_ 中心坐标 X，如若不传入则不改变当前 X 坐标
+_（可选）_ 中心坐标 X，如若不传入则不改变当前 X 坐标
 
 
 </td></tr>
@@ -1312,7 +1312,7 @@ number
 
 </td><td>
 
-_(Optional)_ 中心坐标 Y，如若不传入则不改变当前 Y 坐标
+_（可选）_ 中心坐标 Y，如若不传入则不改变当前 Y 坐标
 
 
 </td></tr>
@@ -1328,7 +1328,7 @@ number
 
 </td><td>
 
-_(Optional)_ 缩放比，如若不传入则不改变当前缩放比，单位跨度为 `1/100`<!-- -->，如若传入 `200`<!-- -->，则表示缩放比为 `200%`
+_（可选）_ 缩放比，如若不传入则不改变当前缩放比，单位跨度为 `1/100`<!-- -->，如若传入 `200`<!-- -->，则表示缩放比为 `200%`
 
 
 </td></tr>
@@ -1344,7 +1344,7 @@ string
 
 </td><td>
 
-_(Optional)_ 标签页 ID，如若未传入，则为最后输入焦点的画布
+_（可选）_ 标签页 ID，如若未传入，则为最后输入焦点的画布
 
 
 </td></tr>
@@ -1352,13 +1352,13 @@ _(Optional)_ 标签页 ID，如若未传入，则为最后输入焦点的画布
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;{ left: number; right: number; top: number; bottom: number; } \| false&gt;
 
 缩放到的区域数据，`false` 表示画布不支持该缩放操作或 `tabId` 不存在
 
-## Remarks
+## 备注
 
 在原理图、符号画布坐标单位跨度为 0.01inch，在 PCB、封装画布坐标单位跨度为 mil
 
@@ -1366,11 +1366,11 @@ Promise&lt;{ left: number; right: number; top: number; bottom: number; } \| fals
 
 # DMT\_EditorControl.zoomToAllPrimitives() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 缩放到所有图元（适应全部）
 
-## Signature
+## 签名
 
 ```typescript
 zoomToAllPrimitives(tabId?: string): Promise<{
@@ -1381,21 +1381,21 @@ zoomToAllPrimitives(tabId?: string): Promise<{
     } | false>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1411,7 +1411,7 @@ string
 
 </td><td>
 
-_(Optional)_ 标签页 ID，如若未传入，则为最后输入焦点的画布
+_（可选）_ 标签页 ID，如若未传入，则为最后输入焦点的画布
 
 
 </td></tr>
@@ -1419,13 +1419,13 @@ _(Optional)_ 标签页 ID，如若未传入，则为最后输入焦点的画布
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;{ left: number; right: number; top: number; bottom: number; } \| false&gt;
 
 缩放到的区域数据，`false` 表示画布不支持该缩放操作或 `tabId` 不存在
 
-## Remarks
+## 备注
 
 在返回数据中，原理图、符号画布坐标单位跨度为 0.01inch，PCB、封装画布坐标单位跨度为 mil
 
@@ -1433,31 +1433,31 @@ Promise&lt;{ left: number; right: number; top: number; bottom: number; } \| fals
 
 # DMT\_EditorControl.zoomToRegion() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 缩放到区域
 
-## Signature
+## 签名
 
 ```typescript
 zoomToRegion(left: number, right: number, top: number, bottom: number, tabId?: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1537,7 +1537,7 @@ string
 
 </td><td>
 
-_(Optional)_ 标签页 ID，如若未传入，则为最后输入焦点的画布
+_（可选）_ 标签页 ID，如若未传入，则为最后输入焦点的画布
 
 
 </td></tr>
@@ -1545,13 +1545,13 @@ _(Optional)_ 标签页 ID，如若未传入，则为最后输入焦点的画布
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 在原理图、符号画布坐标单位跨度为 0.01inch，在 PCB、封装画布坐标单位跨度为 mil
 
@@ -1559,11 +1559,11 @@ Promise&lt;boolean&gt;
 
 # DMT\_EditorControl.zoomToSelectedPrimitives() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 缩放到已选中图元（适应选中）
 
-## Signature
+## 签名
 
 ```typescript
 zoomToSelectedPrimitives(tabId?: string): Promise<{
@@ -1574,21 +1574,21 @@ zoomToSelectedPrimitives(tabId?: string): Promise<{
     } | false>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1604,7 +1604,7 @@ string
 
 </td><td>
 
-_(Optional)_ 标签页 ID，如若未传入，则为最后输入焦点的画布
+_（可选）_ 标签页 ID，如若未传入，则为最后输入焦点的画布
 
 
 </td></tr>
@@ -1612,12 +1612,12 @@ _(Optional)_ 标签页 ID，如若未传入，则为最后输入焦点的画布
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;{ left: number; right: number; top: number; bottom: number; } \| false&gt;
 
 缩放到的区域数据，`false` 表示画布不支持该缩放操作或 `tabId` 不存在
 
-## Remarks
+## 备注
 
 在返回数据中，原理图、符号画布坐标单位跨度为 0.01inch，PCB、封装画布坐标单位跨度为 mil

@@ -2,31 +2,31 @@
 
 系统 / 对话框类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SYS_Dialog 
 ```
 
-## Remarks
+## 备注
 
 生成对话框窗口
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -112,27 +112,27 @@ Description
 
 弹出确认窗口
 
-## Signature
+## 签名
 
 ```typescript
 showConfirmationMessage(content: string, title?: string, mainButtonTitle?: string, buttonTitle?: string, callbackFn?: (mainButtonClicked: boolean) => void): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -164,7 +164,7 @@ string
 
 </td><td>
 
-_(Optional)_ 弹出窗口标题
+_（可选）_ 弹出窗口标题
 
 
 </td></tr>
@@ -180,7 +180,7 @@ string
 
 </td><td>
 
-_(Optional)_ 主要按钮标题
+_（可选）_ 主要按钮标题
 
 
 </td></tr>
@@ -196,7 +196,7 @@ string
 
 </td><td>
 
-_(Optional)_ 主要按钮标题
+_（可选）_ 主要按钮标题
 
 
 </td></tr>
@@ -212,7 +212,7 @@ callbackFn
 
 </td><td>
 
-_(Optional)_ 回调函数
+_（可选）_ 回调函数
 
 
 </td></tr>
@@ -220,11 +220,11 @@ _(Optional)_ 回调函数
 
 
 
-## Returns
+## 返回值
 
 void
 
-## Remarks
+## 备注
 
 显示一个拥有确认和取消按钮的窗口
 
@@ -234,27 +234,27 @@ void
 
 弹出消息窗口
 
-## Signature
+## 签名
 
 ```typescript
 showInformationMessage(content: string, title?: string, buttonTitle?: string): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -286,7 +286,7 @@ string
 
 </td><td>
 
-_(Optional)_ 弹出窗口标题
+_（可选）_ 弹出窗口标题
 
 
 </td></tr>
@@ -302,7 +302,7 @@ string
 
 </td><td>
 
-_(Optional)_ 按钮标题，为空则不显示按钮
+_（可选）_ 按钮标题，为空则不显示按钮
 
 
 </td></tr>
@@ -310,11 +310,11 @@ _(Optional)_ 按钮标题，为空则不显示按钮
 
 
 
-## Returns
+## 返回值
 
 void
 
-## Remarks
+## 备注
 
 显示一个文字消息窗口
 
@@ -322,11 +322,11 @@ void
 
 # SYS\_Dialog.showInputDialog() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 弹出输入窗口
 
-## Signature
+## 签名
 
 ```typescript
 showInputDialog(beforeContent?: string, afterContent?: string, title?: string, type?: 'color' | 'date' | 'datetime-local' | 'email' | 'mouth' | 'number' | 'password' | 'tel' | 'text' | 'time' | 'url' | 'week', value?: string | number, otherProperty?: {
@@ -342,21 +342,21 @@ showInputDialog(beforeContent?: string, afterContent?: string, title?: string, t
     }, callbackFn?: (value: any) => void): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -372,7 +372,7 @@ string
 
 </td><td>
 
-_(Optional)_ 输入框上方文字
+_（可选）_ 输入框上方文字
 
 
 </td></tr>
@@ -388,7 +388,7 @@ string
 
 </td><td>
 
-_(Optional)_ 输入框下方文字
+_（可选）_ 输入框下方文字
 
 
 </td></tr>
@@ -404,7 +404,7 @@ string
 
 </td><td>
 
-_(Optional)_ 弹出窗口标题
+_（可选）_ 弹出窗口标题
 
 
 </td></tr>
@@ -420,7 +420,7 @@ type
 
 </td><td>
 
-_(Optional)_ 输入框类型
+_（可选）_ 输入框类型
 
 
 </td></tr>
@@ -436,7 +436,7 @@ string \| number
 
 </td><td>
 
-_(Optional)_ 输入框默认值
+_（可选）_ 输入框默认值
 
 
 </td></tr>
@@ -452,7 +452,7 @@ otherProperty
 
 </td><td>
 
-_(Optional)_ 其它参数，可参考 [The HTML Input element](https://developer.mozilla.org/docs/Web/HTML/Element/input#attributes)
+_（可选）_ 其它参数，可参考 [The HTML Input element](https://developer.mozilla.org/docs/Web/HTML/Element/input#attributes)
 
 
 </td></tr>
@@ -468,7 +468,7 @@ callbackFn
 
 </td><td>
 
-_(Optional)_ 回调函数
+_（可选）_ 回调函数
 
 
 </td></tr>
@@ -476,7 +476,7 @@ _(Optional)_ 回调函数
 
 
 
-## Returns
+## 返回值
 
 void
 
@@ -486,11 +486,11 @@ void
 
 # SYS\_Dialog.showSelectDialog() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 弹出选择窗口
 
-## Signature
+## 签名
 
 ```typescript
 showSelectDialog(options: Array<string> | Array<{
@@ -499,21 +499,21 @@ showSelectDialog(options: Array<string> | Array<{
     }>, beforeContent?: string, afterContent?: string, title?: string, defaultOption?: string, multiple?: false, callbackFn?: (value: string) => void | Promise<void>): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -549,7 +549,7 @@ string
 
 </td><td>
 
-_(Optional)_ 选择框上方文字
+_（可选）_ 选择框上方文字
 
 
 </td></tr>
@@ -565,7 +565,7 @@ string
 
 </td><td>
 
-_(Optional)_ 选择框下方文字
+_（可选）_ 选择框下方文字
 
 
 </td></tr>
@@ -581,7 +581,7 @@ string
 
 </td><td>
 
-_(Optional)_ 选择框标题
+_（可选）_ 选择框标题
 
 
 </td></tr>
@@ -597,7 +597,7 @@ string
 
 </td><td>
 
-_(Optional)_ 默认选项，以选项的值作为匹配参数，如若 `multiple` 参数为 `true`<!-- -->，则此处需要传入字符串数组
+_（可选）_ 默认选项，以选项的值作为匹配参数，如若 `multiple` 参数为 `true`<!-- -->，则此处需要传入字符串数组
 
 
 </td></tr>
@@ -613,7 +613,7 @@ false
 
 </td><td>
 
-_(Optional)_ 是否支持多选，默认为单选框
+_（可选）_ 是否支持多选，默认为单选框
 
 
 </td></tr>
@@ -629,7 +629,7 @@ callbackFn
 
 </td><td>
 
-_(Optional)_ 回调函数
+_（可选）_ 回调函数
 
 
 </td></tr>
@@ -637,7 +637,7 @@ _(Optional)_ 回调函数
 
 
 
-## Returns
+## 返回值
 
 void
 
@@ -647,11 +647,11 @@ void
 
 # SYS\_Dialog.showSelectDialog() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 弹出多选窗口
 
-## Signature
+## 签名
 
 ```typescript
 showSelectDialog(options: Array<string> | Array<{
@@ -660,21 +660,21 @@ showSelectDialog(options: Array<string> | Array<{
     }>, beforeContent?: string, afterContent?: string, title?: string, defaultOption?: Array<string>, multiple?: true, callbackFn?: (value: Array<string>) => void | Promise<void>): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -710,7 +710,7 @@ string
 
 </td><td>
 
-_(Optional)_ 多选框上方文字
+_（可选）_ 多选框上方文字
 
 
 </td></tr>
@@ -726,7 +726,7 @@ string
 
 </td><td>
 
-_(Optional)_ 多选框下方文字
+_（可选）_ 多选框下方文字
 
 
 </td></tr>
@@ -742,7 +742,7 @@ string
 
 </td><td>
 
-_(Optional)_ 多选框标题
+_（可选）_ 多选框标题
 
 
 </td></tr>
@@ -758,7 +758,7 @@ Array&lt;string&gt;
 
 </td><td>
 
-_(Optional)_ 默认选项数组，以选项的值作为匹配参数
+_（可选）_ 默认选项数组，以选项的值作为匹配参数
 
 
 </td></tr>
@@ -774,7 +774,7 @@ true
 
 </td><td>
 
-_(Optional)_ 是否支持多选
+_（可选）_ 是否支持多选
 
 
 </td></tr>
@@ -790,7 +790,7 @@ callbackFn
 
 </td><td>
 
-_(Optional)_ 回调函数
+_（可选）_ 回调函数
 
 
 </td></tr>
@@ -798,7 +798,7 @@ _(Optional)_ 回调函数
 
 
 
-## Returns
+## 返回值
 
 void
 

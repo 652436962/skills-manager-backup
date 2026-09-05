@@ -2,32 +2,32 @@
 
 PCB 属性
 
-## Signature
+## 签名
 
 ```typescript
 interface IDMT_PcbItem 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -86,7 +86,7 @@ string
 
 </td><td>
 
-_(Optional)_ 所属板子名称
+_（可选）_ 所属板子名称
 
 
 </td></tr>
@@ -140,7 +140,7 @@ PCB UUID
 
 项目类型
 
-## Signature
+## 签名
 
 ```typescript
 readonly itemType: EDMT_ItemType.PCB | EDMT_ItemType.CBB_PCB;
@@ -152,7 +152,7 @@ readonly itemType: EDMT_ItemType.PCB | EDMT_ItemType.CBB_PCB;
 
 PCB 名称
 
-## Signature
+## 签名
 
 ```typescript
 name: string;
@@ -164,7 +164,7 @@ name: string;
 
 所属板子名称
 
-## Signature
+## 签名
 
 ```typescript
 parentBoardName?: string;
@@ -176,7 +176,7 @@ parentBoardName?: string;
 
 所属工程 UUID
 
-## Signature
+## 签名
 
 ```typescript
 parentProjectUuid: string;
@@ -188,7 +188,7 @@ parentProjectUuid: string;
 
 PCB UUID
 
-## Signature
+## 签名
 
 ```typescript
 uuid: string;

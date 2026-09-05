@@ -2,30 +2,30 @@
 
 系统 / 顶部菜单类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SYS_HeaderMenu 
 ```
 
-## Remarks
+## 备注
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -111,27 +111,27 @@ Description
 
 导入顶部菜单数据
 
-## Signature
+## 签名
 
 ```typescript
 insertHeaderMenus(headerMenus: ISYS_HeaderMenus): Promise<void>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -155,7 +155,7 @@ headerMenus
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;void&gt;
 
@@ -163,11 +163,11 @@ Promise&lt;void&gt;
 
 # SYS\_HeaderMenu.insertSystemHeaderMenuItem() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 在指定位置插入系统顶部菜单项
 
-## Signature
+## 签名
 
 ```typescript
 insertSystemHeaderMenuItem(env: ESYS_HeaderMenuEnvironment, id: Array<string>, props: {
@@ -181,21 +181,21 @@ insertSystemHeaderMenuItem(env: ESYS_HeaderMenuEnvironment, id: Array<string>, p
     }): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -251,13 +251,13 @@ props
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
 顶部菜单项的 ID 数组，分隔线是否插入并不会影响操作结果的返回值
 
-## Remarks
+## 备注
 
 系统顶部菜单一旦新增无法有效删除，需要重启嘉立创 EDA 软件才可以恢复
 
@@ -279,14 +279,14 @@ Promise&lt;string \| undefined&gt;
 
 移除顶部菜单数据
 
-## Signature
+## 签名
 
 ```typescript
 removeHeaderMenus(): void;
 ```
 
 
-## Returns
+## 返回值
 
 void
 
@@ -294,11 +294,11 @@ void
 
 # SYS\_HeaderMenu.removeSystemHeaderMenuItem() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 移除系统顶部菜单项
 
-## Signature
+## 签名
 
 ```typescript
 removeSystemHeaderMenuItem(id: Array<string>, props?: {
@@ -307,21 +307,21 @@ removeSystemHeaderMenuItem(id: Array<string>, props?: {
     }): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -353,7 +353,7 @@ props
 
 </td><td>
 
-_(Optional)_ 其它参数，是否移除菜单项之前、之后的分隔线
+_（可选）_ 其它参数，是否移除菜单项之前、之后的分隔线
 
 
 </td></tr>
@@ -361,13 +361,13 @@ _(Optional)_ 其它参数，是否移除菜单项之前、之后的分隔线
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 移除操作是否成功，菜单已移除但分隔线未找到也会返回 `true` 的结果
 
-## Remarks
+## 备注
 
 一旦菜单被移除，需要重启嘉立创 EDA 软件才可以恢复
 
@@ -387,27 +387,27 @@ Promise&lt;boolean&gt;
 
 替换顶部菜单数据
 
-## Signature
+## 签名
 
 ```typescript
 replaceHeaderMenus(headerMenus: ISYS_HeaderMenus): Promise<void>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -431,10 +431,10 @@ headerMenus
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;void&gt;
 
-## Remarks
+## 备注
 
 本接口相当于同时执行了 [移除](./SYS_HeaderMenu.md) 和 [导入](./SYS_HeaderMenu.md) 操作

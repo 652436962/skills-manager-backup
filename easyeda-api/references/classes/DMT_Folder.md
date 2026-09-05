@@ -2,27 +2,27 @@
 
 文档树 / 文件夹类
 
-## Signature
+## 签名
 
 ```typescript
 declare class DMT_Folder 
 ```
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -134,31 +134,31 @@ Description
 
 # DMT\_Folder.createFolder() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 创建文件夹
 
-## Signature
+## 签名
 
 ```typescript
 createFolder(folderName: string, teamUuid: string, parentFolderUuid?: string, description?: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -206,7 +206,7 @@ string
 
 </td><td>
 
-_(Optional)_ 父文件夹 UUID，如若不指定，则为根文件夹
+_（可选）_ 父文件夹 UUID，如若不指定，则为根文件夹
 
 
 </td></tr>
@@ -222,7 +222,7 @@ string
 
 </td><td>
 
-_(Optional)_ 文件夹描述
+_（可选）_ 文件夹描述
 
 
 </td></tr>
@@ -230,7 +230,7 @@ _(Optional)_ 文件夹描述
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -242,27 +242,27 @@ Promise&lt;string \| undefined&gt;
 
 删除文件夹
 
-## Signature
+## 签名
 
 ```typescript
 deleteFolder(teamUuid: string, folderUuid: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -302,7 +302,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -314,27 +314,27 @@ Promise&lt;boolean&gt;
 
 获取所有文件夹的 UUID
 
-## Signature
+## 签名
 
 ```typescript
 getAllFoldersUuid(teamUuid: string): Promise<Array<string>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -358,13 +358,13 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;string&gt;&gt;
 
 文件夹 UUID 数组
 
-## Remarks
+## 备注
 
 本接口忽略层级信息，将会返回所有层级的文件夹的 UUID 并放置于一维数组中
 
@@ -374,27 +374,27 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 获取文件夹详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getFolderInfo(teamUuid: string, folderUuid: string): Promise<IDMT_FolderItem | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -434,13 +434,13 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IDMT\_FolderItem](../interfaces/IDMT_FolderItem.md) \| undefined&gt;
 
 文件夹属性，如若为 `undefined` 则获取失败
 
-## Remarks
+## 备注
 
 当 [parentFolderUuid](../interfaces/IDMT_FolderItem.md) 等于 [teamUuid](../interfaces/IDMT_FolderItem.md) 时，代表当前文件夹为指定团队下的一级文件夹
 
@@ -448,31 +448,31 @@ Promise&lt;[IDMT\_FolderItem](../interfaces/IDMT_FolderItem.md) \| undefined&gt;
 
 # DMT\_Folder.modifyFolderDescription() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改文件夹描述
 
-## Signature
+## 签名
 
 ```typescript
 modifyFolderDescription(teamUuid: string, folderUuid: string, description?: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -520,7 +520,7 @@ string
 
 </td><td>
 
-_(Optional)_ 文件夹描述，如若为 `undefined` 则清空工程现有描述
+_（可选）_ 文件夹描述，如若为 `undefined` 则清空工程现有描述
 
 
 </td></tr>
@@ -528,13 +528,13 @@ _(Optional)_ 文件夹描述，如若为 `undefined` 则清空工程现有描述
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 是否修改成功
 
-## Remarks
+## 备注
 
 修改文件夹描述需要与工作区系统进行交互，修改操作存在延迟，需要短暂等待后才会呈现效果
 
@@ -544,27 +544,27 @@ Promise&lt;boolean&gt;
 
 修改文件夹名称
 
-## Signature
+## 签名
 
 ```typescript
 modifyFolderName(teamUuid: string, folderUuid: string, folderName: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -620,7 +620,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -632,27 +632,27 @@ Promise&lt;boolean&gt;
 
 移动文件夹
 
-## Signature
+## 签名
 
 ```typescript
 moveFolderToFolder(teamUuid: string, folderUuid: string, parentFolderUuid?: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -700,7 +700,7 @@ string
 
 </td><td>
 
-_(Optional)_ 父文件夹 UUID，如若不指定，则默认为根文件夹
+_（可选）_ 父文件夹 UUID，如若不指定，则默认为根文件夹
 
 
 </td></tr>
@@ -708,7 +708,7 @@ _(Optional)_ 父文件夹 UUID，如若不指定，则默认为根文件夹
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 

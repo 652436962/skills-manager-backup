@@ -2,32 +2,32 @@
 
 外部库搜索结果数据行
 
-## Signature
+## 签名
 
 ```typescript
 interface ILIB_ExtendLibrarySearchResultDataLine 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -193,7 +193,7 @@ _(Optional)_
 
 # ILIB\_ExtendLibrarySearchResultDataLine.classification property
 
-## Signature
+## 签名
 
 ```typescript
 classification?: ILIB_ExtendLibraryClassificationIndex | Array<string>;
@@ -203,7 +203,7 @@ classification?: ILIB_ExtendLibraryClassificationIndex | Array<string>;
 
 # ILIB\_ExtendLibrarySearchResultDataLine.createTime property
 
-## Signature
+## 签名
 
 ```typescript
 createTime?: number;
@@ -213,7 +213,7 @@ createTime?: number;
 
 # ILIB\_ExtendLibrarySearchResultDataLine.creator property
 
-## Signature
+## 签名
 
 ```typescript
 creator?: ILIB_ExtendLibraryUserIndex;
@@ -223,7 +223,7 @@ creator?: ILIB_ExtendLibraryUserIndex;
 
 # ILIB\_ExtendLibrarySearchResultDataLine.description property
 
-## Signature
+## 签名
 
 ```typescript
 description?: string;
@@ -233,7 +233,7 @@ description?: string;
 
 # ILIB\_ExtendLibrarySearchResultDataLine.modifier property
 
-## Signature
+## 签名
 
 ```typescript
 modifier?: ILIB_ExtendLibraryUserIndex;
@@ -243,7 +243,7 @@ modifier?: ILIB_ExtendLibraryUserIndex;
 
 # ILIB\_ExtendLibrarySearchResultDataLine.owner property
 
-## Signature
+## 签名
 
 ```typescript
 owner?: ILIB_ExtendLibraryUserIndex;
@@ -253,7 +253,7 @@ owner?: ILIB_ExtendLibraryUserIndex;
 
 # ILIB\_ExtendLibrarySearchResultDataLine.updateTime property
 
-## Signature
+## 签名
 
 ```typescript
 updateTime?: number;
@@ -263,7 +263,7 @@ updateTime?: number;
 
 # ILIB\_ExtendLibrarySearchResultDataLine.version property
 
-## Signature
+## 签名
 
 ```typescript
 version?: string;

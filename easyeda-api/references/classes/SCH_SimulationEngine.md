@@ -2,31 +2,31 @@
 
 原理图 &amp; 符号 / 仿真引擎类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SCH_SimulationEngine 
 ```
 
-## Remarks
+## 备注
 
 控制仿真引擎的对接和交互
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -56,7 +56,7 @@ Description
 
 向仿真内核发送数据
 
-## Signature
+## 签名
 
 ```typescript
 pushData(eventType: ESCH_DynamicSimulationEnginePushEventType | ESCH_SpiceSimulationEnginePushEventType, props: {
@@ -64,21 +64,21 @@ pushData(eventType: ESCH_DynamicSimulationEnginePushEventType | ESCH_SpiceSimula
     }): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -118,6 +118,6 @@ props
 
 
 
-## Returns
+## 返回值
 
 void

@@ -2,27 +2,27 @@
 
 填充图元填充模式
 
-## Signature
+## 签名
 
 ```typescript
 declare enum EPCB_PrimitiveFillMode 
 ```
 
-## Enumeration Members
+## 枚举成员
 
 <table><thead><tr><th>
 
-Member
+成员
 
 
 </th><th>
 
-Value
+值
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -76,6 +76,6 @@ SOLID
 </td></tr>
 </tbody></table>
 
-## Remarks
+## 备注
 
 网格填充和内电层填充为预留配置

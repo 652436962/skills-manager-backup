@@ -2,32 +2,32 @@
 
 编辑器文档对象
 
-## Signature
+## 签名
 
 ```typescript
 interface IDMT_EditorDocumentItem 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -65,7 +65,7 @@ string
 
 </td><td>
 
-_(Optional)_ 库文档所属库 UUID
+_（可选）_ 库文档所属库 UUID
 
 
 </td></tr>
@@ -84,7 +84,7 @@ string
 
 </td><td>
 
-_(Optional)_ 文档所属工程 UUID
+_（可选）_ 文档所属工程 UUID
 
 
 </td></tr>
@@ -138,7 +138,7 @@ string
 
 文档类型
 
-## Signature
+## 签名
 
 ```typescript
 documentType: EDMT_EditorDocumentType;
@@ -150,7 +150,7 @@ documentType: EDMT_EditorDocumentType;
 
 库文档所属库 UUID
 
-## Signature
+## 签名
 
 ```typescript
 parentLibraryUuid?: string;
@@ -162,7 +162,7 @@ parentLibraryUuid?: string;
 
 文档所属工程 UUID
 
-## Signature
+## 签名
 
 ```typescript
 parentProjectUuid?: string;
@@ -174,7 +174,7 @@ parentProjectUuid?: string;
 
 文档的标签页 ID
 
-## Signature
+## 签名
 
 ```typescript
 tabId: string;
@@ -186,7 +186,7 @@ tabId: string;
 
 文档 UUID
 
-## Signature
+## 签名
 
 ```typescript
 uuid: string;

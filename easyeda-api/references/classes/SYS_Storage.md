@@ -2,32 +2,32 @@
 
 系统 / 存储类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SYS_Storage 
 ```
 
-## Remarks
+## 备注
 
 可以进行扩展的用户配置存储、浏览器本地存储的操作接口
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -127,20 +127,20 @@ Description
 
 清除扩展所有用户配置
 
-## Signature
+## 签名
 
 ```typescript
 clearExtensionAllUserConfigs(): Promise<boolean>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 此举会删除当前扩展的所有用户配置信息，请谨慎操作
 
@@ -152,27 +152,27 @@ Promise&lt;boolean&gt;
 
 删除扩展用户配置
 
-## Signature
+## 签名
 
 ```typescript
 deleteExtensionUserConfig(key: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -196,13 +196,13 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`
 
@@ -212,7 +212,7 @@ Promise&lt;boolean&gt;
 
 获取扩展所有用户配置
 
-## Signature
+## 签名
 
 ```typescript
 getExtensionAllUserConfigs(): {
@@ -221,13 +221,13 @@ getExtensionAllUserConfigs(): {
 ```
 
 
-## Returns
+## 返回值
 
 \{ \[key: string\]: any; \}
 
 扩展所有用户配置信息
 
-## Remarks
+## 备注
 
 注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`
 
@@ -237,27 +237,27 @@ getExtensionAllUserConfigs(): {
 
 获取扩展用户配置
 
-## Signature
+## 签名
 
 ```typescript
 getExtensionUserConfig(key: string): any | undefined;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -281,13 +281,13 @@ string
 
 
 
-## Returns
+## 返回值
 
 any \| undefined
 
 配置项对应的值，不存在将返回 `undefined`
 
-## Remarks
+## 备注
 
 注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`
 
@@ -297,7 +297,7 @@ any \| undefined
 
 设置扩展所有用户配置
 
-## Signature
+## 签名
 
 ```typescript
 setExtensionAllUserConfigs(configs: {
@@ -305,21 +305,21 @@ setExtensionAllUserConfigs(configs: {
     }): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -343,13 +343,13 @@ configs
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 此举会覆盖当前扩展的所有用户配置信息，请谨慎操作
 
@@ -361,27 +361,27 @@ Promise&lt;boolean&gt;
 
 设置扩展用户配置
 
-## Signature
+## 签名
 
 ```typescript
 setExtensionUserConfig(key: string, value: any): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -421,13 +421,13 @@ any
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 新建扩展用户配置也使用本接口，在设置时如果不存在将会自动新建
 

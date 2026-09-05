@@ -2,9 +2,9 @@
 
 PCB &amp; 封装 / 属性图元类
 
-## Signature
+## 签名
 
 ```typescript
 declare class PCB_PrimitiveAttribute implements IPCB_PrimitiveAPI 
 ```
-**Implements:** [IPCB\_PrimitiveAPI](../interfaces/IPCB_PrimitiveAPI.md)
+**实现自：**[IPCB\_PrimitiveAPI](../interfaces/IPCB_PrimitiveAPI.md)

@@ -2,32 +2,32 @@
 
 编辑器标签页
 
-## Signature
+## 签名
 
 ```typescript
 interface IDMT_EditorTabItem 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -119,7 +119,7 @@ string
 
 标签页是否可拖动
 
-## Signature
+## 签名
 
 ```typescript
 draggable: boolean;
@@ -131,7 +131,7 @@ draggable: boolean;
 
 标签页是否可关闭
 
-## Signature
+## 签名
 
 ```typescript
 isAbleDelete: boolean;
@@ -143,7 +143,7 @@ isAbleDelete: boolean;
 
 标签页 ID
 
-## Signature
+## 签名
 
 ```typescript
 tabId: string;
@@ -155,7 +155,7 @@ tabId: string;
 
 标签页标题
 
-## Signature
+## 签名
 
 ```typescript
 title: string;

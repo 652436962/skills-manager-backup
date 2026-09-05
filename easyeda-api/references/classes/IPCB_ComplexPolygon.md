@@ -2,32 +2,32 @@
 
 复杂多边形
 
-## Signature
+## 签名
 
 ```typescript
 declare class IPCB_ComplexPolygon 
 ```
 
-## Remarks
+## 备注
 
 复杂多边形可以包含多个单多边形，通过 [fill-rule](https://developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/fill-rule) 将其组合，以实现多边形的布尔运算。 目前嘉立创 EDA 专业版固定使用 [nonzero](https://developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/fill-rule#nonzero) 这个 fill-rule。
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -85,27 +85,27 @@ Description
 
 添加多边形数据
 
-## Signature
+## 签名
 
 ```typescript
 addSource(complexPolygon: TPCB_PolygonSourceArray | Array<TPCB_PolygonSourceArray> | IPCB_Polygon | Array<IPCB_Polygon>): IPCB_ComplexPolygon;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -129,7 +129,7 @@ complexPolygon
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_ComplexPolygon](./IPCB_ComplexPolygon.md)
 
@@ -141,20 +141,20 @@ complexPolygon
 
 获取多边形数据
 
-## Signature
+## 签名
 
 ```typescript
 getSource(): TPCB_PolygonSourceArray | Array<TPCB_PolygonSourceArray>;
 ```
 
 
-## Returns
+## 返回值
 
 [TPCB\_PolygonSourceArray](../types/TPCB_PolygonSourceArray.md) \| Array&lt;[TPCB\_PolygonSourceArray](../types/TPCB_PolygonSourceArray.md)<!-- -->&gt;
 
 单多边形或复杂多边形数据
 
-## Remarks
+## 备注
 
 如遇仅包含单一的单多边形，将会化简最外层的数组
 
@@ -164,19 +164,19 @@ getSource(): TPCB_PolygonSourceArray | Array<TPCB_PolygonSourceArray>;
 
 获取复杂多边形数据
 
-## Signature
+## 签名
 
 ```typescript
 getSourceStrictComplex(): Array<TPCB_PolygonSourceArray>;
 ```
 
 
-## Returns
+## 返回值
 
 Array&lt;[TPCB\_PolygonSourceArray](../types/TPCB_PolygonSourceArray.md)<!-- -->&gt;
 
 复杂多边形数据
 
-## Remarks
+## 备注
 
 强制返回复杂多边形格式数据，即使它仅包含单一的单多边形

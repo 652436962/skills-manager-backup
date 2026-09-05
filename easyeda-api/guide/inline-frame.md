@@ -1,20 +1,20 @@
-# Inline Frame Support
+# 内联框架支持
 
-In some application scenarios where extensions want to have fully customized windows that are not limited to the popups and controls provided by EasyEDA, we provide a way to build windows using inline frames.
+在一些应用场景下，扩展希望拥有完全自定义的窗口，它不局限于嘉立创 EDA 提供的弹窗和控件，此时我们提供了使用内联框架构建窗口的方式。
 
-To use inline frames, you need to save all files in the extension's `/iframe/` directory and use [SYS_IFrame.openIFrame()](../reference/pro-api.sys_iframe.openiframe) method to load the specified `html` file as the content of the inline frame.
+想要使用内联框架，你需要将所有文件保存在扩展的 `/iframe/` 目录中，并使用 [SYS_IFrame.openIFrame()](../reference/pro-api.sys_iframe.openiframe) 方法加载指定的 `html` 文件作为内联框架的内容。
 
 ```typescript
-// This example loads the index.html file in the /iframe/ directory with a window of 500px in height and width
+// 此处示例加载扩展 /iframe/ 目录下的 index.html 文件，窗口的高度和宽度均为 500px
 eda.sys_IFrame.openIFrame('/iframe/index.html', 500, 500);
 ```
 
 ::: tip
-Files can be loaded and indexed without being stored in the `/iframe/` directory, but it is recommended that the `/iframe/` directory be used as the storage directory for inline frame files for a more intuitive organization of the files.
+文件不保存在 `/iframe/` 目录下也可以被加载和索引，但我们建议将 `/iframe/` 目录作为内联框架文件的存储目录，这样组织文件更加直观。
 
-The URI referred to by the `htmlFileName` parameter starts at the root path of the extension package, you can use `/` or start directly with the `iframe/` folder name.
+`htmlFileName` 参数所指代的 URI 从扩展包的根路径起始，你可以使用 `/` 或直接以 `iframe/` 文件夹名称起始。
 :::
 
-The extension API will automatically read the specified `html` file and other files associated with it, but will not continue to recursively parse it, due to the limitations of our secure resource access rules.
+扩展 API 会自动读取指定的 `html` 文件及其关联的其他文件，但不会继续递归解析，这是我们的安全资源访问规则的限制。
 
-To open multiple IFrame windows within a single extension, specify an ID for each IFrame.
+如需在单个扩展内打开多个 IFrame 窗口，请为每个 IFrame 指定 ID。

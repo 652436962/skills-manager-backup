@@ -2,27 +2,27 @@
 
 PCB &amp; 封装 / 多边形数学类
 
-## Signature
+## 签名
 
 ```typescript
 declare class PCB_MathPolygon 
 ```
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -116,27 +116,27 @@ Description
 
 # PCB\_MathPolygon.calculateBBoxHeight() method
 
-## Signature
+## 签名
 
 ```typescript
 calculateBBoxHeight(complexPolygon: TPCB_PolygonSourceArray | Array<TPCB_PolygonSourceArray>): number;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -158,7 +158,7 @@ complexPolygon
 
 
 
-## Returns
+## 返回值
 
 number
 
@@ -166,27 +166,27 @@ number
 
 # PCB\_MathPolygon.calculateBBoxWidth() method
 
-## Signature
+## 签名
 
 ```typescript
 calculateBBoxWidth(complexPolygon: TPCB_PolygonSourceArray | Array<TPCB_PolygonSourceArray>): number;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -208,7 +208,7 @@ complexPolygon
 
 
 
-## Returns
+## 返回值
 
 number
 
@@ -216,31 +216,31 @@ number
 
 # PCB\_MathPolygon.convertImageToComplexPolygon() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将图像转换为复杂多边形对象
 
-## Signature
+## 签名
 
 ```typescript
 convertImageToComplexPolygon(imageBlob: Blob, imageWidth: number, imageHeight: number, tolerance?: number, simplification?: number, smoothing?: number, despeckling?: number, whiteAsBackgroundColor?: boolean, inversion?: boolean): Promise<IPCB_ComplexPolygon | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -304,7 +304,7 @@ number
 
 </td><td>
 
-_(Optional)_ 容差，取值范围 `0`<!-- -->-`1`
+_（可选）_ 容差，取值范围 `0`<!-- -->-`1`
 
 
 </td></tr>
@@ -320,7 +320,7 @@ number
 
 </td><td>
 
-_(Optional)_ 简化，取值范围 `0`<!-- -->-`1`
+_（可选）_ 简化，取值范围 `0`<!-- -->-`1`
 
 
 </td></tr>
@@ -336,7 +336,7 @@ number
 
 </td><td>
 
-_(Optional)_ 平滑，取值范围 `0`<!-- -->-`1.33`
+_（可选）_ 平滑，取值范围 `0`<!-- -->-`1.33`
 
 
 </td></tr>
@@ -352,7 +352,7 @@ number
 
 </td><td>
 
-_(Optional)_ 去斑，取值范围 `0`<!-- -->-`5`
+_（可选）_ 去斑，取值范围 `0`<!-- -->-`5`
 
 
 </td></tr>
@@ -368,7 +368,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否白色作为背景色
+_（可选）_ 是否白色作为背景色
 
 
 </td></tr>
@@ -384,7 +384,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否反相
+_（可选）_ 是否反相
 
 
 </td></tr>
@@ -392,7 +392,7 @@ _(Optional)_ 是否反相
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_ComplexPolygon](./IPCB_ComplexPolygon.md) \| undefined&gt;
 
@@ -404,27 +404,27 @@ Promise&lt;[IPCB\_ComplexPolygon](./IPCB_ComplexPolygon.md) \| undefined&gt;
 
 创建复杂多边形
 
-## Signature
+## 签名
 
 ```typescript
 createComplexPolygon(complexPolygon: TPCB_PolygonSourceArray | Array<TPCB_PolygonSourceArray> | IPCB_Polygon | Array<IPCB_Polygon>): IPCB_ComplexPolygon | undefined;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -448,7 +448,7 @@ complexPolygon
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_ComplexPolygon](./IPCB_ComplexPolygon.md) \| undefined
 
@@ -460,27 +460,27 @@ complexPolygon
 
 创建单多边形
 
-## Signature
+## 签名
 
 ```typescript
 createPolygon(polygon: TPCB_PolygonSourceArray): IPCB_Polygon | undefined;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -504,7 +504,7 @@ polygon
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_Polygon](./IPCB_Polygon.md) \| undefined
 
@@ -516,27 +516,27 @@ polygon
 
 拆分单多边形
 
-## Signature
+## 签名
 
 ```typescript
 splitPolygon(...complexPolygons: Array<IPCB_ComplexPolygon>): Array<IPCB_Polygon>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -560,7 +560,7 @@ Array&lt;[IPCB\_ComplexPolygon](./IPCB_ComplexPolygon.md)<!-- -->&gt;
 
 
 
-## Returns
+## 返回值
 
 Array&lt;[IPCB\_Polygon](./IPCB_Polygon.md)<!-- -->&gt;
 

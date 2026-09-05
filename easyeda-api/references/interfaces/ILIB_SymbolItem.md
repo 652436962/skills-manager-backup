@@ -2,32 +2,32 @@
 
 符号属性
 
-## Signature
+## 签名
 
 ```typescript
 interface ILIB_SymbolItem 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -46,7 +46,7 @@ string
 
 </td><td>
 
-_(Optional)_ 所属复用模块 UUID，仅复用模块符号存在该属性
+_（可选）_ 所属复用模块 UUID，仅复用模块符号存在该属性
 
 
 </td></tr>
@@ -65,7 +65,7 @@ _(Optional)_ 所属复用模块 UUID，仅复用模块符号存在该属性
 
 </td><td>
 
-_(Optional)_ 分类
+_（可选）_ 分类
 
 
 </td></tr>
@@ -84,7 +84,7 @@ string
 
 </td><td>
 
-_(Optional)_ 描述
+_（可选）_ 描述
 
 
 </td></tr>
@@ -149,25 +149,6 @@ string
 </td></tr>
 <tr><td>
 
-[subPartNames](./ILIB_SymbolItem.md)
-
-
-</td><td>
-
-
-</td><td>
-
-\[\]
-
-
-</td><td>
-
-子部件名称数组
-
-
-</td></tr>
-<tr><td>
-
 [type](./ILIB_SymbolItem.md)
 
 
@@ -216,7 +197,7 @@ string
 
 所属复用模块 UUID，仅复用模块符号存在该属性
 
-## Signature
+## 签名
 
 ```typescript
 cbbUuid?: string;
@@ -228,7 +209,7 @@ cbbUuid?: string;
 
 分类
 
-## Signature
+## 签名
 
 ```typescript
 classification?: ILIB_ClassificationIndex | Array<string>;
@@ -240,7 +221,7 @@ classification?: ILIB_ClassificationIndex | Array<string>;
 
 描述
 
-## Signature
+## 签名
 
 ```typescript
 description?: string;
@@ -252,7 +233,7 @@ description?: string;
 
 库类型
 
-## Signature
+## 签名
 
 ```typescript
 readonly libraryType: ELIB_LibraryType.SYMBOL;
@@ -264,7 +245,7 @@ readonly libraryType: ELIB_LibraryType.SYMBOL;
 
 所属库 UUID
 
-## Signature
+## 签名
 
 ```typescript
 libraryUuid: string;
@@ -276,22 +257,10 @@ libraryUuid: string;
 
 符号名称
 
-## Signature
+## 签名
 
 ```typescript
 name: string;
-```
-
-### subpartnames
-
-# ILIB\_SymbolItem.subPartNames property
-
-子部件名称数组
-
-## Signature
-
-```typescript
-subPartNames: [];
 ```
 
 ### type
@@ -300,7 +269,7 @@ subPartNames: [];
 
 符号类型
 
-## Signature
+## 签名
 
 ```typescript
 type: ELIB_SymbolType;
@@ -312,7 +281,7 @@ type: ELIB_SymbolType;
 
 符号 UUID
 
-## Signature
+## 签名
 
 ```typescript
 uuid: string;

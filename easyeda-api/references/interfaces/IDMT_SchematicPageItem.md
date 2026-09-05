@@ -2,32 +2,32 @@
 
 原理图图页属性
 
-## Signature
+## 签名
 
 ```typescript
 interface IDMT_SchematicPageItem 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -159,7 +159,7 @@ string
 
 项目类型
 
-## Signature
+## 签名
 
 ```typescript
 readonly itemType: EDMT_ItemType.SCHEMATIC_PAGE;
@@ -171,7 +171,7 @@ readonly itemType: EDMT_ItemType.SCHEMATIC_PAGE;
 
 原理图图页名称
 
-## Signature
+## 签名
 
 ```typescript
 name: string;
@@ -183,7 +183,7 @@ name: string;
 
 所属原理图 UUID
 
-## Signature
+## 签名
 
 ```typescript
 parentSchematicUuid: string;
@@ -195,7 +195,7 @@ parentSchematicUuid: string;
 
 是否显示明细表
 
-## Signature
+## 签名
 
 ```typescript
 showTitleBlock: boolean;
@@ -207,7 +207,7 @@ showTitleBlock: boolean;
 
 明细表数据
 
-## Signature
+## 签名
 
 ```typescript
 titleBlockData: {
@@ -225,7 +225,7 @@ titleBlockData: {
 
 原理图图页 UUID
 
-## Signature
+## 签名
 
 ```typescript
 uuid: string;

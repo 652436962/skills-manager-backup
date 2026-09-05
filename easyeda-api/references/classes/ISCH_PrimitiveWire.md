@@ -2,31 +2,31 @@
 
 导线图元
 
-## Signature
+## 签名
 
 ```typescript
 declare class ISCH_PrimitiveWire implements ISCH_Primitive 
 ```
-**Implements:** [ISCH\_Primitive](../interfaces/ISCH_Primitive.md)
+**实现自：**[ISCH\_Primitive](../interfaces/ISCH_Primitive.md)
 
-## Remarks
+## 备注
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -264,18 +264,18 @@ Description
 
 # ISCH\_PrimitiveWire.done() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将对图元的更改应用到画布
 
-## Signature
+## 签名
 
 ```typescript
 done(): Promise<ISCH_PrimitiveWire>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ISCH\_PrimitiveWire](./ISCH_PrimitiveWire.md)<!-- -->&gt;
 
@@ -287,14 +287,14 @@ Promise&lt;[ISCH\_PrimitiveWire](./ISCH_PrimitiveWire.md)<!-- -->&gt;
 
 获取属性状态：总线颜色
 
-## Signature
+## 签名
 
 ```typescript
 getState_Color(): string | null;
 ```
 
 
-## Returns
+## 返回值
 
 string \| null
 
@@ -306,14 +306,14 @@ string \| null
 
 获取属性状态：多段线坐标组
 
-## Signature
+## 签名
 
 ```typescript
 getState_Line(): Array<number> | Array<Array<number>>;
 ```
 
 
-## Returns
+## 返回值
 
 Array&lt;number&gt; \| Array&lt;Array&lt;number&gt;&gt;
 
@@ -325,14 +325,14 @@ Array&lt;number&gt; \| Array&lt;Array&lt;number&gt;&gt;
 
 获取属性状态：线型
 
-## Signature
+## 签名
 
 ```typescript
 getState_LineType(): ESCH_PrimitiveLineType | null;
 ```
 
 
-## Returns
+## 返回值
 
 [ESCH\_PrimitiveLineType](../enums/ESCH_PrimitiveLineType.md) \| null
 
@@ -344,14 +344,14 @@ getState_LineType(): ESCH_PrimitiveLineType | null;
 
 获取属性状态：线宽
 
-## Signature
+## 签名
 
 ```typescript
 getState_LineWidth(): number | null;
 ```
 
 
-## Returns
+## 返回值
 
 number \| null
 
@@ -363,14 +363,14 @@ number \| null
 
 获取属性状态：网络名称
 
-## Signature
+## 签名
 
 ```typescript
 getState_Net(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -382,14 +382,14 @@ string
 
 获取属性状态：图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveId(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -401,14 +401,14 @@ string
 
 获取属性状态：图元类型
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveType(): ESCH_PrimitiveType;
 ```
 
 
-## Returns
+## 返回值
 
 [ESCH\_PrimitiveType](../enums/ESCH_PrimitiveType.md)
 
@@ -420,14 +420,14 @@ getState_PrimitiveType(): ESCH_PrimitiveType;
 
 查询图元是否为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 isAsync(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -437,31 +437,31 @@ boolean
 
 # ISCH\_PrimitiveWire.setState\_Color() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：导线颜色
 
-## Signature
+## 签名
 
 ```typescript
 setState_Color(color: string | null): ISCH_PrimitiveWire;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -485,7 +485,7 @@ string \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveWire](./ISCH_PrimitiveWire.md)
 
@@ -495,31 +495,31 @@ string \| null
 
 # ISCH\_PrimitiveWire.setState\_Line() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：多段线坐标组
 
-## Signature
+## 签名
 
 ```typescript
 setState_Line(line: Array<number> | Array<Array<number>>): ISCH_PrimitiveWire;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -543,7 +543,7 @@ Array&lt;number&gt; \| Array&lt;Array&lt;number&gt;&gt;
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveWire](./ISCH_PrimitiveWire.md)
 
@@ -553,31 +553,31 @@ Array&lt;number&gt; \| Array&lt;Array&lt;number&gt;&gt;
 
 # ISCH\_PrimitiveWire.setState\_LineType() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：线型
 
-## Signature
+## 签名
 
 ```typescript
 setState_LineType(lineType: ESCH_PrimitiveLineType | null): ISCH_PrimitiveWire;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -601,7 +601,7 @@ lineType
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveWire](./ISCH_PrimitiveWire.md)
 
@@ -611,31 +611,31 @@ lineType
 
 # ISCH\_PrimitiveWire.setState\_LineWidth() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：线宽
 
-## Signature
+## 签名
 
 ```typescript
 setState_LineWidth(lineWidth: number | null): ISCH_PrimitiveWire;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -659,7 +659,7 @@ number \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveWire](./ISCH_PrimitiveWire.md)
 
@@ -669,31 +669,31 @@ number \| null
 
 # ISCH\_PrimitiveWire.setState\_Net() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：网络名称
 
-## Signature
+## 签名
 
 ```typescript
 setState_Net(net: string): ISCH_PrimitiveWire;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -717,7 +717,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveWire](./ISCH_PrimitiveWire.md)
 
@@ -729,14 +729,14 @@ string
 
 将图元转换为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 toAsync(): ISCH_PrimitiveWire;
 ```
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveWire](./ISCH_PrimitiveWire.md)
 
@@ -748,14 +748,14 @@ toAsync(): ISCH_PrimitiveWire;
 
 将图元转换为同步图元
 
-## Signature
+## 签名
 
 ```typescript
 toSync(): ISCH_PrimitiveWire;
 ```
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveWire](./ISCH_PrimitiveWire.md)
 

@@ -2,32 +2,32 @@
 
 图层属性
 
-## Signature
+## 签名
 
 ```typescript
 interface IPCB_LayerItem 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -214,7 +214,7 @@ number
 
 颜色（RGB HEX 格式）
 
-## Signature
+## 签名
 
 ```typescript
 color: string;
@@ -226,7 +226,7 @@ color: string;
 
 图层 ID
 
-## Signature
+## 签名
 
 ```typescript
 id: EPCB_LayerId;
@@ -238,7 +238,7 @@ id: EPCB_LayerId;
 
 非激活颜色（RGB HEX 格式）
 
-## Signature
+## 签名
 
 ```typescript
 inactiveColor: string;
@@ -250,7 +250,7 @@ inactiveColor: string;
 
 非激活透明度（%）
 
-## Signature
+## 签名
 
 ```typescript
 inactiveTransparency: number;
@@ -262,7 +262,7 @@ inactiveTransparency: number;
 
 层状态
 
-## Signature
+## 签名
 
 ```typescript
 layerStatus: EPCB_LayerStatus;
@@ -274,7 +274,7 @@ layerStatus: EPCB_LayerStatus;
 
 是否锁定
 
-## Signature
+## 签名
 
 ```typescript
 locked: boolean;
@@ -286,7 +286,7 @@ locked: boolean;
 
 名称
 
-## Signature
+## 签名
 
 ```typescript
 name: string;
@@ -298,7 +298,7 @@ name: string;
 
 透明度（%）
 
-## Signature
+## 签名
 
 ```typescript
 transparency: number;
@@ -310,7 +310,7 @@ transparency: number;
 
 类型
 
-## Signature
+## 签名
 
 ```typescript
 type: EPCB_LayerType;

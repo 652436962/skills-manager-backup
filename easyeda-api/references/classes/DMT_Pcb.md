@@ -2,31 +2,31 @@
 
 文档树 / PCB 管理类
 
-## Signature
+## 签名
 
 ```typescript
 declare class DMT_Pcb 
 ```
 
-## Remarks
+## 备注
 
 在当前打开的工程内进行 PCB 管理的相关操作
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -140,27 +140,27 @@ Description
 
 复制 PCB
 
-## Signature
+## 签名
 
 ```typescript
 copyPcb(pcbUuid: string, boardName?: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -192,7 +192,7 @@ string
 
 </td><td>
 
-_(Optional)_ 新 PCB 所属板子名称，如若不指定则为游离 PCB
+_（可选）_ 新 PCB 所属板子名称，如若不指定则为游离 PCB
 
 
 </td></tr>
@@ -200,13 +200,13 @@ _(Optional)_ 新 PCB 所属板子名称，如若不指定则为游离 PCB
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
 新 PCB UUID，如若为 `undefined` 则复制失败
 
-## Remarks
+## 备注
 
 即使此处 PCB 已关联复用模块（在工程库内存在同名的复用模块符号），也不新建复用模块符号，此操作逻辑与当前编辑器前端保持一致
 
@@ -216,27 +216,27 @@ Promise&lt;string \| undefined&gt;
 
 创建 PCB
 
-## Signature
+## 签名
 
 ```typescript
 createPcb(boardName?: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -252,7 +252,7 @@ string
 
 </td><td>
 
-_(Optional)_ 所属板子名称，如若不指定则为游离 PCB
+_（可选）_ 所属板子名称，如若不指定则为游离 PCB
 
 
 </td></tr>
@@ -260,7 +260,7 @@ _(Optional)_ 所属板子名称，如若不指定则为游离 PCB
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -272,27 +272,27 @@ PCB UUID，如若为 `undefined` 则创建失败
 
 删除 PCB
 
-## Signature
+## 签名
 
 ```typescript
 deletePcb(pcbUuid: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -316,13 +316,13 @@ PCB UUID
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 如若 PCB 已关联复用模块（在工程库内存在同名的复用模块符号），则删除 PCB 时将同步删除关联的原理图和复用模块符号，复用模块符号不可删除则跳过
 
@@ -332,14 +332,14 @@ Promise&lt;boolean&gt;
 
 获取工程内所有 PCB 的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getAllPcbsInfo(): Promise<Array<IDMT_PcbItem>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IDMT\_PcbItem](../interfaces/IDMT_PcbItem.md)<!-- -->&gt;&gt;
 
@@ -351,20 +351,20 @@ Promise&lt;Array&lt;[IDMT\_PcbItem](../interfaces/IDMT_PcbItem.md)<!-- -->&gt;&g
 
 获取当前 PCB 的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getCurrentPcbInfo(): Promise<IDMT_PcbItem | undefined>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IDMT\_PcbItem](../interfaces/IDMT_PcbItem.md) \| undefined&gt;
 
 PCB 的详细属性，如若为 `undefined` 则获取失败
 
-## Remarks
+## 备注
 
 将会获取当前打开且拥有最后输入焦点的 PCB 的详细属性
 
@@ -374,27 +374,27 @@ PCB 的详细属性，如若为 `undefined` 则获取失败
 
 获取 PCB 的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getPcbInfo(pcbUuid: string): Promise<IDMT_PcbItem | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -418,7 +418,7 @@ PCB UUID
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IDMT\_PcbItem](../interfaces/IDMT_PcbItem.md) \| undefined&gt;
 
@@ -430,27 +430,27 @@ PCB 的详细属性，如若为 `undefined` 则获取失败
 
 修改 PCB 名称
 
-## Signature
+## 签名
 
 ```typescript
 modifyPcbName(pcbUuid: string, pcbName: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -490,12 +490,12 @@ PCB 名称
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 是否修改成功
 
-## Remarks
+## 备注
 
 如若 PCB 已关联复用模块（在工程库内存在同名的复用模块符号），则修改名称时将同步修改复用模块符号名称与关联原理图名称

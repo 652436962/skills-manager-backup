@@ -2,31 +2,31 @@
 
 系统 / 消息通知类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SYS_Message 
 ```
 
-## Remarks
+## 备注
 
 生成各种对用户的非侵入式提醒
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -82,31 +82,31 @@ Description
 
 # SYS\_Message.removeFollowMouseTip() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 移除跟随鼠标的提示
 
-## Signature
+## 签名
 
 ```typescript
 removeFollowMouseTip(tip?: string): Promise<void>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -122,7 +122,7 @@ string
 
 </td><td>
 
-_(Optional)_ 提示内容，如若传入，则仅当当前提示为指定内容时才移除
+_（可选）_ 提示内容，如若传入，则仅当当前提示为指定内容时才移除
 
 
 </td></tr>
@@ -130,11 +130,11 @@ _(Optional)_ 提示内容，如若传入，则仅当当前提示为指定内容�
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;void&gt;
 
-## Remarks
+## 备注
 
 移除当前或指定的跟随鼠标的提示
 
@@ -142,31 +142,31 @@ Promise&lt;void&gt;
 
 # SYS\_Message.showFollowMouseTip() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 展示跟随鼠标的提示
 
-## Signature
+## 签名
 
 ```typescript
 showFollowMouseTip(tip: string, msTimeout?: number): Promise<void>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -198,7 +198,7 @@ number
 
 </td><td>
 
-_(Optional)_ 展示时间，以毫秒（ms）为单位，如若不传入则持续展示，直到调用 [removeFollowMouseTip](./SYS_Message.md) 或被其它提示覆盖
+_（可选）_ 展示时间，以毫秒（ms）为单位，如若不传入则持续展示，直到调用 [removeFollowMouseTip](./SYS_Message.md) 或被其它提示覆盖
 
 
 </td></tr>
@@ -206,11 +206,11 @@ _(Optional)_ 展示时间，以毫秒（ms）为单位，如若不传入则持�
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;void&gt;
 
-## Remarks
+## 备注
 
 同一时间只能展示一条提示，如果展示新的提示，则之前的提示将被自动移除
 
@@ -220,27 +220,27 @@ Promise&lt;void&gt;
 
 显示吐司消息
 
-## Signature
+## 签名
 
 ```typescript
 showToastMessage(message: string, messageType?: ESYS_ToastMessageType, timer?: number, bottomPanel?: ESYS_BottomPanelTab, buttonTitle?: string, buttonCallbackFn?: string): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -272,7 +272,7 @@ messageType
 
 </td><td>
 
-_(Optional)_ 消息类型
+_（可选）_ 消息类型
 
 
 </td></tr>
@@ -288,7 +288,7 @@ number
 
 </td><td>
 
-_(Optional)_ 自动关闭倒计时秒数，`0` 为不自动关闭
+_（可选）_ 自动关闭倒计时秒数，`0` 为不自动关闭
 
 
 </td></tr>
@@ -304,7 +304,7 @@ bottomPanel
 
 </td><td>
 
-_(Optional)_ 展开底部信息面板
+_（可选）_ 展开底部信息面板
 
 
 </td></tr>
@@ -320,7 +320,7 @@ string
 
 </td><td>
 
-_(Optional)_ 回调按钮标题
+_（可选）_ 回调按钮标题
 
 
 </td></tr>
@@ -336,7 +336,7 @@ string
 
 </td><td>
 
-_(Optional)_ 回调函数内容，字符串形式，会被自动解析并执行
+_（可选）_ 回调函数内容，字符串形式，会被自动解析并执行
 
 
 </td></tr>
@@ -344,6 +344,6 @@ _(Optional)_ 回调函数内容，字符串形式，会被自动解析并执行
 
 
 
-## Returns
+## 返回值
 
 void

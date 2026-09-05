@@ -2,31 +2,31 @@
 
 器件图元
 
-## Signature
+## 签名
 
 ```typescript
 declare class IPCB_PrimitiveComponent implements IPCB_Primitive 
 ```
-**Implements:** [IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
+**实现自：**[IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
 
-## Remarks
+## 备注
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -600,18 +600,18 @@ Description
 
 # IPCB\_PrimitiveComponent.done() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将对图元的更改应用到画布
 
-## Signature
+## 签名
 
 ```typescript
 done(): Promise<IPCB_PrimitiveComponent>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)<!-- -->&gt;
 
@@ -621,18 +621,18 @@ Promise&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)<!-- -->&gt;
 
 # IPCB\_PrimitiveComponent.getAllPins() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取器件关联的所有焊盘
 
-## Signature
+## 签名
 
 ```typescript
 getAllPins(): Promise<Array<IPCB_PrimitiveComponentPad>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveComponentPad](./IPCB_PrimitiveComponentPad.md)<!-- -->&gt;&gt;
 
@@ -644,14 +644,14 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveComponentPad](./IPCB_PrimitiveComponentPad.m
 
 获取属性状态：是否加入 BOM
 
-## Signature
+## 签名
 
 ```typescript
 getState_AddIntoBom(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -663,20 +663,19 @@ boolean
 
 获取属性状态：关联库器件
 
-## Signature
+## 签名
 
 ```typescript
 getState_Component(): {
         libraryUuid: string;
         uuid: string;
-        name?: string;
-    } | undefined;
+    };
 ```
 
 
-## Returns
+## 返回值
 
-{ libraryUuid: string; uuid: string; name?: string; } \| undefined
+\{ libraryUuid: string; uuid: string; \}
 
 关联库器件
 
@@ -686,14 +685,14 @@ getState_Component(): {
 
 获取属性状态：位号
 
-## Signature
+## 签名
 
 ```typescript
 getState_Designator(): string | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 string \| undefined
 
@@ -705,20 +704,19 @@ string \| undefined
 
 获取属性状态：关联库封装
 
-## Signature
+## 签名
 
 ```typescript
 getState_Footprint(): {
         libraryUuid: string;
         uuid: string;
-        name?: string;
     } | undefined;
 ```
 
 
-## Returns
+## 返回值
 
-{ libraryUuid: string; uuid: string; name?: string; } \| undefined
+{ libraryUuid: string; uuid: string; } \| undefined
 
 关联库封装
 
@@ -728,14 +726,14 @@ getState_Footprint(): {
 
 获取属性状态：层
 
-## Signature
+## 签名
 
 ```typescript
 getState_Layer(): TPCB_LayersOfComponent;
 ```
 
 
-## Returns
+## 返回值
 
 [TPCB\_LayersOfComponent](../types/TPCB_LayersOfComponent.md)
 
@@ -747,14 +745,14 @@ getState_Layer(): TPCB_LayersOfComponent;
 
 获取属性状态：制造商
 
-## Signature
+## 签名
 
 ```typescript
 getState_Manufacturer(): string | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 string \| undefined
 
@@ -766,14 +764,14 @@ string \| undefined
 
 获取属性状态：制造商编号
 
-## Signature
+## 签名
 
 ```typescript
 getState_ManufacturerId(): string | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 string \| undefined
 
@@ -785,20 +783,19 @@ string \| undefined
 
 获取属性状态：关联库 3D 模型
 
-## Signature
+## 签名
 
 ```typescript
 getState_Model3D(): {
         libraryUuid: string;
         uuid: string;
-        name?: string;
     } | undefined;
 ```
 
 
-## Returns
+## 返回值
 
-{ libraryUuid: string; uuid: string; name?: string; } \| undefined
+{ libraryUuid: string; uuid: string; } \| undefined
 
 关联库 3D 模型
 
@@ -808,14 +805,14 @@ getState_Model3D(): {
 
 获取属性状态：名称
 
-## Signature
+## 签名
 
 ```typescript
 getState_Name(): string | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 string \| undefined
 
@@ -827,7 +824,7 @@ string \| undefined
 
 获取属性状态：其它参数
 
-## Signature
+## 签名
 
 ```typescript
 getState_OtherProperty(): {
@@ -836,7 +833,7 @@ getState_OtherProperty(): {
 ```
 
 
-## Returns
+## 返回值
 
 { \[key: string\]: string \| number \| boolean; } \| undefined
 
@@ -848,7 +845,7 @@ getState_OtherProperty(): {
 
 获取属性状态：焊盘
 
-## Signature
+## 签名
 
 ```typescript
 getState_Pads(): Array<{
@@ -859,7 +856,7 @@ getState_Pads(): Array<{
 ```
 
 
-## Returns
+## 返回值
 
 Array&lt;{ primitiveId: string; net: string; padNumber: string; }&gt; \| undefined
 
@@ -871,14 +868,14 @@ Array&lt;{ primitiveId: string; net: string; padNumber: string; }&gt; \| undefin
 
 获取属性状态：图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveId(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -890,14 +887,14 @@ string
 
 获取属性状态：是否锁定
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveLock(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -909,14 +906,14 @@ boolean
 
 获取属性状态：图元类型
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveType(): EPCB_PrimitiveType;
 ```
 
 
-## Returns
+## 返回值
 
 [EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)
 
@@ -928,14 +925,14 @@ getState_PrimitiveType(): EPCB_PrimitiveType;
 
 获取属性状态：旋转角度
 
-## Signature
+## 签名
 
 ```typescript
 getState_Rotation(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -947,14 +944,14 @@ number
 
 获取属性状态：供应商
 
-## Signature
+## 签名
 
 ```typescript
 getState_Supplier(): string | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 string \| undefined
 
@@ -966,14 +963,14 @@ string \| undefined
 
 获取属性状态：供应商编号
 
-## Signature
+## 签名
 
 ```typescript
 getState_SupplierId(): string | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 string \| undefined
 
@@ -985,14 +982,14 @@ string \| undefined
 
 获取属性状态：唯一 ID
 
-## Signature
+## 签名
 
 ```typescript
 getState_UniqueId(): string | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 string \| undefined
 
@@ -1004,14 +1001,14 @@ string \| undefined
 
 获取属性状态：坐标 X
 
-## Signature
+## 签名
 
 ```typescript
 getState_X(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -1023,14 +1020,14 @@ number
 
 获取属性状态：坐标 Y
 
-## Signature
+## 签名
 
 ```typescript
 getState_Y(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -1042,14 +1039,14 @@ number
 
 查询图元是否为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 isAsync(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -1059,18 +1056,18 @@ boolean
 
 # IPCB\_PrimitiveComponent.reset() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将异步图元重置为当前画布状态
 
-## Signature
+## 签名
 
 ```typescript
 reset(): Promise<IPCB_PrimitiveComponent>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)<!-- -->&gt;
 
@@ -1080,31 +1077,31 @@ Promise&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)<!-- -->&gt;
 
 # IPCB\_PrimitiveComponent.setState\_AddIntoBom() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：是否加入 BOM
 
-## Signature
+## 签名
 
 ```typescript
 setState_AddIntoBom(addIntoBom: boolean): IPCB_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1128,7 +1125,7 @@ boolean
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
@@ -1138,31 +1135,31 @@ boolean
 
 # IPCB\_PrimitiveComponent.setState\_Designator() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：位号
 
-## Signature
+## 签名
 
 ```typescript
 setState_Designator(designator: string | undefined): IPCB_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1186,7 +1183,7 @@ string \| undefined
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
@@ -1196,31 +1193,31 @@ string \| undefined
 
 # IPCB\_PrimitiveComponent.setState\_Layer() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：层
 
-## Signature
+## 签名
 
 ```typescript
 setState_Layer(layer: TPCB_LayersOfComponent): IPCB_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1244,7 +1241,7 @@ layer
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
@@ -1254,31 +1251,31 @@ layer
 
 # IPCB\_PrimitiveComponent.setState\_Manufacturer() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：制造商
 
-## Signature
+## 签名
 
 ```typescript
 setState_Manufacturer(manufacturer: string | undefined): IPCB_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1302,7 +1299,7 @@ string \| undefined
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
@@ -1312,31 +1309,31 @@ string \| undefined
 
 # IPCB\_PrimitiveComponent.setState\_ManufacturerId() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：制造商编号
 
-## Signature
+## 签名
 
 ```typescript
 setState_ManufacturerId(manufacturerId: string | undefined): IPCB_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1360,7 +1357,7 @@ string \| undefined
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
@@ -1370,31 +1367,31 @@ string \| undefined
 
 # IPCB\_PrimitiveComponent.setState\_Name() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：名称
 
-## Signature
+## 签名
 
 ```typescript
 setState_Name(name: string | undefined): IPCB_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1418,7 +1415,7 @@ string \| undefined
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
@@ -1428,11 +1425,11 @@ string \| undefined
 
 # IPCB\_PrimitiveComponent.setState\_OtherProperty() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：其它参数
 
-## Signature
+## 签名
 
 ```typescript
 setState_OtherProperty(otherProperty: {
@@ -1440,21 +1437,21 @@ setState_OtherProperty(otherProperty: {
     }): IPCB_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1478,7 +1475,7 @@ otherProperty
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
@@ -1488,31 +1485,31 @@ otherProperty
 
 # IPCB\_PrimitiveComponent.setState\_PrimitiveLock() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：是否锁定
 
-## Signature
+## 签名
 
 ```typescript
 setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1536,7 +1533,7 @@ boolean
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
@@ -1546,31 +1543,31 @@ boolean
 
 # IPCB\_PrimitiveComponent.setState\_Rotation() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：旋转角度
 
-## Signature
+## 签名
 
 ```typescript
 setState_Rotation(rotation: number): IPCB_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1594,7 +1591,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
@@ -1604,31 +1601,31 @@ number
 
 # IPCB\_PrimitiveComponent.setState\_Supplier() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：供应商
 
-## Signature
+## 签名
 
 ```typescript
 setState_Supplier(supplier: string | undefined): IPCB_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1652,7 +1649,7 @@ string \| undefined
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
@@ -1662,31 +1659,31 @@ string \| undefined
 
 # IPCB\_PrimitiveComponent.setState\_SupplierId() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：供应商编号
 
-## Signature
+## 签名
 
 ```typescript
 setState_SupplierId(supplierId: string | undefined): IPCB_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1710,7 +1707,7 @@ string \| undefined
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
@@ -1720,31 +1717,31 @@ string \| undefined
 
 # IPCB\_PrimitiveComponent.setState\_UniqueId() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：唯一 ID
 
-## Signature
+## 签名
 
 ```typescript
 setState_UniqueId(uniqueId: string | undefined): IPCB_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1768,7 +1765,7 @@ string \| undefined
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
@@ -1778,31 +1775,31 @@ string \| undefined
 
 # IPCB\_PrimitiveComponent.setState\_X() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：坐标 X
 
-## Signature
+## 签名
 
 ```typescript
 setState_X(x: number): IPCB_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1826,7 +1823,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
@@ -1836,31 +1833,31 @@ number
 
 # IPCB\_PrimitiveComponent.setState\_Y() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：坐标 Y
 
-## Signature
+## 签名
 
 ```typescript
 setState_Y(y: number): IPCB_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1884,7 +1881,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
@@ -1896,14 +1893,14 @@ number
 
 将图元转换为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 toAsync(): IPCB_PrimitiveComponent;
 ```
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 
@@ -1915,14 +1912,14 @@ toAsync(): IPCB_PrimitiveComponent;
 
 将图元转换为同步图元
 
-## Signature
+## 签名
 
 ```typescript
 toSync(): IPCB_PrimitiveComponent;
 ```
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)
 

@@ -2,31 +2,31 @@
 
 区域图元
 
-## Signature
+## 签名
 
 ```typescript
 declare class IPCB_PrimitiveRegion implements IPCB_Primitive 
 ```
-**Implements:** [IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
+**实现自：**[IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
 
-## Remarks
+## 备注
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -348,18 +348,18 @@ Description
 
 # IPCB\_PrimitiveRegion.convertToFill() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 转换到：填充图元
 
-## Signature
+## 签名
 
 ```typescript
 convertToFill(): Promise<IPCB_PrimitiveFill>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveFill](./IPCB_PrimitiveFill.md)<!-- -->&gt;
 
@@ -369,18 +369,18 @@ Promise&lt;[IPCB\_PrimitiveFill](./IPCB_PrimitiveFill.md)<!-- -->&gt;
 
 # IPCB\_PrimitiveRegion.convertToPolyline() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 转换到：折线图元
 
-## Signature
+## 签名
 
 ```typescript
 convertToPolyline(): Promise<IPCB_PrimitivePolyline>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md)<!-- -->&gt;
 
@@ -390,18 +390,18 @@ Promise&lt;[IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md)<!-- -->&gt;
 
 # IPCB\_PrimitiveRegion.convertToPour() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 转换到：覆铜边框图元
 
-## Signature
+## 签名
 
 ```typescript
 convertToPour(): Promise<IPCB_PrimitivePour>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitivePour](./IPCB_PrimitivePour.md)<!-- -->&gt;
 
@@ -411,18 +411,18 @@ Promise&lt;[IPCB\_PrimitivePour](./IPCB_PrimitivePour.md)<!-- -->&gt;
 
 # IPCB\_PrimitiveRegion.done() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将对图元的更改应用到画布
 
-## Signature
+## 签名
 
 ```typescript
 done(): Promise<IPCB_PrimitiveRegion>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)<!-- -->&gt;
 
@@ -434,14 +434,14 @@ Promise&lt;[IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)<!-- -->&gt;
 
 获取属性状态：复杂多边形
 
-## Signature
+## 签名
 
 ```typescript
 getState_ComplexPolygon(): IPCB_Polygon;
 ```
 
 
-## Returns
+## 返回值
 
 [IPCB\_Polygon](./IPCB_Polygon.md)
 
@@ -453,14 +453,14 @@ getState_ComplexPolygon(): IPCB_Polygon;
 
 获取属性状态：层
 
-## Signature
+## 签名
 
 ```typescript
 getState_Layer(): TPCB_LayersOfRegion;
 ```
 
 
-## Returns
+## 返回值
 
 [TPCB\_LayersOfRegion](../types/TPCB_LayersOfRegion.md)
 
@@ -472,14 +472,14 @@ getState_Layer(): TPCB_LayersOfRegion;
 
 获取属性状态：线宽
 
-## Signature
+## 签名
 
 ```typescript
 getState_LineWidth(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -491,14 +491,14 @@ number
 
 获取属性状态：图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveId(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -510,14 +510,14 @@ string
 
 获取属性状态：是否锁定
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveLock(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -529,14 +529,14 @@ boolean
 
 获取属性状态：图元类型
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveType(): EPCB_PrimitiveType;
 ```
 
 
-## Returns
+## 返回值
 
 [EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)
 
@@ -548,14 +548,14 @@ getState_PrimitiveType(): EPCB_PrimitiveType;
 
 获取属性状态：区域名称
 
-## Signature
+## 签名
 
 ```typescript
 getState_RegionName(): string | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 string \| undefined
 
@@ -567,14 +567,14 @@ string \| undefined
 
 获取属性状态：区域规则类型
 
-## Signature
+## 签名
 
 ```typescript
 getState_RuleType(): Array<EPCB_PrimitiveRegionRuleType>;
 ```
 
 
-## Returns
+## 返回值
 
 Array&lt;[EPCB\_PrimitiveRegionRuleType](../enums/EPCB_PrimitiveRegionRuleType.md)<!-- -->&gt;
 
@@ -586,14 +586,14 @@ Array&lt;[EPCB\_PrimitiveRegionRuleType](../enums/EPCB_PrimitiveRegionRuleType.m
 
 查询图元是否为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 isAsync(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -603,18 +603,18 @@ boolean
 
 # IPCB\_PrimitiveRegion.reset() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将异步图元重置为当前画布状态
 
-## Signature
+## 签名
 
 ```typescript
 reset(): Promise<IPCB_PrimitiveRegion>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)<!-- -->&gt;
 
@@ -624,31 +624,31 @@ Promise&lt;[IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)<!-- -->&gt;
 
 # IPCB\_PrimitiveRegion.setState\_ComplexPolygon() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：复杂多边形
 
-## Signature
+## 签名
 
 ```typescript
 setState_ComplexPolygon(complexPolygon: IPCB_Polygon): IPCB_PrimitiveRegion;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -672,7 +672,7 @@ complexPolygon
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)
 
@@ -682,31 +682,31 @@ complexPolygon
 
 # IPCB\_PrimitiveRegion.setState\_Layer() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：层
 
-## Signature
+## 签名
 
 ```typescript
 setState_Layer(layer: TPCB_LayersOfRegion): IPCB_PrimitiveRegion;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -730,7 +730,7 @@ layer
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)
 
@@ -740,31 +740,31 @@ layer
 
 # IPCB\_PrimitiveRegion.setState\_LineWidth() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：线宽
 
-## Signature
+## 签名
 
 ```typescript
 setState_LineWidth(lineWidth: number): IPCB_PrimitiveRegion;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -788,7 +788,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)
 
@@ -798,31 +798,31 @@ number
 
 # IPCB\_PrimitiveRegion.setState\_PrimitiveLock() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：是否锁定
 
-## Signature
+## 签名
 
 ```typescript
 setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveRegion;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -846,7 +846,7 @@ boolean
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)
 
@@ -856,31 +856,31 @@ boolean
 
 # IPCB\_PrimitiveRegion.setState\_RegionName() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：区域名称
 
-## Signature
+## 签名
 
 ```typescript
 setState_RegionName(regionName?: string): IPCB_PrimitiveRegion;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -896,7 +896,7 @@ string
 
 </td><td>
 
-_(Optional)_ 区域名称
+_（可选）_ 区域名称
 
 
 </td></tr>
@@ -904,13 +904,13 @@ _(Optional)_ 区域名称
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)
 
 区域图元对象
 
-## Remarks
+## 备注
 
 仅当 `ruleType` 为 [EPCB\_PrimitiveRegionRuleType.FOLLOW\_REGION\_RULE](../enums/EPCB_PrimitiveRegionRuleType.md) 时有效，用于匹配区域 DRC 规则
 
@@ -920,31 +920,31 @@ _(Optional)_ 区域名称
 
 # IPCB\_PrimitiveRegion.setState\_RuleType() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：区域规则类型
 
-## Signature
+## 签名
 
 ```typescript
 setState_RuleType(ruleType: Array<EPCB_PrimitiveRegionRuleType>): IPCB_PrimitiveRegion;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -968,7 +968,7 @@ Array&lt;[EPCB\_PrimitiveRegionRuleType](../enums/EPCB_PrimitiveRegionRuleType.m
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)
 
@@ -980,14 +980,14 @@ Array&lt;[EPCB\_PrimitiveRegionRuleType](../enums/EPCB_PrimitiveRegionRuleType.m
 
 将图元转换为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 toAsync(): IPCB_PrimitiveRegion;
 ```
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)
 
@@ -999,14 +999,14 @@ toAsync(): IPCB_PrimitiveRegion;
 
 将图元转换为同步图元
 
-## Signature
+## 签名
 
 ```typescript
 toSync(): IPCB_PrimitiveRegion;
 ```
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)
 

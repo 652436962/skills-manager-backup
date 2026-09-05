@@ -2,28 +2,28 @@
 
 原理图 &amp; 符号 / 导线图元类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SCH_PrimitiveWire implements ISCH_PrimitiveAPI 
 ```
-**Implements:** [ISCH\_PrimitiveAPI](../interfaces/ISCH_PrimitiveAPI.md)
+**实现自：**[ISCH\_PrimitiveAPI](../interfaces/ISCH_PrimitiveAPI.md)
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -135,31 +135,31 @@ Description
 
 # SCH\_PrimitiveWire.create() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 创建导线
 
-## Signature
+## 签名
 
 ```typescript
 create(line: Array<number> | Array<Array<number>>, net?: string, color?: string | null, lineWidth?: number | null, lineType?: ESCH_PrimitiveLineType | null): Promise<ISCH_PrimitiveWire | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -191,7 +191,7 @@ string
 
 </td><td>
 
-_(Optional)_ 网络名称，如若未指定，则遵循： 1. 没有坐标落在任何图元上，则默认为空网络； 2. 有一个坐标点在某个网络的图元上，则跟随该图元的网络； 3. 有多个坐标点在多个不同网络的图元上，则创建失败
+_（可选）_ 网络名称，如若未指定，则遵循： 1. 没有坐标落在任何图元上，则默认为空网络； 2. 有一个坐标点在某个网络的图元上，则跟随该图元的网络； 3. 有多个坐标点在多个不同网络的图元上，则创建失败
 
 如若已指定，则遵循： 1. 有一个或多个坐标点在其他网络的图元上，且其他图元并未显式（通常指的是包含网络标签或网络端口）指定网络，则其他图元跟随指定的网络； 2. 如若其他图元指定了网络，则创建失败
 
@@ -209,7 +209,7 @@ string \| null
 
 </td><td>
 
-_(Optional)_ 导线颜色，`null` 表示默认
+_（可选）_ 导线颜色，`null` 表示默认
 
 
 </td></tr>
@@ -225,7 +225,7 @@ number \| null
 
 </td><td>
 
-_(Optional)_ 线宽，范围 `1-10`<!-- -->，`null` 表示默认
+_（可选）_ 线宽，范围 `1-10`<!-- -->，`null` 表示默认
 
 
 </td></tr>
@@ -241,7 +241,7 @@ lineType
 
 </td><td>
 
-_(Optional)_ 线型，`null` 表示默认
+_（可选）_ 线型，`null` 表示默认
 
 
 </td></tr>
@@ -249,7 +249,7 @@ _(Optional)_ 线型，`null` 表示默认
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ISCH\_PrimitiveWire](./ISCH_PrimitiveWire.md) \| undefined&gt;
 
@@ -259,31 +259,31 @@ Promise&lt;[ISCH\_PrimitiveWire](./ISCH_PrimitiveWire.md) \| undefined&gt;
 
 # SCH\_PrimitiveWire.delete() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 删除导线
 
-## Signature
+## 签名
 
 ```typescript
 delete(primitiveIds: string | ISCH_PrimitiveWire | Array<string> | Array<ISCH_PrimitiveWire>): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -307,7 +307,7 @@ string \| [ISCH\_PrimitiveWire](./ISCH_PrimitiveWire.md) \| Array&lt;string&gt; 
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -317,31 +317,31 @@ Promise&lt;boolean&gt;
 
 # SCH\_PrimitiveWire.get() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取导线
 
-## Signature
+## 签名
 
 ```typescript
 get(primitiveIds: string): Promise<ISCH_PrimitiveWire | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -365,7 +365,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ISCH\_PrimitiveWire](./ISCH_PrimitiveWire.md) \| undefined&gt;
 
@@ -375,31 +375,31 @@ Promise&lt;[ISCH\_PrimitiveWire](./ISCH_PrimitiveWire.md) \| undefined&gt;
 
 # SCH\_PrimitiveWire.get() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取导线
 
-## Signature
+## 签名
 
 ```typescript
 get(primitiveIds: Array<string>): Promise<Array<ISCH_PrimitiveWire>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -423,13 +423,13 @@ Array&lt;string&gt;
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[ISCH\_PrimitiveWire](./ISCH_PrimitiveWire.md)<!-- -->&gt;&gt;
 
 导线图元对象，空数组表示获取失败
 
-## Remarks
+## 备注
 
 如若传入多个图元 ID，任意图元 ID 未匹配到不影响其它图元的返回，即可能返回少于传入的图元 ID 数量的图元对象
 
@@ -437,31 +437,31 @@ Promise&lt;Array&lt;[ISCH\_PrimitiveWire](./ISCH_PrimitiveWire.md)<!-- -->&gt;&g
 
 # SCH\_PrimitiveWire.getAll() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取所有导线
 
-## Signature
+## 签名
 
 ```typescript
 getAll(net?: string | Array<string>): Promise<Array<ISCH_PrimitiveWire>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -477,7 +477,7 @@ string \| Array&lt;string&gt;
 
 </td><td>
 
-_(Optional)_ 网络名称
+_（可选）_ 网络名称
 
 
 </td></tr>
@@ -485,7 +485,7 @@ _(Optional)_ 网络名称
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[ISCH\_PrimitiveWire](./ISCH_PrimitiveWire.md)<!-- -->&gt;&gt;
 
@@ -495,31 +495,31 @@ Promise&lt;Array&lt;[ISCH\_PrimitiveWire](./ISCH_PrimitiveWire.md)<!-- -->&gt;&g
 
 # SCH\_PrimitiveWire.getAllPrimitiveId() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取所有导线的图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getAllPrimitiveId(net?: string | Array<string>): Promise<Array<string>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -535,7 +535,7 @@ string \| Array&lt;string&gt;
 
 </td><td>
 
-_(Optional)_ 网络名称
+_（可选）_ 网络名称
 
 
 </td></tr>
@@ -543,7 +543,7 @@ _(Optional)_ 网络名称
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;string&gt;&gt;
 
@@ -553,11 +553,11 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 # SCH\_PrimitiveWire.modify() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改导线
 
-## Signature
+## 签名
 
 ```typescript
 modify(primitiveId: string | ISCH_PrimitiveWire, property: {
@@ -569,21 +569,21 @@ modify(primitiveId: string | ISCH_PrimitiveWire, property: {
     }): Promise<ISCH_PrimitiveWire | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -623,7 +623,7 @@ property
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ISCH\_PrimitiveWire](./ISCH_PrimitiveWire.md) \| undefined&gt;
 

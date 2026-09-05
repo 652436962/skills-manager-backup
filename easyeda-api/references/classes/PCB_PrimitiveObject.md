@@ -2,32 +2,32 @@
 
 PCB &amp; 封装 / 二进制内嵌对象图元类
 
-## Signature
+## 签名
 
 ```typescript
 declare class PCB_PrimitiveObject implements IPCB_PrimitiveAPI 
 ```
-**Implements:** [IPCB\_PrimitiveAPI](../interfaces/IPCB_PrimitiveAPI.md)
+**实现自：**[IPCB\_PrimitiveAPI](../interfaces/IPCB_PrimitiveAPI.md)
 
-## Remarks
+## 备注
 
 彩色丝印图像属于二进制内嵌对象，需要使用二进制内嵌对象的方法创建和修改
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -139,31 +139,31 @@ Description
 
 # PCB\_PrimitiveObject.create() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 创建二进制内嵌对象
 
-## Signature
+## 签名
 
 ```typescript
 create(layer: TPCB_LayersOfObject, topLeftX: number, topLeftY: number, binaryData: string, width: number, height: number, rotation?: number, mirror?: boolean, fileName?: string, primitiveLock?: boolean): Promise<IPCB_PrimitiveObject | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -275,7 +275,7 @@ number
 
 </td><td>
 
-_(Optional)_ 旋转角度
+_（可选）_ 旋转角度
 
 
 </td></tr>
@@ -291,7 +291,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否水平镜像
+_（可选）_ 是否水平镜像
 
 
 </td></tr>
@@ -307,7 +307,7 @@ string
 
 </td><td>
 
-_(Optional)_ 文件名
+_（可选）_ 文件名
 
 
 </td></tr>
@@ -323,7 +323,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否锁定
+_（可选）_ 是否锁定
 
 
 </td></tr>
@@ -331,7 +331,7 @@ _(Optional)_ 是否锁定
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md) \| undefined&gt;
 
@@ -341,31 +341,31 @@ Promise&lt;[IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md) \| undefined&gt;
 
 # PCB\_PrimitiveObject.delete() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 删除二进制内嵌对象
 
-## Signature
+## 签名
 
 ```typescript
 delete(primitiveIds: string | IPCB_PrimitiveObject | Array<string> | Array<IPCB_PrimitiveObject>): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -389,7 +389,7 @@ string \| [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md) \| Array&lt;string&
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -399,31 +399,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_PrimitiveObject.get() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取二进制内嵌对象
 
-## Signature
+## 签名
 
 ```typescript
 get(primitiveIds: string): Promise<IPCB_PrimitiveObject | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -447,7 +447,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md) \| undefined&gt;
 
@@ -457,31 +457,31 @@ Promise&lt;[IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md) \| undefined&gt;
 
 # PCB\_PrimitiveObject.get() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取二进制内嵌对象
 
-## Signature
+## 签名
 
 ```typescript
 get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitiveObject>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -505,13 +505,13 @@ Array&lt;string&gt;
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)<!-- -->&gt;&gt;
 
 二进制内嵌对象图元对象，空数组表示获取失败
 
-## Remarks
+## 备注
 
 如若传入多个图元 ID，任意图元 ID 未匹配到不影响其它图元的返回，即可能返回少于传入的图元 ID 数量的图元对象
 
@@ -519,31 +519,31 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)<!-- -->&g
 
 # PCB\_PrimitiveObject.getAll() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取所有二进制内嵌对象
 
-## Signature
+## 签名
 
 ```typescript
 getAll(layer?: TPCB_LayersOfObject, primitiveLock?: boolean): Promise<Array<IPCB_PrimitiveObject>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -559,7 +559,7 @@ layer
 
 </td><td>
 
-_(Optional)_ 层
+_（可选）_ 层
 
 
 </td></tr>
@@ -575,7 +575,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否锁定
+_（可选）_ 是否锁定
 
 
 </td></tr>
@@ -583,7 +583,7 @@ _(Optional)_ 是否锁定
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)<!-- -->&gt;&gt;
 
@@ -593,31 +593,31 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)<!-- -->&g
 
 # PCB\_PrimitiveObject.getAllPrimitiveId() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取所有二进制内嵌对象的图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getAllPrimitiveId(layer?: TPCB_LayersOfObject, primitiveLock?: boolean): Promise<Array<string>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -633,7 +633,7 @@ layer
 
 </td><td>
 
-_(Optional)_ 层
+_（可选）_ 层
 
 
 </td></tr>
@@ -649,7 +649,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否锁定
+_（可选）_ 是否锁定
 
 
 </td></tr>
@@ -657,7 +657,7 @@ _(Optional)_ 是否锁定
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;string&gt;&gt;
 
@@ -667,11 +667,11 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 # PCB\_PrimitiveObject.modify() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改二进制内嵌对象
 
-## Signature
+## 签名
 
 ```typescript
 modify(primitiveId: string | IPCB_PrimitiveObject, property: {
@@ -688,21 +688,21 @@ modify(primitiveId: string | IPCB_PrimitiveObject, property: {
     }): Promise<IPCB_PrimitiveObject | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -742,7 +742,7 @@ property
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md) \| undefined&gt;
 

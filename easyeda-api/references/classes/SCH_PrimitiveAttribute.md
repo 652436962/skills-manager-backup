@@ -2,28 +2,28 @@
 
 原理图 &amp; 符号 / 属性图元类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SCH_PrimitiveAttribute implements ISCH_PrimitiveAPI 
 ```
-**Implements:** [ISCH\_PrimitiveAPI](../interfaces/ISCH_PrimitiveAPI.md)
+**实现自：**[ISCH\_PrimitiveAPI](../interfaces/ISCH_PrimitiveAPI.md)
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -107,31 +107,31 @@ Description
 
 # SCH\_PrimitiveAttribute.get() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取属性
 
-## Signature
+## 签名
 
 ```typescript
 get(primitiveIds: string): Promise<ISCH_PrimitiveAttribute | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -155,7 +155,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md) \| undefined&gt;
 
@@ -165,31 +165,31 @@ Promise&lt;[ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md) \| undefined
 
 # SCH\_PrimitiveAttribute.get() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取属性
 
-## Signature
+## 签名
 
 ```typescript
 get(primitiveIds: Array<string>): Promise<Array<ISCH_PrimitiveAttribute>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -213,13 +213,13 @@ Array&lt;string&gt;
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)<!-- -->&gt;&gt;
 
 属性图元对象，空数组表示获取失败
 
-## Remarks
+## 备注
 
 如若传入多个图元 ID，任意图元 ID 未匹配到不影响其它图元的返回，即可能返回少于传入的图元 ID 数量的图元对象
 
@@ -227,31 +227,31 @@ Promise&lt;Array&lt;[ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)<!--
 
 # SCH\_PrimitiveAttribute.getAll() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取所有属性
 
-## Signature
+## 签名
 
 ```typescript
 getAll(parentPrimitiveId?: string): Promise<Array<ISCH_PrimitiveAttribute>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -267,7 +267,7 @@ string
 
 </td><td>
 
-_(Optional)_ 父图元 ID
+_（可选）_ 父图元 ID
 
 
 </td></tr>
@@ -275,13 +275,13 @@ _(Optional)_ 父图元 ID
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)<!-- -->&gt;&gt;
 
 属性图元对象数组
 
-## Remarks
+## 备注
 
 不传递父图元 ID 将拿到图页中的所有属性图元
 
@@ -289,31 +289,31 @@ Promise&lt;Array&lt;[ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)<!--
 
 # SCH\_PrimitiveAttribute.getAllPrimitiveId() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取所有属性的图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getAllPrimitiveId(parentPrimitiveId?: string): Promise<Array<string>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -329,7 +329,7 @@ string
 
 </td><td>
 
-_(Optional)_ 父图元 ID
+_（可选）_ 父图元 ID
 
 
 </td></tr>
@@ -337,13 +337,13 @@ _(Optional)_ 父图元 ID
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;string&gt;&gt;
 
 属性的图元 ID 数组
 
-## Remarks
+## 备注
 
 不传递父图元 ID 将拿到图页中的所有属性图元
 
@@ -351,11 +351,11 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 # SCH\_PrimitiveAttribute.modify() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改属性
 
-## Signature
+## 签名
 
 ```typescript
 modify(primitiveId: string | ISCH_PrimitiveAttribute, property: {
@@ -377,21 +377,21 @@ modify(primitiveId: string | ISCH_PrimitiveAttribute, property: {
     }): Promise<ISCH_PrimitiveAttribute | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -431,7 +431,7 @@ property
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md) \| undefined&gt;
 

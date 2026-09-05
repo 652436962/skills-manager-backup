@@ -1,41 +1,41 @@
 # ILIB\_ClassificationIndex interface
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > - since EDA v3.2; dropped EDA v3.3
 
 分类索引
 
-## Signature
+## 签名
 
 ```typescript
 interface ILIB_ClassificationIndex 
 ```
 
-## Remarks
+## 备注
 
 本分类索引用于索引指定库内的分类，其中库 UUID 和库类型仅作针对于本索引的识别用途，防止将不同库内的索引互相引用从而引发错误
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -111,7 +111,7 @@ string
 
 </td><td>
 
-_(Optional)_ 二级分类 UUID
+_（可选）_ 二级分类 UUID
 
 
 </td></tr>
@@ -127,7 +127,7 @@ _(Optional)_ 二级分类 UUID
 
 库类型
 
-## Signature
+## 签名
 
 ```typescript
 libraryType: ELIB_LibraryType;
@@ -139,7 +139,7 @@ libraryType: ELIB_LibraryType;
 
 库 UUID
 
-## Signature
+## 签名
 
 ```typescript
 libraryUuid: string;
@@ -151,7 +151,7 @@ libraryUuid: string;
 
 一级分类 UUID
 
-## Signature
+## 签名
 
 ```typescript
 primaryClassificationUuid: string;
@@ -163,7 +163,7 @@ primaryClassificationUuid: string;
 
 二级分类 UUID
 
-## Signature
+## 签名
 
 ```typescript
 secondaryClassificationUuid?: string;

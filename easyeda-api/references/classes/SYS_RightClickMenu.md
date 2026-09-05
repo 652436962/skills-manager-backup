@@ -2,30 +2,30 @@
 
 系统 / 右键菜单类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SYS_RightClickMenu 
 ```
 
-## Remarks
+## 备注
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -53,31 +53,31 @@ Description
 
 # SYS\_RightClickMenu.changeMenu() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改右键菜单
 
-## Signature
+## 签名
 
 ```typescript
 changeMenu(menuId: string, menuItems: Array<ISYS_RightClickMenuItem | null>): Promise<void>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -117,11 +117,11 @@ Array&lt;[ISYS\_RightClickMenuItem](../interfaces/ISYS_RightClickMenuItem.md) \|
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;void&gt;
 
-## Remarks
+## 备注
 
 当前仅支持 \*\*底部菜单器件列表项目右击\*\*、\*\*底部菜单符号列表项目右击\*\*、\*\*底部菜单封装列表项目右击\*\*、\*\*底部菜单复用模块列表项目右击\*\* 的右键菜单修改
 

@@ -2,27 +2,27 @@
 
 综合库 / 选择控制类
 
-## Signature
+## 签名
 
 ```typescript
 declare class LIB_SelectControl 
 ```
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -50,23 +50,23 @@ Description
 
 # LIB\_SelectControl.getSelectedLibraryRowInfo() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取当前底部库选中行的信息
 
-## Signature
+## 签名
 
 ```typescript
 getSelectedLibraryRowInfo(): Promise<ILIB_LibraryItem | undefined>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ILIB\_LibraryItem](../interfaces/ILIB_LibraryItem.md) \| undefined&gt;
 
 库属性对象，如若为 `undefined` 则获取失败
 
-## Remarks
+## 备注
 
 将会获取当前底部库选中行的库类型、UUID、所属库 UUID

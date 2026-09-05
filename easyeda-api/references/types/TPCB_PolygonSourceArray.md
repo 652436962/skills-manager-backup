@@ -2,13 +2,13 @@
 
 单多边形源数组
 
-## Signature
+## 签名
 
 ```typescript
 type TPCB_PolygonSourceArray = Array<'L' | 'ARC' | 'CARC' | 'C' | 'R' | 'CIRCLE' | number>;
 ```
 
-## Remarks
+## 备注
 
 单多边形为首尾重合的一条不间断的线所描述的区域，如果首尾不重合将会自动重合。
 

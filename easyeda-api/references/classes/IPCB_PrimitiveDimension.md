@@ -2,31 +2,31 @@
 
 尺寸标注图元
 
-## Signature
+## 签名
 
 ```typescript
 declare class IPCB_PrimitiveDimension implements IPCB_Primitive 
 ```
-**Implements:** [IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
+**实现自：**[IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
 
-## Remarks
+## 备注
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -348,18 +348,18 @@ Description
 
 # IPCB\_PrimitiveDimension.done() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将对图元的更改应用到画布
 
-## Signature
+## 签名
 
 ```typescript
 done(): Promise<IPCB_PrimitiveDimension>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)<!-- -->&gt;
 
@@ -371,14 +371,14 @@ Promise&lt;[IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)<!-- -->&gt;
 
 获取属性状态：坐标集
 
-## Signature
+## 签名
 
 ```typescript
 getState_CoordinateSet(): TPCB_PrimitiveDimensionCoordinateSet;
 ```
 
 
-## Returns
+## 返回值
 
 [TPCB\_PrimitiveDimensionCoordinateSet](../types/TPCB_PrimitiveDimensionCoordinateSet.md)
 
@@ -390,14 +390,14 @@ getState_CoordinateSet(): TPCB_PrimitiveDimensionCoordinateSet;
 
 获取属性状态：尺寸标注类型
 
-## Signature
+## 签名
 
 ```typescript
 getState_DimensionType(): EPCB_PrimitiveDimensionType;
 ```
 
 
-## Returns
+## 返回值
 
 [EPCB\_PrimitiveDimensionType](../enums/EPCB_PrimitiveDimensionType.md)
 
@@ -409,14 +409,14 @@ getState_DimensionType(): EPCB_PrimitiveDimensionType;
 
 获取属性状态：层
 
-## Signature
+## 签名
 
 ```typescript
 getState_Layer(): TPCB_LayersOfDimension;
 ```
 
 
-## Returns
+## 返回值
 
 [TPCB\_LayersOfDimension](../types/TPCB_LayersOfDimension.md)
 
@@ -428,14 +428,14 @@ getState_Layer(): TPCB_LayersOfDimension;
 
 获取属性状态：线宽
 
-## Signature
+## 签名
 
 ```typescript
 getState_LineWidth(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -447,14 +447,14 @@ number
 
 获取属性状态：精度
 
-## Signature
+## 签名
 
 ```typescript
 getState_Precision(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -466,14 +466,14 @@ number
 
 获取属性状态：图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveId(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -485,14 +485,14 @@ string
 
 获取属性状态：是否锁定
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveLock(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -504,14 +504,14 @@ boolean
 
 获取属性状态：图元类型
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveType(): EPCB_PrimitiveType;
 ```
 
 
-## Returns
+## 返回值
 
 [EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)
 
@@ -523,14 +523,14 @@ getState_PrimitiveType(): EPCB_PrimitiveType;
 
 获取属性状态：文字跟随
 
-## Signature
+## 签名
 
 ```typescript
 getState_TextFollow(): 0 | 1;
 ```
 
 
-## Returns
+## 返回值
 
 0 \| 1
 
@@ -542,14 +542,14 @@ getState_TextFollow(): 0 | 1;
 
 获取属性状态：单位
 
-## Signature
+## 签名
 
 ```typescript
 getState_Unit(): ESYS_Unit.MILLIMETER | ESYS_Unit.CENTIMETER | ESYS_Unit.INCH | ESYS_Unit.MIL;
 ```
 
 
-## Returns
+## 返回值
 
 [ESYS\_Unit.MILLIMETER](../enums/ESYS_Unit.md) \| [ESYS\_Unit.CENTIMETER](../enums/ESYS_Unit.md) \| [ESYS\_Unit.INCH](../enums/ESYS_Unit.md) \| [ESYS\_Unit.MIL](../enums/ESYS_Unit.md)
 
@@ -561,14 +561,14 @@ getState_Unit(): ESYS_Unit.MILLIMETER | ESYS_Unit.CENTIMETER | ESYS_Unit.INCH | 
 
 查询图元是否为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 isAsync(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -578,18 +578,18 @@ boolean
 
 # IPCB\_PrimitiveDimension.reset() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将异步图元重置为当前画布状态
 
-## Signature
+## 签名
 
 ```typescript
 reset(): Promise<IPCB_PrimitiveDimension>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)<!-- -->&gt;
 
@@ -599,31 +599,31 @@ Promise&lt;[IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)<!-- -->&gt;
 
 # IPCB\_PrimitiveDimension.setState\_CoordinateSet() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：坐标集
 
-## Signature
+## 签名
 
 ```typescript
 setState_CoordinateSet(coordinateSet: TPCB_PrimitiveDimensionCoordinateSet): IPCB_PrimitiveDimension;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -647,7 +647,7 @@ coordinateSet
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)
 
@@ -657,31 +657,31 @@ coordinateSet
 
 # IPCB\_PrimitiveDimension.setState\_DimensionType() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：尺寸标注类型
 
-## Signature
+## 签名
 
 ```typescript
 setState_DimensionType(dimensionType: EPCB_PrimitiveDimensionType): IPCB_PrimitiveDimension;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -705,7 +705,7 @@ dimensionType
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)
 
@@ -715,31 +715,31 @@ dimensionType
 
 # IPCB\_PrimitiveDimension.setState\_Layer() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：层
 
-## Signature
+## 签名
 
 ```typescript
 setState_Layer(layer: TPCB_LayersOfDimension): IPCB_PrimitiveDimension;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -763,7 +763,7 @@ layer
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)
 
@@ -773,31 +773,31 @@ layer
 
 # IPCB\_PrimitiveDimension.setState\_LineWidth() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：线宽
 
-## Signature
+## 签名
 
 ```typescript
 setState_LineWidth(lineWidth: number): IPCB_PrimitiveDimension;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -821,7 +821,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)
 
@@ -831,31 +831,31 @@ number
 
 # IPCB\_PrimitiveDimension.setState\_Precision() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：精度
 
-## Signature
+## 签名
 
 ```typescript
 setState_Precision(precision: number): IPCB_PrimitiveDimension;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -879,7 +879,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)
 
@@ -889,31 +889,31 @@ number
 
 # IPCB\_PrimitiveDimension.setState\_PrimitiveLock() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：是否锁定
 
-## Signature
+## 签名
 
 ```typescript
 setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveDimension;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -937,7 +937,7 @@ boolean
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)
 
@@ -947,31 +947,31 @@ boolean
 
 # IPCB\_PrimitiveDimension.setState\_Unit() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：单位
 
-## Signature
+## 签名
 
 ```typescript
 setState_Unit(unit: ESYS_Unit.MILLIMETER | ESYS_Unit.CENTIMETER | ESYS_Unit.INCH | ESYS_Unit.MIL): IPCB_PrimitiveDimension;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -995,7 +995,7 @@ unit
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)
 
@@ -1007,14 +1007,14 @@ unit
 
 将图元转换为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 toAsync(): IPCB_PrimitiveDimension;
 ```
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)
 
@@ -1026,14 +1026,14 @@ toAsync(): IPCB_PrimitiveDimension;
 
 将图元转换为同步图元
 
-## Signature
+## 签名
 
 ```typescript
 toSync(): IPCB_PrimitiveDimension;
 ```
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveDimension](./IPCB_PrimitiveDimension.md)
 

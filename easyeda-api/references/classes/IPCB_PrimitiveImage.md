@@ -2,31 +2,31 @@
 
 图像图元
 
-## Signature
+## 签名
 
 ```typescript
 declare class IPCB_PrimitiveImage implements IPCB_Primitive 
 ```
-**Implements:** [IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
+**实现自：**[IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
 
-## Remarks
+## 备注
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -376,18 +376,18 @@ Description
 
 # IPCB\_PrimitiveImage.done() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将对图元的更改应用到画布
 
-## Signature
+## 签名
 
 ```typescript
 done(): Promise<IPCB_PrimitiveImage>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)<!-- -->&gt;
 
@@ -399,14 +399,14 @@ Promise&lt;[IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)<!-- -->&gt;
 
 获取属性状态：图像源数据（复杂多边形）
 
-## Signature
+## 签名
 
 ```typescript
 getState_ComplexPolygon(): TPCB_PolygonSourceArray | Array<TPCB_PolygonSourceArray>;
 ```
 
 
-## Returns
+## 返回值
 
 [TPCB\_PolygonSourceArray](../types/TPCB_PolygonSourceArray.md) \| Array&lt;[TPCB\_PolygonSourceArray](../types/TPCB_PolygonSourceArray.md)<!-- -->&gt;
 
@@ -418,14 +418,14 @@ getState_ComplexPolygon(): TPCB_PolygonSourceArray | Array<TPCB_PolygonSourceArr
 
 获取属性状态：高
 
-## Signature
+## 签名
 
 ```typescript
 getState_Height(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -437,14 +437,14 @@ number
 
 获取属性状态：是否水平镜像
 
-## Signature
+## 签名
 
 ```typescript
 getState_HorizonMirror(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -456,14 +456,14 @@ boolean
 
 获取属性状态：层
 
-## Signature
+## 签名
 
 ```typescript
 getState_Layer(): TPCB_LayersOfImage;
 ```
 
 
-## Returns
+## 返回值
 
 [TPCB\_LayersOfImage](../types/TPCB_LayersOfImage.md)
 
@@ -475,14 +475,14 @@ getState_Layer(): TPCB_LayersOfImage;
 
 获取属性状态：图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveId(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -494,14 +494,14 @@ string
 
 获取属性状态：是否锁定
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveLock(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -513,14 +513,14 @@ boolean
 
 获取属性状态：图元类型
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveType(): EPCB_PrimitiveType;
 ```
 
 
-## Returns
+## 返回值
 
 [EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)
 
@@ -532,14 +532,14 @@ getState_PrimitiveType(): EPCB_PrimitiveType;
 
 获取属性状态：旋转角度
 
-## Signature
+## 签名
 
 ```typescript
 getState_Rotation(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -551,14 +551,14 @@ number
 
 获取属性状态：宽
 
-## Signature
+## 签名
 
 ```typescript
 getState_Width(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -570,14 +570,14 @@ number
 
 获取属性状态：BBox 左上点坐标 X
 
-## Signature
+## 签名
 
 ```typescript
 getState_X(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -589,14 +589,14 @@ BBox 左上点坐标 X
 
 获取属性状态：BBox 左上点坐标 Y
 
-## Signature
+## 签名
 
 ```typescript
 getState_Y(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -608,14 +608,14 @@ BBox 左上点坐标 Y
 
 查询图元是否为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 isAsync(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -625,18 +625,18 @@ boolean
 
 # IPCB\_PrimitiveImage.reset() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将异步图元重置为当前画布状态
 
-## Signature
+## 签名
 
 ```typescript
 reset(): Promise<IPCB_PrimitiveImage>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)<!-- -->&gt;
 
@@ -646,31 +646,31 @@ Promise&lt;[IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)<!-- -->&gt;
 
 # IPCB\_PrimitiveImage.setState\_Height() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：高
 
-## Signature
+## 签名
 
 ```typescript
 setState_Height(height: number): IPCB_PrimitiveImage;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -694,7 +694,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)
 
@@ -704,31 +704,31 @@ number
 
 # IPCB\_PrimitiveImage.setState\_HorizonMirror() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：是否水平镜像
 
-## Signature
+## 签名
 
 ```typescript
 setState_HorizonMirror(horizonMirror: boolean): IPCB_PrimitiveImage;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -752,7 +752,7 @@ boolean
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)
 
@@ -762,31 +762,31 @@ boolean
 
 # IPCB\_PrimitiveImage.setState\_Layer() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：层
 
-## Signature
+## 签名
 
 ```typescript
 setState_Layer(layer: TPCB_LayersOfImage): IPCB_PrimitiveImage;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -810,7 +810,7 @@ layer
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)
 
@@ -820,31 +820,31 @@ layer
 
 # IPCB\_PrimitiveImage.setState\_PrimitiveLock() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：是否锁定
 
-## Signature
+## 签名
 
 ```typescript
 setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveImage;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -868,7 +868,7 @@ boolean
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)
 
@@ -878,31 +878,31 @@ boolean
 
 # IPCB\_PrimitiveImage.setState\_Rotation() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：旋转角度
 
-## Signature
+## 签名
 
 ```typescript
 setState_Rotation(rotation: number): IPCB_PrimitiveImage;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -926,7 +926,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)
 
@@ -936,31 +936,31 @@ number
 
 # IPCB\_PrimitiveImage.setState\_Width() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：宽
 
-## Signature
+## 签名
 
 ```typescript
 setState_Width(width: number): IPCB_PrimitiveImage;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -984,7 +984,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)
 
@@ -994,31 +994,31 @@ number
 
 # IPCB\_PrimitiveImage.setState\_X() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：BBox 左上点坐标 X
 
-## Signature
+## 签名
 
 ```typescript
 setState_X(x: number): IPCB_PrimitiveImage;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1042,7 +1042,7 @@ BBox 左上点坐标 X
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)
 
@@ -1052,31 +1052,31 @@ BBox 左上点坐标 X
 
 # IPCB\_PrimitiveImage.setState\_Y() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：BBox 左上点坐标 Y
 
-## Signature
+## 签名
 
 ```typescript
 setState_Y(y: number): IPCB_PrimitiveImage;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1100,7 +1100,7 @@ BBox 左上点坐标 Y
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)
 
@@ -1112,14 +1112,14 @@ BBox 左上点坐标 Y
 
 将图元转换为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 toAsync(): IPCB_PrimitiveImage;
 ```
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)
 
@@ -1131,14 +1131,14 @@ toAsync(): IPCB_PrimitiveImage;
 
 将图元转换为同步图元
 
-## Signature
+## 签名
 
 ```typescript
 toSync(): IPCB_PrimitiveImage;
 ```
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)
 

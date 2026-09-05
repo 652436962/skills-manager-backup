@@ -2,12 +2,12 @@
 
 区域所属层
 
-## Signature
+## 签名
 
 ```typescript
 type TPCB_LayersOfRegion = TPCB_LayersOfCopper | EPCB_LayerId.MULTI;
 ```
-## References
+## 引用
 
 
 [TPCB\_LayersOfCopper](./TPCB_LayersOfCopper.md)<!-- -->, [EPCB\_LayerId.MULTI](../enums/EPCB_LayerId.md)

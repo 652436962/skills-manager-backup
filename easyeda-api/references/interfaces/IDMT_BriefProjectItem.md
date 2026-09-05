@@ -2,32 +2,32 @@
 
 简略工程属性
 
-## Signature
+## 签名
 
 ```typescript
 interface IDMT_BriefProjectItem 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -46,7 +46,7 @@ string
 
 </td><td>
 
-_(Optional)_ 所属文件夹 UUID
+_（可选）_ 所属文件夹 UUID
 
 
 </td></tr>
@@ -140,7 +140,7 @@ string
 
 所属文件夹 UUID
 
-## Signature
+## 签名
 
 ```typescript
 folderUuid?: string;
@@ -152,7 +152,7 @@ folderUuid?: string;
 
 工程友好名称
 
-## Signature
+## 签名
 
 ```typescript
 friendlyName: string;
@@ -164,7 +164,7 @@ friendlyName: string;
 
 项目类型
 
-## Signature
+## 签名
 
 ```typescript
 readonly itemType: EDMT_ItemType.PROJECT | EDMT_ItemType.CBB_PROJECT;
@@ -176,7 +176,7 @@ readonly itemType: EDMT_ItemType.PROJECT | EDMT_ItemType.CBB_PROJECT;
 
 所属团队 UUID
 
-## Signature
+## 签名
 
 ```typescript
 teamUuid: string;
@@ -188,7 +188,7 @@ teamUuid: string;
 
 工程 UUID
 
-## Signature
+## 签名
 
 ```typescript
 uuid: string;

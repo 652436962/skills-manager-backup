@@ -2,31 +2,31 @@
 
 过孔图元
 
-## Signature
+## 签名
 
 ```typescript
 declare class IPCB_PrimitiveVia implements IPCB_Primitive 
 ```
-**Implements:** [IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
+**实现自：**[IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
 
-## Remarks
+## 备注
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -404,18 +404,18 @@ Description
 
 # IPCB\_PrimitiveVia.done() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将对图元的更改应用到画布
 
-## Signature
+## 签名
 
 ```typescript
 done(): Promise<IPCB_PrimitiveVia>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveVia](./IPCB_PrimitiveVia.md)<!-- -->&gt;
 
@@ -425,24 +425,24 @@ Promise&lt;[IPCB\_PrimitiveVia](./IPCB_PrimitiveVia.md)<!-- -->&gt;
 
 # IPCB\_PrimitiveVia.getAdjacentPrimitives() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取相邻的图元对象
 
-## Signature
+## 签名
 
 ```typescript
 getAdjacentPrimitives(): Promise<Array<IPCB_PrimitiveLine | IPCB_PrimitiveArc>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md) \| [IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md)<!-- -->&gt;&gt;
 
 相邻的导线、圆弧线图元对象
 
-## Remarks
+## 备注
 
 将会获取与过孔直接相连的导线、圆弧线图元对象
 
@@ -452,14 +452,14 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md) \| [IPCB\_Pri
 
 获取属性状态：盲埋孔设计规则项名称
 
-## Signature
+## 签名
 
 ```typescript
 getState_DesignRuleBlindViaName(): string | null;
 ```
 
 
-## Returns
+## 返回值
 
 string \| null
 
@@ -471,14 +471,14 @@ string \| null
 
 获取属性状态：外径
 
-## Signature
+## 签名
 
 ```typescript
 getState_Diameter(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -490,14 +490,14 @@ number
 
 获取属性状态：孔径
 
-## Signature
+## 签名
 
 ```typescript
 getState_HoleDiameter(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -509,14 +509,14 @@ number
 
 获取属性状态：网络名称
 
-## Signature
+## 签名
 
 ```typescript
 getState_Net(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -528,14 +528,14 @@ string
 
 获取属性状态：图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveId(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -547,14 +547,14 @@ string
 
 获取属性状态：是否锁定
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveLock(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -566,14 +566,14 @@ boolean
 
 获取属性状态：图元类型
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveType(): EPCB_PrimitiveType;
 ```
 
 
-## Returns
+## 返回值
 
 [EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)
 
@@ -585,14 +585,14 @@ getState_PrimitiveType(): EPCB_PrimitiveType;
 
 获取属性状态：阻焊/助焊扩展
 
-## Signature
+## 签名
 
 ```typescript
 getState_SolderMaskExpansion(): IPCB_PrimitiveSolderMaskAndPasteMaskExpansion | null;
 ```
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveSolderMaskAndPasteMaskExpansion](../interfaces/IPCB_PrimitiveSolderMaskAndPasteMaskExpansion.md) \| null
 
@@ -604,14 +604,14 @@ getState_SolderMaskExpansion(): IPCB_PrimitiveSolderMaskAndPasteMaskExpansion | 
 
 获取属性状态：过孔类型
 
-## Signature
+## 签名
 
 ```typescript
 getState_ViaType(): EPCB_PrimitiveViaType;
 ```
 
 
-## Returns
+## 返回值
 
 [EPCB\_PrimitiveViaType](../enums/EPCB_PrimitiveViaType.md)
 
@@ -623,14 +623,14 @@ getState_ViaType(): EPCB_PrimitiveViaType;
 
 获取属性状态：坐标 X
 
-## Signature
+## 签名
 
 ```typescript
 getState_X(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -642,14 +642,14 @@ number
 
 获取属性状态：坐标 Y
 
-## Signature
+## 签名
 
 ```typescript
 getState_Y(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -661,14 +661,14 @@ number
 
 查询图元是否为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 isAsync(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -678,18 +678,18 @@ boolean
 
 # IPCB\_PrimitiveVia.reset() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将异步图元重置为当前画布状态
 
-## Signature
+## 签名
 
 ```typescript
 reset(): Promise<IPCB_PrimitiveVia>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveVia](./IPCB_PrimitiveVia.md)<!-- -->&gt;
 
@@ -699,31 +699,31 @@ Promise&lt;[IPCB\_PrimitiveVia](./IPCB_PrimitiveVia.md)<!-- -->&gt;
 
 # IPCB\_PrimitiveVia.setState\_DesignRuleBlindViaName() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：盲埋孔设计规则项名称
 
-## Signature
+## 签名
 
 ```typescript
 setState_DesignRuleBlindViaName(designRuleBlindViaName: string | null): IPCB_PrimitiveVia;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -747,7 +747,7 @@ string \| null
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveVia](./IPCB_PrimitiveVia.md)
 
@@ -757,31 +757,31 @@ string \| null
 
 # IPCB\_PrimitiveVia.setState\_Diameter() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：外径
 
-## Signature
+## 签名
 
 ```typescript
 setState_Diameter(diameter: number): IPCB_PrimitiveVia;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -805,7 +805,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveVia](./IPCB_PrimitiveVia.md)
 
@@ -815,31 +815,31 @@ number
 
 # IPCB\_PrimitiveVia.setState\_HoleDiameter() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：孔径
 
-## Signature
+## 签名
 
 ```typescript
 setState_HoleDiameter(holeDiameter: number): IPCB_PrimitiveVia;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -863,7 +863,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveVia](./IPCB_PrimitiveVia.md)
 
@@ -873,31 +873,31 @@ number
 
 # IPCB\_PrimitiveVia.setState\_Net() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：网络名称
 
-## Signature
+## 签名
 
 ```typescript
 setState_Net(net: string): IPCB_PrimitiveVia;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -921,7 +921,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveVia](./IPCB_PrimitiveVia.md)
 
@@ -931,31 +931,31 @@ string
 
 # IPCB\_PrimitiveVia.setState\_PrimitiveLock() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：是否锁定
 
-## Signature
+## 签名
 
 ```typescript
 setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveVia;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -979,7 +979,7 @@ boolean
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveVia](./IPCB_PrimitiveVia.md)
 
@@ -989,31 +989,31 @@ boolean
 
 # IPCB\_PrimitiveVia.setState\_SolderMaskExpansion() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：阻焊/助焊扩展
 
-## Signature
+## 签名
 
 ```typescript
 setState_SolderMaskExpansion(solderMaskExpansion: IPCB_PrimitiveSolderMaskAndPasteMaskExpansion | null): IPCB_PrimitiveVia;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1037,7 +1037,7 @@ solderMaskExpansion
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveVia](./IPCB_PrimitiveVia.md)
 
@@ -1047,31 +1047,31 @@ solderMaskExpansion
 
 # IPCB\_PrimitiveVia.setState\_ViaType() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：过孔类型
 
-## Signature
+## 签名
 
 ```typescript
 setState_ViaType(viaType: EPCB_PrimitiveViaType): IPCB_PrimitiveVia;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1095,7 +1095,7 @@ viaType
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveVia](./IPCB_PrimitiveVia.md)
 
@@ -1105,31 +1105,31 @@ viaType
 
 # IPCB\_PrimitiveVia.setState\_X() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：坐标 X
 
-## Signature
+## 签名
 
 ```typescript
 setState_X(x: number): IPCB_PrimitiveVia;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1153,7 +1153,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveVia](./IPCB_PrimitiveVia.md)
 
@@ -1163,31 +1163,31 @@ number
 
 # IPCB\_PrimitiveVia.setState\_Y() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：坐标 Y
 
-## Signature
+## 签名
 
 ```typescript
 setState_Y(y: number): IPCB_PrimitiveVia;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1211,7 +1211,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveVia](./IPCB_PrimitiveVia.md)
 
@@ -1223,14 +1223,14 @@ number
 
 将图元转换为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 toAsync(): IPCB_PrimitiveVia;
 ```
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveVia](./IPCB_PrimitiveVia.md)
 
@@ -1242,14 +1242,14 @@ toAsync(): IPCB_PrimitiveVia;
 
 将图元转换为同步图元
 
-## Signature
+## 签名
 
 ```typescript
 toSync(): IPCB_PrimitiveVia;
 ```
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveVia](./IPCB_PrimitiveVia.md)
 

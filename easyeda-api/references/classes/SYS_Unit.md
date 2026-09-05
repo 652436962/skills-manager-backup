@@ -2,37 +2,37 @@
 
 系统 / 单位类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SYS_Unit 
 ```
 
-## Remarks
+## 备注
 
-控制系统数据单位与单位转换基础函数，当前原理图数据单位跨度等效为 `10mil` 或 `0.01inch`<!-- -->，PCB 数据单位跨度等效为 `mil`
+控制系统数据单位与单位转换基础函数，当前系统数据单位跨度等效为 `mil`
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
 <tbody><tr><td>
 
-[getFrontendDataUnit()](./SYS_Unit.md)
+[getSystemDataUnit()](./SYS_Unit.md)
 
 
 </td><td>
@@ -40,7 +40,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** 获取 EDA 前端数据单位跨度
+获取 API 系统数据单位跨度
 
 
 </td></tr>
@@ -134,30 +134,28 @@ Description
 
 ## 方法详情
 
-### getfrontenddataunit
+### getsystemdataunit
 
-# SYS\_Unit.getFrontendDataUnit() method
+# SYS\_Unit.getSystemDataUnit() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+获取 API 系统数据单位跨度
 
-获取 EDA 前端数据单位跨度
-
-## Signature
+## 签名
 
 ```typescript
-getFrontendDataUnit(): Promise<ESYS_Unit | undefined>;
+getSystemDataUnit(): ESYS_Unit.MIL;
 ```
 
 
-## Returns
+## 返回值
 
-Promise&lt;[ESYS\_Unit](../enums/ESYS_Unit.md) \| undefined&gt;
+[ESYS\_Unit.MIL](../enums/ESYS_Unit.md)
 
 单位
 
-## Remarks
+## 备注
 
-此处指的是前端用户可以切换的单位，需要同时兼容原理图和 PCB 画布
+当前 API 系统数据单位跨度等效为 `mil`<!-- -->，不会发生改变
 
 ### inchtomil
 
@@ -165,27 +163,27 @@ Promise&lt;[ESYS\_Unit](../enums/ESYS_Unit.md) \| undefined&gt;
 
 单位转换：英寸到密尔
 
-## Signature
+## 签名
 
 ```typescript
 inchToMil(inch: number, numberOfDecimals?: number): number;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -217,7 +215,7 @@ number
 
 </td><td>
 
-_(Optional)_ 保留小数位数，默认为 `4`
+_（可选）_ 保留小数位数，默认为 `4`
 
 
 </td></tr>
@@ -225,7 +223,7 @@ _(Optional)_ 保留小数位数，默认为 `4`
 
 
 
-## Returns
+## 返回值
 
 number
 
@@ -237,27 +235,27 @@ number
 
 单位转换：英寸到毫米
 
-## Signature
+## 签名
 
 ```typescript
 inchToMm(inch: number, numberOfDecimals?: number): number;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -289,7 +287,7 @@ number
 
 </td><td>
 
-_(Optional)_ 保留小数位数，默认为 `4`
+_（可选）_ 保留小数位数，默认为 `4`
 
 
 </td></tr>
@@ -297,7 +295,7 @@ _(Optional)_ 保留小数位数，默认为 `4`
 
 
 
-## Returns
+## 返回值
 
 number
 
@@ -309,27 +307,27 @@ number
 
 单位转换：密尔到英寸
 
-## Signature
+## 签名
 
 ```typescript
 milToInch(mil: number, numberOfDecimals?: number): number;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -361,7 +359,7 @@ number
 
 </td><td>
 
-_(Optional)_ 保留小数位数，默认为 `4`
+_（可选）_ 保留小数位数，默认为 `4`
 
 
 </td></tr>
@@ -369,7 +367,7 @@ _(Optional)_ 保留小数位数，默认为 `4`
 
 
 
-## Returns
+## 返回值
 
 number
 
@@ -381,27 +379,27 @@ number
 
 单位转换：密尔到毫米
 
-## Signature
+## 签名
 
 ```typescript
 milToMm(mil: number, numberOfDecimals?: number): number;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -433,7 +431,7 @@ number
 
 </td><td>
 
-_(Optional)_ 保留小数位数，默认为 `4`
+_（可选）_ 保留小数位数，默认为 `4`
 
 
 </td></tr>
@@ -441,7 +439,7 @@ _(Optional)_ 保留小数位数，默认为 `4`
 
 
 
-## Returns
+## 返回值
 
 number
 
@@ -453,27 +451,27 @@ number
 
 单位转换：毫米到英寸
 
-## Signature
+## 签名
 
 ```typescript
 mmToInch(mm: number, numberOfDecimals?: number): number;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -505,7 +503,7 @@ number
 
 </td><td>
 
-_(Optional)_ 保留小数位数，默认为 `4`
+_（可选）_ 保留小数位数，默认为 `4`
 
 
 </td></tr>
@@ -513,7 +511,7 @@ _(Optional)_ 保留小数位数，默认为 `4`
 
 
 
-## Returns
+## 返回值
 
 number
 
@@ -525,27 +523,27 @@ number
 
 单位转换：毫米到密尔
 
-## Signature
+## 签名
 
 ```typescript
 mmToMil(mm: number, numberOfDecimals?: number): number;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -577,7 +575,7 @@ number
 
 </td><td>
 
-_(Optional)_ 保留小数位数，默认为 `4`
+_（可选）_ 保留小数位数，默认为 `4`
 
 
 </td></tr>
@@ -585,7 +583,7 @@ _(Optional)_ 保留小数位数，默认为 `4`
 
 
 
-## Returns
+## 返回值
 
 number
 

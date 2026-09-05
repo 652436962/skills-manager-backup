@@ -1,41 +1,41 @@
 # ILIB\_ExtendLibraryClassificationIndex interface
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > - since EDA v3.2; dropped EDA v3.3
 
 外部库分类索引
 
-## Signature
+## 签名
 
 ```typescript
 interface ILIB_ExtendLibraryClassificationIndex 
 ```
 
-## Remarks
+## 备注
 
 支持外部库使用名称或 UUID 作为分类的唯一 ID 索引
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -54,7 +54,7 @@ string
 
 </td><td>
 
-_(Optional)_ 一级分类名称
+_（可选）_ 一级分类名称
 
 
 </td></tr>
@@ -73,7 +73,7 @@ string
 
 </td><td>
 
-_(Optional)_ 一级分类 UUID
+_（可选）_ 一级分类 UUID
 
 
 </td></tr>
@@ -92,7 +92,7 @@ string
 
 </td><td>
 
-_(Optional)_ 二级分类名称
+_（可选）_ 二级分类名称
 
 
 </td></tr>
@@ -111,7 +111,7 @@ string
 
 </td><td>
 
-_(Optional)_ 二级分类 UUID
+_（可选）_ 二级分类 UUID
 
 
 </td></tr>
@@ -127,7 +127,7 @@ _(Optional)_ 二级分类 UUID
 
 一级分类名称
 
-## Signature
+## 签名
 
 ```typescript
 primaryClassificationName?: string;
@@ -139,7 +139,7 @@ primaryClassificationName?: string;
 
 一级分类 UUID
 
-## Signature
+## 签名
 
 ```typescript
 primaryClassificationUuid?: string;
@@ -151,7 +151,7 @@ primaryClassificationUuid?: string;
 
 二级分类名称
 
-## Signature
+## 签名
 
 ```typescript
 secondaryClassificationName?: string;
@@ -163,7 +163,7 @@ secondaryClassificationName?: string;
 
 二级分类 UUID
 
-## Signature
+## 签名
 
 ```typescript
 secondaryClassificationUuid?: string;

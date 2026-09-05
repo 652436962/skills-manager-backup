@@ -2,32 +2,32 @@
 
 网络属性
 
-## Signature
+## 签名
 
 ```typescript
 interface IPCB_NetInfo 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -100,7 +100,7 @@ string
 
 颜色
 
-## Signature
+## 签名
 
 ```typescript
 color: {
@@ -117,7 +117,7 @@ color: {
 
 长度
 
-## Signature
+## 签名
 
 ```typescript
 length: number;
@@ -129,7 +129,7 @@ length: number;
 
 网络名称
 
-## Signature
+## 签名
 
 ```typescript
 net: string;

@@ -2,40 +2,40 @@
 
 器件焊盘图元
 
-## Signature
+## 签名
 
 ```typescript
 declare class IPCB_PrimitiveComponentPad extends IPCB_PrimitivePad 
 ```
-**Extends:** [IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)
+**扩展自：**[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)
 
-## Remarks
+## 备注
 
 器件焊盘图元是一个特殊的图元，它指的是在 PCB 画布上关联到封装的焊盘
 
 你只能通过 [器件类的 getAllPinsByPrimitiveId 方法](./PCB_PrimitiveComponent.md) 或 [器件图元的 getAllPads 方法](./IPCB_PrimitiveComponent.md) 获取到器件焊盘图元
 
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -64,21 +64,21 @@ Description
 </td></tr>
 </tbody></table>
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -162,7 +162,7 @@ Description
 
 图元类型
 
-## Signature
+## 签名
 
 ```typescript
 protected readonly primitiveType: EPCB_PrimitiveType.COMPONENT_PAD;
@@ -177,18 +177,18 @@ protected readonly primitiveType: EPCB_PrimitiveType.COMPONENT_PAD;
 
 # IPCB\_PrimitiveComponentPad.done() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将对图元的更改应用到画布
 
-## Signature
+## 签名
 
 ```typescript
 done(): Promise<IPCB_PrimitiveComponentPad>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveComponentPad](./IPCB_PrimitiveComponentPad.md)<!-- -->&gt;
 
@@ -198,31 +198,31 @@ Promise&lt;[IPCB\_PrimitiveComponentPad](./IPCB_PrimitiveComponentPad.md)<!-- --
 
 # IPCB\_PrimitiveComponentPad.getConnectedPrimitives() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取连接的图元
 
-## Signature
+## 签名
 
 ```typescript
 getConnectedPrimitives(onlyCentreConnection: true): Promise<Array<IPCB_PrimitiveLine | IPCB_PrimitiveArc | IPCB_PrimitiveVia>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -246,11 +246,11 @@ true
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md) \| [IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md) \| [IPCB\_PrimitiveVia](./IPCB_PrimitiveVia.md)<!-- -->&gt;&gt;
 
-## Remarks
+## 备注
 
 本接口可以获取到与焊盘直接接触的图元
 
@@ -258,27 +258,27 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md) \| [IPCB\_Pri
 
 # IPCB\_PrimitiveComponentPad.getConnectedPrimitives() method
 
-## Signature
+## 签名
 
 ```typescript
 getConnectedPrimitives(onlyCentreConnection: false): Promise<Array<IPCB_PrimitiveLine | IPCB_PrimitiveArc | IPCB_PrimitiveVia | IPCB_PrimitivePolyline | IPCB_PrimitiveFill>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -300,7 +300,7 @@ false
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md) \| [IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md) \| [IPCB\_PrimitiveVia](./IPCB_PrimitiveVia.md) \| [IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md) \| [IPCB\_PrimitiveFill](./IPCB_PrimitiveFill.md)<!-- -->&gt;&gt;
 
@@ -310,14 +310,14 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md) \| [IPCB\_Pri
 
 获取属性状态：父器件图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getState_ParentComponentPrimitiveId(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -329,19 +329,19 @@ string
 
 设置属性状态：父器件图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 setState_ParentComponentPrimitiveId(): IPCB_PrimitiveComponentPad;
 ```
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveComponentPad](./IPCB_PrimitiveComponentPad.md)
 
 器件焊盘图元对象
 
-## Remarks
+## 备注
 
 本器件焊盘图元属性不支持修改，本接口调用将不会有任何效果

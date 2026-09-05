@@ -2,31 +2,31 @@
 
 属性图元
 
-## Signature
+## 签名
 
 ```typescript
 declare class ISCH_PrimitiveAttribute implements ISCH_Primitive 
 ```
-**Implements:** [ISCH\_Primitive](../interfaces/ISCH_Primitive.md)
+**实现自：**[ISCH\_Primitive](../interfaces/ISCH_Primitive.md)
 
-## Remarks
+## 备注
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -572,18 +572,18 @@ Description
 
 # ISCH\_PrimitiveAttribute.done() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将对图元的更改应用到画布
 
-## Signature
+## 签名
 
 ```typescript
 done(): Promise<ISCH_PrimitiveAttribute>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)<!-- -->&gt;
 
@@ -595,14 +595,14 @@ Promise&lt;[ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)<!-- -->&gt;
 
 获取属性状态：对齐模式
 
-## Signature
+## 签名
 
 ```typescript
 getState_AlignMode(): ESCH_PrimitiveTextAlignMode | null;
 ```
 
 
-## Returns
+## 返回值
 
 [ESCH\_PrimitiveTextAlignMode](../enums/ESCH_PrimitiveTextAlignMode.md) \| null
 
@@ -614,14 +614,14 @@ getState_AlignMode(): ESCH_PrimitiveTextAlignMode | null;
 
 获取属性状态：是否加粗
 
-## Signature
+## 签名
 
 ```typescript
 getState_Bold(): boolean | null;
 ```
 
 
-## Returns
+## 返回值
 
 boolean \| null
 
@@ -633,14 +633,14 @@ boolean \| null
 
 获取属性状态：文本颜色
 
-## Signature
+## 签名
 
 ```typescript
 getState_Color(): string | null;
 ```
 
 
-## Returns
+## 返回值
 
 string \| null
 
@@ -652,14 +652,14 @@ string \| null
 
 获取属性状态：填充颜色
 
-## Signature
+## 签名
 
 ```typescript
 getState_FillColor(): string | null;
 ```
 
 
-## Returns
+## 返回值
 
 string \| null
 
@@ -671,14 +671,14 @@ string \| null
 
 获取属性状态：字体名称
 
-## Signature
+## 签名
 
 ```typescript
 getState_FontName(): string | null;
 ```
 
 
-## Returns
+## 返回值
 
 string \| null
 
@@ -690,14 +690,14 @@ string \| null
 
 获取属性状态：字体大小
 
-## Signature
+## 签名
 
 ```typescript
 getState_FontSize(): number | null;
 ```
 
 
-## Returns
+## 返回值
 
 number \| null
 
@@ -709,14 +709,14 @@ number \| null
 
 获取属性状态：是否斜体
 
-## Signature
+## 签名
 
 ```typescript
 getState_Italic(): boolean | null;
 ```
 
 
-## Returns
+## 返回值
 
 boolean \| null
 
@@ -728,14 +728,14 @@ boolean \| null
 
 获取属性状态：键
 
-## Signature
+## 签名
 
 ```typescript
 getState_Key(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -747,14 +747,14 @@ string
 
 获取属性状态：键是否显示
 
-## Signature
+## 签名
 
 ```typescript
 getState_KeyVisible(): boolean | null;
 ```
 
 
-## Returns
+## 返回值
 
 boolean \| null
 
@@ -766,14 +766,14 @@ boolean \| null
 
 获取属性状态：父图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getState_ParentPrimitiveId(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -785,14 +785,14 @@ string
 
 获取属性状态：图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveId(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -804,14 +804,14 @@ string
 
 获取属性状态：图元类型
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveType(): ESCH_PrimitiveType;
 ```
 
 
-## Returns
+## 返回值
 
 [ESCH\_PrimitiveType](../enums/ESCH_PrimitiveType.md)
 
@@ -823,14 +823,14 @@ getState_PrimitiveType(): ESCH_PrimitiveType;
 
 获取属性状态：旋转角度
 
-## Signature
+## 签名
 
 ```typescript
 getState_Rotation(): number | null;
 ```
 
 
-## Returns
+## 返回值
 
 number \| null
 
@@ -842,14 +842,14 @@ number \| null
 
 获取属性状态：是否加下划线
 
-## Signature
+## 签名
 
 ```typescript
 getState_UnderLine(): boolean | null;
 ```
 
 
-## Returns
+## 返回值
 
 boolean \| null
 
@@ -861,14 +861,14 @@ boolean \| null
 
 获取属性状态：值
 
-## Signature
+## 签名
 
 ```typescript
 getState_Value(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -880,14 +880,14 @@ string
 
 获取属性状态：值是否显示
 
-## Signature
+## 签名
 
 ```typescript
 getState_ValueVisible(): boolean | null;
 ```
 
 
-## Returns
+## 返回值
 
 boolean \| null
 
@@ -899,14 +899,14 @@ boolean \| null
 
 获取属性状态：坐标 X
 
-## Signature
+## 签名
 
 ```typescript
 getState_X(): number | null;
 ```
 
 
-## Returns
+## 返回值
 
 number \| null
 
@@ -918,14 +918,14 @@ number \| null
 
 获取属性状态：坐标 Y
 
-## Signature
+## 签名
 
 ```typescript
 getState_Y(): number | null;
 ```
 
 
-## Returns
+## 返回值
 
 number \| null
 
@@ -937,14 +937,14 @@ number \| null
 
 查询图元是否为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 isAsync(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -954,18 +954,18 @@ boolean
 
 # ISCH\_PrimitiveAttribute.reset() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将异步图元重置为当前画布状态
 
-## Signature
+## 签名
 
 ```typescript
 reset(): Promise<ISCH_PrimitiveAttribute>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)<!-- -->&gt;
 
@@ -975,31 +975,31 @@ Promise&lt;[ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)<!-- -->&gt;
 
 # ISCH\_PrimitiveAttribute.setState\_AlignMode() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：对齐模式
 
-## Signature
+## 签名
 
 ```typescript
 setState_AlignMode(alignMode: ESCH_PrimitiveTextAlignMode | null): ISCH_PrimitiveAttribute;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1023,7 +1023,7 @@ alignMode
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)
 
@@ -1033,31 +1033,31 @@ alignMode
 
 # ISCH\_PrimitiveAttribute.setState\_Bold() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：是否加粗
 
-## Signature
+## 签名
 
 ```typescript
 setState_Bold(bold: boolean | null): ISCH_PrimitiveAttribute;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1081,7 +1081,7 @@ boolean \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)
 
@@ -1091,31 +1091,31 @@ boolean \| null
 
 # ISCH\_PrimitiveAttribute.setState\_Color() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：文本颜色
 
-## Signature
+## 签名
 
 ```typescript
 setState_Color(color: string | null): ISCH_PrimitiveAttribute;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1137,7 +1137,7 @@ string \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)
 
@@ -1147,31 +1147,31 @@ string \| null
 
 # ISCH\_PrimitiveAttribute.setState\_FillColor() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：填充颜色
 
-## Signature
+## 签名
 
 ```typescript
 setState_FillColor(fillColor: string | null): ISCH_PrimitiveAttribute;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1195,7 +1195,7 @@ string \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)
 
@@ -1205,31 +1205,31 @@ string \| null
 
 # ISCH\_PrimitiveAttribute.setState\_FontName() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：字体名称
 
-## Signature
+## 签名
 
 ```typescript
 setState_FontName(fontName: string | null): ISCH_PrimitiveAttribute;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1253,7 +1253,7 @@ string \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)
 
@@ -1263,31 +1263,31 @@ string \| null
 
 # ISCH\_PrimitiveAttribute.setState\_FontSize() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：字体大小
 
-## Signature
+## 签名
 
 ```typescript
 setState_FontSize(fontSize: number | null): ISCH_PrimitiveAttribute;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1311,7 +1311,7 @@ number \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)
 
@@ -1321,31 +1321,31 @@ number \| null
 
 # ISCH\_PrimitiveAttribute.setState\_Italic() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：是否斜体
 
-## Signature
+## 签名
 
 ```typescript
 setState_Italic(italic: boolean | null): ISCH_PrimitiveAttribute;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1369,7 +1369,7 @@ boolean \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)
 
@@ -1379,31 +1379,31 @@ boolean \| null
 
 # ISCH\_PrimitiveAttribute.setState\_Key() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：键
 
-## Signature
+## 签名
 
 ```typescript
 setState_Key(key: string): ISCH_PrimitiveAttribute;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1427,7 +1427,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)
 
@@ -1437,31 +1437,31 @@ string
 
 # ISCH\_PrimitiveAttribute.setState\_KeyVisible() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：键是否显示
 
-## Signature
+## 签名
 
 ```typescript
 setState_KeyVisible(keyVisible: boolean | null): ISCH_PrimitiveAttribute;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1485,7 +1485,7 @@ boolean \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)
 
@@ -1495,31 +1495,31 @@ boolean \| null
 
 # ISCH\_PrimitiveAttribute.setState\_Rotation() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：旋转角度
 
-## Signature
+## 签名
 
 ```typescript
 setState_Rotation(rotation: number | null): ISCH_PrimitiveAttribute;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1543,7 +1543,7 @@ number \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)
 
@@ -1553,31 +1553,31 @@ number \| null
 
 # ISCH\_PrimitiveAttribute.setState\_UnderLine() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：是否加下划线
 
-## Signature
+## 签名
 
 ```typescript
 setState_UnderLine(underLine: boolean | null): ISCH_PrimitiveAttribute;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1601,7 +1601,7 @@ boolean \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)
 
@@ -1611,31 +1611,31 @@ boolean \| null
 
 # ISCH\_PrimitiveAttribute.setState\_Value() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：值
 
-## Signature
+## 签名
 
 ```typescript
 setState_Value(value: string): ISCH_PrimitiveAttribute;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1659,7 +1659,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)
 
@@ -1669,31 +1669,31 @@ string
 
 # ISCH\_PrimitiveAttribute.setState\_ValueVisible() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：值是否显示
 
-## Signature
+## 签名
 
 ```typescript
 setState_ValueVisible(valueVisible: boolean | null): ISCH_PrimitiveAttribute;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1717,7 +1717,7 @@ boolean \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)
 
@@ -1727,31 +1727,31 @@ boolean \| null
 
 # ISCH\_PrimitiveAttribute.setState\_X() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：坐标 X
 
-## Signature
+## 签名
 
 ```typescript
 setState_X(x: number | null): ISCH_PrimitiveAttribute;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1775,7 +1775,7 @@ number \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)
 
@@ -1785,31 +1785,31 @@ number \| null
 
 # ISCH\_PrimitiveAttribute.setState\_Y() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：坐标 Y
 
-## Signature
+## 签名
 
 ```typescript
 setState_Y(y: number | null): ISCH_PrimitiveAttribute;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1833,7 +1833,7 @@ number \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)
 
@@ -1845,14 +1845,14 @@ number \| null
 
 将图元转换为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 toAsync(): ISCH_PrimitiveAttribute;
 ```
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)
 
@@ -1864,14 +1864,14 @@ toAsync(): ISCH_PrimitiveAttribute;
 
 将图元转换为同步图元
 
-## Signature
+## 签名
 
 ```typescript
 toSync(): ISCH_PrimitiveAttribute;
 ```
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveAttribute](./ISCH_PrimitiveAttribute.md)
 

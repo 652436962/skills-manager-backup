@@ -2,32 +2,32 @@
 
 原理图 &amp; 符号 / 事件类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SCH_Event 
 ```
 
-## Remarks
+## 备注
 
 注册事件回调
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -113,27 +113,27 @@ Description
 
 新增鼠标事件监听
 
-## Signature
+## 签名
 
 ```typescript
 addMouseEventListener(id: string, eventType: 'all' | ESCH_MouseEventType, callFn: (eventType: ESCH_MouseEventType) => void | Promise<void>, onlyOnce?: boolean): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -197,7 +197,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否仅监听一次
+_（可选）_ 是否仅监听一次
 
 
 </td></tr>
@@ -205,11 +205,11 @@ _(Optional)_ 是否仅监听一次
 
 
 
-## Returns
+## 返回值
 
 void
 
-## Remarks
+## 备注
 
 注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`
 
@@ -217,11 +217,11 @@ void
 
 # SCH\_Event.addPrimitiveEventListener() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 新增图元事件监听
 
-## Signature
+## 签名
 
 ```typescript
 addPrimitiveEventListener(id: string, eventType: 'all' | ESCH_PrimitiveEventType, callFn: (eventType: ESCH_PrimitiveEventType, props: {
@@ -229,21 +229,21 @@ addPrimitiveEventListener(id: string, eventType: 'all' | ESCH_PrimitiveEventType
     }) => void | Promise<void>, onlyOnce?: boolean): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -307,7 +307,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否仅监听一次
+_（可选）_ 是否仅监听一次
 
 
 </td></tr>
@@ -315,11 +315,11 @@ _(Optional)_ 是否仅监听一次
 
 
 
-## Returns
+## 返回值
 
 void
 
-## Remarks
+## 备注
 
 注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`
 
@@ -327,11 +327,11 @@ void
 
 # SCH\_Event.addSimulationEnginePullEventListener() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 注册仿真引擎拉取事件监听
 
-## Signature
+## 签名
 
 ```typescript
 addSimulationEnginePullEventListener(id: string, eventType: 'all', callFn: (eventType: ESCH_DynamicSimulationEnginePullEventType | ESCH_SpiceSimulationEnginePullEventType, props: {
@@ -339,21 +339,21 @@ addSimulationEnginePullEventListener(id: string, eventType: 'all', callFn: (even
     }) => void | Promise<void>): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -409,11 +409,11 @@ callFn
 
 
 
-## Returns
+## 返回值
 
 void
 
-## Remarks
+## 备注
 
 注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`
 
@@ -423,27 +423,27 @@ void
 
 查询事件监听是否存在
 
-## Signature
+## 签名
 
 ```typescript
 isEventListenerAlreadyExist(id: string): boolean;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -467,7 +467,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -479,27 +479,27 @@ boolean
 
 移除事件监听
 
-## Signature
+## 签名
 
 ```typescript
 removeEventListener(id: string): boolean;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -523,7 +523,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 boolean
 

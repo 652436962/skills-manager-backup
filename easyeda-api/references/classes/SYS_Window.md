@@ -2,31 +2,31 @@
 
 系统 / 窗口类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SYS_Window 
 ```
 
-## Remarks
+## 备注
 
 为了保证安全性，仅提供有限的窗口跳转与监听支持，更多操作请使用内联框架窗口 [SYS\_IFrame](./SYS_IFrame.md)
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -168,7 +168,7 @@ Description
 
 新增事件监听
 
-## Signature
+## 签名
 
 ```typescript
 addEventListener(type: ESYS_WindowEventType, listener: (ev: any) => any, options?: {
@@ -179,21 +179,21 @@ addEventListener(type: ESYS_WindowEventType, listener: (ev: any) => any, options
     }): ISYS_WindowEventListenerRemovableObject | undefined;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -241,7 +241,7 @@ options
 
 </td><td>
 
-_(Optional)_ 可选参数
+_（可选）_ 可选参数
 
 
 </td></tr>
@@ -249,7 +249,7 @@ _(Optional)_ 可选参数
 
 
 
-## Returns
+## 返回值
 
 [ISYS\_WindowEventListenerRemovableObject](../interfaces/ISYS_WindowEventListenerRemovableObject.md) \| undefined
 
@@ -261,20 +261,20 @@ _(Optional)_ 可选参数
 
 获取当前主题
 
-## Signature
+## 签名
 
 ```typescript
 getCurrentTheme(): Promise<ESYS_Theme>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ESYS\_Theme](../enums/ESYS_Theme.md)<!-- -->&gt;
 
 当前主题
 
-## Remarks
+## 备注
 
 获取当前 EDA 主题，\*\*浅色\*\* 或 \*\*深色\*\*
 
@@ -284,14 +284,14 @@ Promise&lt;[ESYS\_Theme](../enums/ESYS_Theme.md)<!-- -->&gt;
 
 获取 URL 锚点
 
-## Signature
+## 签名
 
 ```typescript
 getUrlAnchor(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -303,27 +303,27 @@ URL 锚点值
 
 获取 URL 参数
 
-## Signature
+## 签名
 
 ```typescript
 getUrlParam(key: string): string | null;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -347,7 +347,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 string \| null
 
@@ -359,27 +359,27 @@ string \| null
 
 打开资源窗口
 
-## Signature
+## 签名
 
 ```typescript
 open(url: string, target?: ESYS_WindowOpenTarget): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -411,7 +411,7 @@ target
 
 </td><td>
 
-_(Optional)_ 上下文目标
+_（可选）_ 上下文目标
 
 
 </td></tr>
@@ -419,7 +419,7 @@ _(Optional)_ 上下文目标
 
 
 
-## Returns
+## 返回值
 
 void
 
@@ -429,7 +429,7 @@ void
 
 打开 UI 窗口
 
-## Signature
+## 签名
 
 ```typescript
 openUI(uiName: string, args?: {
@@ -437,21 +437,21 @@ openUI(uiName: string, args?: {
     }): Promise<void>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -483,7 +483,7 @@ args
 
 </td><td>
 
-_(Optional)_ 可选参数对象
+_（可选）_ 可选参数对象
 
 
 </td></tr>
@@ -491,11 +491,11 @@ _(Optional)_ 可选参数对象
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;void&gt;
 
-## Remarks
+## 备注
 
 非公开接口使用提醒：本接口按原样提供，不提供参数的额外文档，参数可能在任何版本出现破坏性更改并不另行通知
 
@@ -505,27 +505,27 @@ Promise&lt;void&gt;
 
 移除事件监听
 
-## Signature
+## 签名
 
 ```typescript
 removeEventListener(removableObject: ISYS_WindowEventListenerRemovableObject): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -549,7 +549,7 @@ removableObject
 
 
 
-## Returns
+## 返回值
 
 void
 
@@ -559,27 +559,27 @@ void
 
 追加新的 URL 历史记录栈信息
 
-## Signature
+## 签名
 
 ```typescript
 urlPushState(url: string): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -603,7 +603,7 @@ URL
 
 
 
-## Returns
+## 返回值
 
 void
 
@@ -613,27 +613,27 @@ void
 
 修改当前的 URL 历史记录栈信息
 
-## Signature
+## 签名
 
 ```typescript
 urlReplaceState(url: string): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -657,6 +657,6 @@ URL
 
 
 
-## Returns
+## 返回值
 
 void

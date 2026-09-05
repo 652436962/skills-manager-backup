@@ -2,28 +2,28 @@
 
 PCB &amp; 封装 / 焊盘图元类
 
-## Signature
+## 签名
 
 ```typescript
 declare class PCB_PrimitivePad implements IPCB_PrimitiveAPI 
 ```
-**Implements:** [IPCB\_PrimitiveAPI](../interfaces/IPCB_PrimitiveAPI.md)
+**实现自：**[IPCB\_PrimitiveAPI](../interfaces/IPCB_PrimitiveAPI.md)
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -137,27 +137,27 @@ Description
 
 创建焊盘
 
-## Signature
+## 签名
 
 ```typescript
 create(layer: TPCB_LayersOfPad, padNumber: string, x: number, y: number, rotation?: number, pad?: TPCB_PrimitivePadShape, net?: string, hole?: TPCB_PrimitivePadHole | null, holeOffsetX?: number, holeOffsetY?: number, holeRotation?: number, metallization?: boolean, padType?: EPCB_PrimitivePadType, specialPad?: TPCB_PrimitiveSpecialPadShape, solderMaskAndPasteMaskExpansion?: IPCB_PrimitiveSolderMaskAndPasteMaskExpansion | null, heatWelding?: IPCB_PrimitivePadHeatWelding | null, primitiveLock?: boolean): Promise<IPCB_PrimitivePad | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -237,7 +237,7 @@ number
 
 </td><td>
 
-_(Optional)_ 旋转角度
+_（可选）_ 旋转角度
 
 
 </td></tr>
@@ -253,7 +253,7 @@ pad
 
 </td><td>
 
-_(Optional)_ 焊盘外形，在特殊焊盘外形实现前，该参数必传
+_（可选）_ 焊盘外形，在特殊焊盘外形实现前，该参数必传
 
 
 </td></tr>
@@ -269,7 +269,7 @@ string
 
 </td><td>
 
-_(Optional)_ 网络名称
+_（可选）_ 网络名称
 
 
 </td></tr>
@@ -285,7 +285,7 @@ hole
 
 </td><td>
 
-_(Optional)_ 孔，`null` 标识无孔
+_（可选）_ 孔，`null` 标识无孔
 
 
 </td></tr>
@@ -301,7 +301,7 @@ number
 
 </td><td>
 
-_(Optional)_ 孔偏移 X
+_（可选）_ 孔偏移 X
 
 
 </td></tr>
@@ -317,7 +317,7 @@ number
 
 </td><td>
 
-_(Optional)_ 孔偏移 Y
+_（可选）_ 孔偏移 Y
 
 
 </td></tr>
@@ -333,7 +333,7 @@ number
 
 </td><td>
 
-_(Optional)_ 孔相对于焊盘的旋转角度
+_（可选）_ 孔相对于焊盘的旋转角度
 
 
 </td></tr>
@@ -349,7 +349,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否金属化孔壁
+_（可选）_ 是否金属化孔壁
 
 
 </td></tr>
@@ -365,7 +365,7 @@ padType
 
 </td><td>
 
-_(Optional)_ 焊盘类型
+_（可选）_ 焊盘类型
 
 
 </td></tr>
@@ -381,7 +381,7 @@ specialPad
 
 </td><td>
 
-_(Optional)_ 特殊焊盘外形，当前暂未实现，请勿使用
+_（可选）_ 特殊焊盘外形，当前暂未实现，请勿使用
 
 
 </td></tr>
@@ -397,7 +397,7 @@ solderMaskAndPasteMaskExpansion
 
 </td><td>
 
-_(Optional)_ 阻焊/助焊扩展，`null` 表示遵循规则
+_（可选）_ 阻焊/助焊扩展，`null` 表示遵循规则
 
 
 </td></tr>
@@ -413,7 +413,7 @@ IPCB\_PrimitivePadHeatWelding \| null
 
 </td><td>
 
-_(Optional)_ 热焊优化参数
+_（可选）_ 热焊优化参数
 
 
 </td></tr>
@@ -429,7 +429,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否锁定
+_（可选）_ 是否锁定
 
 
 </td></tr>
@@ -437,7 +437,7 @@ _(Optional)_ 是否锁定
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md) \| undefined&gt;
 
@@ -447,31 +447,31 @@ Promise&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md) \| undefined&gt;
 
 # PCB\_PrimitivePad.delete() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 删除焊盘
 
-## Signature
+## 签名
 
 ```typescript
 delete(primitiveIds: string | IPCB_PrimitivePad | Array<string> | Array<IPCB_PrimitivePad>): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -495,7 +495,7 @@ string \| [IPCB\_PrimitivePad](./IPCB_PrimitivePad.md) \| Array&lt;string&gt; \|
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -505,31 +505,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_PrimitivePad.get() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取焊盘
 
-## Signature
+## 签名
 
 ```typescript
 get(primitiveIds: string): Promise<IPCB_PrimitivePad | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -553,7 +553,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md) \| undefined&gt;
 
@@ -563,31 +563,31 @@ Promise&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md) \| undefined&gt;
 
 # PCB\_PrimitivePad.get() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取焊盘
 
-## Signature
+## 签名
 
 ```typescript
 get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitivePad>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -611,13 +611,13 @@ Array&lt;string&gt;
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)<!-- -->&gt;&gt;
 
 焊盘图元对象，空数组表示获取失败
 
-## Remarks
+## 备注
 
 如若传入多个图元 ID，任意图元 ID 未匹配到不影响其它图元的返回，即可能返回少于传入的图元 ID 数量的图元对象
 
@@ -625,31 +625,31 @@ Promise&lt;Array&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)<!-- -->&gt;&gt;
 
 # PCB\_PrimitivePad.getAll() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取所有焊盘
 
-## Signature
+## 签名
 
 ```typescript
 getAll(layer?: TPCB_LayersOfPad, net?: string, primitiveLock?: boolean, padType?: EPCB_PrimitivePadType): Promise<Array<IPCB_PrimitivePad>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -665,7 +665,7 @@ layer
 
 </td><td>
 
-_(Optional)_ 层
+_（可选）_ 层
 
 
 </td></tr>
@@ -681,7 +681,7 @@ string
 
 </td><td>
 
-_(Optional)_ 网络名称
+_（可选）_ 网络名称
 
 
 </td></tr>
@@ -697,7 +697,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否锁定
+_（可选）_ 是否锁定
 
 
 </td></tr>
@@ -721,7 +721,7 @@ _(Optional)_
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)<!-- -->&gt;&gt;
 
@@ -731,31 +731,31 @@ Promise&lt;Array&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)<!-- -->&gt;&gt;
 
 # PCB\_PrimitivePad.getAllPrimitiveId() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取所有焊盘的图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getAllPrimitiveId(layer?: TPCB_LayersOfPad, net?: string, primitiveLock?: boolean, padType?: EPCB_PrimitivePadType): Promise<Array<string>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -771,7 +771,7 @@ layer
 
 </td><td>
 
-_(Optional)_ 层
+_（可选）_ 层
 
 
 </td></tr>
@@ -787,7 +787,7 @@ string
 
 </td><td>
 
-_(Optional)_ 网络名称
+_（可选）_ 网络名称
 
 
 </td></tr>
@@ -803,7 +803,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否锁定
+_（可选）_ 是否锁定
 
 
 </td></tr>
@@ -827,7 +827,7 @@ _(Optional)_
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;string&gt;&gt;
 
@@ -837,11 +837,11 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 # PCB\_PrimitivePad.modify() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改焊盘
 
-## Signature
+## 签名
 
 ```typescript
 modify(primitiveId: string | IPCB_PrimitivePad, property: {
@@ -864,21 +864,21 @@ modify(primitiveId: string | IPCB_PrimitivePad, property: {
     }): Promise<IPCB_PrimitivePad | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -918,7 +918,7 @@ property
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md) \| undefined&gt;
 

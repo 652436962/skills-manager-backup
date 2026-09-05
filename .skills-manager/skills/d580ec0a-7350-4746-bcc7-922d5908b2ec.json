@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "d580ec0a-7350-4746-bcc7-922d5908b2ec",
+  "path": "zmk-project-init",
+  "path_key": "zmk-project-init",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

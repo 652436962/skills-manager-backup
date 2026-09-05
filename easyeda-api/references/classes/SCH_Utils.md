@@ -2,7 +2,7 @@
 
 原理图 &amp; 符号 / 工具类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SCH_Utils 

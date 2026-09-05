@@ -2,32 +2,32 @@
 
 BOM 列的属性及排序规则
 
-## Signature
+## 签名
 
 ```typescript
 interface IPCB_BomPropertiesTableColumns 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -46,7 +46,7 @@ null \| 'Yes' \| 'No'
 
 </td><td>
 
-_(Optional)_ 是否分组
+_（可选）_ 是否分组
 
 
 </td></tr>
@@ -65,7 +65,7 @@ number
 
 </td><td>
 
-_(Optional)_ 排列权重（大权重优先在 BOM 的左侧）
+_（可选）_ 排列权重（大权重优先在 BOM 的左侧）
 
 
 </td></tr>
@@ -103,7 +103,7 @@ null \| 'asc' \| 'desc'
 
 </td><td>
 
-_(Optional)_ 排序规则
+_（可选）_ 排序规则
 
 
 </td></tr>
@@ -122,7 +122,7 @@ string
 
 </td><td>
 
-_(Optional)_ 显示名称
+_（可选）_ 显示名称
 
 
 </td></tr>
@@ -138,7 +138,7 @@ _(Optional)_ 显示名称
 
 是否分组
 
-## Signature
+## 签名
 
 ```typescript
 group?: null | 'Yes' | 'No';
@@ -150,7 +150,7 @@ group?: null | 'Yes' | 'No';
 
 排列权重（大权重优先在 BOM 的左侧）
 
-## Signature
+## 签名
 
 ```typescript
 orderWeight?: number;
@@ -162,7 +162,7 @@ orderWeight?: number;
 
 属性
 
-## Signature
+## 签名
 
 ```typescript
 property: string;
@@ -174,7 +174,7 @@ property: string;
 
 排序规则
 
-## Signature
+## 签名
 
 ```typescript
 sort?: null | 'asc' | 'desc';
@@ -186,7 +186,7 @@ sort?: null | 'asc' | 'desc';
 
 显示名称
 
-## Signature
+## 签名
 
 ```typescript
 title?: string;

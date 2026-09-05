@@ -2,32 +2,32 @@
 
 右键菜单项
 
-## Signature
+## 签名
 
 ```typescript
 interface ISYS_RightClickMenuItem 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -46,7 +46,7 @@ string
 
 </td><td>
 
-_(Optional)_ 菜单项图标
+_（可选）_ 菜单项图标
 
 
 </td></tr>
@@ -84,7 +84,7 @@ Array&lt;[ISYS\_RightClickMenuItem](./ISYS_RightClickMenuItem.md) \| null&gt;
 
 </td><td>
 
-_(Optional)_ 子菜单项
+_（可选）_ 子菜单项
 
 
 </td></tr>
@@ -103,7 +103,7 @@ string
 
 </td><td>
 
-_(Optional)_ 注册方法名称（需要在扩展入口文件导出该方法）
+_（可选）_ 注册方法名称（需要在扩展入口文件导出该方法）
 
 
 </td></tr>
@@ -122,7 +122,7 @@ string
 
 </td><td>
 
-_(Optional)_ 菜单项标题
+_（可选）_ 菜单项标题
 
 
 </td></tr>
@@ -138,7 +138,7 @@ _(Optional)_ 菜单项标题
 
 菜单项图标
 
-## Signature
+## 签名
 
 ```typescript
 icon?: string;
@@ -150,7 +150,7 @@ icon?: string;
 
 菜单项 ID，不可重复
 
-## Signature
+## 签名
 
 ```typescript
 id: string;
@@ -162,7 +162,7 @@ id: string;
 
 子菜单项
 
-## Signature
+## 签名
 
 ```typescript
 menuItems?: Array<ISYS_RightClickMenuItem | null>;
@@ -174,7 +174,7 @@ menuItems?: Array<ISYS_RightClickMenuItem | null>;
 
 菜单项标题
 
-## Signature
+## 签名
 
 ```typescript
 title?: string;
@@ -191,7 +191,7 @@ title?: string;
 
 注册方法名称（需要在扩展入口文件导出该方法）
 
-## Signature
+## 签名
 
 ```typescript
 registerFn?: string;

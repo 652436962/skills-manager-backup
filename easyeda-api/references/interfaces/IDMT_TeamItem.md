@@ -2,32 +2,32 @@
 
 团队属性
 
-## Signature
+## 签名
 
 ```typescript
 interface IDMT_TeamItem 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -121,7 +121,7 @@ string
 
 当前用户在团队内的身份（权限组）ID
 
-## Signature
+## 签名
 
 ```typescript
 identity: number;
@@ -133,7 +133,7 @@ identity: number;
 
 项目类型
 
-## Signature
+## 签名
 
 ```typescript
 readonly itemType: EDMT_ItemType.TEAM;
@@ -145,7 +145,7 @@ readonly itemType: EDMT_ItemType.TEAM;
 
 团队名称
 
-## Signature
+## 签名
 
 ```typescript
 name: string;
@@ -157,7 +157,7 @@ name: string;
 
 团队 UUID
 
-## Signature
+## 签名
 
 ```typescript
 uuid: string;

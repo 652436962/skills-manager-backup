@@ -2,32 +2,32 @@
 
 外部库方法
 
-## Signature
+## 签名
 
 ```typescript
 interface ILIB_ExtendLibraryFunctions 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -100,7 +100,7 @@ Description
 
 获取分类树
 
-## Signature
+## 签名
 
 ```typescript
 getClassificationTree: () => Promise<Array<{
@@ -119,7 +119,7 @@ getClassificationTree: () => Promise<Array<{
 
 获取详细信息
 
-## Signature
+## 签名
 
 ```typescript
 getDetail: (uuid: string) => Promise<any>;
@@ -131,7 +131,7 @@ getDetail: (uuid: string) => Promise<any>;
 
 获取列表
 
-## Signature
+## 签名
 
 ```typescript
 getList: (props: ILIB_ExtendLibrarySearchProperty<any>) => Promise<ILIB_ExtendLibrarySearchResult<any>>;

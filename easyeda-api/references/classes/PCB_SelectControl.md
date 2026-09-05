@@ -2,31 +2,31 @@
 
 PCB &amp; 封装 / 选择控制类
 
-## Signature
+## 签名
 
 ```typescript
 declare class PCB_SelectControl 
 ```
 
-## Remarks
+## 备注
 
 获取或操作选择的元素
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -138,18 +138,18 @@ Description
 
 # PCB\_SelectControl.clearSelected() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 清除选中
 
-## Signature
+## 签名
 
 ```typescript
 clearSelected(): Promise<boolean>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -159,31 +159,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_SelectControl.doCrossProbeSelect() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 进行交叉选择
 
-## Signature
+## 签名
 
 ```typescript
 doCrossProbeSelect(components?: Array<string>, pins?: Array<string>, nets?: Array<string>, highlight?: boolean, select?: boolean): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -199,7 +199,7 @@ Array&lt;string&gt;
 
 </td><td>
 
-_(Optional)_ 器件位号
+_（可选）_ 器件位号
 
 
 </td></tr>
@@ -215,7 +215,7 @@ Array&lt;string&gt;
 
 </td><td>
 
-_(Optional)_ 器件位号\_引脚编号，格式为 \['U1\_1', 'U1\_2'\]
+_（可选）_ 器件位号\_引脚编号，格式为 \['U1\_1', 'U1\_2'\]
 
 
 </td></tr>
@@ -231,7 +231,7 @@ Array&lt;string&gt;
 
 </td><td>
 
-_(Optional)_ 网络名称
+_（可选）_ 网络名称
 
 
 </td></tr>
@@ -247,7 +247,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否高亮
+_（可选）_ 是否高亮
 
 
 </td></tr>
@@ -263,7 +263,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 操作是否成功
+_（可选）_ 操作是否成功
 
 
 </td></tr>
@@ -271,7 +271,7 @@ _(Optional)_ 操作是否成功
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -279,31 +279,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_SelectControl.doSelectPrimitives() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 使用图元 ID 选中图元
 
-## Signature
+## 签名
 
 ```typescript
 doSelectPrimitives(primitiveIds: string | Array<string>): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -327,7 +327,7 @@ string \| Array&lt;string&gt;
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -337,18 +337,18 @@ Promise&lt;boolean&gt;
 
 # PCB\_SelectControl.getAllSelectedPrimitives() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 查询所有已选中图元的图元对象
 
-## Signature
+## 签名
 
 ```typescript
 getAllSelectedPrimitives(): Promise<Array<IPCB_Primitive>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_Primitive](../interfaces/IPCB_Primitive.md)<!-- -->&gt;&gt;
 
@@ -358,18 +358,18 @@ Promise&lt;Array&lt;[IPCB\_Primitive](../interfaces/IPCB_Primitive.md)<!-- -->&g
 
 # PCB\_SelectControl.getAllSelectedPrimitives\_PrimitiveId() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 查询所有已选中图元的图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getAllSelectedPrimitives_PrimitiveId(): Promise<Array<string>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;string&gt;&gt;
 
@@ -379,11 +379,11 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 # PCB\_SelectControl.getCurrentMousePosition() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取当前鼠标在画布上的位置
 
-## Signature
+## 签名
 
 ```typescript
 getCurrentMousePosition(): Promise<{
@@ -393,7 +393,7 @@ getCurrentMousePosition(): Promise<{
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;{ x: number; y: number; } \| undefined&gt;
 
@@ -403,22 +403,22 @@ Promise&lt;{ x: number; y: number; } \| undefined&gt;
 
 # PCB\_SelectControl.getSelectedPrimitives() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 请使用 [getAllSelectedPrimitives](./PCB_SelectControl.md) 替代
 
 查询选中图元的所有参数
 
-## Signature
+## 签名
 
 ```typescript
 getSelectedPrimitives(): Promise<Array<Object>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;Object&gt;&gt;
 

@@ -2,31 +2,31 @@
 
 PCB &amp; 封装 / 文档操作类
 
-## Signature
+## 签名
 
 ```typescript
 declare class PCB_Document 
 ```
 
-## Remarks
+## 备注
 
 对设计文档总体进行的操作
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -294,7 +294,7 @@ Description
 
 输入画布坐标返回该坐标对应的数据坐标
 
-## Signature
+## 签名
 
 ```typescript
 convertCanvasOriginToDataOrigin(x: number, y: number): Promise<{
@@ -303,21 +303,21 @@ convertCanvasOriginToDataOrigin(x: number, y: number): Promise<{
     }>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -353,13 +353,13 @@ number
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;{ x: number; y: number; }&gt;
 
 数据原点坐标
 
-## Remarks
+## 备注
 
 嘉立创 EDA 前端显示的坐标均为画布原点；嘉立创 EDA API 使用的均为数据原点；在创建 PCB 时，默认画布原点等于数据原点
 
@@ -369,7 +369,7 @@ Promise&lt;{ x: number; y: number; }&gt;
 
 输入数据坐标返回该坐标对应的画布坐标
 
-## Signature
+## 签名
 
 ```typescript
 convertDataOriginToCanvasOrigin(x: number, y: number): Promise<{
@@ -378,21 +378,21 @@ convertDataOriginToCanvasOrigin(x: number, y: number): Promise<{
     }>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -432,13 +432,13 @@ number
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;{ x: number; y: number; }&gt;
 
 画布原点坐标
 
-## Remarks
+## 备注
 
 嘉立创 EDA 前端显示的坐标均为画布原点；嘉立创 EDA API 使用的均为数据原点；在创建 PCB 时，默认画布原点等于数据原点
 
@@ -448,14 +448,14 @@ Promise&lt;{ x: number; y: number; }&gt;
 
 获取当前飞线计算功能状态
 
-## Signature
+## 签名
 
 ```typescript
 getCalculatingRatlineStatus(): Promise<EPCB_DocumentRatlineCalculatingActiveStatus>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[EPCB\_DocumentRatlineCalculatingActiveStatus](../enums/EPCB_DocumentRatlineCalculatingActiveStatus.md)<!-- -->&gt;
 
@@ -467,7 +467,7 @@ Promise&lt;[EPCB\_DocumentRatlineCalculatingActiveStatus](../enums/EPCB_Document
 
 获取画布原点相对于数据原点的偏移坐标
 
-## Signature
+## 签名
 
 ```typescript
 getCanvasOrigin(): Promise<{
@@ -477,13 +477,13 @@ getCanvasOrigin(): Promise<{
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;{ offsetX: number; offsetY: number; }&gt;
 
 画布原点相对于数据原点的偏移坐标
 
-## Remarks
+## 备注
 
 嘉立创 EDA 专业版前端显示的坐标均为画布原点；
 
@@ -497,11 +497,11 @@ Promise&lt;{ offsetX: number; offsetY: number; }&gt;
 
 # PCB\_Document.getCurrentFilterConfiguration() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取当前画布过滤器配置
 
-## Signature
+## 签名
 
 ```typescript
 getCurrentFilterConfiguration(): Promise<{
@@ -510,7 +510,7 @@ getCurrentFilterConfiguration(): Promise<{
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;{ \[key: string\]: any; } \| undefined&gt;
 
@@ -520,31 +520,31 @@ Promise&lt;{ \[key: string\]: any; } \| undefined&gt;
 
 # PCB\_Document.getPrimitiveAtPoint() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取坐标点的图元
 
-## Signature
+## 签名
 
 ```typescript
 getPrimitiveAtPoint(x: number, y: number): Promise<IPCB_Primitive | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -584,13 +584,13 @@ number
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_Primitive](../interfaces/IPCB_Primitive.md) \| undefined&gt;
 
 坐标点的图元，如若坐标点无法找到图元，将返回 `undefined`
 
-## Remarks
+## 备注
 
 本操作和前端鼠标点击操作类似，将会获取指定坐标点上的图元
 
@@ -598,31 +598,31 @@ Promise&lt;[IPCB\_Primitive](../interfaces/IPCB_Primitive.md) \| undefined&gt;
 
 # PCB\_Document.getPrimitivesInRegion() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取区域内所有图元
 
-## Signature
+## 签名
 
 ```typescript
 getPrimitivesInRegion(left: number, right: number, top: number, bottom: number, leftToRight?: boolean): Promise<Array<IPCB_Primitive>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -702,7 +702,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否仅获取完全框选的图元，`false` 则触碰即获取
+_（可选）_ 是否仅获取完全框选的图元，`false` 则触碰即获取
 
 
 </td></tr>
@@ -710,7 +710,7 @@ _(Optional)_ 是否仅获取完全框选的图元，`false` 则触碰即获取
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_Primitive](../interfaces/IPCB_Primitive.md)<!-- -->&gt;&gt;
 
@@ -720,31 +720,31 @@ Promise&lt;Array&lt;[IPCB\_Primitive](../interfaces/IPCB_Primitive.md)<!-- -->&g
 
 # PCB\_Document.importAutoLayoutJsonFile() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 导入自动布局文件（JSON）
 
-## Signature
+## 签名
 
 ```typescript
 importAutoLayoutJsonFile(autoLayoutFile: File): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -768,13 +768,13 @@ File
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 导入操作是否成功
 
-## Remarks
+## 备注
 
 可以使用  读入文件
 
@@ -782,31 +782,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Document.importAutoRouteJsonFile() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 导入自动布线文件（JSON）
 
-## Signature
+## 签名
 
 ```typescript
 importAutoRouteJsonFile(autoRouteFile: File): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -830,13 +830,13 @@ File
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 导入操作是否成功
 
-## Remarks
+## 备注
 
 可以使用  读入文件
 
@@ -844,31 +844,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Document.importAutoRouteSesFile() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 导入自动布线文件（SES）
 
-## Signature
+## 签名
 
 ```typescript
 importAutoRouteSesFile(autoRouteFile: File): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -892,13 +892,13 @@ File
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 导入操作是否成功
 
-## Remarks
+## 备注
 
 可以使用  读入文件
 
@@ -908,27 +908,27 @@ Promise&lt;boolean&gt;
 
 从原理图导入变更
 
-## Signature
+## 签名
 
 ```typescript
 importChanges(uuid?: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -944,7 +944,7 @@ string
 
 </td><td>
 
-_(Optional)_ 原理图 UUID，默认为关联在同一个 Board 下的原理图
+_（可选）_ 原理图 UUID，默认为关联在同一个 Board 下的原理图
 
 
 </td></tr>
@@ -952,7 +952,7 @@ _(Optional)_ 原理图 UUID，默认为关联在同一个 Board 下的原理图
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -964,27 +964,27 @@ Promise&lt;boolean&gt;
 
 定位到画布坐标
 
-## Signature
+## 签名
 
 ```typescript
 navigateToCoordinates(x: number, y: number): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1024,13 +1024,13 @@ number
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 本接口在前端画布上定位到指定的数据层面坐标；
 
@@ -1042,31 +1042,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Document.navigateToRegion() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 定位到画布区域
 
-## Signature
+## 签名
 
 ```typescript
 navigateToRegion(left: number, right: number, top: number, bottom: number): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1138,13 +1138,13 @@ number
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 本接口在前端画布上定位到指定的区域，区域数据为相对于数据原点的偏移；
 
@@ -1160,27 +1160,27 @@ Promise&lt;boolean&gt;
 
 保存文档
 
-## Signature
+## 签名
 
 ```typescript
 save(uuid: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1202,7 +1202,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -1214,27 +1214,27 @@ Promise&lt;boolean&gt;
 
 设置画布原点相对于数据原点的偏移坐标
 
-## Signature
+## 签名
 
 ```typescript
 setCanvasOrigin(offsetX: number, offsetY: number): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1274,13 +1274,13 @@ number
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 嘉立创 EDA 专业版前端显示的坐标均为画布原点；
 
@@ -1296,20 +1296,20 @@ Promise&lt;boolean&gt;
 
 启动飞线计算功能
 
-## Signature
+## 签名
 
 ```typescript
 startCalculatingRatline(): Promise<boolean>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 在启动时将会触发一次飞线计算
 
@@ -1319,14 +1319,14 @@ Promise&lt;boolean&gt;
 
 停止飞线计算功能
 
-## Signature
+## 签名
 
 ```typescript
 stopCalculatingRatline(): Promise<boolean>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -1336,18 +1336,18 @@ Promise&lt;boolean&gt;
 
 # PCB\_Document.zoomToBoardOutline() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 缩放到板框（适应板框）
 
-## Signature
+## 签名
 
 ```typescript
 zoomToBoardOutline(): Promise<boolean>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 

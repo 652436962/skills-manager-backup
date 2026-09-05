@@ -1,53 +1,47 @@
-# Getting and Using Extensions
+# 扩展的获取和使用
 
-## Getting Extensions
+## 获取扩展
 
-EasyEDA Pro now provides the official [Extensions Marketplace](https://ext.lceda.cn), where you can conveniently obtain a wide range of EasyEDA Pro extensions provided by both official and third-party developers.
+嘉立创 EDA 专业版当前已提供 [官方扩展广场](https://ext.lceda.cn)，你可以在此处便捷地获取到众多由官方和第三方开发者提供的嘉立创 EDA 专业版扩展程序。
 
-![](/storage/images/cn/api/guide/how-to-install/how-to-install_20250427_164224.jpg)
+![图 0](/storage/images/cn/api/guide/how-to-install/how-to-install_20250427_164224.jpg)
 
-::: info
+## 安装扩展
 
-The current extensions marketplace is only available in the Mainland China version; please wait for the international version to be launched.
+### V3 版本安装
 
-:::
+1. 打开 [嘉立创 EDA 专业版编辑器](https://pro.lceda.cn/editor)
 
-## Installing Extensions
+2. 在顶部菜单，**高级** -\> **扩展管理器**。
 
-### V3 Installation
+![](/storage/images/cn/api/user-guide/using-extension/using-extension_20260209_093932.jpg)
 
-1. Open the [EasyEDA Pro Editor](https://pro.easyeda.com/editor).
+联网时可以直接搜索安装，也通过点击 **导入** 按钮进行导入。
 
-2. In the top menu, click **Advanced** -\> **Extension Manager**:
+![](/storage/images/cn/api/user-guide/using-extension/using-extension_20260209_094031.jpg)
 
-    ![](/storage/images/cn/api/user-guide/using-extension/using-extension_20260209_093932.jpg)
+3. 切到 **已安装** 列表，点击已安装的扩展，可以设置扩展是否启用与是否可以进行外部交互（即联网）等。如果未勾选 **显示在顶部菜单**，则扩展的入口默认在 **高级** 菜单下。
 
-3. While online, you can search for extensions and install them directly. If you already have an extension file, you can also click **Import** to import it:
+   ![](/storage/images/cn/api/user-guide/using-extension/using-extension_20260209_094223.jpg)
 
-    ![](/storage/images/cn/api/user-guide/using-extension/using-extension_20260209_094031.jpg)
+### V2版本安装
 
-4. Switch to the **Installed** list and click an installed extension to configure its enabled state and permissions. If **Show in top menu** is not checked, the extension entry will appear under the **Advanced** menu by default:
+1. 打开 [嘉立创 EDA 专业版编辑器](https://pro.lceda.cn/editor)
 
-    ![](/storage/images/cn/api/user-guide/using-extension/using-extension_20260209_094223.jpg)
+2. 在顶部菜单栏中依次点击 **设置** -\> **扩展** -\> **扩展管理器...**：
 
-### V2 Installation
+    ![图 1](/storage/images/cn/api/guide/how-to-install/how-to-install_20250427_164417.jpg)
 
-1. Open the [EasyEDA Pro Editor](https://pro.easyeda.com/editor).
+3. 在弹出的窗口中，点击 **导入扩展**，选择已下载的 `.eext` 文件，即可完成扩展的导入操作。
 
-2. In the top menu bar, click **Settings** -\> **Extensions** -\> **Extension Manager...** in sequence:
+    ![图 2](/storage/images/cn/api/guide/how-to-install/how-to-install_20250427_164447.jpg)
 
-    ![](/storage/images/cn/api/guide/how-to-install/how-to-install_20250427_164417.jpg)
+4. 扩展设置
 
-3. In the pop-up window, click **Import Extension**, then select the downloaded `.eext` file to complete the import.
+- 已安装的扩展支持启用或禁用。启用后的扩展的注册菜单将显示在顶部菜单栏中：
 
-    ![](/storage/images/cn/api/guide/how-to-install/how-to-install_20250427_164447.jpg)
+    ![图 1](/storage/images/cn/api/user-guide/using-extension/using-extension_20250604_103955.png)
 
-4. Extension settings
+- 部分扩展会涉及外部交互（联网）功能，需要启用扩展的 **外部交互** 功能以确保正常运行：
 
-- Installed extensions can be enabled or disabled. The registered menu of an enabled extension will be displayed in the top menu bar:
-
-    ![](/storage/images/cn/api/user-guide/using-extension/using-extension_20250604_103955.png)
-
-- Some extensions involve external interactions, such as network access. You need to enable the extension's **External Interactions** permission to ensure proper operation:
-
-    ![](/storage/images/cn/api/user-guide/using-extension/using-extension_20250604_104235.png)
+    ![图 3](/storage/images/cn/api/user-guide/using-extension/using-extension_20250604_104235.png)

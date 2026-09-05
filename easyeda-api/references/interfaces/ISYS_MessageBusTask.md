@@ -2,32 +2,32 @@
 
 消息总线任务
 
-## Signature
+## 签名
 
 ```typescript
 interface ISYS_MessageBusTask 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -100,7 +100,7 @@ Description
 
 调用以取消任务
 
-## Signature
+## 签名
 
 ```typescript
 cancel: () => void;
@@ -112,7 +112,7 @@ cancel: () => void;
 
 任务处理
 
-## Signature
+## 签名
 
 ```typescript
 execute: (message: any) => Promise<void>;
@@ -124,7 +124,7 @@ execute: (message: any) => Promise<void>;
 
 检查运行状态
 
-## Signature
+## 签名
 
 ```typescript
 running: () => boolean;

@@ -2,17 +2,17 @@
 
 焊盘外形
 
-## Signature
+## 签名
 
 ```typescript
 type TPCB_PrimitivePadShape = [EPCB_PrimitivePadShapeType.ELLIPSE | EPCB_PrimitivePadShapeType.OBLONG | EPCB_PrimitivePadShapeType.REGULAR_POLYGON, number, number] | [EPCB_PrimitivePadShapeType.RECTANGLE, number, number, number] | [EPCB_PrimitivePadShapeType.POLYLINE_COMPLEX_POLYGON, TPCB_PolygonSourceArray | Array<TPCB_PolygonSourceArray>];
 ```
-## References
+## 引用
 
 
 [EPCB\_PrimitivePadShapeType.ELLIPSE](../enums/EPCB_PrimitivePadShapeType.md)<!-- -->, [EPCB\_PrimitivePadShapeType.OBLONG](../enums/EPCB_PrimitivePadShapeType.md)<!-- -->, [EPCB\_PrimitivePadShapeType.REGULAR\_POLYGON](../enums/EPCB_PrimitivePadShapeType.md)<!-- -->, [EPCB\_PrimitivePadShapeType.RECTANGLE](../enums/EPCB_PrimitivePadShapeType.md)<!-- -->, [EPCB\_PrimitivePadShapeType.POLYLINE\_COMPLEX\_POLYGON](../enums/EPCB_PrimitivePadShapeType.md)<!-- -->, [TPCB\_PolygonSourceArray](./TPCB_PolygonSourceArray.md)
 
-## Remarks
+## 备注
 
 焊盘当前存在以下四种 [外形种类](../enums/EPCB_PrimitivePadShapeType.md)<!-- -->：
 

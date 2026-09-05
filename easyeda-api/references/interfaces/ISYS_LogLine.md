@@ -2,32 +2,32 @@
 
 日志行
 
-## Signature
+## 签名
 
 ```typescript
 interface ISYS_LogLine 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -100,7 +100,7 @@ number
 
 日志内容
 
-## Signature
+## 签名
 
 ```typescript
 message: string;
@@ -112,7 +112,7 @@ message: string;
 
 时间戳
 
-## Signature
+## 签名
 
 ```typescript
 timestamp: number;
@@ -124,7 +124,7 @@ timestamp: number;
 
 日志类型
 
-## Signature
+## 签名
 
 ```typescript
 type: ESYS_LogType;

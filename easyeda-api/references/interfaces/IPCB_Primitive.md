@@ -2,32 +2,32 @@
 
 PCB 图元
 
-## Signature
+## 签名
 
 ```typescript
 interface IPCB_Primitive 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -177,7 +177,7 @@ Description
 
 # IPCB\_Primitive.create property
 
-## Signature
+## 签名
 
 ```typescript
 create: () => IPCB_Primitive | Promise<IPCB_Primitive>;
@@ -187,7 +187,7 @@ create: () => IPCB_Primitive | Promise<IPCB_Primitive>;
 
 # IPCB\_Primitive.done property
 
-## Signature
+## 签名
 
 ```typescript
 done: () => IPCB_Primitive | Promise<IPCB_Primitive>;
@@ -197,7 +197,7 @@ done: () => IPCB_Primitive | Promise<IPCB_Primitive>;
 
 # IPCB\_Primitive.getState\_PrimitiveId property
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveId: () => string;
@@ -207,7 +207,7 @@ getState_PrimitiveId: () => string;
 
 # IPCB\_Primitive.getState\_PrimitiveType property
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveType: () => EPCB_PrimitiveType;
@@ -217,7 +217,7 @@ getState_PrimitiveType: () => EPCB_PrimitiveType;
 
 # IPCB\_Primitive.isAsync property
 
-## Signature
+## 签名
 
 ```typescript
 isAsync: () => boolean;
@@ -227,7 +227,7 @@ isAsync: () => boolean;
 
 # IPCB\_Primitive.reset property
 
-## Signature
+## 签名
 
 ```typescript
 reset: () => IPCB_Primitive | Promise<IPCB_Primitive>;
@@ -237,7 +237,7 @@ reset: () => IPCB_Primitive | Promise<IPCB_Primitive>;
 
 # IPCB\_Primitive.toAsync property
 
-## Signature
+## 签名
 
 ```typescript
 toAsync: () => IPCB_Primitive;
@@ -247,7 +247,7 @@ toAsync: () => IPCB_Primitive;
 
 # IPCB\_Primitive.toSync property
 
-## Signature
+## 签名
 
 ```typescript
 toSync: () => IPCB_Primitive;

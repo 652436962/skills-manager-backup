@@ -2,31 +2,31 @@
 
 原理图 &amp; 符号 / 器件图元类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SCH_PrimitiveComponent implements ISCH_PrimitiveAPI 
 ```
-**Implements:** [ISCH\_PrimitiveAPI](../interfaces/ISCH_PrimitiveAPI.md)
+**实现自：**[ISCH\_PrimitiveAPI](../interfaces/ISCH_PrimitiveAPI.md)
 
-## Remarks
+## 备注
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -320,11 +320,11 @@ Description
 
 # SCH\_PrimitiveComponent.create() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 创建器件
 
-## Signature
+## 签名
 
 ```typescript
 create(component: {
@@ -333,21 +333,21 @@ create(component: {
     } | ILIB_DeviceItem | ILIB_DeviceSearchItem, x: number, y: number, subPartName?: string, rotation?: number, mirror?: boolean, addIntoBom?: boolean, addIntoPcb?: boolean): Promise<ISCH_PrimitiveComponent$1 | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -411,7 +411,7 @@ string
 
 </td><td>
 
-_(Optional)_ 子图块名称
+_（可选）_ 子图块名称
 
 
 </td></tr>
@@ -427,7 +427,7 @@ number
 
 </td><td>
 
-_(Optional)_ 旋转角度
+_（可选）_ 旋转角度
 
 
 </td></tr>
@@ -443,7 +443,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否镜像
+_（可选）_ 是否镜像
 
 
 </td></tr>
@@ -459,7 +459,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否加入 BOM
+_（可选）_ 是否加入 BOM
 
 
 </td></tr>
@@ -475,7 +475,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否转到 PCB
+_（可选）_ 是否转到 PCB
 
 
 </td></tr>
@@ -483,7 +483,7 @@ _(Optional)_ 是否转到 PCB
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;ISCH\_PrimitiveComponent$1 \| undefined&gt;
 
@@ -493,31 +493,31 @@ Promise&lt;ISCH\_PrimitiveComponent$1 \| undefined&gt;
 
 # SCH\_PrimitiveComponent.createNetFlag() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 创建网络标识
 
-## Signature
+## 签名
 
 ```typescript
 createNetFlag(identification: 'Power' | 'Ground' | 'AnalogGround' | 'ProtectGround', net: string, x: number, y: number, rotation?: number, mirror?: boolean): Promise<ISCH_PrimitiveComponent$1 | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -597,7 +597,7 @@ number
 
 </td><td>
 
-_(Optional)_ 旋转角度
+_（可选）_ 旋转角度
 
 
 </td></tr>
@@ -613,7 +613,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否镜像
+_（可选）_ 是否镜像
 
 
 </td></tr>
@@ -621,7 +621,7 @@ _(Optional)_ 是否镜像
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;ISCH\_PrimitiveComponent$1 \| undefined&gt;
 
@@ -631,31 +631,31 @@ Promise&lt;ISCH\_PrimitiveComponent$1 \| undefined&gt;
 
 # SCH\_PrimitiveComponent.createNetPort() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 创建网络端口
 
-## Signature
+## 签名
 
 ```typescript
 createNetPort(direction: 'IN' | 'OUT' | 'BI', net: string, x: number, y: number, rotation?: number, mirror?: boolean): Promise<ISCH_PrimitiveComponent$1 | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -735,7 +735,7 @@ number
 
 </td><td>
 
-_(Optional)_ 旋转角度
+_（可选）_ 旋转角度
 
 
 </td></tr>
@@ -751,7 +751,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否镜像
+_（可选）_ 是否镜像
 
 
 </td></tr>
@@ -759,7 +759,7 @@ _(Optional)_ 是否镜像
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;ISCH\_PrimitiveComponent$1 \| undefined&gt;
 
@@ -769,31 +769,31 @@ Promise&lt;ISCH\_PrimitiveComponent$1 \| undefined&gt;
 
 # SCH\_PrimitiveComponent.createShortCircuitFlag() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 创建短接标识
 
-## Signature
+## 签名
 
 ```typescript
 createShortCircuitFlag(x: number, y: number, rotation?: number, mirror?: boolean): Promise<ISCH_PrimitiveComponent$1 | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -841,7 +841,7 @@ number
 
 </td><td>
 
-_(Optional)_ 旋转角度
+_（可选）_ 旋转角度
 
 
 </td></tr>
@@ -857,7 +857,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否镜像
+_（可选）_ 是否镜像
 
 
 </td></tr>
@@ -865,7 +865,7 @@ _(Optional)_ 是否镜像
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;ISCH\_PrimitiveComponent$1 \| undefined&gt;
 
@@ -875,31 +875,31 @@ Promise&lt;ISCH\_PrimitiveComponent$1 \| undefined&gt;
 
 # SCH\_PrimitiveComponent.delete() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 删除器件
 
-## Signature
+## 签名
 
 ```typescript
 delete(primitiveIds: string | ISCH_PrimitiveComponent$1 | Array<string> | Array<ISCH_PrimitiveComponent$1>): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -923,7 +923,7 @@ string \| ISCH\_PrimitiveComponent$1 \| Array&lt;string&gt; \| Array&lt;ISCH\_Pr
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -933,31 +933,31 @@ Promise&lt;boolean&gt;
 
 # SCH\_PrimitiveComponent.get() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取器件
 
-## Signature
+## 签名
 
 ```typescript
 get(primitiveIds: string): Promise<ISCH_PrimitiveComponent$1 | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -981,7 +981,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;ISCH\_PrimitiveComponent$1 \| undefined&gt;
 
@@ -991,31 +991,31 @@ Promise&lt;ISCH\_PrimitiveComponent$1 \| undefined&gt;
 
 # SCH\_PrimitiveComponent.get() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取器件
 
-## Signature
+## 签名
 
 ```typescript
 get(primitiveIds: Array<string>): Promise<Array<ISCH_PrimitiveComponent$1>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1039,13 +1039,13 @@ Array&lt;string&gt;
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;ISCH\_PrimitiveComponent$1&gt;&gt;
 
 器件图元对象，空数组表示获取失败
 
-## Remarks
+## 备注
 
 如若传入多个图元 ID，任意图元 ID 未匹配到不影响其它图元的返回，即可能返回少于传入的图元 ID 数量的图元对象
 
@@ -1053,31 +1053,31 @@ Promise&lt;Array&lt;ISCH\_PrimitiveComponent$1&gt;&gt;
 
 # SCH\_PrimitiveComponent.getAll() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取所有器件
 
-## Signature
+## 签名
 
 ```typescript
 getAll(componentType?: ESCH_PrimitiveComponentType$1, allSchematicPages?: boolean): Promise<Array<ISCH_PrimitiveComponent$1>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1093,7 +1093,7 @@ componentType
 
 </td><td>
 
-_(Optional)_ 器件类型
+_（可选）_ 器件类型
 
 
 </td></tr>
@@ -1109,7 +1109,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否获取所有原理图图页的器件
+_（可选）_ 是否获取所有原理图图页的器件
 
 
 </td></tr>
@@ -1117,7 +1117,7 @@ _(Optional)_ 是否获取所有原理图图页的器件
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;ISCH\_PrimitiveComponent$1&gt;&gt;
 
@@ -1127,31 +1127,31 @@ Promise&lt;Array&lt;ISCH\_PrimitiveComponent$1&gt;&gt;
 
 # SCH\_PrimitiveComponent.getAllPinsByPrimitiveId() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取器件关联的所有引脚
 
-## Signature
+## 签名
 
 ```typescript
 getAllPinsByPrimitiveId(primitiveId: string): Promise<Array<ISCH_PrimitiveComponentPin> | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1175,7 +1175,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[ISCH\_PrimitiveComponentPin](./ISCH_PrimitiveComponentPin.md)<!-- -->&gt; \| undefined&gt;
 
@@ -1185,31 +1185,31 @@ Promise&lt;Array&lt;[ISCH\_PrimitiveComponentPin](./ISCH_PrimitiveComponentPin.m
 
 # SCH\_PrimitiveComponent.getAllPrimitiveId() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取所有器件的图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getAllPrimitiveId(componentType?: ESCH_PrimitiveComponentType$1, allSchematicPages?: boolean): Promise<Array<string>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1225,7 +1225,7 @@ componentType
 
 </td><td>
 
-_(Optional)_ 器件类型
+_（可选）_ 器件类型
 
 
 </td></tr>
@@ -1241,7 +1241,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否获取所有原理图图页的器件
+_（可选）_ 是否获取所有原理图图页的器件
 
 
 </td></tr>
@@ -1249,7 +1249,7 @@ _(Optional)_ 是否获取所有原理图图页的器件
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;string&gt;&gt;
 
@@ -1259,20 +1259,20 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 # SCH\_PrimitiveComponent.getAllPropertyNames() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取所有器件的所有属性名称集合
 
-## Signature
+## 签名
 
 ```typescript
-getAllPropertyNames(): Promise<Array<string>>;
+getAllPropertyNames(): Promise<string[]>;
 ```
 
 
-## Returns
+## 返回值
 
-Promise&lt;Array&lt;string&gt;&gt;
+Promise&lt;string\[\]&gt;
 
 所有器件的所有属性名称集合
 
@@ -1280,11 +1280,11 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 # SCH\_PrimitiveComponent.modify() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改器件
 
-## Signature
+## 签名
 
 ```typescript
 modify(primitiveId: string | ISCH_PrimitiveComponent$1, property: {
@@ -1307,21 +1307,21 @@ modify(primitiveId: string | ISCH_PrimitiveComponent$1, property: {
     }): Promise<ISCH_PrimitiveComponent$1 | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1359,13 +1359,13 @@ property
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;ISCH\_PrimitiveComponent$1 \| undefined&gt;
 
 器件图元对象
 
-## Remarks
+## 备注
 
 仅当器件类型为 [COMPONENT](../enums/ESCH_PrimitiveComponentType.md) 时允许使用该方法进行修改
 
@@ -1373,34 +1373,34 @@ Promise&lt;ISCH\_PrimitiveComponent$1 \| undefined&gt;
 
 # SCH\_PrimitiveComponent.placeComponentWithMouse() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 使用鼠标放置器件
 
-## Signature
+## 签名
 
 ```typescript
 placeComponentWithMouse(component: {
         libraryUuid: string;
         uuid: string;
-    } | ILIB_DeviceItem | ILIB_DeviceSearchItem, subPartName?: string): Promise<boolean>;
+    } | ILIB_DeviceItem, subPartName?: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1411,7 +1411,7 @@ component
 
 </td><td>
 
-{ libraryUuid: string; uuid: string; } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)
+{ libraryUuid: string; uuid: string; } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md)
 
 
 </td><td>
@@ -1440,13 +1440,13 @@ _(Optional)_
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 是否找到器件
 
-## Remarks
+## 备注
 
 本接口模拟前端点击放置按钮，指定的器件将绑定到当前鼠标，并在用户后续点击时放置于画布
 
@@ -1456,11 +1456,11 @@ Promise&lt;boolean&gt;
 
 # SCH\_PrimitiveComponent.setNetFlagComponentUuid\_AnalogGround() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置在扩展 API 中 AnalogGround 网络标识关联的器件 UUID
 
-## Signature
+## 签名
 
 ```typescript
 setNetFlagComponentUuid_AnalogGround(component: {
@@ -1469,21 +1469,21 @@ setNetFlagComponentUuid_AnalogGround(component: {
     } | ILIB_DeviceItem | ILIB_DeviceSearchItem): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1507,7 +1507,7 @@ component
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -1517,11 +1517,11 @@ Promise&lt;boolean&gt;
 
 # SCH\_PrimitiveComponent.setNetFlagComponentUuid\_Ground() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置在扩展 API 中 Ground 网络标识关联的器件 UUID
 
-## Signature
+## 签名
 
 ```typescript
 setNetFlagComponentUuid_Ground(component: {
@@ -1530,21 +1530,21 @@ setNetFlagComponentUuid_Ground(component: {
     } | ILIB_DeviceItem | ILIB_DeviceSearchItem): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1568,7 +1568,7 @@ component
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -1578,11 +1578,11 @@ Promise&lt;boolean&gt;
 
 # SCH\_PrimitiveComponent.setNetFlagComponentUuid\_Power() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置在扩展 API 中 Power 网络标识关联的器件 UUID
 
-## Signature
+## 签名
 
 ```typescript
 setNetFlagComponentUuid_Power(component: {
@@ -1591,21 +1591,21 @@ setNetFlagComponentUuid_Power(component: {
     } | ILIB_DeviceItem | ILIB_DeviceSearchItem): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1629,7 +1629,7 @@ component
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -1639,11 +1639,11 @@ Promise&lt;boolean&gt;
 
 # SCH\_PrimitiveComponent.setNetFlagComponentUuid\_ProtectGround() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置在扩展 API 中 ProtectGround 网络标识关联的器件 UUID
 
-## Signature
+## 签名
 
 ```typescript
 setNetFlagComponentUuid_ProtectGround(component: {
@@ -1652,21 +1652,21 @@ setNetFlagComponentUuid_ProtectGround(component: {
     } | ILIB_DeviceItem | ILIB_DeviceSearchItem): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1690,7 +1690,7 @@ component
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -1700,11 +1700,11 @@ Promise&lt;boolean&gt;
 
 # SCH\_PrimitiveComponent.setNetPortComponentUuid\_BI() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置在扩展 API 中 BI 网络端口关联的器件 UUID
 
-## Signature
+## 签名
 
 ```typescript
 setNetPortComponentUuid_BI(component: {
@@ -1713,21 +1713,21 @@ setNetPortComponentUuid_BI(component: {
     } | ILIB_DeviceItem | ILIB_DeviceSearchItem): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1751,7 +1751,7 @@ component
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -1761,11 +1761,11 @@ Promise&lt;boolean&gt;
 
 # SCH\_PrimitiveComponent.setNetPortComponentUuid\_IN() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置在扩展 API 中 IN 网络端口关联的器件 UUID
 
-## Signature
+## 签名
 
 ```typescript
 setNetPortComponentUuid_IN(component: {
@@ -1774,21 +1774,21 @@ setNetPortComponentUuid_IN(component: {
     } | ILIB_DeviceItem | ILIB_DeviceSearchItem): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1812,7 +1812,7 @@ component
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -1822,11 +1822,11 @@ Promise&lt;boolean&gt;
 
 # SCH\_PrimitiveComponent.setNetPortComponentUuid\_OUT() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置在扩展 API 中 OUT 网络端口关联的器件 UUID
 
-## Signature
+## 签名
 
 ```typescript
 setNetPortComponentUuid_OUT(component: {
@@ -1835,21 +1835,21 @@ setNetPortComponentUuid_OUT(component: {
     } | ILIB_DeviceItem | ILIB_DeviceSearchItem): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1873,7 +1873,7 @@ component
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 

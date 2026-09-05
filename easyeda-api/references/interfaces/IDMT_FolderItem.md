@@ -2,32 +2,32 @@
 
 文件夹属性
 
-## Signature
+## 签名
 
 ```typescript
 interface IDMT_FolderItem 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -46,7 +46,7 @@ Array&lt;string&gt;
 
 </td><td>
 
-_(Optional)_ 子文件夹 UUID 列表
+_（可选）_ 子文件夹 UUID 列表
 
 
 </td></tr>
@@ -65,7 +65,7 @@ string
 
 </td><td>
 
-_(Optional)_ 文件夹描述
+_（可选）_ 文件夹描述
 
 
 </td></tr>
@@ -178,7 +178,7 @@ string
 
 子文件夹 UUID 列表
 
-## Signature
+## 签名
 
 ```typescript
 childrenFoldersUuid?: Array<string>;
@@ -190,7 +190,7 @@ childrenFoldersUuid?: Array<string>;
 
 文件夹描述
 
-## Signature
+## 签名
 
 ```typescript
 description?: string;
@@ -202,7 +202,7 @@ description?: string;
 
 项目类型
 
-## Signature
+## 签名
 
 ```typescript
 readonly itemType: EDMT_ItemType.FOLDER;
@@ -214,7 +214,7 @@ readonly itemType: EDMT_ItemType.FOLDER;
 
 文件夹名称
 
-## Signature
+## 签名
 
 ```typescript
 name: string;
@@ -226,7 +226,7 @@ name: string;
 
 父文件夹 UUID
 
-## Signature
+## 签名
 
 ```typescript
 parentFolderUuid: string;
@@ -238,7 +238,7 @@ parentFolderUuid: string;
 
 所属团队 UUID
 
-## Signature
+## 签名
 
 ```typescript
 teamUuid: string;
@@ -250,7 +250,7 @@ teamUuid: string;
 
 文件夹 UUID
 
-## Signature
+## 签名
 
 ```typescript
 uuid: string;

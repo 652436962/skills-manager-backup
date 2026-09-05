@@ -2,13 +2,13 @@
 
 外部库元素索引
 
-## Signature
+## 签名
 
 ```typescript
 interface ILIB_ExtendLibraryItemIndex 
 ```
 
-## Remarks
+## 备注
 
 支持外部库使用名称或 UUID 作为元素的唯一 ID 索引
 
@@ -18,26 +18,26 @@ interface ILIB_ExtendLibraryItemIndex
 
 如若传入 `uuid` 和 `name` 字段，则只有 `uuid` 不可重复
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -75,7 +75,7 @@ string
 
 </td><td>
 
-_(Optional)_ 库 UUID
+_（可选）_ 库 UUID
 
 
 </td></tr>
@@ -91,7 +91,7 @@ _(Optional)_ 库 UUID
 
 库名称
 
-## Signature
+## 签名
 
 ```typescript
 name: string;
@@ -103,7 +103,7 @@ name: string;
 
 库 UUID
 
-## Signature
+## 签名
 
 ```typescript
 uuid?: string;

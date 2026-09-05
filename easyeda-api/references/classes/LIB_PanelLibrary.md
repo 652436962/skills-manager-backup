@@ -2,27 +2,27 @@
 
 综合库 / 面板库类
 
-## Signature
+## 签名
 
 ```typescript
 declare class LIB_PanelLibrary 
 ```
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -134,31 +134,31 @@ Description
 
 # LIB\_PanelLibrary.copy() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 复制面板库
 
-## Signature
+## 签名
 
 ```typescript
 copy(panelLibraryUuid: string, libraryUuid: string, targetLibraryUuid: string, targetClassification?: ILIB_ClassificationIndex | Array<string>, newPanelLibraryName?: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -222,7 +222,7 @@ targetClassification
 
 </td><td>
 
-_(Optional)_ 目标库内的分类
+_（可选）_ 目标库内的分类
 
 
 </td></tr>
@@ -238,7 +238,7 @@ string
 
 </td><td>
 
-_(Optional)_ 新面板库名称，如若目标库内存在重名面板库将导致复制失败
+_（可选）_ 新面板库名称，如若目标库内存在重名面板库将导致复制失败
 
 
 </td></tr>
@@ -246,7 +246,7 @@ _(Optional)_ 新面板库名称，如若目标库内存在重名面板库将导�
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -256,31 +256,31 @@ Promise&lt;string \| undefined&gt;
 
 # LIB\_PanelLibrary.create() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 创建面板库
 
-## Signature
+## 签名
 
 ```typescript
 create(libraryUuid: string, panelLibraryName: string, classification?: ILIB_ClassificationIndex | Array<string>, description?: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -328,7 +328,7 @@ classification
 
 </td><td>
 
-_(Optional)_ 分类
+_（可选）_ 分类
 
 
 </td></tr>
@@ -344,7 +344,7 @@ string
 
 </td><td>
 
-_(Optional)_ 描述
+_（可选）_ 描述
 
 
 </td></tr>
@@ -352,7 +352,7 @@ _(Optional)_ 描述
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -362,31 +362,31 @@ Promise&lt;string \| undefined&gt;
 
 # LIB\_PanelLibrary.delete() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 删除面板库
 
-## Signature
+## 签名
 
 ```typescript
 delete(panelLibraryUuid: string, libraryUuid: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -426,7 +426,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -436,31 +436,31 @@ Promise&lt;boolean&gt;
 
 # LIB\_PanelLibrary.get() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取面板库的所有属性
 
-## Signature
+## 签名
 
 ```typescript
 get(panelLibraryUuid: string, libraryUuid?: string): Promise<ILIB_PanelLibraryItem | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -492,7 +492,7 @@ string
 
 </td><td>
 
-_(Optional)_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
+_（可选）_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
 
 
 </td></tr>
@@ -500,7 +500,7 @@ _(Optional)_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ILIB\_PanelLibraryItem](../interfaces/ILIB_PanelLibraryItem.md) \| undefined&gt;
 
@@ -510,31 +510,31 @@ Promise&lt;[ILIB\_PanelLibraryItem](../interfaces/ILIB_PanelLibraryItem.md) \| u
 
 # LIB\_PanelLibrary.modify() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改面板库
 
-## Signature
+## 签名
 
 ```typescript
 modify(panelLibraryUuid: string, libraryUuid: string, panelLibraryName?: string, classification?: ILIB_ClassificationIndex | Array<string> | null, description?: string | null): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -582,7 +582,7 @@ string
 
 </td><td>
 
-_(Optional)_ 面板库名称
+_（可选）_ 面板库名称
 
 
 </td></tr>
@@ -598,7 +598,7 @@ classification
 
 </td><td>
 
-_(Optional)_ 分类
+_（可选）_ 分类
 
 
 </td></tr>
@@ -614,7 +614,7 @@ string \| null
 
 </td><td>
 
-_(Optional)_ 描述
+_（可选）_ 描述
 
 
 </td></tr>
@@ -622,13 +622,13 @@ _(Optional)_ 描述
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 如希望清除某些属性，则将其的值设置为 `null`
 
@@ -636,31 +636,31 @@ Promise&lt;boolean&gt;
 
 # LIB\_PanelLibrary.openInEditor() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 在编辑器打开文档
 
-## Signature
+## 签名
 
 ```typescript
 openInEditor(panelLibraryUuid: string, libraryUuid: string, splitScreenId?: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -708,7 +708,7 @@ string
 
 </td><td>
 
-_(Optional)_ 分屏 ID，不填写则默认在最后输入焦点的分屏内打开，可以使用 [DMT\_EditorControl](./DMT_EditorControl.md) 内的接口获取
+_（可选）_ 分屏 ID，不填写则默认在最后输入焦点的分屏内打开，可以使用 [DMT\_EditorControl](./DMT_EditorControl.md) 内的接口获取
 
 
 </td></tr>
@@ -716,7 +716,7 @@ _(Optional)_ 分屏 ID，不填写则默认在最后输入焦点的分屏内打�
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -726,31 +726,31 @@ Promise&lt;string \| undefined&gt;
 
 # LIB\_PanelLibrary.search() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 搜索面板库
 
-## Signature
+## 签名
 
 ```typescript
 search(key: string, libraryUuid?: string, classification?: ILIB_ClassificationIndex | Array<string>, itemsOfPage?: number, page?: number): Promise<Array<ILIB_PanelLibrarySearchItem>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -782,7 +782,7 @@ string
 
 </td><td>
 
-_(Optional)_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
+_（可选）_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
 
 
 </td></tr>
@@ -798,7 +798,7 @@ classification
 
 </td><td>
 
-_(Optional)_ 分类，默认为全部
+_（可选）_ 分类，默认为全部
 
 
 </td></tr>
@@ -814,7 +814,7 @@ number
 
 </td><td>
 
-_(Optional)_ 一页搜索结果的数量
+_（可选）_ 一页搜索结果的数量
 
 
 </td></tr>
@@ -830,7 +830,7 @@ number
 
 </td><td>
 
-_(Optional)_ 页数
+_（可选）_ 页数
 
 
 </td></tr>
@@ -838,7 +838,7 @@ _(Optional)_ 页数
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[ILIB\_PanelLibrarySearchItem](../interfaces/ILIB_PanelLibrarySearchItem.md)<!-- -->&gt;&gt;
 

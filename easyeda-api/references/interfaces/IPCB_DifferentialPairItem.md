@@ -2,32 +2,32 @@
 
 差分对属性
 
-## Signature
+## 签名
 
 ```typescript
 interface IPCB_DifferentialPairItem 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -100,7 +100,7 @@ string
 
 差分对名称
 
-## Signature
+## 签名
 
 ```typescript
 name: string;
@@ -112,7 +112,7 @@ name: string;
 
 负网络
 
-## Signature
+## 签名
 
 ```typescript
 negativeNet: string;
@@ -124,7 +124,7 @@ negativeNet: string;
 
 正网络
 
-## Signature
+## 签名
 
 ```typescript
 positiveNet: string;

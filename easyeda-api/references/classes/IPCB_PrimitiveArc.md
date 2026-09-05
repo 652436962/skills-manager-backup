@@ -2,33 +2,33 @@
 
 圆弧线图元
 
-## Signature
+## 签名
 
 ```typescript
 declare class IPCB_PrimitiveArc implements IPCB_Primitive 
 ```
-**Implements:** [IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
+**实现自：**[IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
 
-## Remarks
+## 备注
 
 直线和圆弧线均为导线，对应画布的线条走线和圆弧走线
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -462,18 +462,18 @@ Description
 
 # IPCB\_PrimitiveArc.done() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将对图元的更改应用到画布
 
-## Signature
+## 签名
 
 ```typescript
 done(): Promise<IPCB_PrimitiveArc>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md)<!-- -->&gt;
 
@@ -483,24 +483,24 @@ Promise&lt;[IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md)<!-- -->&gt;
 
 # IPCB\_PrimitiveArc.getAdjacentPrimitives() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取相邻的图元对象
 
-## Signature
+## 签名
 
 ```typescript
 getAdjacentPrimitives(): Promise<Array<IPCB_PrimitiveLine | IPCB_PrimitiveVia | IPCB_PrimitiveArc>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md) \| [IPCB\_PrimitiveVia](./IPCB_PrimitiveVia.md) \| [IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md)<!-- -->&gt;&gt;
 
 相邻的直线、过孔、圆弧线图元对象
 
-## Remarks
+## 备注
 
 将会获取与圆弧线直接相连的直线、过孔、圆弧线图元对象
 
@@ -508,31 +508,31 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md) \| [IPCB\_Pri
 
 # IPCB\_PrimitiveArc.getEntireTrack() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取整段导线
 
-## Signature
+## 签名
 
 ```typescript
 getEntireTrack(includeVias: false): Promise<Array<IPCB_PrimitiveLine | IPCB_PrimitiveArc>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -556,7 +556,7 @@ false
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md) \| [IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md)<!-- -->&gt;&gt;
 
@@ -566,31 +566,31 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md) \| [IPCB\_Pri
 
 # IPCB\_PrimitiveArc.getEntireTrack() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取整段导线
 
-## Signature
+## 签名
 
 ```typescript
 getEntireTrack(includeVias: true): Promise<Array<IPCB_PrimitiveLine | IPCB_PrimitiveArc | IPCB_PrimitiveVia>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -614,7 +614,7 @@ true
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md) \| [IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md) \| [IPCB\_PrimitiveVia](./IPCB_PrimitiveVia.md)<!-- -->&gt;&gt;
 
@@ -626,14 +626,14 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveLine](./IPCB_PrimitiveLine.md) \| [IPCB\_Pri
 
 获取属性状态：圆弧角度
 
-## Signature
+## 签名
 
 ```typescript
 getState_ArcAngle(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -645,14 +645,14 @@ number
 
 获取属性状态：终止位置 X
 
-## Signature
+## 签名
 
 ```typescript
 getState_EndX(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -664,14 +664,14 @@ number
 
 获取属性状态：终止位置 Y
 
-## Signature
+## 签名
 
 ```typescript
 getState_EndY(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -683,14 +683,14 @@ number
 
 获取属性状态：交互模式
 
-## Signature
+## 签名
 
 ```typescript
 getState_InteractiveMode(): EPCB_PrimitiveArcInteractiveMode;
 ```
 
 
-## Returns
+## 返回值
 
 [EPCB\_PrimitiveArcInteractiveMode](../enums/EPCB_PrimitiveArcInteractiveMode.md)
 
@@ -702,14 +702,14 @@ getState_InteractiveMode(): EPCB_PrimitiveArcInteractiveMode;
 
 获取属性状态：层
 
-## Signature
+## 签名
 
 ```typescript
 getState_Layer(): TPCB_LayersOfLine;
 ```
 
 
-## Returns
+## 返回值
 
 [TPCB\_LayersOfLine](../types/TPCB_LayersOfLine.md)
 
@@ -721,14 +721,14 @@ getState_Layer(): TPCB_LayersOfLine;
 
 获取属性状态：线宽
 
-## Signature
+## 签名
 
 ```typescript
 getState_LineWidth(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -740,14 +740,14 @@ number
 
 获取属性状态：网络名称
 
-## Signature
+## 签名
 
 ```typescript
 getState_Net(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -759,14 +759,14 @@ string
 
 获取属性状态：图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveId(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -778,14 +778,14 @@ string
 
 获取属性状态：是否锁定
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveLock(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -797,14 +797,14 @@ boolean
 
 获取属性状态：图元类型
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveType(): EPCB_PrimitiveType;
 ```
 
 
-## Returns
+## 返回值
 
 [EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)
 
@@ -816,14 +816,14 @@ getState_PrimitiveType(): EPCB_PrimitiveType;
 
 获取属性状态：起始位置 X
 
-## Signature
+## 签名
 
 ```typescript
 getState_StartX(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -835,14 +835,14 @@ number
 
 获取属性状态：起始位置 Y
 
-## Signature
+## 签名
 
 ```typescript
 getState_StartY(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -854,14 +854,14 @@ number
 
 查询图元是否为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 isAsync(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -871,18 +871,18 @@ boolean
 
 # IPCB\_PrimitiveArc.reset() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将异步图元重置为当前画布状态
 
-## Signature
+## 签名
 
 ```typescript
 reset(): Promise<IPCB_PrimitiveArc>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md)<!-- -->&gt;
 
@@ -892,31 +892,31 @@ Promise&lt;[IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md)<!-- -->&gt;
 
 # IPCB\_PrimitiveArc.setState\_ArcAngle() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：圆弧角度
 
-## Signature
+## 签名
 
 ```typescript
 setState_ArcAngle(arcAngle: number): IPCB_PrimitiveArc;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -940,7 +940,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md)
 
@@ -950,31 +950,31 @@ number
 
 # IPCB\_PrimitiveArc.setState\_EndX() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：终止位置 X
 
-## Signature
+## 签名
 
 ```typescript
 setState_EndX(endX: number): IPCB_PrimitiveArc;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -998,7 +998,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md)
 
@@ -1008,31 +1008,31 @@ number
 
 # IPCB\_PrimitiveArc.setState\_EndY() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：终止位置 Y
 
-## Signature
+## 签名
 
 ```typescript
 setState_EndY(endY: number): IPCB_PrimitiveArc;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1056,7 +1056,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md)
 
@@ -1066,31 +1066,31 @@ number
 
 # IPCB\_PrimitiveArc.setState\_InteractiveMode() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：交互模式
 
-## Signature
+## 签名
 
 ```typescript
 setState_InteractiveMode(interactiveMode: EPCB_PrimitiveArcInteractiveMode): IPCB_PrimitiveArc;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1114,7 +1114,7 @@ interactiveMode
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md)
 
@@ -1124,31 +1124,31 @@ interactiveMode
 
 # IPCB\_PrimitiveArc.setState\_Layer() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：层
 
-## Signature
+## 签名
 
 ```typescript
 setState_Layer(layer: TPCB_LayersOfLine): IPCB_PrimitiveArc;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1172,7 +1172,7 @@ layer
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md)
 
@@ -1182,31 +1182,31 @@ layer
 
 # IPCB\_PrimitiveArc.setState\_LineWidth() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：线宽
 
-## Signature
+## 签名
 
 ```typescript
 setState_LineWidth(lineWidth: number): IPCB_PrimitiveArc;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1230,7 +1230,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md)
 
@@ -1240,31 +1240,31 @@ number
 
 # IPCB\_PrimitiveArc.setState\_Net() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：网络名称
 
-## Signature
+## 签名
 
 ```typescript
 setState_Net(net: string): IPCB_PrimitiveArc;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1288,7 +1288,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md)
 
@@ -1298,31 +1298,31 @@ string
 
 # IPCB\_PrimitiveArc.setState\_PrimitiveLock() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：是否锁定
 
-## Signature
+## 签名
 
 ```typescript
 setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveArc;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1346,7 +1346,7 @@ boolean
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md)
 
@@ -1356,31 +1356,31 @@ boolean
 
 # IPCB\_PrimitiveArc.setState\_StartX() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：起始位置 X
 
-## Signature
+## 签名
 
 ```typescript
 setState_StartX(startX: number): IPCB_PrimitiveArc;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1404,7 +1404,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md)
 
@@ -1414,31 +1414,31 @@ number
 
 # IPCB\_PrimitiveArc.setState\_StartY() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：起始位置 Y
 
-## Signature
+## 签名
 
 ```typescript
 setState_StartY(startY: number): IPCB_PrimitiveArc;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1462,7 +1462,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md)
 
@@ -1474,14 +1474,14 @@ number
 
 将图元转换为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 toAsync(): IPCB_PrimitiveArc;
 ```
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md)
 
@@ -1493,14 +1493,14 @@ toAsync(): IPCB_PrimitiveArc;
 
 将图元转换为同步图元
 
-## Signature
+## 签名
 
 ```typescript
 toSync(): IPCB_PrimitiveArc;
 ```
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveArc](./IPCB_PrimitiveArc.md)
 

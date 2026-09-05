@@ -2,32 +2,32 @@
 
 器件扩展属性
 
-## Signature
+## 签名
 
 ```typescript
 interface ILIB_DeviceExtendPropertyItem 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -46,7 +46,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 加入 BOM
+_（可选）_ 加入 BOM
 
 
 </td></tr>
@@ -65,7 +65,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 转到 PCB
+_（可选）_ 转到 PCB
 
 
 </td></tr>
@@ -84,7 +84,7 @@ string
 
 </td><td>
 
-_(Optional)_ 位号
+_（可选）_ 位号
 
 
 </td></tr>
@@ -103,7 +103,7 @@ string
 
 </td><td>
 
-_(Optional)_ 制造商
+_（可选）_ 制造商
 
 
 </td></tr>
@@ -122,7 +122,7 @@ string
 
 </td><td>
 
-_(Optional)_ 制造商编号
+_（可选）_ 制造商编号
 
 
 </td></tr>
@@ -141,7 +141,7 @@ string
 
 </td><td>
 
-_(Optional)_ 名称
+_（可选）_ 名称
 
 
 </td></tr>
@@ -160,7 +160,7 @@ string
 
 </td><td>
 
-_(Optional)_ 网络
+_（可选）_ 网络
 
 
 </td></tr>
@@ -179,7 +179,7 @@ _(Optional)_ 网络
 
 </td><td>
 
-_(Optional)_ 其它属性
+_（可选）_ 其它参数
 
 
 </td></tr>
@@ -198,7 +198,7 @@ string
 
 </td><td>
 
-_(Optional)_ 供应商
+_（可选）_ 供应商
 
 
 </td></tr>
@@ -217,7 +217,7 @@ string
 
 </td><td>
 
-_(Optional)_ 供应商编号
+_（可选）_ 供应商编号
 
 
 </td></tr>
@@ -233,7 +233,7 @@ _(Optional)_ 供应商编号
 
 加入 BOM
 
-## Signature
+## 签名
 
 ```typescript
 addIntoBom?: boolean;
@@ -245,7 +245,7 @@ addIntoBom?: boolean;
 
 转到 PCB
 
-## Signature
+## 签名
 
 ```typescript
 addIntoPcb?: boolean;
@@ -257,7 +257,7 @@ addIntoPcb?: boolean;
 
 位号
 
-## Signature
+## 签名
 
 ```typescript
 designator?: string;
@@ -269,7 +269,7 @@ designator?: string;
 
 制造商
 
-## Signature
+## 签名
 
 ```typescript
 manufacturer?: string;
@@ -281,7 +281,7 @@ manufacturer?: string;
 
 制造商编号
 
-## Signature
+## 签名
 
 ```typescript
 manufacturerId?: string;
@@ -293,7 +293,7 @@ manufacturerId?: string;
 
 名称
 
-## Signature
+## 签名
 
 ```typescript
 name?: string;
@@ -305,7 +305,7 @@ name?: string;
 
 网络
 
-## Signature
+## 签名
 
 ```typescript
 net?: string;
@@ -315,9 +315,9 @@ net?: string;
 
 # ILIB\_DeviceExtendPropertyItem.otherProperty property
 
-其它属性
+其它参数
 
-## Signature
+## 签名
 
 ```typescript
 otherProperty?: {
@@ -331,7 +331,7 @@ otherProperty?: {
 
 供应商
 
-## Signature
+## 签名
 
 ```typescript
 supplier?: string;
@@ -343,7 +343,7 @@ supplier?: string;
 
 供应商编号
 
-## Signature
+## 签名
 
 ```typescript
 supplierId?: string;

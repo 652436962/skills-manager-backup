@@ -2,31 +2,31 @@
 
 原理图 &amp; 符号 / 网表类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SCH_Netlist 
 ```
 
-## Remarks
+## 备注
 
 获取、更新网表
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -68,33 +68,33 @@ Description
 
 # SCH\_Netlist.getNetlist() method
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 请使用 [SCH\_ManufactureData.getNetlistFile()](./SCH_ManufactureData.md) 替代
 
 获取网表
 
-## Signature
+## 签名
 
 ```typescript
 getNetlist(type?: ESYS_NetlistType): Promise<string>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -110,7 +110,7 @@ type
 
 </td><td>
 
-_(Optional)_ 网表格式
+_（可选）_ 网表格式
 
 
 </td></tr>
@@ -118,7 +118,7 @@ _(Optional)_ 网表格式
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string&gt;
 
@@ -128,31 +128,31 @@ Promise&lt;string&gt;
 
 # SCH\_Netlist.setNetlist() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 更新网表
 
-## Signature
+## 签名
 
 ```typescript
 setNetlist(type: ESYS_NetlistType | undefined, netlist: string): Promise<void>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -192,6 +192,6 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;void&gt;

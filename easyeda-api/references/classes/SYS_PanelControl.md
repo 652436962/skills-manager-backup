@@ -2,27 +2,27 @@
 
 系统 / 面板控制类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SYS_PanelControl 
 ```
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -206,14 +206,14 @@ Description
 
 关闭底部面板
 
-## Signature
+## 签名
 
 ```typescript
 closeBottomPanel(): void;
 ```
 
 
-## Returns
+## 返回值
 
 void
 
@@ -223,14 +223,14 @@ void
 
 关闭左侧面板
 
-## Signature
+## 签名
 
 ```typescript
 closeLeftPanel(): void;
 ```
 
 
-## Returns
+## 返回值
 
 void
 
@@ -240,14 +240,14 @@ void
 
 关闭右侧面板
 
-## Signature
+## 签名
 
 ```typescript
 closeRightPanel(): void;
 ```
 
 
-## Returns
+## 返回值
 
 void
 
@@ -257,14 +257,14 @@ void
 
 查询底部面板是否已锁定
 
-## Signature
+## 签名
 
 ```typescript
 isBottomPanelLocked(): Promise<boolean>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -276,14 +276,14 @@ Promise&lt;boolean&gt;
 
 查询左侧面板是否已锁定
 
-## Signature
+## 签名
 
 ```typescript
 isLeftPanelLocked(): Promise<boolean>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -295,14 +295,14 @@ Promise&lt;boolean&gt;
 
 查询右侧面板是否已锁定
 
-## Signature
+## 签名
 
 ```typescript
 isRightPanelLocked(): Promise<boolean>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -314,27 +314,27 @@ Promise&lt;boolean&gt;
 
 打开底部面板
 
-## Signature
+## 签名
 
 ```typescript
 openBottomPanel(tab?: ESYS_BottomPanelTab): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -350,7 +350,7 @@ tab
 
 </td><td>
 
-_(Optional)_ 标签页，如若不指定则不切换标签页
+_（可选）_ 标签页，如若不指定则不切换标签页
 
 
 </td></tr>
@@ -358,7 +358,7 @@ _(Optional)_ 标签页，如若不指定则不切换标签页
 
 
 
-## Returns
+## 返回值
 
 void
 
@@ -368,27 +368,27 @@ void
 
 打开左侧面板
 
-## Signature
+## 签名
 
 ```typescript
 openLeftPanel(tab?: ESYS_LeftPanelTab): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -404,7 +404,7 @@ tab
 
 </td><td>
 
-_(Optional)_ 标签页，如若不指定则不切换标签页
+_（可选）_ 标签页，如若不指定则不切换标签页
 
 
 </td></tr>
@@ -412,7 +412,7 @@ _(Optional)_ 标签页，如若不指定则不切换标签页
 
 
 
-## Returns
+## 返回值
 
 void
 
@@ -422,27 +422,27 @@ void
 
 打开右侧面板
 
-## Signature
+## 签名
 
 ```typescript
 openRightPanel(tab?: ESYS_RightPanelTab): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -458,7 +458,7 @@ tab
 
 </td><td>
 
-_(Optional)_ 标签页，如若不指定则不切换标签页
+_（可选）_ 标签页，如若不指定则不切换标签页
 
 
 </td></tr>
@@ -466,7 +466,7 @@ _(Optional)_ 标签页，如若不指定则不切换标签页
 
 
 
-## Returns
+## 返回值
 
 void
 
@@ -476,27 +476,27 @@ void
 
 切换底部面板锁定状态
 
-## Signature
+## 签名
 
 ```typescript
 toggleBottomPanelLockState(state?: boolean): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -512,7 +512,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否锁定，如若不指定则反置当前状态
+_（可选）_ 是否锁定，如若不指定则反置当前状态
 
 
 </td></tr>
@@ -520,7 +520,7 @@ _(Optional)_ 是否锁定，如若不指定则反置当前状态
 
 
 
-## Returns
+## 返回值
 
 void
 
@@ -530,27 +530,27 @@ void
 
 切换左侧面板锁定状态
 
-## Signature
+## 签名
 
 ```typescript
 toggleLeftPanelLockState(state?: boolean): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -566,7 +566,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否锁定，如若不指定则反置当前状态
+_（可选）_ 是否锁定，如若不指定则反置当前状态
 
 
 </td></tr>
@@ -574,7 +574,7 @@ _(Optional)_ 是否锁定，如若不指定则反置当前状态
 
 
 
-## Returns
+## 返回值
 
 void
 
@@ -584,27 +584,27 @@ void
 
 切换右侧面板锁定状态
 
-## Signature
+## 签名
 
 ```typescript
 toggleRightPanelLockState(state?: boolean): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -620,7 +620,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否锁定，如若不指定则反置当前状态
+_（可选）_ 是否锁定，如若不指定则反置当前状态
 
 
 </td></tr>
@@ -628,6 +628,6 @@ _(Optional)_ 是否锁定，如若不指定则反置当前状态
 
 
 
-## Returns
+## 返回值
 
 void

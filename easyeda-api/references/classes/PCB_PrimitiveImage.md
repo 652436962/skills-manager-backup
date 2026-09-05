@@ -2,28 +2,28 @@
 
 PCB &amp; 封装 / 图像图元类
 
-## Signature
+## 签名
 
 ```typescript
 declare class PCB_PrimitiveImage implements IPCB_PrimitiveAPI 
 ```
-**Implements:** [IPCB\_PrimitiveAPI](../interfaces/IPCB_PrimitiveAPI.md)
+**实现自：**[IPCB\_PrimitiveAPI](../interfaces/IPCB_PrimitiveAPI.md)
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -137,27 +137,27 @@ Description
 
 创建图像
 
-## Signature
+## 签名
 
 ```typescript
 create(x: number, y: number, complexPolygon: TPCB_PolygonSourceArray | Array<TPCB_PolygonSourceArray> | IPCB_Polygon | IPCB_ComplexPolygon, layer: TPCB_LayersOfImage, width?: number, height?: number, rotation?: number, horizonMirror?: boolean, primitiveLock?: boolean): Promise<IPCB_PrimitiveImage | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -237,7 +237,7 @@ number
 
 </td><td>
 
-_(Optional)_ 宽
+_（可选）_ 宽
 
 
 </td></tr>
@@ -253,7 +253,7 @@ number
 
 </td><td>
 
-_(Optional)_ 高
+_（可选）_ 高
 
 
 </td></tr>
@@ -269,7 +269,7 @@ number
 
 </td><td>
 
-_(Optional)_ 旋转角度
+_（可选）_ 旋转角度
 
 
 </td></tr>
@@ -285,7 +285,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否水平镜像
+_（可选）_ 是否水平镜像
 
 
 </td></tr>
@@ -301,7 +301,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否锁定
+_（可选）_ 是否锁定
 
 
 </td></tr>
@@ -309,13 +309,13 @@ _(Optional)_ 是否锁定
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md) \| undefined&gt;
 
 图像图元对象
 
-## Remarks
+## 备注
 
 如需创建彩色丝印图像，请使用 [二进制内嵌对象图元类](./PCB_PrimitiveObject.md)
 
@@ -323,31 +323,31 @@ Promise&lt;[IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md) \| undefined&gt;
 
 # PCB\_PrimitiveImage.delete() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 删除图像
 
-## Signature
+## 签名
 
 ```typescript
 delete(primitiveIds: string | IPCB_PrimitiveImage | Array<string> | Array<IPCB_PrimitiveImage>): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -371,7 +371,7 @@ string \| [IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md) \| Array&lt;string&gt
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -381,31 +381,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_PrimitiveImage.get() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取图像
 
-## Signature
+## 签名
 
 ```typescript
 get(primitiveIds: string): Promise<IPCB_PrimitiveImage | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -429,7 +429,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md) \| undefined&gt;
 
@@ -439,31 +439,31 @@ Promise&lt;[IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md) \| undefined&gt;
 
 # PCB\_PrimitiveImage.get() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取图像
 
-## Signature
+## 签名
 
 ```typescript
 get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitiveImage>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -487,13 +487,13 @@ Array&lt;string&gt;
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)<!-- -->&gt;&gt;
 
 图像图元对象，空数组表示获取失败
 
-## Remarks
+## 备注
 
 如若传入多个图元 ID，任意图元 ID 未匹配到不影响其它图元的返回，即可能返回少于传入的图元 ID 数量的图元对象
 
@@ -501,31 +501,31 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)<!-- -->&gt;
 
 # PCB\_PrimitiveImage.getAll() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取所有图像
 
-## Signature
+## 签名
 
 ```typescript
 getAll(layer?: TPCB_LayersOfImage, primitiveLock?: boolean): Promise<Array<IPCB_PrimitiveImage>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -541,7 +541,7 @@ layer
 
 </td><td>
 
-_(Optional)_ 层
+_（可选）_ 层
 
 
 </td></tr>
@@ -557,7 +557,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否锁定
+_（可选）_ 是否锁定
 
 
 </td></tr>
@@ -565,7 +565,7 @@ _(Optional)_ 是否锁定
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)<!-- -->&gt;&gt;
 
@@ -575,31 +575,31 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md)<!-- -->&gt;
 
 # PCB\_PrimitiveImage.getAllPrimitiveId() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取所有图像的图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getAllPrimitiveId(layer?: TPCB_LayersOfImage, primitiveLock?: boolean): Promise<Array<string>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -615,7 +615,7 @@ layer
 
 </td><td>
 
-_(Optional)_ 层
+_（可选）_ 层
 
 
 </td></tr>
@@ -631,7 +631,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否锁定
+_（可选）_ 是否锁定
 
 
 </td></tr>
@@ -639,7 +639,7 @@ _(Optional)_ 是否锁定
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;string&gt;&gt;
 
@@ -649,11 +649,11 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 # PCB\_PrimitiveImage.modify() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改图像
 
-## Signature
+## 签名
 
 ```typescript
 modify(primitiveId: string | IPCB_PrimitiveImage, property: {
@@ -668,21 +668,21 @@ modify(primitiveId: string | IPCB_PrimitiveImage, property: {
     }): Promise<IPCB_PrimitiveImage | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -722,7 +722,7 @@ property
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveImage](./IPCB_PrimitiveImage.md) \| undefined&gt;
 

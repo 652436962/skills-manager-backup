@@ -2,32 +2,32 @@
 
 覆铜填充区域
 
-## Signature
+## 签名
 
 ```typescript
 interface IPCB_PrimitivePouredPourFill 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -119,7 +119,7 @@ number
 
 是否填充
 
-## Signature
+## 签名
 
 ```typescript
 fill: boolean;
@@ -131,7 +131,7 @@ fill: boolean;
 
 ID
 
-## Signature
+## 签名
 
 ```typescript
 id: string;
@@ -143,7 +143,7 @@ id: string;
 
 线宽
 
-## Signature
+## 签名
 
 ```typescript
 lineWidth: number;
@@ -155,7 +155,7 @@ lineWidth: number;
 
 复杂多边形
 
-## Signature
+## 签名
 
 ```typescript
 path: IPCB_ComplexPolygon;

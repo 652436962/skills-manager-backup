@@ -2,27 +2,27 @@
 
 焊盘热焊连接方式
 
-## Signature
+## 签名
 
 ```typescript
 declare enum EPCB_PrimitivePadHeatWeldingConnectionMethod 
 ```
 
-## Enumeration Members
+## 枚举成员
 
 <table><thead><tr><th>
 
-Member
+成员
 
 
 </th><th>
 
-Value
+值
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>

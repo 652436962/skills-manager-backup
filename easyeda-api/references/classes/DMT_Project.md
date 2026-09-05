@@ -2,27 +2,27 @@
 
 文档树 / 工程管理类
 
-## Signature
+## 签名
 
 ```typescript
 declare class DMT_Project 
 ```
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -120,31 +120,31 @@ Description
 
 # DMT\_Project.createProject() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 创建工程
 
-## Signature
+## 签名
 
 ```typescript
 createProject(projectFriendlyName: string, projectName?: string, teamUuid?: string, folderUuid?: string, description?: string, collaborationMode?: EDMT_ProjectCollaborationMode): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -176,7 +176,7 @@ string
 
 </td><td>
 
-_(Optional)_ 工程名称，不可重复，仅支持字母 `a-zA-Z`<!-- -->、数字 `0-9`<!-- -->、中划线 `-`<!-- -->，如若不指定，则根据工程友好名称自动生成
+_（可选）_ 工程名称，不可重复，仅支持字母 `a-zA-Z`<!-- -->、数字 `0-9`<!-- -->、中划线 `-`<!-- -->，如若不指定，则根据工程友好名称自动生成
 
 
 </td></tr>
@@ -192,7 +192,7 @@ string
 
 </td><td>
 
-_(Optional)_ 团队 UUID，如若不指定，则默认为个人；在不存在个人工程的环境下必须指定团队 UUID
+_（可选）_ 团队 UUID，如若不指定，则默认为个人；在不存在个人工程的环境下必须指定团队 UUID
 
 
 </td></tr>
@@ -208,7 +208,7 @@ string
 
 </td><td>
 
-_(Optional)_ 文件夹 UUID，如若不指定，则为根文件夹
+_（可选）_ 文件夹 UUID，如若不指定，则为根文件夹
 
 
 </td></tr>
@@ -224,7 +224,7 @@ string
 
 </td><td>
 
-_(Optional)_ 工程描述
+_（可选）_ 工程描述
 
 
 </td></tr>
@@ -240,7 +240,7 @@ collaborationMode
 
 </td><td>
 
-_(Optional)_ 工程协作模式，如若团队权限无需工程设置协作模式，则该参数将被忽略
+_（可选）_ 工程协作模式，如若团队权限无需工程设置协作模式，则该参数将被忽略
 
 
 </td></tr>
@@ -248,7 +248,7 @@ _(Optional)_ 工程协作模式，如若团队权限无需工程设置协作模�
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -260,27 +260,27 @@ Promise&lt;string \| undefined&gt;
 
 获取所有工程的 UUID
 
-## Signature
+## 签名
 
 ```typescript
 getAllProjectsUuid(teamUuid?: string, folderUuid?: string, workspaceUuid?: string): Promise<Array<string>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -296,7 +296,7 @@ string
 
 </td><td>
 
-_(Optional)_ 团队 UUID
+_（可选）_ 团队 UUID
 
 
 </td></tr>
@@ -312,7 +312,7 @@ string
 
 </td><td>
 
-_(Optional)_ 文件夹 UUID，如若不指定，则默认为团队的根文件夹
+_（可选）_ 文件夹 UUID，如若不指定，则默认为团队的根文件夹
 
 
 </td></tr>
@@ -328,7 +328,7 @@ string
 
 </td><td>
 
-_(Optional)_ 工作区 UUID
+_（可选）_ 工作区 UUID
 
 
 </td></tr>
@@ -336,13 +336,13 @@ _(Optional)_ 工作区 UUID
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;string&gt;&gt;
 
 工程 UUID 数组
 
-## Remarks
+## 备注
 
 如若指定 `teamUuid`<!-- -->，则获取指定团队下的所有工程；
 
@@ -358,20 +358,20 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 获取当前工程的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getCurrentProjectInfo(): Promise<IDMT_ProjectItem | undefined>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IDMT\_ProjectItem](../interfaces/IDMT_ProjectItem.md) \| undefined&gt;
 
 工程属性，如若为 `undefined` 则获取失败
 
-## Remarks
+## 备注
 
 将会获取当前打开且拥有最后输入焦点的原理图、PCB、面板所关联的工程的详细属性
 
@@ -381,27 +381,27 @@ Promise&lt;[IDMT\_ProjectItem](../interfaces/IDMT_ProjectItem.md) \| undefined&g
 
 获取工程属性
 
-## Signature
+## 签名
 
 ```typescript
 getProjectInfo(projectUuid: string): Promise<IDMT_BriefProjectItem | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -425,13 +425,13 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IDMT\_BriefProjectItem](../interfaces/IDMT_BriefProjectItem.md) \| undefined&gt;
 
 简略的工程属性，如若为 `undefined` 则获取失败
 
-## Remarks
+## 备注
 
 本接口只能读取简略的工程属性，如需详细的工程树，请使用 [getCurrentProjectInfo](./DMT_Project.md) 接口
 
@@ -441,27 +441,27 @@ Promise&lt;[IDMT\_BriefProjectItem](../interfaces/IDMT_BriefProjectItem.md) \| u
 
 移动工程到文件夹
 
-## Signature
+## 签名
 
 ```typescript
 moveProjectToFolder(projectUuid: string, folderUuid?: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -493,7 +493,7 @@ string
 
 </td><td>
 
-_(Optional)_ 文件夹 UUID，只能为当前工程所在团队或个人下的文件夹，如若为 `undefined` 则移动到当前团队的根文件夹
+_（可选）_ 文件夹 UUID，只能为当前工程所在团队或个人下的文件夹，如若为 `undefined` 则移动到当前团队的根文件夹
 
 
 </td></tr>
@@ -501,7 +501,7 @@ _(Optional)_ 文件夹 UUID，只能为当前工程所在团队或个人下的�
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -513,27 +513,27 @@ Promise&lt;boolean&gt;
 
 打开工程
 
-## Signature
+## 签名
 
 ```typescript
 openProject(projectUuid: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -557,12 +557,12 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 是否成功打开工程
 
-## Remarks
+## 备注
 
 本操作将会在 EDA 前端打开指定工程，如若原先已打开其它工程且有未保存的变更，执行本操作将直接丢失所有未保存的数据

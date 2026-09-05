@@ -1,37 +1,37 @@
-# Interface Stabilization
+# 接口稳定性
 
-Our priority in maintaining the extension API is efficient abstraction and interface stability. It's important for users that extensions don't fail to work on a regular basis, and this is especially true and important considering that EasyEDA is currently a rapidly evolving product.
+我们维护扩展 API 的首要任务就是高效的抽象和接口稳定性。对于用户来说，扩展不能经常性地无法工作，考虑到当前嘉立创 EDA 是一个快速发展的产品，这一点显得尤其正确且重要。
 
-On the other hand, we also want to strike the right balance between delivering new features quickly and maintaining backward compatibility, and here's how we intend to do that.
+另一方面，我们还希望在快速提供新功能和保持向后兼容性之间取得适当的平衡，以下是我们打算如何做到这一点。
 
-## API Version Control
+## API 版本控制
 
-Changes to the extension API will be identified as `major.minor.patch`. `major` indicates a major version, `minor` indicates a minor version, and `patch` indicates a fix.
+对扩展 API 的更改将会被标识为 `major.minor.patch`。`major` 表示主要版本，`minor` 表示次要版本，`patch` 表示修正。
 
-### Major Version
+### 主要版本
 
 ::: info
-The EasyEDA Professional Edition Extension API has its own release version number, which is not equivalent to the EasyEDA version number. In general, major updates to the Extension API will follow the major or minor releases of EasyEDA.
+嘉立创 EDA 专业版扩展 API 有自己的发布版本号，它并不等同于嘉立创 EDA 的版本号，一般来说，扩展 API 的主要更新会跟随嘉立创 EDA 的主要版本或次要版本发布。
 :::
 
-Changes to existing APIs that will be made available as major releases may have a noticeable impact on extensions and require the authors of extensions that utilize those APIs to update their code.
+对现有 API 的更改将作为主要版本提供，这些更改可能会对扩展产生明显的影响，并要求使用到这些 API 的扩展的作者更新其代码。
 
-This includes changes to the API itself (e.g., removing deprecated methods) or changes to API behavior.
+这包括对 API 本身的更改（例如：删除已经弃用的方法）或对 API 行为的更改。
 
-Extensions are not automatically upgraded to these versions, and in order to keep existing extensions working, the EasyEDA Professional API development team is committed to extending the lifecycle of deprecated methods as long as possible.
+扩展不会自动升级到这些版本，为了保持现有扩展的工作，嘉立创 EDA 专业版 API 开发团队承诺尽可能地延长已被弃用的方法的生命周期。
 
-### Minor Version
+### 次要版本
 
-New API interfaces and bug fixes will be provided as minor releases, and these new APIs will automatically be available to extensions as soon as they are run in the latest version of EasyEDA.
+新的 API 接口和错误修复将作为次要版本提供，只要将扩展运行在最新版本的嘉立创 EDA 中，这些新 API 将自动可供扩展使用。
 
-If there are bugs in the API, we may, at our discretion, release bug fixes as a minor update, depending on whether we feel that certain extensions may break as a result of fixing the bugs. While any change in API behavior could theoretically make extensions work improperly, it would incur a lot of unnecessary additional overhead for extension authors and us to treat every bug fix as a major change.
+如果 API 存在错误，我们可能会自行决定将错误修复作为次要更新发布，这取决于我们是否觉得某些扩展可能会因修复错误而损坏。虽然 API 行为的任何更改理论上都可能使扩展的工作不正常，但对于扩展作者和我们来说，将每个错误修复视为重大更改将产生很多不必要的额外开销。
 
-### Patch
+### 修正
 
-We release a fix update when we fix an urgent new issue, make a minimal change to the API, or even just change the content of the documentation.
+当我们修复了一个紧急的新问题，对 API 进行了微乎其微的变更，或者甚至只是修改了文档的内容后，我们会发布修正更新。
 
-We may change the API's TypeScript type definition in the form of a break in the fix update. In the TypeScript world, Type and Script are two different things. As such, changes to Type do not affect existing code or cause breaks in released extensions, and having types that accurately represent the latest state of the API is more important than having perfect backward compatibility because types are easy to update. Typically, type changes only involve renaming certain types.
+我们可能在修正更新中以中断的形式更改 API 的 TypeScript 类型定义。在 TypeScript 的世界里，Type 和 Script 是两个不同的东西。因此，对 Type 的更改不会影响现有代码，也不会导致已发布的扩展中断，拥有准确表示 API 最新状态的类型比具有完美的向后兼容性更重要，因为类型易于更新。通常，类型更改仅涉及重命名某些类型。
 
-## APIs for the Development Phase
+## 开发阶段的 API
 
-Development-stage APIs are APIs that are only available when the extension is set to a development version, which allows extension developers to try out new APIs and provide feedback to the EasyEDA Professional Extension API development team on whether the APIs are meeting usage requirements and/or working in any unexpected ways. APIs in development will be prominently identified within the documentation.
+开发阶段的 API 是仅当扩展被设置为开发版本时可用的 API，这允许扩展开发者尝试新的 API，并向嘉立创 EDA 专业版扩展 API 开发团队提供反馈，了解 API 是否满足使用需求，和/或以任何意想不到的方式运行。处于开发阶段的 API 在文档内将会有显著的标识。

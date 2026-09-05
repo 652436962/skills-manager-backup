@@ -2,33 +2,33 @@
 
 外部库器件方法
 
-## Signature
+## 签名
 
 ```typescript
 interface ILIB_ExtendLibraryDeviceFunctions extends ILIB_ExtendLibraryFunctions 
 ```
-**Extends:** [ILIB\_ExtendLibraryFunctions](./ILIB_ExtendLibraryFunctions.md)
+**扩展自：**[ILIB\_ExtendLibraryFunctions](./ILIB_ExtendLibraryFunctions.md)
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -97,7 +97,7 @@ Description
 
 # ILIB\_ExtendLibraryDeviceFunctions.getList property
 
-## Signature
+## 签名
 
 ```typescript
 getList: (props: ILIB_ExtendLibrarySearchProperty<{
@@ -148,7 +148,7 @@ getList: (props: ILIB_ExtendLibrarySearchProperty<{
 
 获取支持的预览类型
 
-## Signature
+## 签名
 
 ```typescript
 getSupportedPreviewTypes: () => Promise<Array<ELIB_PreviewType>>;
@@ -160,7 +160,7 @@ getSupportedPreviewTypes: () => Promise<Array<ELIB_PreviewType>>;
 
 获取支持的符号类型
 
-## Signature
+## 签名
 
 ```typescript
 getSupportedSymbolTypes: () => Promise<Array<ELIB_SymbolType>>;

@@ -4,79 +4,32 @@
 
 React 组件化弹出窗口接口
 
-## Signature
+## 签名
 
 ```typescript
 interface ISYS_ReactComponentizationDialogInterface 
 ```
 
-## Remarks
-
-此接口提供了创建 React 组件化弹出窗口所需的所有功能。 通过此接口，用户可以使用 lc-editor-design 提供的预制组件创建自定义弹窗。
-
-## Example
-
-
-```typescript
-const { Components, WorkerPortal, VirtualRender } = await eda.sys_Dialog.createReactComponentizationDialogInterface(
-  {
-    createContext: React.createContext,
-    useContext: React.useContext,
-    useRef: React.useRef,
-    useEffect: React.useEffect,
-    createElement: React.createElement,
-  },
-  {
-    default: Reconciler,
-    constants: {
-      ContinuousEventPriority,
-      DiscreteEventPriority,
-      DefaultEventPriority,
-      ConcurrentRoot,
-    },
-  },
-);
-
-const portal = new WorkerPortal();
-const root = new VirtualRender();
-
-function MyDialog() {
-  return (
-    <Modal defaultTop={100} defaultLeft={100} defaultWidth={800} defaultHeight={600}>
-      <Dialog title="My Dialog">
-        <Input placeholder="Enter text" />
-      </Dialog>
-    </Modal>
-  );
-}
-
-root.render(
-  <portal.Provider>
-    <MyDialog />
-  </portal.Provider>,
-);
-```
-
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -90,7 +43,7 @@ Description
 
 </td><td>
 
-[LC\_DESIGN\_COMPONENTS](../types/LC_DESIGN_COMPONENTS.md)
+Components
 
 
 </td><td>
@@ -101,7 +54,7 @@ Description
 </td></tr>
 <tr><td>
 
-[LC\_DESIGN\_COMPONENTS\_NAMES](./ISYS_ReactComponentizationDialogInterface.md)
+[portal](./ISYS_ReactComponentizationDialogInterface.md)
 
 
 </td><td>
@@ -109,18 +62,18 @@ Description
 
 </td><td>
 
-typeof LC\_DESIGN\_COMPONENTS\_NAMES
+WorkerPortal
 
 
 </td><td>
 
-**_(ALPHA)_** 组件名称常量
+**_(ALPHA)_** Portal 实例
 
 
 </td></tr>
 <tr><td>
 
-[VirtualRender](./ISYS_ReactComponentizationDialogInterface.md)
+[render](./ISYS_ReactComponentizationDialogInterface.md)
 
 
 </td><td>
@@ -128,31 +81,12 @@ typeof LC\_DESIGN\_COMPONENTS\_NAMES
 
 </td><td>
 
-new () =&gt; [ISYS\_ReactComponentizationDialogVirtualRender](./ISYS_ReactComponentizationDialogVirtualRender.md)
+(node: TComponentsNode) =&gt; void
 
 
 </td><td>
 
-**_(ALPHA)_** VirtualRender 类
-
-
-</td></tr>
-<tr><td>
-
-[WorkerPortal](./ISYS_ReactComponentizationDialogInterface.md)
-
-
-</td><td>
-
-
-</td><td>
-
-new () =&gt; [ISYS\_ReactComponentizationDialogWorkerPortal](./ISYS_ReactComponentizationDialogWorkerPortal.md)
-
-
-</td><td>
-
-**_(ALPHA)_** WorkerPortal 类
+**_(ALPHA)_** 渲染 React 组件
 
 
 </td></tr>
@@ -170,66 +104,36 @@ new () =&gt; [ISYS\_ReactComponentizationDialogWorkerPortal](./ISYS_ReactCompone
 
 预制组件
 
-## Signature
+## 签名
 
 ```typescript
-Components: LC_DESIGN_COMPONENTS;
+Components: Components;
 ```
 
-## Remarks
+### portal
 
-包含所有 lc-editor-design 提供的预制组件，如 Modal、Dialog、Input、Button 等。
-
-### lc_design_components_names
-
-# ISYS\_ReactComponentizationDialogInterface.LC\_DESIGN\_COMPONENTS\_NAMES property
+# ISYS\_ReactComponentizationDialogInterface.portal property
 
 > This API is provided as an alpha preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-组件名称常量
+Portal 实例
 
-## Signature
+## 签名
 
 ```typescript
-LC_DESIGN_COMPONENTS_NAMES: typeof LC_DESIGN_COMPONENTS_NAMES;
+portal: WorkerPortal;
 ```
 
-## Remarks
+### render
 
-包含所有预制组件的名称常量，用于类型安全的组件引用。
-
-### virtualrender
-
-# ISYS\_ReactComponentizationDialogInterface.VirtualRender property
+# ISYS\_ReactComponentizationDialogInterface.render property
 
 > This API is provided as an alpha preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-VirtualRender 类
+渲染 React 组件
 
-## Signature
-
-```typescript
-VirtualRender: new () => ISYS_ReactComponentizationDialogVirtualRender;
-```
-
-## Remarks
-
-用于在虚拟环境中渲染 React 组件。 需要实例化后使用。
-
-### workerportal
-
-# ISYS\_ReactComponentizationDialogInterface.WorkerPortal property
-
-> This API is provided as an alpha preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-WorkerPortal 类
-
-## Signature
+## 签名
 
 ```typescript
-WorkerPortal: new () => ISYS_ReactComponentizationDialogWorkerPortal;
+render: (node: TComponentsNode) => void;
 ```
-
-## Remarks
-
-用于管理组件的生命周期和事件处理。 需要实例化后使用。

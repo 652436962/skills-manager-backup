@@ -2,27 +2,27 @@
 
 系统 / 文件管理类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SYS_FileManager 
 ```
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -234,27 +234,27 @@ Description
 
 提取文件内的库配置信息
 
-## Signature
+## 签名
 
 ```typescript
 extractLibInfo(data: File | Array<File>): Promise<any>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -278,7 +278,7 @@ File \| Array&lt;File&gt;
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;any&gt;
 
@@ -290,27 +290,27 @@ Promise&lt;any&gt;
 
 提取文件内的工程配置信息
 
-## Signature
+## 签名
 
 ```typescript
 extractProjectInfo(data: File): Promise<any>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -334,7 +334,7 @@ File
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;any&gt;
 
@@ -344,11 +344,11 @@ Promise&lt;any&gt;
 
 # SYS\_FileManager.getCbbFileByCbbUuid() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 使用复用模块 UUID 获取复用模块文件
 
-## Signature
+## 签名
 
 ```typescript
 getCbbFileByCbbUuid(cbbUuid: string, libraryUuid?: string, props?: {
@@ -360,21 +360,21 @@ getCbbFileByCbbUuid(cbbUuid: string, libraryUuid?: string, props?: {
     }): Promise<File | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -406,7 +406,7 @@ string
 
 </td><td>
 
-_(Optional)_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
+_（可选）_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
 
 
 </td></tr>
@@ -430,13 +430,13 @@ _(Optional)_
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;File \| undefined&gt;
 
 复用模块文件数据，`undefined` 表示数据获取失败
 
-## Remarks
+## 备注
 
 可以使用 [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统
 
@@ -448,27 +448,27 @@ Promise&lt;File \| undefined&gt;
 
 使用器件 UUID 获取器件文件
 
-## Signature
+## 签名
 
 ```typescript
 getDeviceFileByDeviceUuid(deviceUuid: string | Array<string>, libraryUuid?: string, fileType?: 'elibz' | 'elibz2'): Promise<File | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -500,7 +500,7 @@ string
 
 </td><td>
 
-_(Optional)_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取，如若不传入，则为系统库
+_（可选）_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取，如若不传入，则为系统库
 
 
 </td></tr>
@@ -524,13 +524,13 @@ _(Optional)_
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;File \| undefined&gt;
 
 器件文件数据，`undefined` 表示数据获取失败
 
-## Remarks
+## 备注
 
 可以使用 [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统
 
@@ -542,27 +542,27 @@ Promise&lt;File \| undefined&gt;
 
 获取文档文件
 
-## Signature
+## 签名
 
 ```typescript
 getDocumentFile(fileName?: string, password?: string, fileType?: 'epro' | 'epro2'): Promise<File | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -578,7 +578,7 @@ string
 
 </td><td>
 
-_(Optional)_ 文件名
+_（可选）_ 文件名
 
 
 </td></tr>
@@ -594,7 +594,7 @@ string
 
 </td><td>
 
-_(Optional)_ 加密密码
+_（可选）_ 加密密码
 
 
 </td></tr>
@@ -610,7 +610,7 @@ fileType
 
 </td><td>
 
-_(Optional)_ 文件格式
+_（可选）_ 文件格式
 
 
 </td></tr>
@@ -618,13 +618,13 @@ _(Optional)_ 文件格式
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;File \| undefined&gt;
 
 文档文件数据，`undefined` 表示当前未打开文档或数据获取失败
 
-## Remarks
+## 备注
 
 可以使用 [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统
 
@@ -634,11 +634,11 @@ Promise&lt;File \| undefined&gt;
 
 # SYS\_FileManager.getDocumentFootprintSources() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取文档封装源码
 
-## Signature
+## 签名
 
 ```typescript
 getDocumentFootprintSources(): Promise<Array<{
@@ -648,7 +648,7 @@ getDocumentFootprintSources(): Promise<Array<{
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;{ footprintUuid: string; documentSource: string; }&gt;&gt;
 
@@ -658,18 +658,18 @@ Promise&lt;Array&lt;{ footprintUuid: string; documentSource: string; }&gt;&gt;
 
 # SYS\_FileManager.getDocumentSource() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取文档源码
 
-## Signature
+## 签名
 
 ```typescript
 getDocumentSource(): Promise<string | undefined>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -679,31 +679,31 @@ Promise&lt;string \| undefined&gt;
 
 # SYS\_FileManager.getFootprintFileByFootprintUuid() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 使用封装 UUID 获取封装文件
 
-## Signature
+## 签名
 
 ```typescript
 getFootprintFileByFootprintUuid(footprintUuid: string | Array<string>, libraryUuid?: string, fileType?: 'elibz' | 'elibz2'): Promise<File | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -735,7 +735,7 @@ string
 
 </td><td>
 
-_(Optional)_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
+_（可选）_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
 
 
 </td></tr>
@@ -759,13 +759,13 @@ _(Optional)_
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;File \| undefined&gt;
 
 封装文件数据，`undefined` 表示数据获取失败
 
-## Remarks
+## 备注
 
 可以使用 [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统
 
@@ -775,31 +775,31 @@ Promise&lt;File \| undefined&gt;
 
 # SYS\_FileManager.getPanelLibraryFileByPanelLibraryUuid() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 使用面板库 UUID 获取面板库文件
 
-## Signature
+## 签名
 
 ```typescript
 getPanelLibraryFileByPanelLibraryUuid(panelLibraryUuid: string | Array<string>, libraryUuid?: string, fileType?: 'elibz' | 'elibz2'): Promise<File | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -831,7 +831,7 @@ string
 
 </td><td>
 
-_(Optional)_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
+_（可选）_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
 
 
 </td></tr>
@@ -855,13 +855,13 @@ _(Optional)_
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;File \| undefined&gt;
 
 面板库文件数据，`undefined` 表示数据获取失败
 
-## Remarks
+## 备注
 
 可以使用 [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统
 
@@ -873,27 +873,27 @@ Promise&lt;File \| undefined&gt;
 
 获取工程文件
 
-## Signature
+## 签名
 
 ```typescript
 getProjectFile(fileName?: string, password?: string, fileType?: 'epro' | 'epro2'): Promise<File | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -909,7 +909,7 @@ string
 
 </td><td>
 
-_(Optional)_ 文件名
+_（可选）_ 文件名
 
 
 </td></tr>
@@ -925,7 +925,7 @@ string
 
 </td><td>
 
-_(Optional)_ 加密密码
+_（可选）_ 加密密码
 
 
 </td></tr>
@@ -941,7 +941,7 @@ fileType
 
 </td><td>
 
-_(Optional)_ 文件格式
+_（可选）_ 文件格式
 
 
 </td></tr>
@@ -949,13 +949,13 @@ _(Optional)_ 文件格式
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;File \| undefined&gt;
 
 工程文件数据，`undefined` 表示当前未打开工程或数据获取失败
 
-## Remarks
+## 备注
 
 可以使用 [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统
 
@@ -965,31 +965,31 @@ Promise&lt;File \| undefined&gt;
 
 # SYS\_FileManager.getProjectFileByProjectUuid() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 使用工程 UUID 获取工程文件
 
-## Signature
+## 签名
 
 ```typescript
 getProjectFileByProjectUuid(projectUuid: string, fileName?: string, password?: string, fileType?: 'epro' | 'epro2'): Promise<File | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1021,7 +1021,7 @@ string
 
 </td><td>
 
-_(Optional)_ 文件名
+_（可选）_ 文件名
 
 
 </td></tr>
@@ -1037,7 +1037,7 @@ string
 
 </td><td>
 
-_(Optional)_ 加密密码
+_（可选）_ 加密密码
 
 
 </td></tr>
@@ -1053,7 +1053,7 @@ fileType
 
 </td><td>
 
-_(Optional)_ 文件格式
+_（可选）_ 文件格式
 
 
 </td></tr>
@@ -1061,13 +1061,13 @@ _(Optional)_ 文件格式
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;File \| undefined&gt;
 
 工程文件数据，`undefined` 表示当前未打开工程或数据获取失败
 
-## Remarks
+## 备注
 
 可以使用 [SYS\_FileSystem.saveFile()](./SYS_FileSystem.md) 接口将文件导出到本地文件系统
 
@@ -1077,11 +1077,11 @@ Promise&lt;File \| undefined&gt;
 
 # SYS\_FileManager.importProjectByProjectFile() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 使用工程文件导入工程
 
-## Signature
+## 签名
 
 ```typescript
 importProjectByProjectFile(projectFile: File, fileType?: 'JLCEDA' | 'JLCEDA Pro' | 'EasyEDA' | 'EasyEDA Pro' | 'Allegro' | 'OrCAD' | 'EAGLE' | 'KiCad' | 'PADS' | 'LTspice', props?: {
@@ -1107,21 +1107,21 @@ importProjectByProjectFile(projectFile: File, fileType?: 'JLCEDA' | 'JLCEDA Pro'
     }): Promise<IDMT_BriefProjectItem | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1153,7 +1153,7 @@ fileType
 
 </td><td>
 
-_(Optional)_ 文件类型
+_（可选）_ 文件类型
 
 
 </td></tr>
@@ -1169,7 +1169,7 @@ props
 
 </td><td>
 
-_(Optional)_ 导入参数，参考 EDA 前端 \*\*导入\*\* 窗口内的配置项
+_（可选）_ 导入参数，参考 EDA 前端 \*\*导入\*\* 窗口内的配置项
 
 
 </td></tr>
@@ -1185,7 +1185,7 @@ saveTo
 
 </td><td>
 
-_(Optional)_ 保存到工程参数
+_（可选）_ 保存到工程参数
 
 
 </td></tr>
@@ -1209,13 +1209,13 @@ _(Optional)_
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IDMT\_BriefProjectItem](../interfaces/IDMT_BriefProjectItem.md) \| undefined&gt;
 
 导入的工程的简略工程属性
 
-## Remarks
+## 备注
 
 暂不支持提取库的相关配置，如果需求提取库，将会按照默认配置提取
 
@@ -1223,11 +1223,11 @@ Promise&lt;[IDMT\_BriefProjectItem](../interfaces/IDMT_BriefProjectItem.md) \| u
 
 # SYS\_FileManager.importProjectByProjectFile() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 使用工程文件导入工程
 
-## Signature
+## 签名
 
 ```typescript
 importProjectByProjectFile(projectFile: File, fileType?: 'Altium Designer' | 'Protel', props?: {
@@ -1255,21 +1255,21 @@ importProjectByProjectFile(projectFile: File, fileType?: 'Altium Designer' | 'Pr
     }): Promise<IDMT_BriefProjectItem | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1301,7 +1301,7 @@ fileType
 
 </td><td>
 
-_(Optional)_ 文件类型
+_（可选）_ 文件类型
 
 
 </td></tr>
@@ -1317,7 +1317,7 @@ props
 
 </td><td>
 
-_(Optional)_ 导入参数，参考 EDA 前端 \*\*导入\*\* 窗口内的配置项
+_（可选）_ 导入参数，参考 EDA 前端 \*\*导入\*\* 窗口内的配置项
 
 
 </td></tr>
@@ -1333,7 +1333,7 @@ saveTo
 
 </td><td>
 
-_(Optional)_ 保存到工程参数
+_（可选）_ 保存到工程参数
 
 
 </td></tr>
@@ -1357,13 +1357,13 @@ _(Optional)_
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IDMT\_BriefProjectItem](../interfaces/IDMT_BriefProjectItem.md) \| undefined&gt;
 
 导入的工程的简略工程属性
 
-## Remarks
+## 备注
 
 暂不支持提取库的相关配置，如果需求提取库，将会按照默认配置提取
 
@@ -1371,31 +1371,31 @@ Promise&lt;[IDMT\_BriefProjectItem](../interfaces/IDMT_BriefProjectItem.md) \| u
 
 # SYS\_FileManager.setDocumentSource() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改文档源码
 
-## Signature
+## 签名
 
 ```typescript
 setDocumentSource(source: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1419,7 +1419,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 

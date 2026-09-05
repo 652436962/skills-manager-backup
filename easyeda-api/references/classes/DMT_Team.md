@@ -2,27 +2,27 @@
 
 文档树 / 团队类
 
-## Signature
+## 签名
 
 ```typescript
 declare class DMT_Team 
 ```
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -80,14 +80,14 @@ Description
 
 获取所有参与的团队的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getAllInvolvedTeamInfo(): Promise<Array<IDMT_TeamItem>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IDMT\_TeamItem](../interfaces/IDMT_TeamItem.md)<!-- -->&gt;&gt;
 
@@ -99,20 +99,20 @@ Promise&lt;Array&lt;[IDMT\_TeamItem](../interfaces/IDMT_TeamItem.md)<!-- -->&gt;
 
 获取所有直接团队的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getAllTeamsInfo(): Promise<Array<IDMT_TeamItem>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IDMT\_TeamItem](../interfaces/IDMT_TeamItem.md)<!-- -->&gt;&gt;
 
 所有团队的详细属性
 
-## Remarks
+## 备注
 
 个人本质上也是一个名为 \*\*个人\*\* 的团队
 
@@ -122,19 +122,19 @@ Promise&lt;Array&lt;[IDMT\_TeamItem](../interfaces/IDMT_TeamItem.md)<!-- -->&gt;
 
 获取当前团队的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getCurrentTeamInfo(): Promise<IDMT_TeamItem | undefined>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IDMT\_TeamItem](../interfaces/IDMT_TeamItem.md) \| undefined&gt;
 
 团队的详细属性，如若为 `undefined` 则获取失败
 
-## Remarks
+## 备注
 
 将会获取当前打开且拥有最后输入焦点的原理图、PCB、面板所关联的工程的所属团队的详细属性

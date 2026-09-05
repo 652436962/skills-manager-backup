@@ -2,13 +2,13 @@
 
 阻焊/助焊扩展
 
-## Signature
+## 签名
 
 ```typescript
 interface IPCB_PrimitiveSolderMaskAndPasteMaskExpansion 
 ```
 
-## Remarks
+## 备注
 
 本参数设置包含以下三类情况：
 
@@ -20,26 +20,26 @@ interface IPCB_PrimitiveSolderMaskAndPasteMaskExpansion
 
 助焊扩展在一般情况下仅用于钢网生产等特定用途，不了解其作用请安心地忽略其参数设置
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -58,7 +58,7 @@ number
 
 </td><td>
 
-_(Optional)_ 底层助焊扩展
+_（可选）_ 底层助焊扩展
 
 
 </td></tr>
@@ -77,7 +77,7 @@ number
 
 </td><td>
 
-_(Optional)_ 底层阻焊扩展
+_（可选）_ 底层阻焊扩展
 
 
 </td></tr>
@@ -96,7 +96,7 @@ number
 
 </td><td>
 
-_(Optional)_ 顶层助焊扩展
+_（可选）_ 顶层助焊扩展
 
 
 </td></tr>
@@ -115,7 +115,7 @@ number
 
 </td><td>
 
-_(Optional)_ 顶层阻焊扩展
+_（可选）_ 顶层阻焊扩展
 
 
 </td></tr>
@@ -131,7 +131,7 @@ _(Optional)_ 顶层阻焊扩展
 
 底层助焊扩展
 
-## Signature
+## 签名
 
 ```typescript
 bottomPasteMask?: number;
@@ -143,7 +143,7 @@ bottomPasteMask?: number;
 
 底层阻焊扩展
 
-## Signature
+## 签名
 
 ```typescript
 bottomSolderMask?: number;
@@ -155,7 +155,7 @@ bottomSolderMask?: number;
 
 顶层助焊扩展
 
-## Signature
+## 签名
 
 ```typescript
 topPasteMask?: number;
@@ -167,7 +167,7 @@ topPasteMask?: number;
 
 顶层阻焊扩展
 
-## Signature
+## 签名
 
 ```typescript
 topSolderMask?: number;

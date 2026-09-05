@@ -2,30 +2,30 @@
 
 单多边形
 
-## Signature
+## 签名
 
 ```typescript
 declare class IPCB_Polygon 
 ```
 
-## Remarks
+## 备注
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -55,14 +55,14 @@ Description
 
 获取单多边形数据
 
-## Signature
+## 签名
 
 ```typescript
 getSource(): TPCB_PolygonSourceArray;
 ```
 
 
-## Returns
+## 返回值
 
 [TPCB\_PolygonSourceArray](../types/TPCB_PolygonSourceArray.md)
 

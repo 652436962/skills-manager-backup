@@ -2,31 +2,31 @@
 
 覆铜填充图元
 
-## Signature
+## 签名
 
 ```typescript
 declare class IPCB_PrimitivePoured implements IPCB_Primitive 
 ```
-**Implements:** [IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
+**实现自：**[IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
 
-## Remarks
+## 备注
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -138,31 +138,31 @@ Description
 
 # IPCB\_PrimitivePoured.addSolderMaskFill() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 添加：阻焊区域
 
-## Signature
+## 签名
 
 ```typescript
 addSolderMaskFill(pourFillId: IPCB_PrimitivePouredPourFill['id']): Promise<IPCB_PrimitiveFill | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -184,7 +184,7 @@ pourFillId
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveFill](./IPCB_PrimitiveFill.md) \| undefined&gt;
 
@@ -194,31 +194,31 @@ Promise&lt;[IPCB\_PrimitiveFill](./IPCB_PrimitiveFill.md) \| undefined&gt;
 
 # IPCB\_PrimitivePoured.convertToFill() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 转换到：填充图元
 
-## Signature
+## 签名
 
 ```typescript
 convertToFill(pourFillId: IPCB_PrimitivePouredPourFill['id']): Promise<IPCB_PrimitiveFill | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -240,7 +240,7 @@ pourFillId
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveFill](./IPCB_PrimitiveFill.md) \| undefined&gt;
 
@@ -250,31 +250,31 @@ Promise&lt;[IPCB\_PrimitiveFill](./IPCB_PrimitiveFill.md) \| undefined&gt;
 
 # IPCB\_PrimitivePoured.deletePourFills() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 删除覆铜填充区域
 
-## Signature
+## 签名
 
 ```typescript
 deletePourFills(pourFillIds: IPCB_PrimitivePouredPourFill['id'] | Array<IPCB_PrimitivePouredPourFill['id']>): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -298,7 +298,7 @@ pourFillIds
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -310,14 +310,14 @@ Promise&lt;boolean&gt;
 
 获取属性状态：覆铜填充区域
 
-## Signature
+## 签名
 
 ```typescript
 getState_PourFills(): Array<IPCB_PrimitivePouredPourFill>;
 ```
 
 
-## Returns
+## 返回值
 
 Array&lt;[IPCB\_PrimitivePouredPourFill](../interfaces/IPCB_PrimitivePouredPourFill.md)<!-- -->&gt;
 
@@ -329,14 +329,14 @@ Array&lt;[IPCB\_PrimitivePouredPourFill](../interfaces/IPCB_PrimitivePouredPourF
 
 获取属性状态：覆铜边框图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getState_PourPrimitiveId(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -348,14 +348,14 @@ string
 
 获取属性状态：图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveId(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -367,14 +367,14 @@ string
 
 获取属性状态：图元类型
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveType(): EPCB_PrimitiveType;
 ```
 
 
-## Returns
+## 返回值
 
 [EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)
 

@@ -2,32 +2,32 @@
 
 搜索到的器件属性
 
-## Signature
+## 签名
 
 ```typescript
 interface ILIB_DeviceSearchItem 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -46,7 +46,7 @@ Description
 
 </td><td>
 
-_(Optional)_ 器件分类
+_（可选）_ 器件分类
 
 
 </td></tr>
@@ -65,7 +65,7 @@ string
 
 </td><td>
 
-_(Optional)_ 描述
+_（可选）_ 描述
 
 
 </td></tr>
@@ -84,7 +84,7 @@ _(Optional)_ 描述
 
 </td><td>
 
-_(Optional)_ 关联封装
+_（可选）_ 关联封装
 
 
 </td></tr>
@@ -103,7 +103,7 @@ string
 
 </td><td>
 
-_(Optional)_ 关联封装名称
+_（可选）_ 关联封装名称
 
 
 </td></tr>
@@ -141,7 +141,7 @@ string
 
 </td><td>
 
-_(Optional)_ 关联图片 UUID
+_（可选）_ 关联图片 UUID
 
 
 </td></tr>
@@ -160,7 +160,7 @@ number
 
 </td><td>
 
-_(Optional)_ 嘉立创库存
+_（可选）_ 嘉立创库存
 
 
 </td></tr>
@@ -179,7 +179,7 @@ _(Optional)_ 嘉立创库存
 
 </td><td>
 
-_(Optional)_ 嘉立创库类别
+_（可选）_ 嘉立创库类别
 
 
 </td></tr>
@@ -198,7 +198,7 @@ number
 
 </td><td>
 
-_(Optional)_ 嘉立创价格
+_（可选）_ 嘉立创价格
 
 
 </td></tr>
@@ -217,7 +217,7 @@ number
 
 </td><td>
 
-_(Optional)_ 立创商城库存
+_（可选）_ 立创商城库存
 
 
 </td></tr>
@@ -236,7 +236,7 @@ number
 
 </td><td>
 
-_(Optional)_ 立创商城价格
+_（可选）_ 立创商城价格
 
 
 </td></tr>
@@ -274,7 +274,7 @@ string
 
 </td><td>
 
-_(Optional)_ 制造商
+_（可选）_ 制造商
 
 
 </td></tr>
@@ -293,7 +293,7 @@ string
 
 </td><td>
 
-_(Optional)_ 制造商编号
+_（可选）_ 制造商编号
 
 
 </td></tr>
@@ -312,7 +312,7 @@ _(Optional)_ 制造商编号
 
 </td><td>
 
-_(Optional)_ 关联 3D 模型
+_（可选）_ 关联 3D 模型
 
 
 </td></tr>
@@ -331,7 +331,7 @@ string
 
 </td><td>
 
-_(Optional)_ 关联 3D 模型名称
+_（可选）_ 关联 3D 模型名称
 
 
 </td></tr>
@@ -407,7 +407,7 @@ number
 
 </td><td>
 
-_(Optional)_ 其它属性
+_（可选）_ 其它参数
 
 
 </td></tr>
@@ -426,7 +426,7 @@ string
 
 </td><td>
 
-_(Optional)_ 供应商
+_（可选）_ 供应商
 
 
 </td></tr>
@@ -445,7 +445,7 @@ string
 
 </td><td>
 
-_(Optional)_ 供应商编号
+_（可选）_ 供应商编号
 
 
 </td></tr>
@@ -537,7 +537,7 @@ string
 
 器件分类
 
-## Signature
+## 签名
 
 ```typescript
 classification?: ILIB_ClassificationIndex | Array<string>;
@@ -549,7 +549,7 @@ classification?: ILIB_ClassificationIndex | Array<string>;
 
 描述
 
-## Signature
+## 签名
 
 ```typescript
 description?: string;
@@ -561,7 +561,7 @@ description?: string;
 
 关联封装
 
-## Signature
+## 签名
 
 ```typescript
 footprint?: {
@@ -575,13 +575,13 @@ footprint?: {
 
 # ILIB\_DeviceSearchItem.footprintName property
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 请使用 [footprint](./ILIB_DeviceSearchItem.md) 替代
 
 关联封装名称
 
-## Signature
+## 签名
 
 ```typescript
 footprintName?: string;
@@ -591,13 +591,13 @@ footprintName?: string;
 
 # ILIB\_DeviceSearchItem.footprintUuid property
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 请使用 [footprint](./ILIB_DeviceSearchItem.md) 替代
 
 关联封装 UUID
 
-## Signature
+## 签名
 
 ```typescript
 footprintUuid: string;
@@ -609,7 +609,7 @@ footprintUuid: string;
 
 关联图片 UUID
 
-## Signature
+## 签名
 
 ```typescript
 imageUuid?: string;
@@ -619,13 +619,13 @@ imageUuid?: string;
 
 # ILIB\_DeviceSearchItem.jlcInventory property
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 在 `otherProperty` 中替代
 
 嘉立创库存
 
-## Signature
+## 签名
 
 ```typescript
 jlcInventory?: number;
@@ -635,13 +635,13 @@ jlcInventory?: number;
 
 # ILIB\_DeviceSearchItem.jlcLibraryCategory property
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 在 `otherProperty` 中替代
 
 嘉立创库类别
 
-## Signature
+## 签名
 
 ```typescript
 jlcLibraryCategory?: ELIB_DeviceJlcLibraryCategory;
@@ -651,13 +651,13 @@ jlcLibraryCategory?: ELIB_DeviceJlcLibraryCategory;
 
 # ILIB\_DeviceSearchItem.jlcPrice property
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 在 `otherProperty` 中替代
 
 嘉立创价格
 
-## Signature
+## 签名
 
 ```typescript
 jlcPrice?: number;
@@ -667,13 +667,13 @@ jlcPrice?: number;
 
 # ILIB\_DeviceSearchItem.lcscInventory property
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 在 `otherProperty` 中替代
 
 立创商城库存
 
-## Signature
+## 签名
 
 ```typescript
 lcscInventory?: number;
@@ -683,13 +683,13 @@ lcscInventory?: number;
 
 # ILIB\_DeviceSearchItem.lcscPrice property
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 在 `otherProperty` 中替代
 
 立创商城价格
 
-## Signature
+## 签名
 
 ```typescript
 lcscPrice?: number;
@@ -701,7 +701,7 @@ lcscPrice?: number;
 
 所属库 UUID
 
-## Signature
+## 签名
 
 ```typescript
 libraryUuid: string;
@@ -711,13 +711,13 @@ libraryUuid: string;
 
 # ILIB\_DeviceSearchItem.manufacturer property
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 在 `otherProperty` 中替代
 
 制造商
 
-## Signature
+## 签名
 
 ```typescript
 manufacturer?: string;
@@ -727,13 +727,13 @@ manufacturer?: string;
 
 # ILIB\_DeviceSearchItem.manufacturerId property
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 在 `otherProperty` 中替代
 
 制造商编号
 
-## Signature
+## 签名
 
 ```typescript
 manufacturerId?: string;
@@ -745,7 +745,7 @@ manufacturerId?: string;
 
 关联 3D 模型
 
-## Signature
+## 签名
 
 ```typescript
 model3D?: {
@@ -759,13 +759,13 @@ model3D?: {
 
 # ILIB\_DeviceSearchItem.model3DName property
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 请使用 [model3D](./ILIB_DeviceSearchItem.md) 替代
 
 关联 3D 模型名称
 
-## Signature
+## 签名
 
 ```typescript
 model3DName?: string;
@@ -775,13 +775,13 @@ model3DName?: string;
 
 # ILIB\_DeviceSearchItem.model3DUuid property
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 请使用 [model3D](./ILIB_DeviceSearchItem.md) 替代
 
 关联 3D 模型 UUID
 
-## Signature
+## 签名
 
 ```typescript
 model3DUuid: string;
@@ -793,7 +793,7 @@ model3DUuid: string;
 
 器件名称
 
-## Signature
+## 签名
 
 ```typescript
 name: string;
@@ -805,7 +805,7 @@ name: string;
 
 排序
 
-## Signature
+## 签名
 
 ```typescript
 ordinal: number;
@@ -815,9 +815,9 @@ ordinal: number;
 
 # ILIB\_DeviceSearchItem.otherProperty property
 
-其它属性
+其它参数
 
-## Signature
+## 签名
 
 ```typescript
 otherProperty?: {
@@ -829,13 +829,13 @@ otherProperty?: {
 
 # ILIB\_DeviceSearchItem.supplier property
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 在 `otherProperty` 中替代
 
 供应商
 
-## Signature
+## 签名
 
 ```typescript
 supplier?: string;
@@ -845,13 +845,13 @@ supplier?: string;
 
 # ILIB\_DeviceSearchItem.supplierId property
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 在 `otherProperty` 中替代
 
 供应商编号
 
-## Signature
+## 签名
 
 ```typescript
 supplierId?: string;
@@ -863,7 +863,7 @@ supplierId?: string;
 
 关联符号
 
-## Signature
+## 签名
 
 ```typescript
 symbol: {
@@ -877,13 +877,13 @@ symbol: {
 
 # ILIB\_DeviceSearchItem.symbolName property
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 请使用 [symbol](./ILIB_DeviceSearchItem.md) 替代
 
 关联符号名称
 
-## Signature
+## 签名
 
 ```typescript
 symbolName: string;
@@ -893,13 +893,13 @@ symbolName: string;
 
 # ILIB\_DeviceSearchItem.symbolUuid property
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 请使用 [symbol](./ILIB_DeviceSearchItem.md) 替代
 
 关联符号 UUID
 
-## Signature
+## 签名
 
 ```typescript
 symbolUuid: string;
@@ -911,7 +911,7 @@ symbolUuid: string;
 
 器件 UUID
 
-## Signature
+## 签名
 
 ```typescript
 uuid: string;

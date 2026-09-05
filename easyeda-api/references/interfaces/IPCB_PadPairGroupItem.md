@@ -2,32 +2,32 @@
 
 焊盘对组属性
 
-## Signature
+## 签名
 
 ```typescript
 interface IPCB_PadPairGroupItem 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -81,7 +81,7 @@ Array&lt;\[string, string\]&gt;
 
 焊盘对组名称
 
-## Signature
+## 签名
 
 ```typescript
 name: string;
@@ -93,7 +93,7 @@ name: string;
 
 焊盘对数组
 
-## Signature
+## 签名
 
 ```typescript
 padPairs: Array<[string, string]>;

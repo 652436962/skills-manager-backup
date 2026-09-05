@@ -39,11 +39,6 @@ import { createConnection } from 'node:net';
 const PORT_START = 49620;
 const PORT_END = 49629;
 const SERVICE_ID = 'easyeda-bridge';
-const LISTEN_HOST = '127.0.0.1';
-
-function formatBannerLine(label, value) {
-  return `║  ${`${label}:`.padEnd(12)} ${String(value).padEnd(44)}║`;
-}
 
 // ─── State ──────────────────────────────────────────────────────────
 /** @type {Map<string, import('ws').WebSocket>} EDA window ID -> WebSocket */
@@ -454,16 +449,15 @@ async function start() {
 
     const port = await findAvailablePort();
 
-    httpServer.listen(port, LISTEN_HOST, () => {
+    httpServer.listen(port, () => {
       console.log(`
 ╔══════════════════════════════════════════════════════════════╗
 ║         EasyEDA WebSocket Bridge Server                      ║
 ╠══════════════════════════════════════════════════════════════╣
 ║                                                              ║
-${formatBannerLine('Port', port)}
-${formatBannerLine('Listen Host', `${LISTEN_HOST} (localhost only)`)}
-${formatBannerLine('Port Range', `${PORT_START}-${PORT_END}`)}
-${formatBannerLine('Service ID', SERVICE_ID)}
+║  Port:        ${port}                                          ║
+║  Port Range:  ${PORT_START}-${PORT_END}                                  ║
+║  Service ID:  ${SERVICE_ID}                              ║
 ║                                                              ║
 ║  HTTP API:    http://localhost:${port}                         ║
 ║  WS (EDA):   ws://localhost:${port}/eda                       ║

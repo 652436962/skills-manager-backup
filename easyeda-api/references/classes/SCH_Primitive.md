@@ -2,31 +2,31 @@
 
 原理图 &amp; 符号 / 图元类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SCH_Primitive 
 ```
 
-## Remarks
+## 备注
 
 图元的统一操作
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -84,27 +84,27 @@ Description
 
 获取指定 ID 的图元的所有属性
 
-## Signature
+## 签名
 
 ```typescript
 getPrimitiveByPrimitiveId(id: string): Promise<ISCH_Primitive | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -128,7 +128,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ISCH\_Primitive](../interfaces/ISCH_Primitive.md) \| undefined&gt;
 
@@ -138,11 +138,11 @@ Promise&lt;[ISCH\_Primitive](../interfaces/ISCH_Primitive.md) \| undefined&gt;
 
 # SCH\_Primitive.getPrimitivesBBox() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取图元的 BBox
 
-## Signature
+## 签名
 
 ```typescript
 getPrimitivesBBox(primitiveIds: Array<string | ISCH_Primitive>): Promise<{
@@ -153,21 +153,21 @@ getPrimitivesBBox(primitiveIds: Array<string | ISCH_Primitive>): Promise<{
     } | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -191,7 +191,7 @@ Array&lt;string \| [ISCH\_Primitive](../interfaces/ISCH_Primitive.md)<!-- -->&gt
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;{ minX: number; minY: number; maxX: number; maxY: number; } \| undefined&gt;
 
@@ -201,31 +201,31 @@ Promise&lt;{ minX: number; minY: number; maxX: number; maxY: number; } \| undefi
 
 # SCH\_Primitive.getPrimitiveTypeByPrimitiveId() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取指定 ID 的图元的图元类型
 
-## Signature
+## 签名
 
 ```typescript
 getPrimitiveTypeByPrimitiveId(id: string): Promise<ESCH_PrimitiveType | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -249,7 +249,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ESCH\_PrimitiveType](../enums/ESCH_PrimitiveType.md) \| undefined&gt;
 

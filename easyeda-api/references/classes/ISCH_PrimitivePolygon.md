@@ -2,31 +2,31 @@
 
 多边形（折线）图元
 
-## Signature
+## 签名
 
 ```typescript
 declare class ISCH_PrimitivePolygon implements ISCH_Primitive 
 ```
-**Implements:** [ISCH\_Primitive](../interfaces/ISCH_Primitive.md)
+**实现自：**[ISCH\_Primitive](../interfaces/ISCH_Primitive.md)
 
-## Remarks
+## 备注
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -278,18 +278,18 @@ Description
 
 # ISCH\_PrimitivePolygon.done() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将对图元的更改应用到画布
 
-## Signature
+## 签名
 
 ```typescript
 done(): ISCH_PrimitivePolygon;
 ```
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitivePolygon](./ISCH_PrimitivePolygon.md)
 
@@ -301,14 +301,14 @@ done(): ISCH_PrimitivePolygon;
 
 获取属性状态：颜色
 
-## Signature
+## 签名
 
 ```typescript
 getState_Color(): string | null;
 ```
 
 
-## Returns
+## 返回值
 
 string \| null
 
@@ -320,14 +320,14 @@ string \| null
 
 获取属性状态：填充颜色
 
-## Signature
+## 签名
 
 ```typescript
 getState_FillColor(): string | null;
 ```
 
 
-## Returns
+## 返回值
 
 string \| null
 
@@ -339,14 +339,14 @@ string \| null
 
 获取属性状态：坐标组
 
-## Signature
+## 签名
 
 ```typescript
 getState_Line(): Array<number>;
 ```
 
 
-## Returns
+## 返回值
 
 Array&lt;number&gt;
 
@@ -358,14 +358,14 @@ Array&lt;number&gt;
 
 获取属性状态：线型
 
-## Signature
+## 签名
 
 ```typescript
 getState_LineType(): ESCH_PrimitiveLineType | null;
 ```
 
 
-## Returns
+## 返回值
 
 [ESCH\_PrimitiveLineType](../enums/ESCH_PrimitiveLineType.md) \| null
 
@@ -377,14 +377,14 @@ getState_LineType(): ESCH_PrimitiveLineType | null;
 
 获取属性状态：线宽
 
-## Signature
+## 签名
 
 ```typescript
 getState_LineWidth(): number | null;
 ```
 
 
-## Returns
+## 返回值
 
 number \| null
 
@@ -396,14 +396,14 @@ number \| null
 
 获取属性状态：图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveId(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -415,14 +415,14 @@ string
 
 获取属性状态：图元类型
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveType(): ESCH_PrimitiveType;
 ```
 
 
-## Returns
+## 返回值
 
 [ESCH\_PrimitiveType](../enums/ESCH_PrimitiveType.md)
 
@@ -434,14 +434,14 @@ getState_PrimitiveType(): ESCH_PrimitiveType;
 
 查询图元是否为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 isAsync(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -451,18 +451,18 @@ boolean
 
 # ISCH\_PrimitivePolygon.reset() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将异步图元重置为当前画布状态
 
-## Signature
+## 签名
 
 ```typescript
 reset(): Promise<ISCH_PrimitivePolygon>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ISCH\_PrimitivePolygon](./ISCH_PrimitivePolygon.md)<!-- -->&gt;
 
@@ -472,31 +472,31 @@ Promise&lt;[ISCH\_PrimitivePolygon](./ISCH_PrimitivePolygon.md)<!-- -->&gt;
 
 # ISCH\_PrimitivePolygon.setState\_Color() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：颜色
 
-## Signature
+## 签名
 
 ```typescript
 setState_Color(color: string | null): ISCH_PrimitivePolygon;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -520,7 +520,7 @@ string \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitivePolygon](./ISCH_PrimitivePolygon.md)
 
@@ -530,31 +530,31 @@ string \| null
 
 # ISCH\_PrimitivePolygon.setState\_FillColor() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：填充颜色
 
-## Signature
+## 签名
 
 ```typescript
 setState_FillColor(fillColor: string | null): ISCH_PrimitivePolygon;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -578,7 +578,7 @@ string \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitivePolygon](./ISCH_PrimitivePolygon.md)
 
@@ -588,31 +588,31 @@ string \| null
 
 # ISCH\_PrimitivePolygon.setState\_Line() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：坐标组
 
-## Signature
+## 签名
 
 ```typescript
 setState_Line(line: Array<number>): ISCH_PrimitivePolygon;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -636,7 +636,7 @@ Array&lt;number&gt;
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitivePolygon](./ISCH_PrimitivePolygon.md)
 
@@ -646,31 +646,31 @@ Array&lt;number&gt;
 
 # ISCH\_PrimitivePolygon.setState\_LineType() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：线型
 
-## Signature
+## 签名
 
 ```typescript
 setState_LineType(lineType: ESCH_PrimitiveLineType | null): ISCH_PrimitivePolygon;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -694,7 +694,7 @@ lineType
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitivePolygon](./ISCH_PrimitivePolygon.md)
 
@@ -704,31 +704,31 @@ lineType
 
 # ISCH\_PrimitivePolygon.setState\_LineWidth() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：线宽
 
-## Signature
+## 签名
 
 ```typescript
 setState_LineWidth(lineWidth: number | null): ISCH_PrimitivePolygon;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -752,7 +752,7 @@ number \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitivePolygon](./ISCH_PrimitivePolygon.md)
 
@@ -764,14 +764,14 @@ number \| null
 
 将图元转换为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 toAsync(): ISCH_PrimitivePolygon;
 ```
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitivePolygon](./ISCH_PrimitivePolygon.md)
 
@@ -783,14 +783,14 @@ toAsync(): ISCH_PrimitivePolygon;
 
 将图元转换为同步图元
 
-## Signature
+## 签名
 
 ```typescript
 toSync(): ISCH_PrimitivePolygon;
 ```
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitivePolygon](./ISCH_PrimitivePolygon.md)
 

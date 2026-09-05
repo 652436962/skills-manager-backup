@@ -2,31 +2,31 @@
 
 二进制内嵌对象图元
 
-## Signature
+## 签名
 
 ```typescript
 declare class IPCB_PrimitiveObject implements IPCB_Primitive 
 ```
-**Implements:** [IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
+**实现自：**[IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
 
-## Remarks
+## 备注
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -418,18 +418,18 @@ Description
 
 # IPCB\_PrimitiveObject.done() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将对图元的更改应用到画布
 
-## Signature
+## 签名
 
 ```typescript
 done(): Promise<IPCB_PrimitiveObject>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)<!-- -->&gt;
 
@@ -441,14 +441,14 @@ Promise&lt;[IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)<!-- -->&gt;
 
 获取属性状态：二进制数据
 
-## Signature
+## 签名
 
 ```typescript
 getState_BinaryData(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -460,14 +460,14 @@ string
 
 获取属性状态：文件名
 
-## Signature
+## 签名
 
 ```typescript
 getState_FileName(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -479,14 +479,14 @@ string
 
 获取属性状态：高
 
-## Signature
+## 签名
 
 ```typescript
 getState_Height(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -498,14 +498,14 @@ number
 
 获取属性状态：层
 
-## Signature
+## 签名
 
 ```typescript
 getState_Layer(): TPCB_LayersOfObject | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 [TPCB\_LayersOfObject](../types/TPCB_LayersOfObject.md) \| undefined
 
@@ -517,14 +517,14 @@ getState_Layer(): TPCB_LayersOfObject | undefined;
 
 获取属性状态：是否水平镜像
 
-## Signature
+## 签名
 
 ```typescript
 getState_Mirror(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -536,14 +536,14 @@ boolean
 
 获取属性状态：图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveId(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -555,14 +555,14 @@ string
 
 获取属性状态：是否锁定
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveLock(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -574,14 +574,14 @@ boolean
 
 获取属性状态：图元类型
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveType(): EPCB_PrimitiveType;
 ```
 
 
-## Returns
+## 返回值
 
 [EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)
 
@@ -593,14 +593,14 @@ getState_PrimitiveType(): EPCB_PrimitiveType;
 
 获取属性状态：旋转角度
 
-## Signature
+## 签名
 
 ```typescript
 getState_Rotation(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -612,14 +612,14 @@ number
 
 获取属性状态：左上点 X
 
-## Signature
+## 签名
 
 ```typescript
 getState_TopLeftX(): number | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 number \| undefined
 
@@ -631,14 +631,14 @@ number \| undefined
 
 获取属性状态：左上点 Y
 
-## Signature
+## 签名
 
 ```typescript
 getState_TopLeftY(): number | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 number \| undefined
 
@@ -650,14 +650,14 @@ number \| undefined
 
 获取属性状态：宽
 
-## Signature
+## 签名
 
 ```typescript
 getState_Width(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -669,14 +669,14 @@ number
 
 查询图元是否为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 isAsync(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -686,18 +686,18 @@ boolean
 
 # IPCB\_PrimitiveObject.reset() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将异步图元重置为当前画布状态
 
-## Signature
+## 签名
 
 ```typescript
 reset(): Promise<IPCB_PrimitiveObject>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)<!-- -->&gt;
 
@@ -709,27 +709,27 @@ Promise&lt;[IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)<!-- -->&gt;
 
 设置属性状态：二进制数据
 
-## Signature
+## 签名
 
 ```typescript
 setState_BinaryData(binaryData: string): IPCB_PrimitiveObject;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -753,7 +753,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 
@@ -765,27 +765,27 @@ string
 
 设置属性状态：文件名
 
-## Signature
+## 签名
 
 ```typescript
 setState_FileName(fileName: string): IPCB_PrimitiveObject;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -809,7 +809,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 
@@ -821,27 +821,27 @@ string
 
 设置属性状态：高
 
-## Signature
+## 签名
 
 ```typescript
 setState_Height(height: number): IPCB_PrimitiveObject;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -865,7 +865,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 
@@ -875,31 +875,31 @@ number
 
 # IPCB\_PrimitiveObject.setState\_Layer() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：层
 
-## Signature
+## 签名
 
 ```typescript
 setState_Layer(layer: TPCB_LayersOfObject): IPCB_PrimitiveObject;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -923,7 +923,7 @@ layer
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 
@@ -935,27 +935,27 @@ layer
 
 设置属性状态：是否水平镜像
 
-## Signature
+## 签名
 
 ```typescript
 setState_Mirror(mirror: boolean): IPCB_PrimitiveObject;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -979,7 +979,7 @@ boolean
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 
@@ -989,31 +989,31 @@ boolean
 
 # IPCB\_PrimitiveObject.setState\_PrimitiveLock() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：是否锁定
 
-## Signature
+## 签名
 
 ```typescript
 setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitiveObject;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1037,7 +1037,7 @@ boolean
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 
@@ -1049,27 +1049,27 @@ boolean
 
 设置属性状态：旋转角度
 
-## Signature
+## 签名
 
 ```typescript
 setState_Rotation(rotation: number): IPCB_PrimitiveObject;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1093,7 +1093,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 
@@ -1105,27 +1105,27 @@ number
 
 设置属性状态：左上点 X
 
-## Signature
+## 签名
 
 ```typescript
 setState_TopLeftX(topLeftX: number): IPCB_PrimitiveObject;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1149,7 +1149,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 
@@ -1161,27 +1161,27 @@ number
 
 设置属性状态：左上点 Y
 
-## Signature
+## 签名
 
 ```typescript
 setState_TopLeftY(topLeftY: number): IPCB_PrimitiveObject;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1205,7 +1205,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 
@@ -1217,27 +1217,27 @@ number
 
 设置属性状态：宽
 
-## Signature
+## 签名
 
 ```typescript
 setState_Width(width: number): IPCB_PrimitiveObject;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1261,7 +1261,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 
@@ -1273,14 +1273,14 @@ number
 
 将图元转换为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 toAsync(): IPCB_PrimitiveObject;
 ```
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 
@@ -1292,14 +1292,14 @@ toAsync(): IPCB_PrimitiveObject;
 
 将图元转换为同步图元
 
-## Signature
+## 签名
 
 ```typescript
 toSync(): IPCB_PrimitiveObject;
 ```
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveObject](./IPCB_PrimitiveObject.md)
 

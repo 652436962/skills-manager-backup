@@ -2,31 +2,31 @@
 
 文档树 / 面板管理类
 
-## Signature
+## 签名
 
 ```typescript
 declare class DMT_Panel 
 ```
 
-## Remarks
+## 备注
 
 在当前打开的工程内进行面板管理的相关操作
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -140,27 +140,27 @@ Description
 
 复制面板
 
-## Signature
+## 签名
 
 ```typescript
 copyPanel(panelUuid: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -184,7 +184,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -194,18 +194,18 @@ Promise&lt;string \| undefined&gt;
 
 # DMT\_Panel.createPanel() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 创建面板
 
-## Signature
+## 签名
 
 ```typescript
 createPanel(): Promise<string | undefined>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -217,27 +217,27 @@ Promise&lt;string \| undefined&gt;
 
 删除面板
 
-## Signature
+## 签名
 
 ```typescript
 deletePanel(panelUuid: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -261,7 +261,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -273,14 +273,14 @@ Promise&lt;boolean&gt;
 
 获取工程内所有面板的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getAllPanelsInfo(): Promise<Array<IDMT_PanelItem>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IDMT\_PanelItem](../interfaces/IDMT_PanelItem.md)<!-- -->&gt;&gt;
 
@@ -292,20 +292,20 @@ Promise&lt;Array&lt;[IDMT\_PanelItem](../interfaces/IDMT_PanelItem.md)<!-- -->&g
 
 获取当前面板的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getCurrentPanelInfo(): Promise<IDMT_PanelItem | undefined>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IDMT\_PanelItem](../interfaces/IDMT_PanelItem.md) \| undefined&gt;
 
 面板的详细属性，如若为 `undefined` 则获取失败
 
-## Remarks
+## 备注
 
 将会获取当前打开且拥有最后输入焦点的面板的详细属性
 
@@ -315,27 +315,27 @@ Promise&lt;[IDMT\_PanelItem](../interfaces/IDMT_PanelItem.md) \| undefined&gt;
 
 获取面板的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getPanelInfo(panelUuid: string): Promise<IDMT_PanelItem | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -359,7 +359,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IDMT\_PanelItem](../interfaces/IDMT_PanelItem.md) \| undefined&gt;
 
@@ -371,27 +371,27 @@ Promise&lt;[IDMT\_PanelItem](../interfaces/IDMT_PanelItem.md) \| undefined&gt;
 
 修改面板名称
 
-## Signature
+## 签名
 
 ```typescript
 modifyPanelName(panelUuid: string, panelName: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -431,7 +431,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 

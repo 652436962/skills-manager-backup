@@ -2,27 +2,27 @@
 
 导入工程板边框来源
 
-## Signature
+## 签名
 
 ```typescript
 declare enum ESYS_ImportProjectBoardOutlineSource 
 ```
 
-## Enumeration Members
+## 枚举成员
 
 <table><thead><tr><th>
 
-Member
+成员
 
 
 </th><th>
 
-Value
+值
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -60,6 +60,6 @@ FROM\_MECHANICAL\_LAYER\_1
 </td></tr>
 </tbody></table>
 
-## Remarks
+## 备注
 
 仅 `fileType` 为 `Altium Designer` 或 `Protel` 时才可以指定该属性，否则将被忽略

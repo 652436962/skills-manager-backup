@@ -2,7 +2,7 @@
 
 扩展用户 API 接口
 
-## Signature
+## 签名
 
 ```typescript
 eda: EDA
@@ -16,7 +16,7 @@ eda: EDA
 
 # EDA.dmt\_Board property
 
-## Signature
+## 签名
 
 ```typescript
 dmt_Board: DMT_Board;
@@ -26,7 +26,7 @@ dmt_Board: DMT_Board;
 
 # EDA.dmt\_EditorControl property
 
-## Signature
+## 签名
 
 ```typescript
 dmt_EditorControl: DMT_EditorControl;
@@ -36,7 +36,7 @@ dmt_EditorControl: DMT_EditorControl;
 
 # EDA.dmt\_Folder property
 
-## Signature
+## 签名
 
 ```typescript
 dmt_Folder: DMT_Folder;
@@ -46,7 +46,7 @@ dmt_Folder: DMT_Folder;
 
 # EDA.dmt\_Panel property
 
-## Signature
+## 签名
 
 ```typescript
 dmt_Panel: DMT_Panel;
@@ -56,7 +56,7 @@ dmt_Panel: DMT_Panel;
 
 # EDA.dmt\_Pcb property
 
-## Signature
+## 签名
 
 ```typescript
 dmt_Pcb: DMT_Pcb;
@@ -66,7 +66,7 @@ dmt_Pcb: DMT_Pcb;
 
 # EDA.dmt\_Project property
 
-## Signature
+## 签名
 
 ```typescript
 dmt_Project: DMT_Project;
@@ -76,7 +76,7 @@ dmt_Project: DMT_Project;
 
 # EDA.dmt\_Schematic property
 
-## Signature
+## 签名
 
 ```typescript
 dmt_Schematic: DMT_Schematic;
@@ -86,7 +86,7 @@ dmt_Schematic: DMT_Schematic;
 
 # EDA.dmt\_SelectControl property
 
-## Signature
+## 签名
 
 ```typescript
 dmt_SelectControl: DMT_SelectControl;
@@ -96,7 +96,7 @@ dmt_SelectControl: DMT_SelectControl;
 
 # EDA.dmt\_Team property
 
-## Signature
+## 签名
 
 ```typescript
 dmt_Team: DMT_Team;
@@ -106,7 +106,7 @@ dmt_Team: DMT_Team;
 
 # EDA.dmt\_Workspace property
 
-## Signature
+## 签名
 
 ```typescript
 dmt_Workspace: DMT_Workspace;
@@ -116,7 +116,7 @@ dmt_Workspace: DMT_Workspace;
 
 # EDA.lib\_3DModel property
 
-## Signature
+## 签名
 
 ```typescript
 lib_3DModel: LIB_3DModel;
@@ -126,7 +126,7 @@ lib_3DModel: LIB_3DModel;
 
 # EDA.lib\_Cbb property
 
-## Signature
+## 签名
 
 ```typescript
 lib_Cbb: LIB_Cbb;
@@ -136,7 +136,7 @@ lib_Cbb: LIB_Cbb;
 
 # EDA.lib\_Classification property
 
-## Signature
+## 签名
 
 ```typescript
 lib_Classification: LIB_Classification;
@@ -146,7 +146,7 @@ lib_Classification: LIB_Classification;
 
 # EDA.lib\_Device property
 
-## Signature
+## 签名
 
 ```typescript
 lib_Device: LIB_Device;
@@ -156,7 +156,7 @@ lib_Device: LIB_Device;
 
 # EDA.lib\_Footprint property
 
-## Signature
+## 签名
 
 ```typescript
 lib_Footprint: LIB_Footprint;
@@ -166,7 +166,7 @@ lib_Footprint: LIB_Footprint;
 
 # EDA.lib\_LibrariesList property
 
-## Signature
+## 签名
 
 ```typescript
 lib_LibrariesList: LIB_LibrariesList;
@@ -176,7 +176,7 @@ lib_LibrariesList: LIB_LibrariesList;
 
 # EDA.lib\_PanelLibrary property
 
-## Signature
+## 签名
 
 ```typescript
 lib_PanelLibrary: LIB_PanelLibrary;
@@ -186,7 +186,7 @@ lib_PanelLibrary: LIB_PanelLibrary;
 
 # EDA.lib\_SelectControl property
 
-## Signature
+## 签名
 
 ```typescript
 lib_SelectControl: LIB_SelectControl;
@@ -196,7 +196,7 @@ lib_SelectControl: LIB_SelectControl;
 
 # EDA.lib\_Symbol property
 
-## Signature
+## 签名
 
 ```typescript
 lib_Symbol: LIB_Symbol;
@@ -206,7 +206,7 @@ lib_Symbol: LIB_Symbol;
 
 # EDA.pcb\_Document property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_Document: PCB_Document;
@@ -216,7 +216,7 @@ pcb_Document: PCB_Document;
 
 # EDA.pcb\_Drc property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_Drc: PCB_Drc;
@@ -226,7 +226,7 @@ pcb_Drc: PCB_Drc;
 
 # EDA.pcb\_Event property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_Event: PCB_Event;
@@ -236,7 +236,7 @@ pcb_Event: PCB_Event;
 
 # EDA.pcb\_Layer property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_Layer: PCB_Layer;
@@ -246,7 +246,7 @@ pcb_Layer: PCB_Layer;
 
 # EDA.pcb\_ManufactureData property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_ManufactureData: PCB_ManufactureData;
@@ -256,7 +256,7 @@ pcb_ManufactureData: PCB_ManufactureData;
 
 # EDA.pcb\_MathPolygon property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_MathPolygon: PCB_MathPolygon;
@@ -266,7 +266,7 @@ pcb_MathPolygon: PCB_MathPolygon;
 
 # EDA.pcb\_Net property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_Net: PCB_Net;
@@ -276,7 +276,7 @@ pcb_Net: PCB_Net;
 
 # EDA.pcb\_Primitive property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_Primitive: PCB_Primitive;
@@ -286,7 +286,7 @@ pcb_Primitive: PCB_Primitive;
 
 # EDA.pcb\_PrimitiveArc property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_PrimitiveArc: PCB_PrimitiveArc;
@@ -296,7 +296,7 @@ pcb_PrimitiveArc: PCB_PrimitiveArc;
 
 # EDA.pcb\_PrimitiveAttribute property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_PrimitiveAttribute: PCB_PrimitiveAttribute;
@@ -306,7 +306,7 @@ pcb_PrimitiveAttribute: PCB_PrimitiveAttribute;
 
 # EDA.pcb\_PrimitiveComponent property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_PrimitiveComponent: PCB_PrimitiveComponent;
@@ -316,7 +316,7 @@ pcb_PrimitiveComponent: PCB_PrimitiveComponent;
 
 # EDA.pcb\_PrimitiveDimension property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_PrimitiveDimension: PCB_PrimitiveDimension;
@@ -326,7 +326,7 @@ pcb_PrimitiveDimension: PCB_PrimitiveDimension;
 
 # EDA.pcb\_PrimitiveFill property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_PrimitiveFill: PCB_PrimitiveFill;
@@ -336,7 +336,7 @@ pcb_PrimitiveFill: PCB_PrimitiveFill;
 
 # EDA.pcb\_PrimitiveImage property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_PrimitiveImage: PCB_PrimitiveImage;
@@ -346,7 +346,7 @@ pcb_PrimitiveImage: PCB_PrimitiveImage;
 
 # EDA.pcb\_PrimitiveLine property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_PrimitiveLine: PCB_PrimitiveLine;
@@ -356,7 +356,7 @@ pcb_PrimitiveLine: PCB_PrimitiveLine;
 
 # EDA.pcb\_PrimitiveObject property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_PrimitiveObject: PCB_PrimitiveObject;
@@ -366,7 +366,7 @@ pcb_PrimitiveObject: PCB_PrimitiveObject;
 
 # EDA.pcb\_PrimitivePad property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_PrimitivePad: PCB_PrimitivePad;
@@ -376,7 +376,7 @@ pcb_PrimitivePad: PCB_PrimitivePad;
 
 # EDA.pcb\_PrimitivePolyline property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_PrimitivePolyline: PCB_PrimitivePolyline;
@@ -386,7 +386,7 @@ pcb_PrimitivePolyline: PCB_PrimitivePolyline;
 
 # EDA.pcb\_PrimitivePour property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_PrimitivePour: PCB_PrimitivePour;
@@ -396,7 +396,7 @@ pcb_PrimitivePour: PCB_PrimitivePour;
 
 # EDA.pcb\_PrimitivePoured property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_PrimitivePoured: PCB_PrimitivePoured;
@@ -406,7 +406,7 @@ pcb_PrimitivePoured: PCB_PrimitivePoured;
 
 # EDA.pcb\_PrimitiveRegion property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_PrimitiveRegion: PCB_PrimitiveRegion;
@@ -416,7 +416,7 @@ pcb_PrimitiveRegion: PCB_PrimitiveRegion;
 
 # EDA.pcb\_PrimitiveString property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_PrimitiveString: PCB_PrimitiveString;
@@ -426,27 +426,17 @@ pcb_PrimitiveString: PCB_PrimitiveString;
 
 # EDA.pcb\_PrimitiveVia property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_PrimitiveVia: PCB_PrimitiveVia;
-```
-
-### pcb_raytracerengine
-
-# EDA.pcb\_RayTracerEngine property
-
-## Signature
-
-```typescript
-pcb_RayTracerEngine: PCB_RayTracerEngine;
 ```
 
 ### pcb_selectcontrol
 
 # EDA.pcb\_SelectControl property
 
-## Signature
+## 签名
 
 ```typescript
 pcb_SelectControl: PCB_SelectControl;
@@ -456,7 +446,7 @@ pcb_SelectControl: PCB_SelectControl;
 
 # EDA.pnl\_Document property
 
-## Signature
+## 签名
 
 ```typescript
 pnl_Document: PNL_Document;
@@ -466,7 +456,7 @@ pnl_Document: PNL_Document;
 
 # EDA.sch\_Document property
 
-## Signature
+## 签名
 
 ```typescript
 sch_Document: SCH_Document;
@@ -476,7 +466,7 @@ sch_Document: SCH_Document;
 
 # EDA.sch\_Drc property
 
-## Signature
+## 签名
 
 ```typescript
 sch_Drc: SCH_Drc;
@@ -486,7 +476,7 @@ sch_Drc: SCH_Drc;
 
 # EDA.sch\_Event property
 
-## Signature
+## 签名
 
 ```typescript
 sch_Event: SCH_Event;
@@ -496,27 +486,17 @@ sch_Event: SCH_Event;
 
 # EDA.sch\_ManufactureData property
 
-## Signature
+## 签名
 
 ```typescript
 sch_ManufactureData: SCH_ManufactureData;
-```
-
-### sch_net
-
-# EDA.sch\_Net property
-
-## Signature
-
-```typescript
-sch_Net: SCH_Net;
 ```
 
 ### sch_netlist
 
 # EDA.sch\_Netlist property
 
-## Signature
+## 签名
 
 ```typescript
 sch_Netlist: SCH_Netlist;
@@ -526,7 +506,7 @@ sch_Netlist: SCH_Netlist;
 
 # EDA.sch\_Primitive property
 
-## Signature
+## 签名
 
 ```typescript
 sch_Primitive: SCH_Primitive;
@@ -536,7 +516,7 @@ sch_Primitive: SCH_Primitive;
 
 # EDA.sch\_PrimitiveArc property
 
-## Signature
+## 签名
 
 ```typescript
 sch_PrimitiveArc: SCH_PrimitiveArc;
@@ -546,7 +526,7 @@ sch_PrimitiveArc: SCH_PrimitiveArc;
 
 # EDA.sch\_PrimitiveAttribute property
 
-## Signature
+## 签名
 
 ```typescript
 sch_PrimitiveAttribute: SCH_PrimitiveAttribute;
@@ -556,7 +536,7 @@ sch_PrimitiveAttribute: SCH_PrimitiveAttribute;
 
 # EDA.sch\_PrimitiveBus property
 
-## Signature
+## 签名
 
 ```typescript
 sch_PrimitiveBus: SCH_PrimitiveBus;
@@ -566,7 +546,7 @@ sch_PrimitiveBus: SCH_PrimitiveBus;
 
 # EDA.sch\_PrimitiveCircle property
 
-## Signature
+## 签名
 
 ```typescript
 sch_PrimitiveCircle: SCH_PrimitiveCircle;
@@ -576,27 +556,17 @@ sch_PrimitiveCircle: SCH_PrimitiveCircle;
 
 # EDA.sch\_PrimitiveComponent property
 
-## Signature
+## 签名
 
 ```typescript
 sch_PrimitiveComponent: SCH_PrimitiveComponent | SCH_PrimitiveComponent3;
-```
-
-### sch_primitiveobject
-
-# EDA.sch\_PrimitiveObject property
-
-## Signature
-
-```typescript
-sch_PrimitiveObject: SCH_PrimitiveObject;
 ```
 
 ### sch_primitivepin
 
 # EDA.sch\_PrimitivePin property
 
-## Signature
+## 签名
 
 ```typescript
 sch_PrimitivePin: SCH_PrimitivePin;
@@ -606,7 +576,7 @@ sch_PrimitivePin: SCH_PrimitivePin;
 
 # EDA.sch\_PrimitivePolygon property
 
-## Signature
+## 签名
 
 ```typescript
 sch_PrimitivePolygon: SCH_PrimitivePolygon;
@@ -616,7 +586,7 @@ sch_PrimitivePolygon: SCH_PrimitivePolygon;
 
 # EDA.sch\_PrimitiveRectangle property
 
-## Signature
+## 签名
 
 ```typescript
 sch_PrimitiveRectangle: SCH_PrimitiveRectangle;
@@ -626,7 +596,7 @@ sch_PrimitiveRectangle: SCH_PrimitiveRectangle;
 
 # EDA.sch\_PrimitiveText property
 
-## Signature
+## 签名
 
 ```typescript
 sch_PrimitiveText: SCH_PrimitiveText;
@@ -636,7 +606,7 @@ sch_PrimitiveText: SCH_PrimitiveText;
 
 # EDA.sch\_PrimitiveWire property
 
-## Signature
+## 签名
 
 ```typescript
 sch_PrimitiveWire: SCH_PrimitiveWire;
@@ -646,7 +616,7 @@ sch_PrimitiveWire: SCH_PrimitiveWire;
 
 # EDA.sch\_SelectControl property
 
-## Signature
+## 签名
 
 ```typescript
 sch_SelectControl: SCH_SelectControl;
@@ -656,7 +626,7 @@ sch_SelectControl: SCH_SelectControl;
 
 # EDA.sch\_SimulationEngine property
 
-## Signature
+## 签名
 
 ```typescript
 sch_SimulationEngine: SCH_SimulationEngine;
@@ -666,7 +636,7 @@ sch_SimulationEngine: SCH_SimulationEngine;
 
 # EDA.sch\_Utils property
 
-## Signature
+## 签名
 
 ```typescript
 sch_Utils: SCH_Utils;
@@ -676,7 +646,7 @@ sch_Utils: SCH_Utils;
 
 # EDA.sys\_ClientUrl property
 
-## Signature
+## 签名
 
 ```typescript
 sys_ClientUrl: SYS_ClientUrl;
@@ -686,7 +656,7 @@ sys_ClientUrl: SYS_ClientUrl;
 
 # EDA.sys\_Dialog property
 
-## Signature
+## 签名
 
 ```typescript
 sys_Dialog: SYS_Dialog;
@@ -696,7 +666,7 @@ sys_Dialog: SYS_Dialog;
 
 # EDA.sys\_Environment property
 
-## Signature
+## 签名
 
 ```typescript
 sys_Environment: SYS_Environment;
@@ -706,7 +676,7 @@ sys_Environment: SYS_Environment;
 
 # EDA.sys\_FileManager property
 
-## Signature
+## 签名
 
 ```typescript
 sys_FileManager: SYS_FileManager;
@@ -716,7 +686,7 @@ sys_FileManager: SYS_FileManager;
 
 # EDA.sys\_FileSystem property
 
-## Signature
+## 签名
 
 ```typescript
 sys_FileSystem: SYS_FileSystem;
@@ -726,7 +696,7 @@ sys_FileSystem: SYS_FileSystem;
 
 # EDA.sys\_FontManager property
 
-## Signature
+## 签名
 
 ```typescript
 sys_FontManager: SYS_FontManager;
@@ -736,7 +706,7 @@ sys_FontManager: SYS_FontManager;
 
 # EDA.sys\_FormatConversion property
 
-## Signature
+## 签名
 
 ```typescript
 sys_FormatConversion: SYS_FormatConversion;
@@ -746,7 +716,7 @@ sys_FormatConversion: SYS_FormatConversion;
 
 # EDA.sys\_HeaderMenu property
 
-## Signature
+## 签名
 
 ```typescript
 sys_HeaderMenu: SYS_HeaderMenu;
@@ -756,7 +726,7 @@ sys_HeaderMenu: SYS_HeaderMenu;
 
 # EDA.sys\_I18n property
 
-## Signature
+## 签名
 
 ```typescript
 sys_I18n: SYS_I18n;
@@ -766,7 +736,7 @@ sys_I18n: SYS_I18n;
 
 # EDA.sys\_IFrame property
 
-## Signature
+## 签名
 
 ```typescript
 sys_IFrame: SYS_IFrame;
@@ -776,7 +746,7 @@ sys_IFrame: SYS_IFrame;
 
 # EDA.sys\_LoadingAndProgressBar property
 
-## Signature
+## 签名
 
 ```typescript
 sys_LoadingAndProgressBar: SYS_LoadingAndProgressBar;
@@ -786,7 +756,7 @@ sys_LoadingAndProgressBar: SYS_LoadingAndProgressBar;
 
 # EDA.sys\_Log property
 
-## Signature
+## 签名
 
 ```typescript
 sys_Log: SYS_Log;
@@ -796,7 +766,7 @@ sys_Log: SYS_Log;
 
 # EDA.sys\_Message property
 
-## Signature
+## 签名
 
 ```typescript
 sys_Message: SYS_Message;
@@ -806,7 +776,7 @@ sys_Message: SYS_Message;
 
 # EDA.sys\_MessageBox property
 
-## Signature
+## 签名
 
 ```typescript
 sys_MessageBox: SYS_MessageBox;
@@ -816,7 +786,7 @@ sys_MessageBox: SYS_MessageBox;
 
 # EDA.sys\_MessageBus property
 
-## Signature
+## 签名
 
 ```typescript
 sys_MessageBus: SYS_MessageBus;
@@ -826,7 +796,7 @@ sys_MessageBus: SYS_MessageBus;
 
 # EDA.sys\_PanelControl property
 
-## Signature
+## 签名
 
 ```typescript
 sys_PanelControl: SYS_PanelControl;
@@ -836,7 +806,7 @@ sys_PanelControl: SYS_PanelControl;
 
 # EDA.sys\_RightClickMenu property
 
-## Signature
+## 签名
 
 ```typescript
 sys_RightClickMenu: SYS_RightClickMenu;
@@ -846,7 +816,7 @@ sys_RightClickMenu: SYS_RightClickMenu;
 
 # EDA.sys\_Setting property
 
-## Signature
+## 签名
 
 ```typescript
 sys_Setting: SYS_Setting;
@@ -856,7 +826,7 @@ sys_Setting: SYS_Setting;
 
 # EDA.sys\_ShortcutKey property
 
-## Signature
+## 签名
 
 ```typescript
 sys_ShortcutKey: SYS_ShortcutKey;
@@ -866,7 +836,7 @@ sys_ShortcutKey: SYS_ShortcutKey;
 
 # EDA.sys\_Storage property
 
-## Signature
+## 签名
 
 ```typescript
 sys_Storage: SYS_Storage;
@@ -876,7 +846,7 @@ sys_Storage: SYS_Storage;
 
 # EDA.sys\_Timer property
 
-## Signature
+## 签名
 
 ```typescript
 sys_Timer: SYS_Timer;
@@ -886,7 +856,7 @@ sys_Timer: SYS_Timer;
 
 # EDA.sys\_ToastMessage property
 
-## Signature
+## 签名
 
 ```typescript
 sys_ToastMessage: SYS_ToastMessage;
@@ -896,7 +866,7 @@ sys_ToastMessage: SYS_ToastMessage;
 
 # EDA.sys\_Tool property
 
-## Signature
+## 签名
 
 ```typescript
 sys_Tool: SYS_Tool;
@@ -906,7 +876,7 @@ sys_Tool: SYS_Tool;
 
 # EDA.sys\_Unit property
 
-## Signature
+## 签名
 
 ```typescript
 sys_Unit: SYS_Unit;
@@ -916,7 +886,7 @@ sys_Unit: SYS_Unit;
 
 # EDA.sys\_WebSocket property
 
-## Signature
+## 签名
 
 ```typescript
 sys_WebSocket: SYS_WebSocket;
@@ -926,7 +896,7 @@ sys_WebSocket: SYS_WebSocket;
 
 # EDA.sys\_Window property
 
-## Signature
+## 签名
 
 ```typescript
 sys_Window: SYS_Window;

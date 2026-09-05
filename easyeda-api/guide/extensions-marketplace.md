@@ -1,56 +1,56 @@
-# Extensions Marketplace
+# 扩展广场
 
-EasyEDA Extensions Marketplace is under developing, you can refer China site [https://ext.lceda.cn](https://ext.lceda.cn),, which is a professional platform for users to download and share extensions.
+嘉立创 EDA 扩展广场（[https://ext.lceda.cn/](https://ext.lceda.cn/)）已正式上线，这是一个为用户提供扩展下载与分享服务的专业平台。
 
-If you want to learn how to develop extensions, please refer to the [how-to-start](./how-to-start), which describes in detail how to install the development environment and build your own EasyEDA Pro extension from scratch.
+如果你希望学习如何开发扩展，请参阅 [如何开始](./how-to-start) 章节，这里详细地描述了如何从零开始安装开发环境并构建属于您的嘉立创 EDA 专业版扩展组件。
 
-## Publishing Your Extension
+## 发布你的扩展
 
-When you have fully verified the functionality of the extension you have developed and wish to share it with other users, please visit the [EasyEDA Extensions Marketplace](https://ext.easyeda.com/) and click the **Extension Management** button in the upper right corner:
+当你已经完整验证你开发的扩展的功能，并希望将其分享给其它用户时，请访问 [嘉立创 EDA 扩展广场](https://ext.lceda.cn)，然后点击右上角的 **扩展管理** 按钮：
 
-![](/storage/images/cn/api/guide/how-to-publish/how-to-publish_20250428_112144.jpg)
+![图 0](/storage/images/cn/api/guide/how-to-publish/how-to-publish_20250428_112144.jpg)
 
-Enter the extension management page, which supports uploading, publishing and versioning of extensions.
+进入扩展管理页面，该页面支持扩展的上传、发布及版本管理等功能。
 
-Click the **Extension Upload** button to upload your first extension that meets the following requirements:
+点击 **扩展上传** 按钮即可上传您的第一个扩展，上传的扩展需满足以下要求：
 
-1. The extension `extension.json` should contain the following attributes: `name`, `uuid`, `displayName`, `description`, `version`, and `license`;
-2. select and fill in at least one or more of the required extension types (`categories`);
-3. the extension must provide a custom icon and must not use the default `logo` provided in the SDK, the recommended icon size ratio is `1:1`, the format must be PNG or JPEG, the content must be clear without risk of infringement, and the file size must not exceed `5 MiB`;
-4. make sure that the entry file (`entry`) of the extension exists and is valid;
-5. the value of the `name` attribute must not be duplicated across extensions with different `uuid`;
-6. include a detailed description of the extension's functionality and usage in the `README.md` file;
-7. if necessary, keep an change log for the extension in the `CHANGELOG.md` file;
-8. the extension **DOESN'T** contain private information, such as your phone numbers.
+1. 扩展 `extension.json` 应包含以下属性项：名称（`name`）、唯一标识符（`uuid`）、显示名称（`displayName`）、描述（`description`）、版本（`version`）以及许可证信息（`license`）；
+2. 至少选择并填写一个或多个符合要求的扩展类型（`categories`）。
+3. 扩展需提供自定义图标，不得使用 SDK 中提供的默认 `logo`。推荐图标尺寸比例为 `1:1`，格式须为 PNG 或 JPEG，内容需清晰且无侵权风险，文件大小不得超过 `5 MiB`；
+4. 确保扩展的入口文件（`entry`）存在且有效；
+5. 不同扩展（具有不同 `uuid`）的 `name` 属性值不得重复；
+6. 在 `README.md` 文件中详细说明扩展的功能及使用方法；
+7. 如有必要的话，请在 `CHANGELOG.md` 文件中记录扩展的更新日志；
+8. 扩展中 **禁止** 包含个人隐私信息，例如电话号码等。
 
-Select your compiled `.eext` file in the upload pop-up window and upload it. The first uploaded extension will automatically create a namespace into which all subsequent uploads of the extension (identified by `uuid`) will be grouped.
+在上传弹窗中选择你编译完成的 `.eext` 文件并上传，首次上传的扩展将会自动创建一个命名空间，后续上传的该扩展（以 `uuid` 识别）的其他版本都将归入该命名空间。
 
-You can view the extension's name, description, version, install count, updated time, and other information on the namespace cover:
+您可以在命名空间的封面查看扩展的名称、描述、版本、安装量、更新时间等信息：
 
-![](/storage/images/cn/api/guide/how-to-publish/how-to-publish_20250428_135832.jpg)
+![图 2](/storage/images/cn/api/guide/extensions-marketplace/extensions-marketplace_20250523_093529.jpg)
 
-After the extension is uploaded, it will automatically enter the review process. After approval, it will be listed in the marketplace:
+上传扩展后会自动进入审核流程，审核通过后将上架到扩展广场:
 
-![](/storage/images/cn/api/guide/extensions-marketplace/extensions-marketplace_20250523_093133.jpg)
+![图 1](/storage/images/cn/api/guide/extensions-marketplace/extensions-marketplace_20250523_093133.jpg)
 
-After waiting for the review to complete, the review status will change to **Passed**. If there is a case that the review is not passed, please check the reason in the message notification in time and check the non-compliant content in the extension:
+等待审核完成后，审核状态将变为 **已通过**。如果出现审核不通过的情况，请及时查看信息通知中的原因，并检查扩展中不符合要求的内容：
 
-![](/storage/images/cn/api/guide/how-to-publish/how-to-publish_20250428_140419.jpg)
+![图 3](/storage/images/cn/api/guide/how-to-publish/how-to-publish_20250428_140419.jpg)
 
-After approval, other users will be able to view your extension details and download the uploaded version:
+审核通过后，其他用户将能够查看您的扩展详情并下载已上传的版本：
 
-![](/storage/images/cn/api/guide/how-to-publish/how-to-publish_20250428_140709.jpg)
+![图 4](/storage/images/cn/api/guide/how-to-publish/how-to-publish_20250428_140709.jpg)
 
-You can view the extension's detail page, where the `README.md` and `CHANGELOG.md` contents of the extension file will be displayed:
+您可以查看扩展的详情页面，其中扩展文件中的 `README.md` 和 `CHANGELOG.md` 内容将在此展示：
 
-![](/storage/images/cn/api/guide/how-to-publish/how-to-publish_20250428_141157.jpg)
+![图 5](/storage/images/cn/api/guide/how-to-publish/how-to-publish_20250428_141157.jpg)
 
-All published versions of the extension are listed in the history:
+历史版本中会列出所有已发布的扩展版本：
 
-![](/storage/images/cn/api/guide/how-to-publish/how-to-publish_20250428_141328.jpg)
+![图 6](/storage/images/cn/api/guide/how-to-publish/how-to-publish_20250428_141328.jpg)
 
-You can leave ratings and reviews of the extension in the comments section:
+您可以在评论区留下对扩展的评分和评价：
 
-![](/storage/images/cn/api/guide/how-to-publish/how-to-publish_20250428_141456.jpg)
+![图 7](/storage/images/cn/api/guide/how-to-publish/how-to-publish_20250428_141456.jpg)
 
-You can also downgrade the namespace of an extension at any time on the extension management page. This does not affect the status of uploaded versions, and you can also individually unpublish a specific version in the versioning management.
+您还可以在扩展管理页面随时下架扩展的命名空间，此操作不会影响已上传版本的状态。同时，您也可以在版本管理中单独取消发布某个特定版本。

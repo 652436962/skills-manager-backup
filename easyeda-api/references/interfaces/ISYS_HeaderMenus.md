@@ -2,32 +2,32 @@
 
 顶部菜单项
 
-## Signature
+## 签名
 
 ```typescript
 interface ISYS_HeaderMenus 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -46,7 +46,7 @@ Array&lt;[ISYS\_HeaderMenuTopMenuItem](./ISYS_HeaderMenuTopMenuItem.md)<!-- -->&
 
 </td><td>
 
-_(Optional)_ 空白页
+_（可选）_ 空白页
 
 
 </td></tr>
@@ -65,7 +65,7 @@ Array&lt;[ISYS\_HeaderMenuTopMenuItem](./ISYS_HeaderMenuTopMenuItem.md)<!-- -->&
 
 </td><td>
 
-_(Optional)_ 封装
+_（可选）_ 封装
 
 
 </td></tr>
@@ -84,7 +84,7 @@ Array&lt;[ISYS\_HeaderMenuTopMenuItem](./ISYS_HeaderMenuTopMenuItem.md)<!-- -->&
 
 </td><td>
 
-_(Optional)_ 主页
+_（可选）_ 主页
 
 
 </td></tr>
@@ -103,7 +103,7 @@ Array&lt;[ISYS\_HeaderMenuTopMenuItem](./ISYS_HeaderMenuTopMenuItem.md)<!-- -->&
 
 </td><td>
 
-_(Optional)_ 面板
+_（可选）_ 面板
 
 
 </td></tr>
@@ -122,7 +122,7 @@ Array&lt;[ISYS\_HeaderMenuTopMenuItem](./ISYS_HeaderMenuTopMenuItem.md)<!-- -->&
 
 </td><td>
 
-_(Optional)_ 面板预览
+_（可选）_ 面板预览
 
 
 </td></tr>
@@ -141,7 +141,7 @@ Array&lt;[ISYS\_HeaderMenuTopMenuItem](./ISYS_HeaderMenuTopMenuItem.md)<!-- -->&
 
 </td><td>
 
-_(Optional)_ PCB
+_（可选）_ PCB
 
 
 </td></tr>
@@ -160,7 +160,7 @@ Array&lt;[ISYS\_HeaderMenuTopMenuItem](./ISYS_HeaderMenuTopMenuItem.md)<!-- -->&
 
 </td><td>
 
-_(Optional)_ PCB 预览（包括 2D、3D 预览）
+_（可选）_ PCB 预览（包括 2D、3D 预览）
 
 
 </td></tr>
@@ -179,7 +179,7 @@ Array&lt;[ISYS\_HeaderMenuTopMenuItem](./ISYS_HeaderMenuTopMenuItem.md)<!-- -->&
 
 </td><td>
 
-_(Optional)_ 原理图
+_（可选）_ 原理图
 
 
 </td></tr>
@@ -198,7 +198,7 @@ Array&lt;[ISYS\_HeaderMenuTopMenuItem](./ISYS_HeaderMenuTopMenuItem.md)<!-- -->&
 
 </td><td>
 
-_(Optional)_ 原理图
+_（可选）_ 原理图
 
 
 </td></tr>
@@ -217,7 +217,7 @@ Array&lt;[ISYS\_HeaderMenuTopMenuItem](./ISYS_HeaderMenuTopMenuItem.md)<!-- -->&
 
 </td><td>
 
-_(Optional)_ 符号（包括 CBB 符号）
+_（可选）_ 符号（包括 CBB 符号）
 
 
 </td></tr>
@@ -233,7 +233,7 @@ _(Optional)_ 符号（包括 CBB 符号）
 
 空白页
 
-## Signature
+## 签名
 
 ```typescript
 blank?: Array<ISYS_HeaderMenuTopMenuItem>;
@@ -245,7 +245,7 @@ blank?: Array<ISYS_HeaderMenuTopMenuItem>;
 
 封装
 
-## Signature
+## 签名
 
 ```typescript
 footprint?: Array<ISYS_HeaderMenuTopMenuItem>;
@@ -257,7 +257,7 @@ footprint?: Array<ISYS_HeaderMenuTopMenuItem>;
 
 主页
 
-## Signature
+## 签名
 
 ```typescript
 home?: Array<ISYS_HeaderMenuTopMenuItem>;
@@ -269,7 +269,7 @@ home?: Array<ISYS_HeaderMenuTopMenuItem>;
 
 面板
 
-## Signature
+## 签名
 
 ```typescript
 panel?: Array<ISYS_HeaderMenuTopMenuItem>;
@@ -281,7 +281,7 @@ panel?: Array<ISYS_HeaderMenuTopMenuItem>;
 
 面板预览
 
-## Signature
+## 签名
 
 ```typescript
 panelView?: Array<ISYS_HeaderMenuTopMenuItem>;
@@ -293,7 +293,7 @@ panelView?: Array<ISYS_HeaderMenuTopMenuItem>;
 
 PCB
 
-## Signature
+## 签名
 
 ```typescript
 pcb?: Array<ISYS_HeaderMenuTopMenuItem>;
@@ -305,7 +305,7 @@ pcb?: Array<ISYS_HeaderMenuTopMenuItem>;
 
 PCB 预览（包括 2D、3D 预览）
 
-## Signature
+## 签名
 
 ```typescript
 pcbView?: Array<ISYS_HeaderMenuTopMenuItem>;
@@ -315,13 +315,13 @@ pcbView?: Array<ISYS_HeaderMenuTopMenuItem>;
 
 # ISYS\_HeaderMenus.sch property
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 请使用 `schematic` 替代 `sch`
 
 原理图
 
-## Signature
+## 签名
 
 ```typescript
 sch?: Array<ISYS_HeaderMenuTopMenuItem>;
@@ -333,7 +333,7 @@ sch?: Array<ISYS_HeaderMenuTopMenuItem>;
 
 原理图
 
-## Signature
+## 签名
 
 ```typescript
 schematic?: Array<ISYS_HeaderMenuTopMenuItem>;
@@ -345,7 +345,7 @@ schematic?: Array<ISYS_HeaderMenuTopMenuItem>;
 
 符号（包括 CBB 符号）
 
-## Signature
+## 签名
 
 ```typescript
 symbol?: Array<ISYS_HeaderMenuTopMenuItem>;

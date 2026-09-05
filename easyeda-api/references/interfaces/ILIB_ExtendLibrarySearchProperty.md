@@ -2,32 +2,32 @@
 
 外部库搜索参数
 
-## Signature
+## 签名
 
 ```typescript
 interface ILIB_ExtendLibrarySearchProperty<T> 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -46,7 +46,7 @@ number
 
 </td><td>
 
-_(Optional)_ 页数
+_（可选）_ 页数
 
 
 </td></tr>
@@ -65,7 +65,7 @@ number
 
 </td><td>
 
-_(Optional)_ 单页条目数
+_（可选）_ 单页条目数
 
 
 </td></tr>
@@ -100,7 +100,7 @@ T &amp; { wd?: string; listByTitles?: Array&lt;string&gt;; classification?: [ILI
 
 页数
 
-## Signature
+## 签名
 
 ```typescript
 page?: number;
@@ -112,7 +112,7 @@ page?: number;
 
 单页条目数
 
-## Signature
+## 签名
 
 ```typescript
 pageSize?: number;
@@ -124,7 +124,7 @@ pageSize?: number;
 
 查询参数
 
-## Signature
+## 签名
 
 ```typescript
 query: T & {

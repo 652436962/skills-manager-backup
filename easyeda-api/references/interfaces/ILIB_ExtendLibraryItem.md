@@ -2,14 +2,14 @@
 
 外部库元素
 
-## Signature
+## 签名
 
 ```typescript
 interface ILIB_ExtendLibraryItem extends ILIB_ExtendLibraryItemIndex 
 ```
-**Extends:** [ILIB\_ExtendLibraryItemIndex](./ILIB_ExtendLibraryItemIndex.md)
+**扩展自：**[ILIB\_ExtendLibraryItemIndex](./ILIB_ExtendLibraryItemIndex.md)
 
-## Remarks
+## 备注
 
 此处需要传递 `url` 或 `data` 字段，如若同时传入，则取 `data` 的数据，忽略 `url` 字段
 
@@ -17,26 +17,26 @@ interface ILIB_ExtendLibraryItem extends ILIB_ExtendLibraryItemIndex
 
 `data` 的数据可为 Blob 格式或 DataURL 格式
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -55,7 +55,7 @@ string \| Blob
 
 </td><td>
 
-_(Optional)_ 库文件数据
+_（可选）_ 库文件数据
 
 
 </td></tr>
@@ -74,7 +74,7 @@ string
 
 </td><td>
 
-_(Optional)_ 库文件地址
+_（可选）_ 库文件地址
 
 
 </td></tr>
@@ -90,7 +90,7 @@ _(Optional)_ 库文件地址
 
 库文件数据
 
-## Signature
+## 签名
 
 ```typescript
 data?: string | Blob;
@@ -102,7 +102,7 @@ data?: string | Blob;
 
 库文件地址
 
-## Signature
+## 签名
 
 ```typescript
 url?: string;

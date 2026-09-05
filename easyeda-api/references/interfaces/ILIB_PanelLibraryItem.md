@@ -2,32 +2,32 @@
 
 面板库属性
 
-## Signature
+## 签名
 
 ```typescript
 interface ILIB_PanelLibraryItem 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -46,7 +46,7 @@ Description
 
 </td><td>
 
-_(Optional)_ 分类
+_（可选）_ 分类
 
 
 </td></tr>
@@ -65,7 +65,7 @@ string
 
 </td><td>
 
-_(Optional)_ 描述
+_（可选）_ 描述
 
 
 </td></tr>
@@ -159,7 +159,7 @@ string
 
 分类
 
-## Signature
+## 签名
 
 ```typescript
 classification?: ILIB_ClassificationIndex | Array<string>;
@@ -171,7 +171,7 @@ classification?: ILIB_ClassificationIndex | Array<string>;
 
 描述
 
-## Signature
+## 签名
 
 ```typescript
 description?: string;
@@ -183,7 +183,7 @@ description?: string;
 
 库类型
 
-## Signature
+## 签名
 
 ```typescript
 readonly libraryType: ELIB_LibraryType.PANEL_LIBRARY;
@@ -195,7 +195,7 @@ readonly libraryType: ELIB_LibraryType.PANEL_LIBRARY;
 
 所属库 UUID
 
-## Signature
+## 签名
 
 ```typescript
 libraryUuid: string;
@@ -207,7 +207,7 @@ libraryUuid: string;
 
 面板库名称
 
-## Signature
+## 签名
 
 ```typescript
 name: string;
@@ -219,7 +219,7 @@ name: string;
 
 面板库 UUID
 
-## Signature
+## 签名
 
 ```typescript
 uuid: string;

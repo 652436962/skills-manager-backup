@@ -2,27 +2,27 @@
 
 网表类型
 
-## Signature
+## 签名
 
 ```typescript
 declare enum ESYS_NetlistType 
 ```
 
-## Enumeration Members
+## 枚举成员
 
 <table><thead><tr><th>
 
-Member
+成员
 
 
 </th><th>
 
-Value
+值
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -71,22 +71,6 @@ DISA
 </td><td>
 
 数字化工业软件联盟
-
-
-</td></tr>
-<tr><td>
-
-DISA\_SIMULATION
-
-
-</td><td>
-
-`"DSNET"`
-
-
-</td><td>
-
-数字化工业软件联盟仿真
 
 
 </td></tr>

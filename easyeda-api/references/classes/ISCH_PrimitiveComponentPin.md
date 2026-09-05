@@ -2,40 +2,40 @@
 
 器件引脚图元
 
-## Signature
+## 签名
 
 ```typescript
 declare class ISCH_PrimitiveComponentPin extends ISCH_PrimitivePin 
 ```
-**Extends:** [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
+**扩展自：**[ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
-## Remarks
+## 备注
 
 器件引脚图元是一个特殊的图元，它指的是在原理图画布上关联到符号的引脚
 
 器件引脚图元仅可更改 `pinNumber`<!-- -->、`noConnected` 属性，其它所有属性均为只读， 并且你只能通过 [器件类的 getAllPinsByPrimitiveId 方法](./SCH_PrimitiveComponent.md) 或  获取到器件引脚图元
 
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -64,21 +64,21 @@ Description
 </td></tr>
 </tbody></table>
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -122,7 +122,7 @@ Description
 
 图元类型
 
-## Signature
+## 签名
 
 ```typescript
 protected readonly primitiveType: ESCH_PrimitiveType.COMPONENT_PIN;
@@ -139,14 +139,14 @@ protected readonly primitiveType: ESCH_PrimitiveType.COMPONENT_PIN;
 
 获取属性状态：是否存在非连接标识
 
-## Signature
+## 签名
 
 ```typescript
 getState_NoConnected(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -158,27 +158,27 @@ boolean
 
 设置属性状态：是否存在非连接标识
 
-## Signature
+## 签名
 
 ```typescript
 setState_NoConnected(noConnected: boolean): ISCH_PrimitiveComponentPin;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -200,7 +200,7 @@ boolean
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveComponentPin](./ISCH_PrimitiveComponentPin.md)
 

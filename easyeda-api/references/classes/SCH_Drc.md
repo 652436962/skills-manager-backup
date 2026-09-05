@@ -2,31 +2,31 @@
 
 原理图 &amp; 符号 / 设计规则检查（DRC）类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SCH_Drc 
 ```
 
-## Remarks
+## 备注
 
 检查、设定 DRC 规则
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -68,31 +68,31 @@ Description
 
 # SCH\_Drc.check() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 检查 DRC
 
-## Signature
+## 签名
 
 ```typescript
 check(strict: boolean, userInterface: boolean, includeVerboseError: false): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -148,7 +148,7 @@ false
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -158,31 +158,31 @@ DRC 检查是否通过
 
 # SCH\_Drc.check() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 检查 DRC
 
-## Signature
+## 签名
 
 ```typescript
 check(strict: boolean, userInterface: boolean, includeVerboseError: true): Promise<Array<any>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -238,7 +238,7 @@ true
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;any&gt;&gt;
 

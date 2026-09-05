@@ -2,38 +2,38 @@
 
 引脚图元
 
-## Signature
+## 签名
 
 ```typescript
 declare class ISCH_PrimitivePin implements ISCH_Primitive 
 ```
-**Implements:** [ISCH\_Primitive](../interfaces/ISCH_Primitive.md)
+**实现自：**[ISCH\_Primitive](../interfaces/ISCH_Primitive.md)
 
-## Remarks
+## 备注
 
 引脚图元仅符号编辑器可用，在原理图图页内，关联到符号的引脚被称为 [器件引脚图元](./ISCH_PrimitiveComponentPin.md)
 
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -201,7 +201,7 @@ string
 
 </td><td>
 
-_(Optional)_ 图元 ID
+_（可选）_ 图元 ID
 
 
 </td></tr>
@@ -293,21 +293,21 @@ number
 </td></tr>
 </tbody></table>
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -701,7 +701,7 @@ Description
 
 异步
 
-## Signature
+## 签名
 
 ```typescript
 protected async: boolean;
@@ -713,7 +713,7 @@ protected async: boolean;
 
 引脚颜色
 
-## Signature
+## 签名
 
 ```typescript
 protected pinColor: string | null;
@@ -725,7 +725,7 @@ protected pinColor: string | null;
 
 引脚长度
 
-## Signature
+## 签名
 
 ```typescript
 protected pinLength: number;
@@ -737,7 +737,7 @@ protected pinLength: number;
 
 引脚名称
 
-## Signature
+## 签名
 
 ```typescript
 protected pinName: string;
@@ -749,7 +749,7 @@ protected pinName: string;
 
 引脚编号
 
-## Signature
+## 签名
 
 ```typescript
 protected pinNumber: string;
@@ -761,7 +761,7 @@ protected pinNumber: string;
 
 引脚形状
 
-## Signature
+## 签名
 
 ```typescript
 protected pinShape: ESCH_PrimitivePinShape;
@@ -773,7 +773,7 @@ protected pinShape: ESCH_PrimitivePinShape;
 
 引脚类型
 
-## Signature
+## 签名
 
 ```typescript
 protected pinType: ESCH_PrimitivePinType;
@@ -785,7 +785,7 @@ protected pinType: ESCH_PrimitivePinType;
 
 图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 protected primitiveId?: string;
@@ -797,7 +797,7 @@ protected primitiveId?: string;
 
 图元类型
 
-## Signature
+## 签名
 
 ```typescript
 protected readonly primitiveType: ESCH_PrimitiveType;
@@ -809,7 +809,7 @@ protected readonly primitiveType: ESCH_PrimitiveType;
 
 旋转角度
 
-## Signature
+## 签名
 
 ```typescript
 protected rotation: number;
@@ -821,7 +821,7 @@ protected rotation: number;
 
 坐标 X
 
-## Signature
+## 签名
 
 ```typescript
 protected x: number;
@@ -833,7 +833,7 @@ protected x: number;
 
 坐标 Y
 
-## Signature
+## 签名
 
 ```typescript
 protected y: number;
@@ -848,18 +848,18 @@ protected y: number;
 
 # ISCH\_PrimitivePin.done() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将对图元的更改应用到画布
 
-## Signature
+## 签名
 
 ```typescript
 done(): Promise<ISCH_PrimitivePin>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)<!-- -->&gt;
 
@@ -871,7 +871,7 @@ Promise&lt;[ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)<!-- -->&gt;
 
 获取属性状态：其它参数
 
-## Signature
+## 签名
 
 ```typescript
 getState_OtherProperty(): {
@@ -880,7 +880,7 @@ getState_OtherProperty(): {
 ```
 
 
-## Returns
+## 返回值
 
 { \[key: string\]: string \| number \| boolean; } \| undefined
 
@@ -892,14 +892,14 @@ getState_OtherProperty(): {
 
 获取属性状态：引脚颜色
 
-## Signature
+## 签名
 
 ```typescript
 getState_PinColor(): string | null;
 ```
 
 
-## Returns
+## 返回值
 
 string \| null
 
@@ -911,14 +911,14 @@ string \| null
 
 获取属性状态：引脚长度
 
-## Signature
+## 签名
 
 ```typescript
 getState_PinLength(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -930,14 +930,14 @@ number
 
 获取属性状态：引脚名称
 
-## Signature
+## 签名
 
 ```typescript
 getState_PinName(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -949,14 +949,14 @@ string
 
 获取属性状态：引脚编号
 
-## Signature
+## 签名
 
 ```typescript
 getState_PinNumber(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -968,14 +968,14 @@ string
 
 获取属性状态：引脚形状
 
-## Signature
+## 签名
 
 ```typescript
 getState_PinShape(): ESCH_PrimitivePinShape;
 ```
 
 
-## Returns
+## 返回值
 
 [ESCH\_PrimitivePinShape](../enums/ESCH_PrimitivePinShape.md)
 
@@ -987,14 +987,14 @@ getState_PinShape(): ESCH_PrimitivePinShape;
 
 获取属性状态：引脚类型
 
-## Signature
+## 签名
 
 ```typescript
 getState_pinType(): ESCH_PrimitivePinType;
 ```
 
 
-## Returns
+## 返回值
 
 [ESCH\_PrimitivePinType](../enums/ESCH_PrimitivePinType.md)
 
@@ -1006,14 +1006,14 @@ getState_pinType(): ESCH_PrimitivePinType;
 
 获取属性状态：图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveId(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -1025,14 +1025,14 @@ string
 
 获取属性状态：图元类型
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveType(): ESCH_PrimitiveType;
 ```
 
 
-## Returns
+## 返回值
 
 [ESCH\_PrimitiveType](../enums/ESCH_PrimitiveType.md)
 
@@ -1044,14 +1044,14 @@ getState_PrimitiveType(): ESCH_PrimitiveType;
 
 获取属性状态：旋转角度
 
-## Signature
+## 签名
 
 ```typescript
 getState_Rotation(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -1063,14 +1063,14 @@ number
 
 获取属性状态：坐标 X
 
-## Signature
+## 签名
 
 ```typescript
 getState_X(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -1082,14 +1082,14 @@ number
 
 获取属性状态：坐标 Y
 
-## Signature
+## 签名
 
 ```typescript
 getState_Y(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -1101,14 +1101,14 @@ number
 
 查询图元是否为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 isAsync(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -1118,18 +1118,18 @@ boolean
 
 # ISCH\_PrimitivePin.reset() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将异步图元重置为当前画布状态
 
-## Signature
+## 签名
 
 ```typescript
 reset(): Promise<ISCH_PrimitivePin>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)<!-- -->&gt;
 
@@ -1139,11 +1139,11 @@ Promise&lt;[ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)<!-- -->&gt;
 
 # ISCH\_PrimitivePin.setState\_OtherProperty() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：其它参数
 
-## Signature
+## 签名
 
 ```typescript
 setState_OtherProperty(otherProperty: {
@@ -1151,21 +1151,21 @@ setState_OtherProperty(otherProperty: {
     }): ISCH_PrimitivePin;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1189,7 +1189,7 @@ otherProperty
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
@@ -1199,31 +1199,31 @@ otherProperty
 
 # ISCH\_PrimitivePin.setState\_PinColor() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：引脚颜色
 
-## Signature
+## 签名
 
 ```typescript
 setState_PinColor(pinColor: string | null): ISCH_PrimitivePin;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1247,7 +1247,7 @@ string \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
@@ -1257,31 +1257,31 @@ string \| null
 
 # ISCH\_PrimitivePin.setState\_PinLength() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：引脚长度
 
-## Signature
+## 签名
 
 ```typescript
 setState_PinLength(pinLength: number): ISCH_PrimitivePin;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1305,7 +1305,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
@@ -1315,31 +1315,31 @@ number
 
 # ISCH\_PrimitivePin.setState\_PinName() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：引脚名称
 
-## Signature
+## 签名
 
 ```typescript
 setState_PinName(pinName: string): ISCH_PrimitivePin;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1363,7 +1363,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
@@ -1373,31 +1373,31 @@ string
 
 # ISCH\_PrimitivePin.setState\_PinNumber() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：引脚编号
 
-## Signature
+## 签名
 
 ```typescript
 setState_PinNumber(pinNumber: string): ISCH_PrimitivePin;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1421,7 +1421,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
@@ -1431,31 +1431,31 @@ string
 
 # ISCH\_PrimitivePin.setState\_PinShape() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：引脚形状
 
-## Signature
+## 签名
 
 ```typescript
 setState_PinShape(pinShape: ESCH_PrimitivePinShape): ISCH_PrimitivePin;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1479,7 +1479,7 @@ pinShape
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
@@ -1489,31 +1489,31 @@ pinShape
 
 # ISCH\_PrimitivePin.setState\_PinType() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：引脚类型
 
-## Signature
+## 签名
 
 ```typescript
 setState_PinType(pinType: ESCH_PrimitivePinType): ISCH_PrimitivePin;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1537,7 +1537,7 @@ pinType
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
@@ -1547,31 +1547,31 @@ pinType
 
 # ISCH\_PrimitivePin.setState\_Rotation() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：旋转角度
 
-## Signature
+## 签名
 
 ```typescript
 setState_Rotation(rotation: number): ISCH_PrimitivePin;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1595,7 +1595,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
@@ -1605,31 +1605,31 @@ number
 
 # ISCH\_PrimitivePin.setState\_X() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：坐标 X
 
-## Signature
+## 签名
 
 ```typescript
 setState_X(x: number): ISCH_PrimitivePin;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1653,7 +1653,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
@@ -1663,31 +1663,31 @@ number
 
 # ISCH\_PrimitivePin.setState\_Y() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：坐标 Y
 
-## Signature
+## 签名
 
 ```typescript
 setState_Y(y: number): ISCH_PrimitivePin;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1711,7 +1711,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
@@ -1723,14 +1723,14 @@ number
 
 将图元转换为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 toAsync(): ISCH_PrimitivePin;
 ```
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 
@@ -1742,14 +1742,14 @@ toAsync(): ISCH_PrimitivePin;
 
 将图元转换为同步图元
 
-## Signature
+## 签名
 
 ```typescript
 toSync(): ISCH_PrimitivePin;
 ```
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitivePin](./ISCH_PrimitivePin.md)
 

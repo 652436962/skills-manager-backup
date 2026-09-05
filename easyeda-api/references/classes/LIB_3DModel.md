@@ -2,27 +2,27 @@
 
 综合库 / 3D 模型类
 
-## Signature
+## 签名
 
 ```typescript
 declare class LIB_3DModel 
 ```
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -120,31 +120,31 @@ Description
 
 # LIB\_3DModel.copy() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 复制 3D 模型
 
-## Signature
+## 签名
 
 ```typescript
 copy(modelUuid: string, libraryUuid: string, targetLibraryUuid: string, targetClassification?: ILIB_ClassificationIndex | Array<string>, newModelName?: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -208,7 +208,7 @@ targetClassification
 
 </td><td>
 
-_(Optional)_ 目标库内的分类
+_（可选）_ 目标库内的分类
 
 
 </td></tr>
@@ -224,7 +224,7 @@ string
 
 </td><td>
 
-_(Optional)_ 新 3D 模型名称，如若目标库内存在重名 3D 模型将导致复制失败
+_（可选）_ 新 3D 模型名称，如若目标库内存在重名 3D 模型将导致复制失败
 
 
 </td></tr>
@@ -232,7 +232,7 @@ _(Optional)_ 新 3D 模型名称，如若目标库内存在重名 3D 模型将�
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -242,31 +242,31 @@ Promise&lt;string \| undefined&gt;
 
 # LIB\_3DModel.create() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 创建 3D 模型
 
-## Signature
+## 签名
 
 ```typescript
 create(libraryUuid: string, modelFile: Blob, classification?: ILIB_ClassificationIndex | Array<string>, unit?: ESYS_Unit.MILLIMETER | ESYS_Unit.CENTIMETER | ESYS_Unit.METER | ESYS_Unit.MIL | ESYS_Unit.INCH): Promise<string[] | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -314,7 +314,7 @@ classification
 
 </td><td>
 
-_(Optional)_ 分类
+_（可选）_ 分类
 
 
 </td></tr>
@@ -338,7 +338,7 @@ _(Optional)_
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string\[\] \| undefined&gt;
 
@@ -348,31 +348,31 @@ Promise&lt;string\[\] \| undefined&gt;
 
 # LIB\_3DModel.delete() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 删除 3D 模型
 
-## Signature
+## 签名
 
 ```typescript
 delete(modelUuid: string, libraryUuid: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -412,7 +412,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -422,31 +422,31 @@ Promise&lt;boolean&gt;
 
 # LIB\_3DModel.get() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取 3D 模型的所有属性
 
-## Signature
+## 签名
 
 ```typescript
 get(modelUuid: string, libraryUuid?: string): Promise<ILIB_3DModelItem | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -478,7 +478,7 @@ string
 
 </td><td>
 
-_(Optional)_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
+_（可选）_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
 
 
 </td></tr>
@@ -486,7 +486,7 @@ _(Optional)_ 库 UUID，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ILIB\_3DModelItem](../interfaces/ILIB_3DModelItem.md) \| undefined&gt;
 
@@ -496,31 +496,31 @@ Promise&lt;[ILIB\_3DModelItem](../interfaces/ILIB_3DModelItem.md) \| undefined&g
 
 # LIB\_3DModel.modify() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改 3D 模型
 
-## Signature
+## 签名
 
 ```typescript
 modify(modelUuid: string, libraryUuid: string, modelName?: string, classification?: ILIB_ClassificationIndex | Array<string> | null, description?: string | null): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -568,7 +568,7 @@ string
 
 </td><td>
 
-_(Optional)_ 3D 模型名称
+_（可选）_ 3D 模型名称
 
 
 </td></tr>
@@ -584,7 +584,7 @@ classification
 
 </td><td>
 
-_(Optional)_ 分类
+_（可选）_ 分类
 
 
 </td></tr>
@@ -600,7 +600,7 @@ string \| null
 
 </td><td>
 
-_(Optional)_ 描述
+_（可选）_ 描述
 
 
 </td></tr>
@@ -608,13 +608,13 @@ _(Optional)_ 描述
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 如希望清除某些属性，则将其的值设置为 `null`
 
@@ -622,31 +622,31 @@ Promise&lt;boolean&gt;
 
 # LIB\_3DModel.search() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 搜索 3D 模型
 
-## Signature
+## 签名
 
 ```typescript
 search(key: string, libraryUuid?: string, classification?: ILIB_ClassificationIndex | Array<string>, itemsOfPage?: number, page?: number): Promise<Array<ILIB_3DModelSearchItem>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -678,7 +678,7 @@ string
 
 </td><td>
 
-_(Optional)_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
+_（可选）_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
 
 
 </td></tr>
@@ -694,7 +694,7 @@ classification
 
 </td><td>
 
-_(Optional)_ 分类，默认为全部
+_（可选）_ 分类，默认为全部
 
 
 </td></tr>
@@ -710,7 +710,7 @@ number
 
 </td><td>
 
-_(Optional)_ 一页搜索结果的数量
+_（可选）_ 一页搜索结果的数量
 
 
 </td></tr>
@@ -726,7 +726,7 @@ number
 
 </td><td>
 
-_(Optional)_ 页数
+_（可选）_ 页数
 
 
 </td></tr>
@@ -734,7 +734,7 @@ _(Optional)_ 页数
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[ILIB\_3DModelSearchItem](../interfaces/ILIB_3DModelSearchItem.md)<!-- -->&gt;&gt;
 

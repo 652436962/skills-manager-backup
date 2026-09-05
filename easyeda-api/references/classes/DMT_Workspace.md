@@ -2,27 +2,27 @@
 
 文档树 / 工作区类
 
-## Signature
+## 签名
 
 ```typescript
 declare class DMT_Workspace 
 ```
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -80,14 +80,14 @@ Description
 
 获取所有工作区的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getAllWorkspacesInfo(): Promise<Array<IDMT_WorkspaceItem>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IDMT\_WorkspaceItem](../interfaces/IDMT_WorkspaceItem.md)<!-- -->&gt;&gt;
 
@@ -99,20 +99,20 @@ Promise&lt;Array&lt;[IDMT\_WorkspaceItem](../interfaces/IDMT_WorkspaceItem.md)<!
 
 获取当前工作区的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getCurrentWorkspaceInfo(): Promise<IDMT_WorkspaceItem | undefined>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IDMT\_WorkspaceItem](../interfaces/IDMT_WorkspaceItem.md) \| undefined&gt;
 
 工作区的详细属性，如若为 `undefined` 则获取失败
 
-## Remarks
+## 备注
 
 将会获取当前工作区的详细属性
 
@@ -122,27 +122,27 @@ Promise&lt;[IDMT\_WorkspaceItem](../interfaces/IDMT_WorkspaceItem.md) \| undefin
 
 切换到工作区
 
-## Signature
+## 签名
 
 ```typescript
 toggleToWorkspace(workspaceUuid?: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -158,7 +158,7 @@ string
 
 </td><td>
 
-_(Optional)_ 工作区 UUID，如若不指定，则将切换到个人工作区
+_（可选）_ 工作区 UUID，如若不指定，则将切换到个人工作区
 
 
 </td></tr>
@@ -166,7 +166,7 @@ _(Optional)_ 工作区 UUID，如若不指定，则将切换到个人工作区
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 

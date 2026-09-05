@@ -2,31 +2,31 @@
 
 矩形图元
 
-## Signature
+## 签名
 
 ```typescript
 declare class ISCH_PrimitiveRectangle implements ISCH_Primitive 
 ```
-**Implements:** [ISCH\_Primitive](../interfaces/ISCH_Primitive.md)
+**实现自：**[ISCH\_Primitive](../interfaces/ISCH_Primitive.md)
 
-## Remarks
+## 备注
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -446,18 +446,18 @@ Description
 
 # ISCH\_PrimitiveRectangle.done() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将对图元的更改应用到画布
 
-## Signature
+## 签名
 
 ```typescript
 done(): ISCH_PrimitiveRectangle;
 ```
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveRectangle](./ISCH_PrimitiveRectangle.md)
 
@@ -469,14 +469,14 @@ done(): ISCH_PrimitiveRectangle;
 
 获取属性状态：边框颜色
 
-## Signature
+## 签名
 
 ```typescript
 getState_Color(): string | null;
 ```
 
 
-## Returns
+## 返回值
 
 string \| null
 
@@ -488,14 +488,14 @@ string \| null
 
 获取属性状态：圆角半径
 
-## Signature
+## 签名
 
 ```typescript
 getState_CornerRadius(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -507,14 +507,14 @@ number
 
 获取属性状态：填充颜色
 
-## Signature
+## 签名
 
 ```typescript
 getState_FillColor(): string | null;
 ```
 
 
-## Returns
+## 返回值
 
 string \| null
 
@@ -526,14 +526,14 @@ string \| null
 
 获取属性状态：填充样式
 
-## Signature
+## 签名
 
 ```typescript
 getState_FillStyle(): ESCH_PrimitiveFillStyle | null;
 ```
 
 
-## Returns
+## 返回值
 
 [ESCH\_PrimitiveFillStyle](../enums/ESCH_PrimitiveFillStyle.md) \| null
 
@@ -545,14 +545,14 @@ getState_FillStyle(): ESCH_PrimitiveFillStyle | null;
 
 获取属性状态：高
 
-## Signature
+## 签名
 
 ```typescript
 getState_Height(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -564,14 +564,14 @@ number
 
 获取属性状态：线型
 
-## Signature
+## 签名
 
 ```typescript
 getState_LineType(): ESCH_PrimitiveLineType | null;
 ```
 
 
-## Returns
+## 返回值
 
 [ESCH\_PrimitiveLineType](../enums/ESCH_PrimitiveLineType.md) \| null
 
@@ -583,14 +583,14 @@ getState_LineType(): ESCH_PrimitiveLineType | null;
 
 获取属性状态：线宽
 
-## Signature
+## 签名
 
 ```typescript
 getState_LineWidth(): number | null;
 ```
 
 
-## Returns
+## 返回值
 
 number \| null
 
@@ -602,14 +602,14 @@ number \| null
 
 获取属性状态：图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveId(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -621,14 +621,14 @@ string
 
 获取属性状态：图元类型
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveType(): ESCH_PrimitiveType;
 ```
 
 
-## Returns
+## 返回值
 
 [ESCH\_PrimitiveType](../enums/ESCH_PrimitiveType.md)
 
@@ -640,14 +640,14 @@ getState_PrimitiveType(): ESCH_PrimitiveType;
 
 获取属性状态：旋转角度
 
-## Signature
+## 签名
 
 ```typescript
 getState_Rotation(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -659,14 +659,14 @@ number
 
 获取属性状态：左上点 X
 
-## Signature
+## 签名
 
 ```typescript
 getState_TopLeftX(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -678,14 +678,14 @@ number
 
 获取属性状态：左上点 Y
 
-## Signature
+## 签名
 
 ```typescript
 getState_TopLeftY(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -697,14 +697,14 @@ number
 
 获取属性状态：宽
 
-## Signature
+## 签名
 
 ```typescript
 getState_Width(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -716,14 +716,14 @@ number
 
 查询图元是否为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 isAsync(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -733,18 +733,18 @@ boolean
 
 # ISCH\_PrimitiveRectangle.reset() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将异步图元重置为当前画布状态
 
-## Signature
+## 签名
 
 ```typescript
 reset(): Promise<ISCH_PrimitiveRectangle>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ISCH\_PrimitiveRectangle](./ISCH_PrimitiveRectangle.md)<!-- -->&gt;
 
@@ -754,31 +754,31 @@ Promise&lt;[ISCH\_PrimitiveRectangle](./ISCH_PrimitiveRectangle.md)<!-- -->&gt;
 
 # ISCH\_PrimitiveRectangle.setState\_Color() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：边框颜色
 
-## Signature
+## 签名
 
 ```typescript
 setState_Color(color: string | null): ISCH_PrimitiveRectangle;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -802,7 +802,7 @@ string \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveRectangle](./ISCH_PrimitiveRectangle.md)
 
@@ -812,31 +812,31 @@ string \| null
 
 # ISCH\_PrimitiveRectangle.setState\_CornerRadius() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：圆角半径
 
-## Signature
+## 签名
 
 ```typescript
 setState_CornerRadius(cornerRadius: number): ISCH_PrimitiveRectangle;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -860,7 +860,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveRectangle](./ISCH_PrimitiveRectangle.md)
 
@@ -870,31 +870,31 @@ number
 
 # ISCH\_PrimitiveRectangle.setState\_FillColor() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：填充颜色
 
-## Signature
+## 签名
 
 ```typescript
 setState_FillColor(fillColor: string | null): ISCH_PrimitiveRectangle;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -918,7 +918,7 @@ string \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveRectangle](./ISCH_PrimitiveRectangle.md)
 
@@ -928,31 +928,31 @@ string \| null
 
 # ISCH\_PrimitiveRectangle.setState\_FillStyle() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：填充样式
 
-## Signature
+## 签名
 
 ```typescript
 setState_FillStyle(fillStyle: ESCH_PrimitiveFillStyle | null): ISCH_PrimitiveRectangle;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -976,7 +976,7 @@ fillStyle
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveRectangle](./ISCH_PrimitiveRectangle.md)
 
@@ -986,31 +986,31 @@ fillStyle
 
 # ISCH\_PrimitiveRectangle.setState\_Height() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：高
 
-## Signature
+## 签名
 
 ```typescript
 setState_Height(height: number): ISCH_PrimitiveRectangle;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1034,7 +1034,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveRectangle](./ISCH_PrimitiveRectangle.md)
 
@@ -1044,31 +1044,31 @@ number
 
 # ISCH\_PrimitiveRectangle.setState\_LineType() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：线型
 
-## Signature
+## 签名
 
 ```typescript
 setState_LineType(lineType: ESCH_PrimitiveLineType | null): ISCH_PrimitiveRectangle;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1092,7 +1092,7 @@ lineType
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveRectangle](./ISCH_PrimitiveRectangle.md)
 
@@ -1102,31 +1102,31 @@ lineType
 
 # ISCH\_PrimitiveRectangle.setState\_LineWidth() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：线宽
 
-## Signature
+## 签名
 
 ```typescript
 setState_LineWidth(lineWidth: number | null): ISCH_PrimitiveRectangle;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1150,7 +1150,7 @@ number \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveRectangle](./ISCH_PrimitiveRectangle.md)
 
@@ -1160,31 +1160,31 @@ number \| null
 
 # ISCH\_PrimitiveRectangle.setState\_Rotation() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：旋转角度
 
-## Signature
+## 签名
 
 ```typescript
 setState_Rotation(rotation: number): ISCH_PrimitiveRectangle;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1208,7 +1208,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveRectangle](./ISCH_PrimitiveRectangle.md)
 
@@ -1218,31 +1218,31 @@ number
 
 # ISCH\_PrimitiveRectangle.setState\_TopLeftX() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：左上点 X
 
-## Signature
+## 签名
 
 ```typescript
 setState_TopLeftX(topLeftX: number): ISCH_PrimitiveRectangle;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1266,7 +1266,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveRectangle](./ISCH_PrimitiveRectangle.md)
 
@@ -1276,31 +1276,31 @@ number
 
 # ISCH\_PrimitiveRectangle.setState\_TopLeftY() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：左上点 Y
 
-## Signature
+## 签名
 
 ```typescript
 setState_TopLeftY(topLeftY: number): ISCH_PrimitiveRectangle;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1324,7 +1324,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveRectangle](./ISCH_PrimitiveRectangle.md)
 
@@ -1334,31 +1334,31 @@ number
 
 # ISCH\_PrimitiveRectangle.setState\_Width() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：宽
 
-## Signature
+## 签名
 
 ```typescript
 setState_Width(width: number): ISCH_PrimitiveRectangle;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1382,7 +1382,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveRectangle](./ISCH_PrimitiveRectangle.md)
 
@@ -1394,14 +1394,14 @@ number
 
 将图元转换为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 toAsync(): ISCH_PrimitiveRectangle;
 ```
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveRectangle](./ISCH_PrimitiveRectangle.md)
 
@@ -1413,14 +1413,14 @@ toAsync(): ISCH_PrimitiveRectangle;
 
 将图元转换为同步图元
 
-## Signature
+## 签名
 
 ```typescript
 toSync(): ISCH_PrimitiveRectangle;
 ```
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveRectangle](./ISCH_PrimitiveRectangle.md)
 

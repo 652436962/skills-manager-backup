@@ -2,31 +2,31 @@
 
 PCB &amp; 封装 / 设计规则检查（DRC）类
 
-## Signature
+## 签名
 
 ```typescript
 declare class PCB_Drc 
 ```
 
-## Remarks
+## 备注
 
 检查、设定 DRC 规则
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -642,31 +642,31 @@ Description
 
 # PCB\_Drc.addNetToEqualLengthNetGroup() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将网络添加到等长网络组
 
-## Signature
+## 签名
 
 ```typescript
 addNetToEqualLengthNetGroup(equalLengthNetGroupName: string, net: string | Array<string>): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -706,7 +706,7 @@ string \| Array&lt;string&gt;
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -716,31 +716,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.addNetToNetClass() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将网络添加到网络类
 
-## Signature
+## 签名
 
 ```typescript
 addNetToNetClass(netClassName: string, net: string | Array<string>): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -780,7 +780,7 @@ string \| Array&lt;string&gt;
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -790,31 +790,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.addPadPairToPadPairGroup() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将焊盘对添加到焊盘对组
 
-## Signature
+## 签名
 
 ```typescript
 addPadPairToPadPairGroup(padPairGroupName: string, padPair: [string, string] | Array<[string, string]>): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -854,13 +854,13 @@ padPair
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Example
+## 示例
 
 有三种不同的用法，确保画布上已有对应的焊盘。 分别是 一，游离焊盘-游离焊盘；二，器件焊盘 - 器件焊盘；三，器件焊盘 - 游离焊盘 await eda.pcb\_Drc.addPadPairToPadPairGroup('test',\['e0','e1'\]) // 游离焊盘-游离焊盘 await eda.pcb\_Drc.addPadPairToPadPairGroup('test',\['R1:1','R1:2'\]) // 器件焊盘 - 器件焊盘 await eda.pcb\_Drc.addPadPairToPadPairGroup('test',\['R1:1','e1'\]) // 器件焊盘 - 游离焊盘
 
@@ -868,31 +868,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.check() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 检查 DRC
 
-## Signature
+## 签名
 
 ```typescript
 check(strict: boolean, userInterface: boolean, includeVerboseError: false): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -948,7 +948,7 @@ false
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -958,31 +958,31 @@ DRC 检查是否通过
 
 # PCB\_Drc.check() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 检查 DRC
 
-## Signature
+## 签名
 
 ```typescript
 check(strict: boolean, userInterface: boolean, includeVerboseError: true): Promise<Array<any>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1038,7 +1038,7 @@ true
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;any&gt;&gt;
 
@@ -1048,31 +1048,31 @@ DRC 检查的详细结果
 
 # PCB\_Drc.createDifferentialPair() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 创建差分对
 
-## Signature
+## 签名
 
 ```typescript
 createDifferentialPair(differentialPairName: string, positiveNet: string, negativeNet: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1128,7 +1128,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -1138,31 +1138,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.createEqualLengthNetGroup() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 创建等长网络组
 
-## Signature
+## 签名
 
 ```typescript
 createEqualLengthNetGroup(equalLengthNetGroupName: string, nets: Array<string>, color: IPCB_EqualLengthNetGroupItem['color']): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1218,7 +1218,7 @@ color
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -1228,31 +1228,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.createNetClass() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 创建网络类
 
-## Signature
+## 签名
 
 ```typescript
 createNetClass(netClassName: string, nets: Array<string>, color: IPCB_EqualLengthNetGroupItem['color']): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1308,7 +1308,7 @@ color
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -1318,31 +1318,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.createPadPairGroup() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 创建焊盘对组
 
-## Signature
+## 签名
 
 ```typescript
 createPadPairGroup(padPairGroupName: string, padPairs: Array<[string, string]>): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1382,13 +1382,13 @@ Array&lt;\[string, string\]&gt;
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Example
+## 示例
 
 有三种不同的用法，确保画布上已有对应的焊盘。 分别是 一，游离焊盘-游离焊盘；二，器件焊盘 - 器件焊盘；三，器件焊盘 - 游离焊盘 await eda.pcb\_Drc.createPadPairGroup('test',\[\['e0','e1'\]\]) // 游离焊盘-游离焊盘 await eda.pcb\_Drc.createPadPairGroup('test',\[\['R1:1','R1:2'\],\['R2:1','R2:2'\]\]) // 器件焊盘 - 器件焊盘 await eda.pcb\_Drc.createPadPairGroup('test',\[\['R1:1','e0'\],\['R1:2','e1'\]\]) // 器件焊盘 - 游离焊盘
 
@@ -1396,31 +1396,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.deleteDifferentialPair() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 删除差分对
 
-## Signature
+## 签名
 
 ```typescript
 deleteDifferentialPair(differentialPairName: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1444,7 +1444,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -1454,31 +1454,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.deleteEqualLengthNetGroup() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 删除等长网络组
 
-## Signature
+## 签名
 
 ```typescript
 deleteEqualLengthNetGroup(equalLengthNetGroupName: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1502,7 +1502,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -1512,31 +1512,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.deleteNetClass() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 删除网络类
 
-## Signature
+## 签名
 
 ```typescript
 deleteNetClass(netClassName: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1560,7 +1560,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -1570,31 +1570,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.deletePadPairGroup() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 删除焊盘对组
 
-## Signature
+## 签名
 
 ```typescript
 deletePadPairGroup(padPairGroupName: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1618,7 +1618,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -1628,31 +1628,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.deleteRuleConfiguration() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 删除设计规则配置
 
-## Signature
+## 签名
 
 ```typescript
 deleteRuleConfiguration(configurationName: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1676,13 +1676,13 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 删除是否成功
 
-## Remarks
+## 备注
 
 系统配置不允许删除
 
@@ -1690,11 +1690,11 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.getAllDifferentialPairs() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取所有差分对的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getAllDifferentialPairs(): Promise<Array<IPCB_DifferentialPairItem> | {
@@ -1703,13 +1703,13 @@ getAllDifferentialPairs(): Promise<Array<IPCB_DifferentialPairItem> | {
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_DifferentialPairItem](../interfaces/IPCB_DifferentialPairItem.md)<!-- -->&gt; \| { \[key: string\]: any; }&gt;
 
 所有差分对的详细属性
 
-## Remarks
+## 备注
 
 BREAKING CHANGE since EDA v3.4
 
@@ -1719,18 +1719,18 @@ BREAKING CHANGE since EDA v3.4
 
 # PCB\_Drc.getAllEqualLengthNetGroups() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取所有等长网络组的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getAllEqualLengthNetGroups(): Promise<Array<IPCB_EqualLengthNetGroupItem>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_EqualLengthNetGroupItem](../interfaces/IPCB_EqualLengthNetGroupItem.md)<!-- -->&gt;&gt;
 
@@ -1740,18 +1740,18 @@ Promise&lt;Array&lt;[IPCB\_EqualLengthNetGroupItem](../interfaces/IPCB_EqualLeng
 
 # PCB\_Drc.getAllNetClasses() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取所有网络类的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getAllNetClasses(): Promise<Array<IPCB_NetClassItem>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_NetClassItem](../interfaces/IPCB_NetClassItem.md)<!-- -->&gt;&gt;
 
@@ -1761,18 +1761,18 @@ Promise&lt;Array&lt;[IPCB\_NetClassItem](../interfaces/IPCB_NetClassItem.md)<!--
 
 # PCB\_Drc.getAllPadPairGroups() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取所有焊盘对组的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getAllPadPairGroups(): Promise<Array<IPCB_PadPairGroupItem>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_PadPairGroupItem](../interfaces/IPCB_PadPairGroupItem.md)<!-- -->&gt;&gt;
 
@@ -1782,11 +1782,11 @@ Promise&lt;Array&lt;[IPCB\_PadPairGroupItem](../interfaces/IPCB_PadPairGroupItem
 
 # PCB\_Drc.getAllRuleConfigurations() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取所有设计规则配置
 
-## Signature
+## 签名
 
 ```typescript
 getAllRuleConfigurations(includeSystem?: boolean): Promise<Array<{
@@ -1794,21 +1794,21 @@ getAllRuleConfigurations(includeSystem?: boolean): Promise<Array<{
     }>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1824,7 +1824,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否获取系统设计规则配置
+_（可选）_ 是否获取系统设计规则配置
 
 
 </td></tr>
@@ -1832,7 +1832,7 @@ _(Optional)_ 是否获取系统设计规则配置
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;{ \[key: string\]: any; }&gt;&gt;
 
@@ -1842,11 +1842,11 @@ Promise&lt;Array&lt;{ \[key: string\]: any; }&gt;&gt;
 
 # PCB\_Drc.getCurrentRuleConfiguration() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取当前设计规则配置
 
-## Signature
+## 签名
 
 ```typescript
 getCurrentRuleConfiguration(): Promise<{
@@ -1855,7 +1855,7 @@ getCurrentRuleConfiguration(): Promise<{
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;{ \[key: string\]: any; } \| undefined&gt;
 
@@ -1867,14 +1867,14 @@ Promise&lt;{ \[key: string\]: any; } \| undefined&gt;
 
 获取当前设计规则配置名称
 
-## Signature
+## 签名
 
 ```typescript
 getCurrentRuleConfigurationName(): Promise<string | undefined>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -1884,18 +1884,18 @@ Promise&lt;string \| undefined&gt;
 
 # PCB\_Drc.getDefaultRuleConfigurationName() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取新建 PCB 默认设计规则配置的名称
 
-## Signature
+## 签名
 
 ```typescript
 getDefaultRuleConfigurationName(): Promise<string | undefined>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -1905,11 +1905,11 @@ Promise&lt;string \| undefined&gt;
 
 # PCB\_Drc.getNetByNetRules() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取网络-网络规则
 
-## Signature
+## 签名
 
 ```typescript
 getNetByNetRules(): Promise<{
@@ -1918,7 +1918,7 @@ getNetByNetRules(): Promise<{
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;{ \[key: string\]: any; }&gt;
 
@@ -1928,11 +1928,11 @@ Promise&lt;{ \[key: string\]: any; }&gt;
 
 # PCB\_Drc.getNetRules() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取网络规则
 
-## Signature
+## 签名
 
 ```typescript
 getNetRules(): Promise<Array<{
@@ -1941,7 +1941,7 @@ getNetRules(): Promise<Array<{
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;{ \[key: string\]: any; }&gt;&gt;
 
@@ -1951,31 +1951,31 @@ Promise&lt;Array&lt;{ \[key: string\]: any; }&gt;&gt;
 
 # PCB\_Drc.getPadPairGroupMinWireLength() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取焊盘对组最短导线长度
 
-## Signature
+## 签名
 
 ```typescript
 getPadPairGroupMinWireLength(padPairGroupName: string): Promise<Array<IPCB_PadPairMinWireLengthItem>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1999,7 +1999,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_PadPairMinWireLengthItem](../interfaces/IPCB_PadPairMinWireLengthItem.md)<!-- -->&gt;&gt;
 
@@ -2009,11 +2009,11 @@ Promise&lt;Array&lt;[IPCB\_PadPairMinWireLengthItem](../interfaces/IPCB_PadPairM
 
 # PCB\_Drc.getRegionRules() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取区域规则
 
-## Signature
+## 签名
 
 ```typescript
 getRegionRules(): Promise<Array<{
@@ -2022,7 +2022,7 @@ getRegionRules(): Promise<Array<{
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;{ \[key: string\]: any; }&gt;&gt;
 
@@ -2034,7 +2034,7 @@ Promise&lt;Array&lt;{ \[key: string\]: any; }&gt;&gt;
 
 获取指定设计规则配置
 
-## Signature
+## 签名
 
 ```typescript
 getRuleConfiguration(configurationName: string): Promise<{
@@ -2042,21 +2042,21 @@ getRuleConfiguration(configurationName: string): Promise<{
     } | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2080,7 +2080,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;{ \[key: string\]: any; } \| undefined&gt;
 
@@ -2090,31 +2090,31 @@ Promise&lt;{ \[key: string\]: any; } \| undefined&gt;
 
 # PCB\_Drc.modifyDifferentialPairName() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改差分对的名称
 
-## Signature
+## 签名
 
 ```typescript
 modifyDifferentialPairName(originalDifferentialPairName: string, differentialPairName: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2154,7 +2154,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -2164,31 +2164,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.modifyDifferentialPairNegativeNet() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改差分对负网络
 
-## Signature
+## 签名
 
 ```typescript
 modifyDifferentialPairNegativeNet(differentialPairName: string, negativeNet: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2228,7 +2228,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -2238,31 +2238,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.modifyDifferentialPairPositiveNet() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改差分对正网络
 
-## Signature
+## 签名
 
 ```typescript
 modifyDifferentialPairPositiveNet(differentialPairName: string, positiveNet: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2302,7 +2302,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -2312,31 +2312,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.modifyEqualLengthNetGroupName() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改等长网络组的名称
 
-## Signature
+## 签名
 
 ```typescript
 modifyEqualLengthNetGroupName(originalEqualLengthNetGroupName: string, equalLengthNetGroupName: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2376,7 +2376,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -2386,31 +2386,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.modifyNetClassName() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改网络类的名称
 
-## Signature
+## 签名
 
 ```typescript
 modifyNetClassName(originalNetClassName: string, netClassName: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2450,7 +2450,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -2460,31 +2460,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.modifyPadPairGroupName() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改焊盘对组的名称
 
-## Signature
+## 签名
 
 ```typescript
 modifyPadPairGroupName(originalPadPairGroupName: string, padPairGroupName: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2524,7 +2524,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -2534,11 +2534,11 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.overwriteCurrentRuleConfiguration() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 覆写目前规则配置
 
-## Signature
+## 签名
 
 ```typescript
 overwriteCurrentRuleConfiguration(ruleConfiguration: {
@@ -2546,21 +2546,21 @@ overwriteCurrentRuleConfiguration(ruleConfiguration: {
     }): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2582,13 +2582,13 @@ ruleConfiguration
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 覆写是否成功
 
-## Remarks
+## 备注
 
 将会覆写当前 PCB 的目前规则管理，请注意数据丢失风险
 
@@ -2596,11 +2596,11 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.overwriteNetByNetRules() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 覆写网络-网络规则
 
-## Signature
+## 签名
 
 ```typescript
 overwriteNetByNetRules(netByNetRules: {
@@ -2608,21 +2608,21 @@ overwriteNetByNetRules(netByNetRules: {
     }): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2646,13 +2646,13 @@ netByNetRules
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 覆写是否成功
 
-## Remarks
+## 备注
 
 将会覆写当前 PCB 的所有网络-网络规则，请注意数据丢失风险
 
@@ -2660,11 +2660,11 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.overwriteNetRules() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 覆写网络规则
 
-## Signature
+## 签名
 
 ```typescript
 overwriteNetRules(netRules: Array<{
@@ -2672,21 +2672,21 @@ overwriteNetRules(netRules: Array<{
     }>): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2710,13 +2710,13 @@ Array&lt;{ \[key: string\]: any; }&gt;
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 覆写是否成功
 
-## Remarks
+## 备注
 
 将会覆写当前 PCB 的所有网络规则，请注意数据丢失风险
 
@@ -2724,11 +2724,11 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.overwriteRegionRules() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 覆写区域规则
 
-## Signature
+## 签名
 
 ```typescript
 overwriteRegionRules(regionRules: Array<{
@@ -2736,21 +2736,21 @@ overwriteRegionRules(regionRules: Array<{
     }>): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2774,13 +2774,13 @@ Array&lt;{ \[key: string\]: any; }&gt;
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 覆写是否成功
 
-## Remarks
+## 备注
 
 将会覆写当前 PCB 的所有区域规则，请注意数据丢失风险
 
@@ -2788,31 +2788,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.removeNetFromEqualLengthNetGroup() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 从等长网络组中移除网络
 
-## Signature
+## 签名
 
 ```typescript
 removeNetFromEqualLengthNetGroup(equalLengthNetGroupName: string, net: string | Array<string>): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2852,7 +2852,7 @@ string \| Array&lt;string&gt;
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -2862,31 +2862,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.removeNetFromNetClass() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 从网络类中移除网络
 
-## Signature
+## 签名
 
 ```typescript
 removeNetFromNetClass(netClassName: string, net: string | Array<string>): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2926,7 +2926,7 @@ string \| Array&lt;string&gt;
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -2936,31 +2936,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.removePadPairFromPadPairGroup() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 从焊盘对组中移除焊盘对
 
-## Signature
+## 签名
 
 ```typescript
 removePadPairFromPadPairGroup(padPairGroupName: string, padPair: [string, string] | Array<[string, string]>): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -3000,13 +3000,13 @@ padPair
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Example
+## 示例
 
 有三种不同的用法，确保画布上已有对应的焊盘。 分别是 一，游离焊盘-游离焊盘；二，器件焊盘 - 器件焊盘；三，器件焊盘 - 游离焊盘 await eda.pcb\_Drc.removePadPairFromPadPairGroup('test',\['e0','e1'\]) // 游离焊盘-游离焊盘 await eda.pcb\_Drc.removePadPairFromPadPairGroup('test',\['R1:1','R1:2'\]) // 器件焊盘 - 器件焊盘 await eda.pcb\_Drc.removePadPairFromPadPairGroup('test',\['R1:2','e1'\]) // 器件焊盘 - 游离焊盘
 
@@ -3014,31 +3014,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.renameRuleConfiguration() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 重命名设计规则配置
 
-## Signature
+## 签名
 
 ```typescript
 renameRuleConfiguration(originalConfigurationName: string, configurationName: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -3078,13 +3078,13 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 重命名是否成功
 
-## Remarks
+## 备注
 
 只有自定义配置可以重命名，系统配置不允许重命名
 
@@ -3092,11 +3092,11 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.saveRuleConfiguration() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 保存设计规则配置
 
-## Signature
+## 签名
 
 ```typescript
 saveRuleConfiguration(ruleConfiguration: {
@@ -3104,21 +3104,21 @@ saveRuleConfiguration(ruleConfiguration: {
     }, configurationName: string, allowOverwrite?: boolean): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -3166,7 +3166,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否允许覆写同名设计规则配置，`false` 则将在遇到同名设计规则配置时返回 `false`<!-- -->，请注意可能的数据丢失风险
+_（可选）_ 是否允许覆写同名设计规则配置，`false` 则将在遇到同名设计规则配置时返回 `false`<!-- -->，请注意可能的数据丢失风险
 
 
 </td></tr>
@@ -3174,13 +3174,13 @@ _(Optional)_ 是否允许覆写同名设计规则配置，`false` 则将在遇�
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 保存是否成功
 
-## Remarks
+## 备注
 
 只有自定义配置可以覆盖保存，系统配置不允许修改和覆盖
 
@@ -3188,31 +3188,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_Drc.setAsDefaultRuleConfiguration() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置为新建 PCB 默认设计规则配置
 
-## Signature
+## 签名
 
 ```typescript
 setAsDefaultRuleConfiguration(configurationName: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -3236,12 +3236,12 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 设置是否成功
 
-## Remarks
+## 备注
 
 返回值为结果导向，重复设置相同的设计规则为默认设计规则也将返回 `true`

@@ -2,31 +2,31 @@
 
 圆弧图元
 
-## Signature
+## 签名
 
 ```typescript
 declare class ISCH_PrimitiveArc implements ISCH_Primitive 
 ```
-**Implements:** [ISCH\_Primitive](../interfaces/ISCH_Primitive.md)
+**实现自：**[ISCH\_Primitive](../interfaces/ISCH_Primitive.md)
 
-## Remarks
+## 备注
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -418,18 +418,18 @@ Description
 
 # ISCH\_PrimitiveArc.done() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将对图元的更改应用到画布
 
-## Signature
+## 签名
 
 ```typescript
 done(): Promise<ISCH_PrimitiveArc>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)<!-- -->&gt;
 
@@ -441,14 +441,14 @@ Promise&lt;[ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)<!-- -->&gt;
 
 获取属性状态：颜色
 
-## Signature
+## 签名
 
 ```typescript
 getState_Color(): string | null;
 ```
 
 
-## Returns
+## 返回值
 
 string \| null
 
@@ -460,14 +460,14 @@ string \| null
 
 获取属性状态：终止点 X
 
-## Signature
+## 签名
 
 ```typescript
 getState_EndX(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -479,14 +479,14 @@ number
 
 获取属性状态：终止点 Y
 
-## Signature
+## 签名
 
 ```typescript
 getState_EndY(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -498,14 +498,14 @@ number
 
 获取属性状态：填充颜色
 
-## Signature
+## 签名
 
 ```typescript
 getState_FillColor(): string | null;
 ```
 
 
-## Returns
+## 返回值
 
 string \| null
 
@@ -517,14 +517,14 @@ string \| null
 
 获取属性状态：线型
 
-## Signature
+## 签名
 
 ```typescript
 getState_LineType(): ESCH_PrimitiveLineType | null;
 ```
 
 
-## Returns
+## 返回值
 
 [ESCH\_PrimitiveLineType](../enums/ESCH_PrimitiveLineType.md) \| null
 
@@ -536,14 +536,14 @@ getState_LineType(): ESCH_PrimitiveLineType | null;
 
 获取属性状态：线宽
 
-## Signature
+## 签名
 
 ```typescript
 getState_LineWidth(): number | null;
 ```
 
 
-## Returns
+## 返回值
 
 number \| null
 
@@ -555,14 +555,14 @@ number \| null
 
 获取属性状态：图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveId(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -574,14 +574,14 @@ string
 
 获取属性状态：图元类型
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveType(): ESCH_PrimitiveType;
 ```
 
 
-## Returns
+## 返回值
 
 [ESCH\_PrimitiveType](../enums/ESCH_PrimitiveType.md)
 
@@ -593,14 +593,14 @@ getState_PrimitiveType(): ESCH_PrimitiveType;
 
 获取属性状态：参考点 X
 
-## Signature
+## 签名
 
 ```typescript
 getState_ReferenceX(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -612,14 +612,14 @@ number
 
 获取属性状态：参考点 Y
 
-## Signature
+## 签名
 
 ```typescript
 getState_ReferenceY(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -631,14 +631,14 @@ number
 
 获取属性状态：起始点 X
 
-## Signature
+## 签名
 
 ```typescript
 getState_StartX(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -650,14 +650,14 @@ number
 
 获取属性状态：起始点 Y
 
-## Signature
+## 签名
 
 ```typescript
 getState_StartY(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -669,14 +669,14 @@ number
 
 查询图元是否为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 isAsync(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -686,18 +686,18 @@ boolean
 
 # ISCH\_PrimitiveArc.reset() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将异步图元重置为当前画布状态
 
-## Signature
+## 签名
 
 ```typescript
 reset(): Promise<ISCH_PrimitiveArc>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)<!-- -->&gt;
 
@@ -707,31 +707,31 @@ Promise&lt;[ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)<!-- -->&gt;
 
 # ISCH\_PrimitiveArc.setState\_Color() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：颜色
 
-## Signature
+## 签名
 
 ```typescript
 setState_Color(color: string | null): ISCH_PrimitiveArc;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -755,7 +755,7 @@ string \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 
@@ -765,31 +765,31 @@ string \| null
 
 # ISCH\_PrimitiveArc.setState\_EndX() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：终止点 X
 
-## Signature
+## 签名
 
 ```typescript
 setState_EndX(endX: number): ISCH_PrimitiveArc;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -813,7 +813,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 
@@ -823,31 +823,31 @@ number
 
 # ISCH\_PrimitiveArc.setState\_EndY() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：终止点 Y
 
-## Signature
+## 签名
 
 ```typescript
 setState_EndY(endY: number): ISCH_PrimitiveArc;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -871,7 +871,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 
@@ -881,31 +881,31 @@ number
 
 # ISCH\_PrimitiveArc.setState\_FillColor() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：填充颜色
 
-## Signature
+## 签名
 
 ```typescript
 setState_FillColor(fillColor: string | null): ISCH_PrimitiveArc;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -929,7 +929,7 @@ string \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 
@@ -939,31 +939,31 @@ string \| null
 
 # ISCH\_PrimitiveArc.setState\_LineType() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：线型
 
-## Signature
+## 签名
 
 ```typescript
 setState_LineType(lineType: ESCH_PrimitiveLineType | null): ISCH_PrimitiveArc;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -987,7 +987,7 @@ lineType
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 
@@ -997,31 +997,31 @@ lineType
 
 # ISCH\_PrimitiveArc.setState\_LineWidth() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：线宽
 
-## Signature
+## 签名
 
 ```typescript
 setState_LineWidth(lineWidth: number | null): ISCH_PrimitiveArc;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1045,7 +1045,7 @@ number \| null
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 
@@ -1055,31 +1055,31 @@ number \| null
 
 # ISCH\_PrimitiveArc.setState\_ReferenceX() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：参考点 X
 
-## Signature
+## 签名
 
 ```typescript
 setState_ReferenceX(referenceX: number): ISCH_PrimitiveArc;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1103,7 +1103,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 
@@ -1113,31 +1113,31 @@ number
 
 # ISCH\_PrimitiveArc.setState\_ReferenceY() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：参考点 Y
 
-## Signature
+## 签名
 
 ```typescript
 setState_ReferenceY(referenceY: number): ISCH_PrimitiveArc;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1161,7 +1161,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 
@@ -1171,31 +1171,31 @@ number
 
 # ISCH\_PrimitiveArc.setState\_StartX() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：起始点 X
 
-## Signature
+## 签名
 
 ```typescript
 setState_StartX(startX: number): ISCH_PrimitiveArc;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1219,7 +1219,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 
@@ -1229,31 +1229,31 @@ number
 
 # ISCH\_PrimitiveArc.setState\_StartY() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：起始点 Y
 
-## Signature
+## 签名
 
 ```typescript
 setState_StartY(startY: number): ISCH_PrimitiveArc;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1277,7 +1277,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 
@@ -1289,14 +1289,14 @@ number
 
 将图元转换为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 toAsync(): ISCH_PrimitiveArc;
 ```
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 
@@ -1308,14 +1308,14 @@ toAsync(): ISCH_PrimitiveArc;
 
 将图元转换为同步图元
 
-## Signature
+## 签名
 
 ```typescript
 toSync(): ISCH_PrimitiveArc;
 ```
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveArc](./ISCH_PrimitiveArc.md)
 

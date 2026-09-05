@@ -2,32 +2,32 @@
 
 原理图属性
 
-## Signature
+## 签名
 
 ```typescript
 interface IDMT_SchematicItem 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -46,7 +46,7 @@ Description
 
 </td><td>
 
-_(Optional)_ 复用模块原理图关联的模块符号
+_（可选）_ 复用模块原理图关联的模块符号
 
 
 </td></tr>
@@ -124,7 +124,7 @@ string
 
 </td><td>
 
-_(Optional)_ 所属板子 UUID
+_（可选）_ 所属板子 UUID
 
 
 </td></tr>
@@ -178,7 +178,7 @@ string
 
 复用模块原理图关联的模块符号
 
-## Signature
+## 签名
 
 ```typescript
 cbbSymbol?: ILIB_SymbolItem;
@@ -190,7 +190,7 @@ cbbSymbol?: ILIB_SymbolItem;
 
 项目类型
 
-## Signature
+## 签名
 
 ```typescript
 readonly itemType: EDMT_ItemType.SCHEMATIC | EDMT_ItemType.CBB_SCHEMATIC;
@@ -202,7 +202,7 @@ readonly itemType: EDMT_ItemType.SCHEMATIC | EDMT_ItemType.CBB_SCHEMATIC;
 
 原理图名称
 
-## Signature
+## 签名
 
 ```typescript
 name: string;
@@ -214,7 +214,7 @@ name: string;
 
 下属原理图图页
 
-## Signature
+## 签名
 
 ```typescript
 page: Array<IDMT_SchematicPageItem>;
@@ -226,7 +226,7 @@ page: Array<IDMT_SchematicPageItem>;
 
 所属板子 UUID
 
-## Signature
+## 签名
 
 ```typescript
 parentBoardUuid?: string;
@@ -238,7 +238,7 @@ parentBoardUuid?: string;
 
 所属工程 UUID
 
-## Signature
+## 签名
 
 ```typescript
 parentProjectUuid: string;
@@ -250,7 +250,7 @@ parentProjectUuid: string;
 
 原理图 UUID
 
-## Signature
+## 签名
 
 ```typescript
 uuid: string;

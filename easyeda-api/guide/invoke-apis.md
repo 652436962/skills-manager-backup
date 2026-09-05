@@ -1,77 +1,77 @@
-# Invoking the Extension API
+# 调用扩展 API
 
-## Invoke Method
+## 调用方法
 
-There are many classes under the EasyEDA Pro Extension API module, all **Classes**, **Enumerations**, **Interfaces**, **Type Aliases** are registered under the `EDA` base class by default and have been instantiated as [eda](../reference/pro-api.eda) object exists in the root scope of every extension runtime, and you can access it directly through the `eda` object.
+嘉立创 EDA 专业版扩展 API 模块下存在许多各司其职的类，所有的 **类**、**枚举**、**接口**、**类型别名** 默认都注册在 `EDA` 基类下，并已实例化为 [eda](../reference/pro-api.eda) 对象存在于每一个扩展运行时的根作用域中，你可以直接通过 `eda` 对象访问到它。
 
-All extension's runtime get a separate `eda` object, which is not shared with other extensions. You can output this object on the console in [Debug Mode](#Entering%20Debug%20Mode) within an extension (or in [Standalone Script](#Debug%20with%20Standalone%20Scripting)) using the following code:
+所有的扩展运行时都会获得一个独立的 `eda` 对象，它不与其他扩展共用。你可以在 [调试模式](#进入调试模式) 下在扩展内（或 [独立脚本](#使用独立脚本功能调试) 内）使用以下代码在控制台输出该对象：
 
 ```javascript
 console.log('[DEBUG] eda:', eda);
 ```
 
-Standard extension API calls require the splice **eda** + **class instance object name** + **method name / variable name**. The object names corresponding to classes instantiated in the system are in the form of the first three letters of the underscore in lowercase, for example:
+标准的扩展 API 调用需要拼接 **eda** + **类实例对象名** + **方法名 / 变量名**。系统内实例化的类对应的对象名称为下划线前三个字母小写的形式，例如：
 
-| Class Name       | Class Instance Object Name |
-| ---------------- | -------------------------- |
-| SYS_I18n         | sys_I18n                   |
-| SYS_ToastMessage | sys_ToastMessage           |
+| 类名             | 类实例对象名     |
+| ---------------- | ---------------- |
+| SYS_I18n         | sys_I18n         |
+| SYS_ToastMessage | sys_ToastMessage |
 
-The following example calls the `text` method under the `SYS_I18n` class and the `showMessage` method under the `SYS_ToastMessage` class:
+如下示例为调用 `SYS_I18n` 类下的 `text` 方法和 `SYS_ToastMessage` 类下的 `showMessage` 方法：
 
 ```typescript {2}
-// Note that the `sys` in `sys_I18n` is lowercase because we need to use the object name when calling the
+// 注意 sys_I18n 的 sys 为小写，这是因为我们调用的时候需要使用对象名称
 eda.sys_ToastMessage.showMessage(eda.sys_I18n.text('Done'), ESYS_ToastMessageType.INFO);
 
-const t = eda.sys_I18n.text; // Assign `eda.sys_I18n.text` method to `t`
-eda.sys_ToastMessage.showMessage(t('Done'), ESYS_ToastMessageType.INFO); // This will give you exactly the same result as line 2
+const t = eda.sys_I18n.text; // 将 eda.sys_I18n.text 方法赋值给 t
+eda.sys_ToastMessage.showMessage(t('Done'), ESYS_ToastMessageType.INFO); // 这将会与第 2 行得到完全相同的结果
 ```
 
-## Commissioning Methods
+## 调试方法
 
-### Entering Debug Mode
+### 进入调试模式
 
-You can add the `cll=debug` parameter within the URL of the EasyEDA Pro editor to enter debug mode:
+你可以在嘉立创 EDA 专业版编辑器的 URL 内添加 `cll=debug` 参数以进入调试模式：
 
 ```diff
-- https://pro.easyeda.com/editor
-+ https://pro.easyeda.com/editor?cll=debug
+- https://pro.lceda.cn/editor
++ https://pro.lceda.cn/editor?cll=debug
 ```
 
-Then press <kbd>F12</kbd> three times in quick succession to open the developer tools. Switch to the Console tab to output debugging information.
+然后使用快捷键 <kbd>F12</kbd> 打开开发人员工具(v2.2.38.3后需要快速按三次F12)，切换到控制台，即可输出调试信息。
 
 ::: tip
 
-If you are using the desktop client, you can press <kbd>F12</kbd> three times in quick succession to open the developer tools, then enter the following in the console:
+如果你使用的是客户端，可以使用快捷键 <kbd>F12</kbd> 打开开发人员工具，并在控制台内输入：
 
 ```javascript
 window.location.href = 'https://client/editor?cll=debug';
 ```
 
-Then you can enter debug mode.
+即可进入调试模式。
 
 :::
 
-### Debugging with Standalone Scripting
+### 使用独立脚本功能调试
 
-When using the extension API interface, you need to compile the changes first and upload the compiled result to EasyEDA before you can see the result. If you have some logic that you want to split out for debugging, you can try using the standalone script feature.
+在使用扩展 API 接口时，你需要在更改后先行编译，并将编译结果上传到嘉立创 EDA 后才能查看到运行效果。如果有一些逻辑希望拆分出来调试，可以尝试使用独立脚本功能。
 
-**V2 Debugging:**
+#### V2 版本调试
 
-Entry: **Top Menu** -\> **Settings** -\> **Extensions** -\> **Standalone Script**
+入口：顶部菜单 - 设置 - 扩展 - 独立脚本
 
-![](/storage/images/en/api/guide/invoke-apis/invoke-apis_20250322_142403.jpg)
+![](/storage/images/cn/api/guide/invoke-apis/invoke-apis_20250322_142536.jpg)
 
-**V3 Debugging:**
+#### V3 版本调试
 
-Entry: **Top Menu** -\> **Advanced** -\> **Run Script**
+入口：顶部菜单 - 高级 - 运行脚本
 
-![](/storage/images/cn/api/guide/invoke-apis/invoke-apis_20260312_101848.png)
+![图 0](/storage/images/cn/api/guide/invoke-apis/invoke-apis_20260312_101848.png)
 
-You can use Script Manager to save standalone scripts and run them quickly:
+支持使用脚本管理器保存和快捷运行独立脚本。
 
-![](/storage/images/cn/api/guide/invoke-apis/invoke-apis_20260312_102007.png)
+![图 1](/storage/images/cn/api/guide/invoke-apis/invoke-apis_20260312_102007.png)
 
-Standalone scripts get a unique, throw-away `eda` object each time they run, so you don't have to worry about contaminating the runtime environment with the results of previous runs. Note, however, that some of the extension API interfaces, such as `SYS_IFrame`, cannot be called from within a standalone script because they use features from extension packages or external interactions.
+独立脚本在每次运行时都会获得唯一的、用后即抛的 `eda` 对象，你不用担心它会被前次的运行结果污染运行环境。但请注意，独立脚本内无法调用部分扩展 API 接口，例如 `SYS_IFrame` 等，这是因为它们使用到了扩展软件包或外部交互的特性。
 
-The standalone script's save feature stores data in the browser's [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) or [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API), which is generally sustainable locally, but please note that this is always insecure, so please backup your own standalone scripts.
+独立脚本的保存功能会将数据存储在浏览器的 [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) 或 [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API) 内，一般情况下可以在本地持续保存，但请注意，这始终是不安全的，请自行备份你开发的独立脚本。

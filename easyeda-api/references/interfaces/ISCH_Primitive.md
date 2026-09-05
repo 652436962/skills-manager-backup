@@ -2,32 +2,32 @@
 
 原理图图元
 
-## Signature
+## 签名
 
 ```typescript
 interface ISCH_Primitive 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -177,7 +177,7 @@ Description
 
 # ISCH\_Primitive.create property
 
-## Signature
+## 签名
 
 ```typescript
 create: () => ISCH_Primitive | Promise<ISCH_Primitive>;
@@ -187,7 +187,7 @@ create: () => ISCH_Primitive | Promise<ISCH_Primitive>;
 
 # ISCH\_Primitive.done property
 
-## Signature
+## 签名
 
 ```typescript
 done: () => ISCH_Primitive | Promise<ISCH_Primitive>;
@@ -197,7 +197,7 @@ done: () => ISCH_Primitive | Promise<ISCH_Primitive>;
 
 # ISCH\_Primitive.getState\_PrimitiveId property
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveId: () => string;
@@ -207,7 +207,7 @@ getState_PrimitiveId: () => string;
 
 # ISCH\_Primitive.getState\_PrimitiveType property
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveType: () => ESCH_PrimitiveType;
@@ -217,7 +217,7 @@ getState_PrimitiveType: () => ESCH_PrimitiveType;
 
 # ISCH\_Primitive.isAsync property
 
-## Signature
+## 签名
 
 ```typescript
 isAsync: () => boolean;
@@ -227,7 +227,7 @@ isAsync: () => boolean;
 
 # ISCH\_Primitive.reset property
 
-## Signature
+## 签名
 
 ```typescript
 reset: () => ISCH_Primitive | Promise<ISCH_Primitive>;
@@ -237,7 +237,7 @@ reset: () => ISCH_Primitive | Promise<ISCH_Primitive>;
 
 # ISCH\_Primitive.toAsync property
 
-## Signature
+## 签名
 
 ```typescript
 toAsync: () => ISCH_Primitive;
@@ -247,7 +247,7 @@ toAsync: () => ISCH_Primitive;
 
 # ISCH\_Primitive.toSync property
 
-## Signature
+## 签名
 
 ```typescript
 toSync: () => ISCH_Primitive;

@@ -2,33 +2,33 @@
 
 工程属性
 
-## Signature
+## 签名
 
 ```typescript
 interface IDMT_ProjectItem extends IDMT_BriefProjectItem 
 ```
-**Extends:** [IDMT\_BriefProjectItem](./IDMT_BriefProjectItem.md)
+**扩展自：**[IDMT\_BriefProjectItem](./IDMT_BriefProjectItem.md)
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -47,7 +47,7 @@ Description
 
 </td><td>
 
-_(Optional)_ 工程协作模式
+_（可选）_ 工程协作模式
 
 
 </td></tr>
@@ -85,7 +85,7 @@ string
 
 </td><td>
 
-_(Optional)_ 描述
+_（可选）_ 描述
 
 
 </td></tr>
@@ -120,7 +120,7 @@ string
 
 工程协作模式
 
-## Signature
+## 签名
 
 ```typescript
 collaborationMode?: EDMT_ProjectCollaborationMode;
@@ -132,7 +132,7 @@ collaborationMode?: EDMT_ProjectCollaborationMode;
 
 工程内文档数据
 
-## Signature
+## 签名
 
 ```typescript
 data: Array<IDMT_BoardItem | IDMT_SchematicItem | IDMT_PcbItem | IDMT_PanelItem>;
@@ -144,7 +144,7 @@ data: Array<IDMT_BoardItem | IDMT_SchematicItem | IDMT_PcbItem | IDMT_PanelItem>
 
 描述
 
-## Signature
+## 签名
 
 ```typescript
 description?: string;
@@ -156,7 +156,7 @@ description?: string;
 
 工程链接名称
 
-## Signature
+## 签名
 
 ```typescript
 name: string;

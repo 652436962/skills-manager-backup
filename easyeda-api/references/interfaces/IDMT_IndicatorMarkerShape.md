@@ -2,32 +2,32 @@
 
 指示标记外形
 
-## Signature
+## 签名
 
 ```typescript
 interface IDMT_IndicatorMarkerShape 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -46,7 +46,7 @@ number
 
 </td><td>
 
-_(Optional)_ 圆弧：角度
+_（可选）_ 圆弧：角度
 
 
 </td></tr>
@@ -65,7 +65,7 @@ number
 
 </td><td>
 
-_(Optional)_ 矩形：下 Y
+_（可选）_ 矩形：下 Y
 
 
 </td></tr>
@@ -84,7 +84,7 @@ number
 
 </td><td>
 
-_(Optional)_ 线段 \| 圆弧：终止点 X
+_（可选）_ 线段 \| 圆弧：终止点 X
 
 
 </td></tr>
@@ -103,7 +103,7 @@ number
 
 </td><td>
 
-_(Optional)_ 线段 \| 圆弧：终止点 Y
+_（可选）_ 线段 \| 圆弧：终止点 Y
 
 
 </td></tr>
@@ -122,7 +122,7 @@ number
 
 </td><td>
 
-_(Optional)_ 矩形：左 X
+_（可选）_ 矩形：左 X
 
 
 </td></tr>
@@ -141,7 +141,7 @@ number
 
 </td><td>
 
-_(Optional)_ 圆形：半径
+_（可选）_ 圆形：半径
 
 
 </td></tr>
@@ -160,7 +160,7 @@ number
 
 </td><td>
 
-_(Optional)_ 矩形：右 X
+_（可选）_ 矩形：右 X
 
 
 </td></tr>
@@ -179,7 +179,7 @@ number
 
 </td><td>
 
-_(Optional)_ 线段 \| 圆弧：起始点 X
+_（可选）_ 线段 \| 圆弧：起始点 X
 
 
 </td></tr>
@@ -198,7 +198,7 @@ number
 
 </td><td>
 
-_(Optional)_ 线段 \| 圆弧：起始点 Y
+_（可选）_ 线段 \| 圆弧：起始点 Y
 
 
 </td></tr>
@@ -217,7 +217,7 @@ number
 
 </td><td>
 
-_(Optional)_ 矩形：上 Y
+_（可选）_ 矩形：上 Y
 
 
 </td></tr>
@@ -255,7 +255,7 @@ number
 
 </td><td>
 
-_(Optional)_ 点：坐标 X
+_（可选）_ 点：坐标 X
 
 圆形：圆心 X
 
@@ -276,7 +276,7 @@ number
 
 </td><td>
 
-_(Optional)_ 点：坐标 Y
+_（可选）_ 点：坐标 Y
 
 圆形：圆心 Y
 
@@ -294,7 +294,7 @@ _(Optional)_ 点：坐标 Y
 
 圆弧：角度
 
-## Signature
+## 签名
 
 ```typescript
 angle?: number;
@@ -306,7 +306,7 @@ angle?: number;
 
 矩形：下 Y
 
-## Signature
+## 签名
 
 ```typescript
 bottom?: number;
@@ -318,7 +318,7 @@ bottom?: number;
 
 线段 \| 圆弧：终止点 X
 
-## Signature
+## 签名
 
 ```typescript
 endX?: number;
@@ -330,7 +330,7 @@ endX?: number;
 
 线段 \| 圆弧：终止点 Y
 
-## Signature
+## 签名
 
 ```typescript
 endY?: number;
@@ -342,7 +342,7 @@ endY?: number;
 
 矩形：左 X
 
-## Signature
+## 签名
 
 ```typescript
 left?: number;
@@ -354,7 +354,7 @@ left?: number;
 
 圆形：半径
 
-## Signature
+## 签名
 
 ```typescript
 r?: number;
@@ -366,7 +366,7 @@ r?: number;
 
 矩形：右 X
 
-## Signature
+## 签名
 
 ```typescript
 right?: number;
@@ -378,7 +378,7 @@ right?: number;
 
 线段 \| 圆弧：起始点 X
 
-## Signature
+## 签名
 
 ```typescript
 startX?: number;
@@ -390,7 +390,7 @@ startX?: number;
 
 线段 \| 圆弧：起始点 Y
 
-## Signature
+## 签名
 
 ```typescript
 startY?: number;
@@ -402,7 +402,7 @@ startY?: number;
 
 矩形：上 Y
 
-## Signature
+## 签名
 
 ```typescript
 top?: number;
@@ -414,7 +414,7 @@ top?: number;
 
 类型
 
-## Signature
+## 签名
 
 ```typescript
 type: EDMT_IndicatorMarkerType;
@@ -428,7 +428,7 @@ type: EDMT_IndicatorMarkerType;
 
 圆形：圆心 X
 
-## Signature
+## 签名
 
 ```typescript
 x?: number;
@@ -442,7 +442,7 @@ x?: number;
 
 圆形：圆心 Y
 
-## Signature
+## 签名
 
 ```typescript
 y?: number;

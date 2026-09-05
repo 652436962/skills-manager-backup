@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "77314554-02f0-4b26-b824-0d969fa6aa48",
+  "path": "emberinter",
+  "path_key": "emberinter",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

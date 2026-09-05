@@ -2,30 +2,30 @@
 
 系统 / 消息总线类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SYS_MessageBus 
 ```
 
-## Remarks
+## 备注
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -293,18 +293,18 @@ Description
 
 创建私有消息总线
 
-## Signature
+## 签名
 
 ```typescript
 createPrivateMessageBus(): void;
 ```
 
 
-## Returns
+## 返回值
 
 void
 
-## Remarks
+## 备注
 
 一般无需调用该方法，在进行监听或发送消息时会自动创建私有消息总线
 
@@ -314,27 +314,27 @@ void
 
 私有消息总线：发布消息
 
-## Signature
+## 签名
 
 ```typescript
 publish(topic: string, message: any): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -374,11 +374,11 @@ any
 
 
 
-## Returns
+## 返回值
 
 void
 
-## Remarks
+## 备注
 
 将消息广播给每一个 Subscriber
 
@@ -388,27 +388,27 @@ void
 
 公共消息总线：发布消息
 
-## Signature
+## 签名
 
 ```typescript
 publishPublic(topic: string, message: any): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -448,11 +448,11 @@ any
 
 
 
-## Returns
+## 返回值
 
 void
 
-## Remarks
+## 备注
 
 将消息广播给每一个 Subscriber
 
@@ -462,27 +462,27 @@ void
 
 私有消息总线：拉消息
 
-## Signature
+## 签名
 
 ```typescript
 pull(topic: string, callbackFn: (message: any) => void): ISYS_MessageBusTask;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -522,13 +522,13 @@ callbackFn
 
 
 
-## Returns
+## 返回值
 
 [ISYS\_MessageBusTask](../interfaces/ISYS_MessageBusTask.md)
 
 消息总线任务
 
-## Remarks
+## 备注
 
 每次只能拉一个消息
 
@@ -538,27 +538,27 @@ callbackFn
 
 私有消息总线：拉消息 Promise 版本
 
-## Signature
+## 签名
 
 ```typescript
 pullAsync(topic: string): Promise<any>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -582,13 +582,13 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;any&gt;
 
 拉取到的消息
 
-## Remarks
+## 备注
 
 每次只能拉一个消息，可以使用 `await` 等待消息拉取
 
@@ -598,27 +598,27 @@ Promise&lt;any&gt;
 
 公共消息总线：拉消息 Promise 版本
 
-## Signature
+## 签名
 
 ```typescript
 pullAsyncPublic(topic: string): Promise<any>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -642,13 +642,13 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;any&gt;
 
 拉取到的消息
 
-## Remarks
+## 备注
 
 每次只能拉一个消息，可以使用 `await` 等待消息拉取
 
@@ -658,27 +658,27 @@ Promise&lt;any&gt;
 
 公共消息总线：拉消息
 
-## Signature
+## 签名
 
 ```typescript
 pullPublic(topic: string, callbackFn: (message: any) => void): ISYS_MessageBusTask;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -718,13 +718,13 @@ callbackFn
 
 
 
-## Returns
+## 返回值
 
 [ISYS\_MessageBusTask](../interfaces/ISYS_MessageBusTask.md)
 
 消息总线任务
 
-## Remarks
+## 备注
 
 每次只能拉一个消息
 
@@ -734,27 +734,27 @@ callbackFn
 
 私有消息总线：推消息
 
-## Signature
+## 签名
 
 ```typescript
 push(topic: string, message: any): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -794,11 +794,11 @@ any
 
 
 
-## Returns
+## 返回值
 
 void
 
-## Remarks
+## 备注
 
 每个消息只有一个 Puller 可以收到
 
@@ -808,27 +808,27 @@ void
 
 公共消息总线：推消息
 
-## Signature
+## 签名
 
 ```typescript
 pushPublic(topic: string, message: any): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -868,11 +868,11 @@ any
 
 
 
-## Returns
+## 返回值
 
 void
 
-## Remarks
+## 备注
 
 每个消息只有一个 Puller 可以收到
 
@@ -882,18 +882,18 @@ void
 
 移除私有消息总线
 
-## Signature
+## 签名
 
 ```typescript
 removePrivateMessageBus(): void;
 ```
 
 
-## Returns
+## 返回值
 
 void
 
-## Remarks
+## 备注
 
 一般无需调用该方法，除非你知道自己在做什么
 
@@ -903,27 +903,27 @@ void
 
 私有消息总线：调用 RPC 服务
 
-## Signature
+## 签名
 
 ```typescript
 rpcCall(topic: string, message?: any, timeout?: number): Promise<any>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -955,7 +955,7 @@ any
 
 </td><td>
 
-_(Optional)_ 消息
+_（可选）_ 消息
 
 
 </td></tr>
@@ -971,7 +971,7 @@ number
 
 </td><td>
 
-_(Optional)_ 超时
+_（可选）_ 超时
 
 
 </td></tr>
@@ -979,7 +979,7 @@ _(Optional)_ 超时
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;any&gt;
 
@@ -991,27 +991,27 @@ RPC 服务返回
 
 公共消息总线：调用 RPC 服务
 
-## Signature
+## 签名
 
 ```typescript
 rpcCallPublic(topic: string, message?: any, timeout?: number): Promise<any>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1043,7 +1043,7 @@ any
 
 </td><td>
 
-_(Optional)_ 消息
+_（可选）_ 消息
 
 
 </td></tr>
@@ -1059,7 +1059,7 @@ number
 
 </td><td>
 
-_(Optional)_ 超时
+_（可选）_ 超时
 
 
 </td></tr>
@@ -1067,7 +1067,7 @@ _(Optional)_ 超时
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;any&gt;
 
@@ -1079,27 +1079,27 @@ RPC 服务返回
 
 私有消息总线：注册 RPC 服务
 
-## Signature
+## 签名
 
 ```typescript
 rpcService(topic: string, callbackFn: (...args: Array<any>) => any | Promise<any>): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1139,7 +1139,7 @@ callbackFn
 
 
 
-## Returns
+## 返回值
 
 void
 
@@ -1149,27 +1149,27 @@ void
 
 公共消息总线：注册 RPC 服务
 
-## Signature
+## 签名
 
 ```typescript
 rpcServicePublic(topic: string, callbackFn: (...args: Array<any>) => any | Promise<any>): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1209,7 +1209,7 @@ callbackFn
 
 
 
-## Returns
+## 返回值
 
 void
 
@@ -1219,27 +1219,27 @@ void
 
 私有消息总线：订阅消息
 
-## Signature
+## 签名
 
 ```typescript
 subscribe(topic: string, callbackFn: (message: any) => void): ISYS_MessageBusTask;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1279,13 +1279,13 @@ callbackFn
 
 
 
-## Returns
+## 返回值
 
 [ISYS\_MessageBusTask](../interfaces/ISYS_MessageBusTask.md)
 
 消息总线任务
 
-## Remarks
+## 备注
 
 持久性订阅消息
 
@@ -1295,27 +1295,27 @@ callbackFn
 
 私有消息总线：订阅单次消息
 
-## Signature
+## 签名
 
 ```typescript
 subscribeOnce(topic: string, callbackFn: (message: any) => void): ISYS_MessageBusTask;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1355,7 +1355,7 @@ callbackFn
 
 
 
-## Returns
+## 返回值
 
 [ISYS\_MessageBusTask](../interfaces/ISYS_MessageBusTask.md)
 
@@ -1367,27 +1367,27 @@ callbackFn
 
 公共消息总线：订阅单次消息
 
-## Signature
+## 签名
 
 ```typescript
 subscribeOncePublic(topic: string, callbackFn: (message: any) => void): ISYS_MessageBusTask;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1427,7 +1427,7 @@ callbackFn
 
 
 
-## Returns
+## 返回值
 
 [ISYS\_MessageBusTask](../interfaces/ISYS_MessageBusTask.md)
 
@@ -1439,27 +1439,27 @@ callbackFn
 
 公共消息总线：订阅消息
 
-## Signature
+## 签名
 
 ```typescript
 subscribePublic(topic: string, callbackFn: (message: any) => void): ISYS_MessageBusTask;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1499,12 +1499,12 @@ callbackFn
 
 
 
-## Returns
+## 返回值
 
 [ISYS\_MessageBusTask](../interfaces/ISYS_MessageBusTask.md)
 
 消息总线任务
 
-## Remarks
+## 备注
 
 持久性订阅消息

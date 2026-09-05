@@ -2,30 +2,30 @@
 
 系统 / 内联框架窗口类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SYS_IFrame 
 ```
 
-## Remarks
+## 备注
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -95,31 +95,31 @@ Description
 
 # SYS\_IFrame.closeIFrame() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 关闭内联框架窗口
 
-## Signature
+## 签名
 
 ```typescript
 closeIFrame(id?: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -135,7 +135,7 @@ string
 
 </td><td>
 
-_(Optional)_ 内联框架窗口 ID，如若传入 `undefined`<!-- -->，将关闭由本扩展打开的所有内联框架窗口
+_（可选）_ 内联框架窗口 ID，如若传入 `undefined`<!-- -->，将关闭由本扩展打开的所有内联框架窗口
 
 
 </td></tr>
@@ -143,13 +143,13 @@ _(Optional)_ 内联框架窗口 ID，如若传入 `undefined`<!-- -->，将关�
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 关闭指定 ID 的内联框架窗口
 
@@ -159,31 +159,31 @@ Promise&lt;boolean&gt;
 
 # SYS\_IFrame.hideIFrame() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 隐藏内联框架窗口
 
-## Signature
+## 签名
 
 ```typescript
 hideIFrame(id?: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -199,7 +199,7 @@ string
 
 </td><td>
 
-_(Optional)_ 内联框架窗口 ID
+_（可选）_ 内联框架窗口 ID
 
 
 </td></tr>
@@ -207,13 +207,13 @@ _(Optional)_ 内联框架窗口 ID
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 本接口为结果导向的： 如若未找到指定内联框架窗口，接口将会返回 `false`<!-- -->； 如若在执行操作前该内联框架窗口已处于隐藏状态，接口将会返回 `true`
 
@@ -223,11 +223,11 @@ Promise&lt;boolean&gt;
 
 # SYS\_IFrame.openIFrame() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 打开内联框架窗口
 
-## Signature
+## 签名
 
 ```typescript
 openIFrame(htmlFileName: string, width?: number, height?: number, id?: string, props?: {
@@ -241,21 +241,21 @@ openIFrame(htmlFileName: string, width?: number, height?: number, id?: string, p
     }): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -287,7 +287,7 @@ number
 
 </td><td>
 
-_(Optional)_ 内联框架窗口的宽度
+_（可选）_ 内联框架窗口的宽度
 
 
 </td></tr>
@@ -303,7 +303,7 @@ number
 
 </td><td>
 
-_(Optional)_ 内联框架窗口的高度
+_（可选）_ 内联框架窗口的高度
 
 
 </td></tr>
@@ -319,7 +319,7 @@ string
 
 </td><td>
 
-_(Optional)_ 内联框架窗口 ID，用于关闭内联框架窗口
+_（可选）_ 内联框架窗口 ID，用于关闭内联框架窗口
 
 
 </td></tr>
@@ -335,7 +335,7 @@ props
 
 </td><td>
 
-_(Optional)_ 其它参数
+_（可选）_ 其它参数
 
 
 </td></tr>
@@ -343,13 +343,13 @@ _(Optional)_ 其它参数
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 本接口仅扩展包允许调用，用户需要在扩展包内包含用于内联的 HTML 文件；
 
@@ -365,31 +365,31 @@ Promise&lt;boolean&gt;
 
 # SYS\_IFrame.showIFrame() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 显示内联框架窗口
 
-## Signature
+## 签名
 
 ```typescript
 showIFrame(id?: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -405,7 +405,7 @@ string
 
 </td><td>
 
-_(Optional)_ 内联框架窗口 ID
+_（可选）_ 内联框架窗口 ID
 
 
 </td></tr>
@@ -413,13 +413,13 @@ _(Optional)_ 内联框架窗口 ID
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 本接口为结果导向的： 如若未找到指定内联框架窗口，接口将会返回 `false`<!-- -->； 如若在执行操作前该内联框架窗口已处于显示状态，接口将会返回 `true`
 

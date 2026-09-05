@@ -2,36 +2,36 @@
 
 焊盘图元
 
-## Signature
+## 签名
 
 ```typescript
 declare class IPCB_PrimitivePad implements IPCB_Primitive 
 ```
-**Implements:** [IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
+**实现自：**[IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
 
-## Remarks
+## 备注
 
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -220,7 +220,7 @@ string
 
 </td><td>
 
-_(Optional)_ 网络名称
+_（可选）_ 网络名称
 
 
 </td></tr>
@@ -241,7 +241,7 @@ _(Optional)_ 网络名称
 
 </td><td>
 
-_(Optional)_ 焊盘外形
+_（可选）_ 焊盘外形
 
 
 </td></tr>
@@ -304,7 +304,7 @@ string
 
 </td><td>
 
-_(Optional)_ 图元 ID
+_（可选）_ 图元 ID
 
 
 </td></tr>
@@ -411,7 +411,7 @@ number
 
 </td><td>
 
-_(Optional)_ 特殊焊盘外形
+_（可选）_ 特殊焊盘外形
 
 
 </td></tr>
@@ -459,21 +459,21 @@ number
 </td></tr>
 </tbody></table>
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1063,7 +1063,7 @@ Description
 
 异步
 
-## Signature
+## 签名
 
 ```typescript
 protected async: boolean;
@@ -1075,7 +1075,7 @@ protected async: boolean;
 
 热焊优化参数
 
-## Signature
+## 签名
 
 ```typescript
 protected heatWelding: IPCB_PrimitivePadHeatWelding | null;
@@ -1087,7 +1087,7 @@ protected heatWelding: IPCB_PrimitivePadHeatWelding | null;
 
 孔
 
-## Signature
+## 签名
 
 ```typescript
 protected hole: TPCB_PrimitivePadHole | null;
@@ -1099,7 +1099,7 @@ protected hole: TPCB_PrimitivePadHole | null;
 
 孔偏移 X
 
-## Signature
+## 签名
 
 ```typescript
 protected holeOffsetX: number;
@@ -1111,7 +1111,7 @@ protected holeOffsetX: number;
 
 孔偏移 Y
 
-## Signature
+## 签名
 
 ```typescript
 protected holeOffsetY: number;
@@ -1123,7 +1123,7 @@ protected holeOffsetY: number;
 
 孔相对于焊盘的旋转角度
 
-## Signature
+## 签名
 
 ```typescript
 protected holeRotation: number;
@@ -1135,7 +1135,7 @@ protected holeRotation: number;
 
 层
 
-## Signature
+## 签名
 
 ```typescript
 protected layer: TPCB_LayersOfPad;
@@ -1147,7 +1147,7 @@ protected layer: TPCB_LayersOfPad;
 
 是否金属化孔壁
 
-## Signature
+## 签名
 
 ```typescript
 protected metallization: boolean;
@@ -1159,7 +1159,7 @@ protected metallization: boolean;
 
 网络名称
 
-## Signature
+## 签名
 
 ```typescript
 protected net?: string;
@@ -1171,7 +1171,7 @@ protected net?: string;
 
 焊盘外形
 
-## Signature
+## 签名
 
 ```typescript
 protected pad?: TPCB_PrimitivePadShape;
@@ -1183,7 +1183,7 @@ protected pad?: TPCB_PrimitivePadShape;
 
 焊盘编号
 
-## Signature
+## 签名
 
 ```typescript
 protected padNumber: string;
@@ -1195,7 +1195,7 @@ protected padNumber: string;
 
 焊盘类型
 
-## Signature
+## 签名
 
 ```typescript
 protected padType: EPCB_PrimitivePadType;
@@ -1207,7 +1207,7 @@ protected padType: EPCB_PrimitivePadType;
 
 图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 protected primitiveId?: string;
@@ -1219,7 +1219,7 @@ protected primitiveId?: string;
 
 是否锁定
 
-## Signature
+## 签名
 
 ```typescript
 protected primitiveLock: boolean;
@@ -1231,7 +1231,7 @@ protected primitiveLock: boolean;
 
 图元类型
 
-## Signature
+## 签名
 
 ```typescript
 protected readonly primitiveType: EPCB_PrimitiveType;
@@ -1243,7 +1243,7 @@ protected readonly primitiveType: EPCB_PrimitiveType;
 
 旋转角度
 
-## Signature
+## 签名
 
 ```typescript
 protected rotation: number;
@@ -1255,7 +1255,7 @@ protected rotation: number;
 
 阻焊/助焊扩展
 
-## Signature
+## 签名
 
 ```typescript
 protected solderMaskAndPasteMaskExpansion: IPCB_PrimitiveSolderMaskAndPasteMaskExpansion | null;
@@ -1267,7 +1267,7 @@ protected solderMaskAndPasteMaskExpansion: IPCB_PrimitiveSolderMaskAndPasteMaskE
 
 特殊焊盘外形
 
-## Signature
+## 签名
 
 ```typescript
 protected specialPad?: TPCB_PrimitiveSpecialPadShape;
@@ -1279,7 +1279,7 @@ protected specialPad?: TPCB_PrimitiveSpecialPadShape;
 
 位置 X
 
-## Signature
+## 签名
 
 ```typescript
 protected x: number;
@@ -1291,7 +1291,7 @@ protected x: number;
 
 位置 Y
 
-## Signature
+## 签名
 
 ```typescript
 protected y: number;
@@ -1306,18 +1306,18 @@ protected y: number;
 
 # IPCB\_PrimitivePad.create() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 在 PCB 画布中创建图元
 
-## Signature
+## 签名
 
 ```typescript
 create(): Promise<IPCB_PrimitivePad>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)<!-- -->&gt;
 
@@ -1327,18 +1327,18 @@ Promise&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)<!-- -->&gt;
 
 # IPCB\_PrimitivePad.done() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将对图元的更改应用到画布
 
-## Signature
+## 签名
 
 ```typescript
 done(): Promise<IPCB_PrimitivePad>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)<!-- -->&gt;
 
@@ -1350,14 +1350,14 @@ Promise&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)<!-- -->&gt;
 
 获取属性状态：热焊优化参数
 
-## Signature
+## 签名
 
 ```typescript
 getState_HeatWelding(): IPCB_PrimitivePadHeatWelding | null;
 ```
 
 
-## Returns
+## 返回值
 
 IPCB\_PrimitivePadHeatWelding \| null
 
@@ -1369,14 +1369,14 @@ IPCB\_PrimitivePadHeatWelding \| null
 
 获取属性状态：孔
 
-## Signature
+## 签名
 
 ```typescript
 getState_Hole(): TPCB_PrimitivePadHole | null;
 ```
 
 
-## Returns
+## 返回值
 
 [TPCB\_PrimitivePadHole](../types/TPCB_PrimitivePadHole.md) \| null
 
@@ -1388,14 +1388,14 @@ getState_Hole(): TPCB_PrimitivePadHole | null;
 
 获取属性状态：孔偏移 X
 
-## Signature
+## 签名
 
 ```typescript
 getState_HoleOffsetX(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -1407,14 +1407,14 @@ number
 
 获取属性状态：孔偏移 Y
 
-## Signature
+## 签名
 
 ```typescript
 getState_HoleOffsetY(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -1426,14 +1426,14 @@ number
 
 获取属性状态：孔相对于焊盘的旋转角度
 
-## Signature
+## 签名
 
 ```typescript
 getState_HoleRotation(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -1445,14 +1445,14 @@ number
 
 获取属性状态：层
 
-## Signature
+## 签名
 
 ```typescript
 getState_Layer(): TPCB_LayersOfPad;
 ```
 
 
-## Returns
+## 返回值
 
 [TPCB\_LayersOfPad](../types/TPCB_LayersOfPad.md)
 
@@ -1464,14 +1464,14 @@ getState_Layer(): TPCB_LayersOfPad;
 
 获取属性状态：是否金属化孔壁
 
-## Signature
+## 签名
 
 ```typescript
 getState_Metallization(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -1483,14 +1483,14 @@ boolean
 
 获取属性状态：网络名称
 
-## Signature
+## 签名
 
 ```typescript
 getState_Net(): string | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 string \| undefined
 
@@ -1502,14 +1502,14 @@ string \| undefined
 
 获取属性状态：焊盘外形
 
-## Signature
+## 签名
 
 ```typescript
 getState_Pad(): TPCB_PrimitivePadShape | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 [TPCB\_PrimitivePadShape](../types/TPCB_PrimitivePadShape.md) \| undefined
 
@@ -1521,14 +1521,14 @@ getState_Pad(): TPCB_PrimitivePadShape | undefined;
 
 获取属性状态：焊盘编号
 
-## Signature
+## 签名
 
 ```typescript
 getState_PadNumber(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -1540,14 +1540,14 @@ string
 
 获取属性状态：焊盘类型
 
-## Signature
+## 签名
 
 ```typescript
 getState_PadType(): EPCB_PrimitivePadType;
 ```
 
 
-## Returns
+## 返回值
 
 [EPCB\_PrimitivePadType](../enums/EPCB_PrimitivePadType.md)
 
@@ -1559,14 +1559,14 @@ getState_PadType(): EPCB_PrimitivePadType;
 
 获取属性状态：图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveId(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -1578,14 +1578,14 @@ string
 
 获取属性状态：是否锁定
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveLock(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -1597,14 +1597,14 @@ boolean
 
 获取属性状态：图元类型
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveType(): EPCB_PrimitiveType;
 ```
 
 
-## Returns
+## 返回值
 
 [EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)
 
@@ -1616,14 +1616,14 @@ getState_PrimitiveType(): EPCB_PrimitiveType;
 
 获取属性状态：旋转角度
 
-## Signature
+## 签名
 
 ```typescript
 getState_Rotation(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -1635,14 +1635,14 @@ number
 
 获取属性状态：阻焊/助焊扩展
 
-## Signature
+## 签名
 
 ```typescript
 getState_SolderMaskAndPasteMaskExpansion(): IPCB_PrimitiveSolderMaskAndPasteMaskExpansion | null;
 ```
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitiveSolderMaskAndPasteMaskExpansion](../interfaces/IPCB_PrimitiveSolderMaskAndPasteMaskExpansion.md) \| null
 
@@ -1654,14 +1654,14 @@ getState_SolderMaskAndPasteMaskExpansion(): IPCB_PrimitiveSolderMaskAndPasteMask
 
 获取属性状态：特殊焊盘外形
 
-## Signature
+## 签名
 
 ```typescript
 getState_SpecialPad(): TPCB_PrimitiveSpecialPadShape | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 [TPCB\_PrimitiveSpecialPadShape](../types/TPCB_PrimitiveSpecialPadShape.md) \| undefined
 
@@ -1673,14 +1673,14 @@ getState_SpecialPad(): TPCB_PrimitiveSpecialPadShape | undefined;
 
 获取属性状态：位置 X
 
-## Signature
+## 签名
 
 ```typescript
 getState_X(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -1692,14 +1692,14 @@ number
 
 获取属性状态：位置 Y
 
-## Signature
+## 签名
 
 ```typescript
 getState_Y(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -1711,14 +1711,14 @@ number
 
 查询图元是否为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 isAsync(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -1728,18 +1728,18 @@ boolean
 
 # IPCB\_PrimitivePad.reset() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将异步图元重置为当前画布状态
 
-## Signature
+## 签名
 
 ```typescript
 reset(): Promise<IPCB_PrimitivePad>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)<!-- -->&gt;
 
@@ -1749,31 +1749,31 @@ Promise&lt;[IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)<!-- -->&gt;
 
 # IPCB\_PrimitivePad.setState\_HeatWelding() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：热焊优化参数
 
-## Signature
+## 签名
 
 ```typescript
 setState_HeatWelding(heatWelding: IPCB_PrimitivePadHeatWelding | null): IPCB_PrimitivePad;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1797,7 +1797,7 @@ IPCB\_PrimitivePadHeatWelding \| null
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)
 
@@ -1807,31 +1807,31 @@ IPCB\_PrimitivePadHeatWelding \| null
 
 # IPCB\_PrimitivePad.setState\_Hole() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：孔
 
-## Signature
+## 签名
 
 ```typescript
 setState_Hole(hole: TPCB_PrimitivePadHole): IPCB_PrimitivePad;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1855,13 +1855,13 @@ hole
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)
 
 焊盘图元对象
 
-## Remarks
+## 备注
 
 设置孔时将会联动设置部分其它属性状态：
 
@@ -1873,31 +1873,31 @@ hole
 
 # IPCB\_PrimitivePad.setState\_HoleOffsetX() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：孔偏移 X
 
-## Signature
+## 签名
 
 ```typescript
 setState_HoleOffsetX(holeOffsetX: number): IPCB_PrimitivePad;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1921,13 +1921,13 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)
 
 焊盘图元对象
 
-## Remarks
+## 备注
 
 如若孔不存在，则属性将不会被修改
 
@@ -1935,31 +1935,31 @@ number
 
 # IPCB\_PrimitivePad.setState\_HoleOffsetY() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：孔偏移 Y
 
-## Signature
+## 签名
 
 ```typescript
 setState_HoleOffsetY(holeOffsetY: number): IPCB_PrimitivePad;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1983,13 +1983,13 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)
 
 焊盘图元对象
 
-## Remarks
+## 备注
 
 如若孔不存在，则属性将不会被修改
 
@@ -1997,31 +1997,31 @@ number
 
 # IPCB\_PrimitivePad.setState\_HoleRotation() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：孔相对于焊盘的旋转角度
 
-## Signature
+## 签名
 
 ```typescript
 setState_HoleRotation(holeRotation: number): IPCB_PrimitivePad;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2045,13 +2045,13 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)
 
 焊盘图元对象
 
-## Remarks
+## 备注
 
 如若孔不存在，则属性将不会被修改
 
@@ -2059,31 +2059,31 @@ number
 
 # IPCB\_PrimitivePad.setState\_Layer() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：层
 
-## Signature
+## 签名
 
 ```typescript
 setState_Layer(layer: TPCB_LayersOfPad): IPCB_PrimitivePad;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2107,13 +2107,13 @@ layer
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)
 
 焊盘图元对象
 
-## Remarks
+## 备注
 
 设置层时将会联动设置部分其它属性状态：
 
@@ -2127,31 +2127,31 @@ layer
 
 # IPCB\_PrimitivePad.setState\_Metallization() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：是否金属化孔壁
 
-## Signature
+## 签名
 
 ```typescript
 setState_Metallization(metallization: boolean): IPCB_PrimitivePad;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2175,13 +2175,13 @@ boolean
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)
 
 焊盘图元对象
 
-## Remarks
+## 备注
 
 如若孔不存在，则属性将不会被修改
 
@@ -2189,31 +2189,31 @@ boolean
 
 # IPCB\_PrimitivePad.setState\_Net() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：网络
 
-## Signature
+## 签名
 
 ```typescript
 setState_Net(net?: string): IPCB_PrimitivePad;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2229,7 +2229,7 @@ string
 
 </td><td>
 
-_(Optional)_ 网络名称
+_（可选）_ 网络名称
 
 
 </td></tr>
@@ -2237,13 +2237,13 @@ _(Optional)_ 网络名称
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)
 
 焊盘图元对象
 
-## Remarks
+## 备注
 
 本接口仅在 PCB 编辑器可用，空字符串与 `undefined` 均被视为空网络
 
@@ -2251,31 +2251,31 @@ _(Optional)_ 网络名称
 
 # IPCB\_PrimitivePad.setState\_Pad() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：焊盘外形
 
-## Signature
+## 签名
 
 ```typescript
 setState_Pad(pad: TPCB_PrimitivePadShape): IPCB_PrimitivePad;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2299,13 +2299,13 @@ pad
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)
 
 焊盘图元对象
 
-## Remarks
+## 备注
 
 设置焊盘外形时将会联动设置部分其它属性状态：
 
@@ -2315,31 +2315,31 @@ pad
 
 # IPCB\_PrimitivePad.setState\_PadNumber() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：焊盘编号
 
-## Signature
+## 签名
 
 ```typescript
 setState_PadNumber(padNumber: string): IPCB_PrimitivePad;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2363,7 +2363,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)
 
@@ -2373,31 +2373,31 @@ string
 
 # IPCB\_PrimitivePad.setState\_PrimitiveLock() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：是否锁定
 
-## Signature
+## 签名
 
 ```typescript
 setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitivePad;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2421,7 +2421,7 @@ boolean
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)
 
@@ -2431,31 +2431,31 @@ boolean
 
 # IPCB\_PrimitivePad.setState\_Rotation() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：旋转角度
 
-## Signature
+## 签名
 
 ```typescript
 setState_Rotation(rotation: number): IPCB_PrimitivePad;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2479,7 +2479,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)
 
@@ -2489,31 +2489,31 @@ number
 
 # IPCB\_PrimitivePad.setState\_SolderMaskAndPasteMaskExpansion() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：阻焊/助焊扩展
 
-## Signature
+## 签名
 
 ```typescript
 setState_SolderMaskAndPasteMaskExpansion(solderMaskAndPasteMaskExpansion: IPCB_PrimitiveSolderMaskAndPasteMaskExpansion | null): IPCB_PrimitivePad;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2537,7 +2537,7 @@ solderMaskAndPasteMaskExpansion
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)
 
@@ -2547,31 +2547,31 @@ solderMaskAndPasteMaskExpansion
 
 # IPCB\_PrimitivePad.setState\_SpecialPad() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：特殊焊盘外形
 
-## Signature
+## 签名
 
 ```typescript
 setState_SpecialPad(specialPad: TPCB_PrimitiveSpecialPadShape): IPCB_PrimitivePad;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2593,13 +2593,13 @@ specialPad
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)
 
 焊盘图元对象
 
-## Remarks
+## 备注
 
 设置特殊焊盘外形时将会联动设置部分其它属性状态：
 
@@ -2609,31 +2609,31 @@ specialPad
 
 # IPCB\_PrimitivePad.setState\_X() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：位置 X
 
-## Signature
+## 签名
 
 ```typescript
 setState_X(x: number): IPCB_PrimitivePad;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2657,7 +2657,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)
 
@@ -2667,31 +2667,31 @@ number
 
 # IPCB\_PrimitivePad.setState\_Y() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：位置 Y
 
-## Signature
+## 签名
 
 ```typescript
 setState_Y(y: number): IPCB_PrimitivePad;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2715,7 +2715,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)
 
@@ -2727,14 +2727,14 @@ number
 
 将图元转换为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 toAsync(): IPCB_PrimitivePad;
 ```
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)
 
@@ -2746,14 +2746,14 @@ toAsync(): IPCB_PrimitivePad;
 
 将图元转换为同步图元
 
-## Signature
+## 签名
 
 ```typescript
 toSync(): IPCB_PrimitivePad;
 ```
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePad](./IPCB_PrimitivePad.md)
 

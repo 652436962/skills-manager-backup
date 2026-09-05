@@ -2,32 +2,32 @@
 
 系统 / 定时器类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SYS_Timer 
 ```
 
-## Remarks
+## 备注
 
 设置定时器
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -99,27 +99,27 @@ Description
 
 清除指定循环定时器
 
-## Signature
+## 签名
 
 ```typescript
 clearIntervalTimer(id: string): boolean;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -143,7 +143,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -155,27 +155,27 @@ boolean
 
 清除指定单次定时器
 
-## Signature
+## 签名
 
 ```typescript
 clearTimeoutTimer(id: string): boolean;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -199,7 +199,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -211,27 +211,27 @@ boolean
 
 设置循环定时器
 
-## Signature
+## 签名
 
 ```typescript
 setIntervalTimer(id: string, timeout: number, callFn: (...args: any) => void, ...args: any): boolean;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -303,13 +303,13 @@ any
 
 
 
-## Returns
+## 返回值
 
 boolean
 
 定时器是否设置成功
 
-## Remarks
+## 备注
 
 如果遇到 ID 重复的定时器，则之前设置的定时器将被清除
 
@@ -319,27 +319,27 @@ boolean
 
 设置单次定时器
 
-## Signature
+## 签名
 
 ```typescript
 setTimeoutTimer(id: string, timeout: number, callFn: (...args: any) => void, ...args: any): boolean;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -411,12 +411,12 @@ any
 
 
 
-## Returns
+## 返回值
 
 boolean
 
 定时器是否设置成功
 
-## Remarks
+## 备注
 
 如果遇到 ID 重复的定时器，则之前设置的定时器将被清除

@@ -2,31 +2,31 @@
 
 折线图元
 
-## Signature
+## 签名
 
 ```typescript
 declare class IPCB_PrimitivePolyline implements IPCB_Primitive 
 ```
-**Implements:** [IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
+**实现自：**[IPCB\_Primitive](../interfaces/IPCB_Primitive.md)
 
-## Remarks
+## 备注
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -320,18 +320,18 @@ Description
 
 # IPCB\_PrimitivePolyline.convertToFill() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 转换到：填充图元
 
-## Signature
+## 签名
 
 ```typescript
 convertToFill(): Promise<IPCB_PrimitiveFill>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveFill](./IPCB_PrimitiveFill.md)<!-- -->&gt;
 
@@ -341,18 +341,18 @@ Promise&lt;[IPCB\_PrimitiveFill](./IPCB_PrimitiveFill.md)<!-- -->&gt;
 
 # IPCB\_PrimitivePolyline.convertToPour() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 转换到：覆铜边框图元
 
-## Signature
+## 签名
 
 ```typescript
 convertToPour(): Promise<IPCB_PrimitivePour>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitivePour](./IPCB_PrimitivePour.md)<!-- -->&gt;
 
@@ -362,18 +362,18 @@ Promise&lt;[IPCB\_PrimitivePour](./IPCB_PrimitivePour.md)<!-- -->&gt;
 
 # IPCB\_PrimitivePolyline.convertToRegion() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 转换到：区域图元
 
-## Signature
+## 签名
 
 ```typescript
 convertToRegion(): Promise<IPCB_PrimitiveRegion>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)<!-- -->&gt;
 
@@ -383,18 +383,18 @@ Promise&lt;[IPCB\_PrimitiveRegion](./IPCB_PrimitiveRegion.md)<!-- -->&gt;
 
 # IPCB\_PrimitivePolyline.done() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将对图元的更改应用到画布
 
-## Signature
+## 签名
 
 ```typescript
 done(): Promise<IPCB_PrimitivePolyline>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md)<!-- -->&gt;
 
@@ -406,14 +406,14 @@ Promise&lt;[IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md)<!-- -->&gt;
 
 获取属性状态：层
 
-## Signature
+## 签名
 
 ```typescript
 getState_Layer(): TPCB_LayersOfLine;
 ```
 
 
-## Returns
+## 返回值
 
 [TPCB\_LayersOfLine](../types/TPCB_LayersOfLine.md)
 
@@ -425,14 +425,14 @@ getState_Layer(): TPCB_LayersOfLine;
 
 获取属性状态：线宽
 
-## Signature
+## 签名
 
 ```typescript
 getState_LineWidth(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -444,14 +444,14 @@ number
 
 获取属性状态：网络名称
 
-## Signature
+## 签名
 
 ```typescript
 getState_Net(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -463,14 +463,14 @@ string
 
 获取属性状态：单多边形
 
-## Signature
+## 签名
 
 ```typescript
 getState_Polygon(): IPCB_Polygon;
 ```
 
 
-## Returns
+## 返回值
 
 [IPCB\_Polygon](./IPCB_Polygon.md)
 
@@ -482,14 +482,14 @@ getState_Polygon(): IPCB_Polygon;
 
 获取属性状态：图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveId(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -501,14 +501,14 @@ string
 
 获取属性状态：是否锁定
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveLock(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -520,14 +520,14 @@ boolean
 
 获取属性状态：图元类型
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveType(): EPCB_PrimitiveType;
 ```
 
 
-## Returns
+## 返回值
 
 [EPCB\_PrimitiveType](../enums/EPCB_PrimitiveType.md)
 
@@ -539,14 +539,14 @@ getState_PrimitiveType(): EPCB_PrimitiveType;
 
 查询图元是否为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 isAsync(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -556,18 +556,18 @@ boolean
 
 # IPCB\_PrimitivePolyline.reset() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将异步图元重置为当前画布状态
 
-## Signature
+## 签名
 
 ```typescript
 reset(): Promise<IPCB_PrimitivePolyline>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md)<!-- -->&gt;
 
@@ -577,31 +577,31 @@ Promise&lt;[IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md)<!-- -->&gt;
 
 # IPCB\_PrimitivePolyline.setState\_Layer() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：层
 
-## Signature
+## 签名
 
 ```typescript
 setState_Layer(layer: TPCB_LayersOfLine): IPCB_PrimitivePolyline;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -625,7 +625,7 @@ layer
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md)
 
@@ -635,31 +635,31 @@ layer
 
 # IPCB\_PrimitivePolyline.setState\_LineWidth() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：线宽
 
-## Signature
+## 签名
 
 ```typescript
 setState_LineWidth(lineWidth: number): IPCB_PrimitivePolyline;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -683,7 +683,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md)
 
@@ -693,31 +693,31 @@ number
 
 # IPCB\_PrimitivePolyline.setState\_Net() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：网络名称
 
-## Signature
+## 签名
 
 ```typescript
 setState_Net(net: string): IPCB_PrimitivePolyline;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -741,7 +741,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md)
 
@@ -751,31 +751,31 @@ string
 
 # IPCB\_PrimitivePolyline.setState\_Polygon() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：单多边形
 
-## Signature
+## 签名
 
 ```typescript
 setState_Polygon(polygon: IPCB_Polygon): IPCB_PrimitivePolyline;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -799,7 +799,7 @@ polygon
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md)
 
@@ -809,31 +809,31 @@ polygon
 
 # IPCB\_PrimitivePolyline.setState\_PrimitiveLock() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：是否锁定
 
-## Signature
+## 签名
 
 ```typescript
 setState_PrimitiveLock(primitiveLock: boolean): IPCB_PrimitivePolyline;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -857,7 +857,7 @@ boolean
 
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md)
 
@@ -869,14 +869,14 @@ boolean
 
 将图元转换为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 toAsync(): IPCB_PrimitivePolyline;
 ```
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md)
 
@@ -888,14 +888,14 @@ toAsync(): IPCB_PrimitivePolyline;
 
 将图元转换为同步图元
 
-## Signature
+## 签名
 
 ```typescript
 toSync(): IPCB_PrimitivePolyline;
 ```
 
 
-## Returns
+## 返回值
 
 [IPCB\_PrimitivePolyline](./IPCB_PrimitivePolyline.md)
 

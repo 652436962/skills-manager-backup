@@ -2,31 +2,31 @@
 
 复用模块符号图元
 
-## Signature
+## 签名
 
 ```typescript
 declare class ISCH_PrimitiveCbbSymbolComponent extends ISCH_PrimitiveComponent 
 ```
-**Extends:** [ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)
+**扩展自：**[ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)
 
-## Remarks
+## 备注
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -70,7 +70,7 @@ Description
 
 获取属性状态：关联复用模块
 
-## Signature
+## 签名
 
 ```typescript
 getState_Cbb(): {
@@ -80,7 +80,7 @@ getState_Cbb(): {
 ```
 
 
-## Returns
+## 返回值
 
 \{ libraryUuid: string; uuid: string; \}
 
@@ -92,20 +92,20 @@ getState_Cbb(): {
 
 获取属性状态：关联复用模块符号
 
-## Signature
+## 签名
 
 ```typescript
 getState_CbbSymbol(): {
         libraryUuid: string;
         cbbUuid: string;
-        uuid?: string;
+        uuid: string;
         name?: string;
     };
 ```
 
 
-## Returns
+## 返回值
 
-\{ libraryUuid: string; cbbUuid: string; uuid?: string; name?: string; \}
+\{ libraryUuid: string; cbbUuid: string; uuid: string; name?: string; \}
 
 关联复用模块符号

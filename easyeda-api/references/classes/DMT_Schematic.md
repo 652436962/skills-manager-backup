@@ -2,31 +2,31 @@
 
 文档树 / 原理图管理类
 
-## Signature
+## 签名
 
 ```typescript
 declare class DMT_Schematic 
 ```
 
-## Remarks
+## 备注
 
 在当前打开的工程内进行原理图管理的相关操作
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -278,31 +278,31 @@ Description
 
 # DMT\_Schematic.copySchematic() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 复制原理图
 
-## Signature
+## 签名
 
 ```typescript
 copySchematic(schematicUuid: string, boardName?: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -334,7 +334,7 @@ string
 
 </td><td>
 
-_(Optional)_ 新原理图所属板子名称，如若不指定则为游离原理图
+_（可选）_ 新原理图所属板子名称，如若不指定则为游离原理图
 
 
 </td></tr>
@@ -342,13 +342,13 @@ _(Optional)_ 新原理图所属板子名称，如若不指定则为游离原理�
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
 新原理图 UUID，如若为 `undefined` 则复制失败
 
-## Remarks
+## 备注
 
 如若原理图已关联复用模块（在工程库内存在同名的复用模块符号），则复制原理图时将同步新建复用模块符号
 
@@ -356,31 +356,31 @@ Promise&lt;string \| undefined&gt;
 
 # DMT\_Schematic.copySchematicPage() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 复制原理图图页
 
-## Signature
+## 签名
 
 ```typescript
 copySchematicPage(schematicPageUuid: string, schematicUuid?: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -412,7 +412,7 @@ string
 
 </td><td>
 
-_(Optional)_ 目标原理图 UUID，如若不指定则为当前原理图
+_（可选）_ 目标原理图 UUID，如若不指定则为当前原理图
 
 
 </td></tr>
@@ -420,7 +420,7 @@ _(Optional)_ 目标原理图 UUID，如若不指定则为当前原理图
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -430,31 +430,31 @@ Promise&lt;string \| undefined&gt;
 
 # DMT\_Schematic.createSchematic() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 创建原理图
 
-## Signature
+## 签名
 
 ```typescript
 createSchematic(boardName?: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -470,7 +470,7 @@ string
 
 </td><td>
 
-_(Optional)_ 所属板子名称，如若不指定则为游离原理图
+_（可选）_ 所属板子名称，如若不指定则为游离原理图
 
 
 </td></tr>
@@ -478,7 +478,7 @@ _(Optional)_ 所属板子名称，如若不指定则为游离原理图
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -488,31 +488,31 @@ Promise&lt;string \| undefined&gt;
 
 # DMT\_Schematic.createSchematicPage() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 创建原理图图页
 
-## Signature
+## 签名
 
 ```typescript
 createSchematicPage(schematicUuid: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -536,7 +536,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -546,31 +546,31 @@ Promise&lt;string \| undefined&gt;
 
 # DMT\_Schematic.deleteSchematic() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 删除原理图
 
-## Signature
+## 签名
 
 ```typescript
 deleteSchematic(schematicUuid: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -594,13 +594,13 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 如若原理图已关联复用模块（在工程库内存在同名的复用模块符号），则删除原理图时将同步删除关联的 PCB 和复用模块符号，复用模块符号不可删除则跳过
 
@@ -608,31 +608,31 @@ Promise&lt;boolean&gt;
 
 # DMT\_Schematic.deleteSchematicPage() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 删除原理图图页
 
-## Signature
+## 签名
 
 ```typescript
 deleteSchematicPage(schematicPageUuid: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -656,7 +656,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -666,18 +666,18 @@ Promise&lt;boolean&gt;
 
 # DMT\_Schematic.getAllSchematicPagesInfo() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取工程内所有原理图图页的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getAllSchematicPagesInfo(): Promise<Array<IDMT_SchematicPageItem>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IDMT\_SchematicPageItem](../interfaces/IDMT_SchematicPageItem.md)<!-- -->&gt;&gt;
 
@@ -687,18 +687,18 @@ Promise&lt;Array&lt;[IDMT\_SchematicPageItem](../interfaces/IDMT_SchematicPageIt
 
 # DMT\_Schematic.getAllSchematicsInfo() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取工程内所有原理图的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getAllSchematicsInfo(): Promise<Array<IDMT_SchematicItem>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IDMT\_SchematicItem](../interfaces/IDMT_SchematicItem.md)<!-- -->&gt;&gt;
 
@@ -708,18 +708,18 @@ Promise&lt;Array&lt;[IDMT\_SchematicItem](../interfaces/IDMT_SchematicItem.md)<!
 
 # DMT\_Schematic.getCurrentSchematicAllSchematicPagesInfo() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取当前原理图内所有原理图图页的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getCurrentSchematicAllSchematicPagesInfo(): Promise<Array<IDMT_SchematicPageItem>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IDMT\_SchematicPageItem](../interfaces/IDMT_SchematicPageItem.md)<!-- -->&gt;&gt;
 
@@ -729,24 +729,24 @@ Promise&lt;Array&lt;[IDMT\_SchematicPageItem](../interfaces/IDMT_SchematicPageIt
 
 # DMT\_Schematic.getCurrentSchematicInfo() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取当前原理图的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getCurrentSchematicInfo(): Promise<IDMT_SchematicItem | undefined>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IDMT\_SchematicItem](../interfaces/IDMT_SchematicItem.md) \| undefined&gt;
 
 原理图的详细属性，如若为 `undefined` 则获取失败
 
-## Remarks
+## 备注
 
 将会获取当前打开且拥有最后输入焦点的原理图图页所关联的原理图的详细属性
 
@@ -754,24 +754,24 @@ Promise&lt;[IDMT\_SchematicItem](../interfaces/IDMT_SchematicItem.md) \| undefin
 
 # DMT\_Schematic.getCurrentSchematicPageInfo() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取当前原理图图页的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getCurrentSchematicPageInfo(): Promise<IDMT_SchematicPageItem | undefined>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IDMT\_SchematicPageItem](../interfaces/IDMT_SchematicPageItem.md) \| undefined&gt;
 
 原理图图页的详细属性，如若为 `undefined` 则获取失败
 
-## Remarks
+## 备注
 
 将会获取当前打开且拥有最后输入焦点的原理图图页的详细属性
 
@@ -779,31 +779,31 @@ Promise&lt;[IDMT\_SchematicPageItem](../interfaces/IDMT_SchematicPageItem.md) \|
 
 # DMT\_Schematic.getSchematicInfo() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取原理图的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getSchematicInfo(schematicUuid: string): Promise<IDMT_SchematicItem | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -827,7 +827,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IDMT\_SchematicItem](../interfaces/IDMT_SchematicItem.md) \| undefined&gt;
 
@@ -837,31 +837,31 @@ Promise&lt;[IDMT\_SchematicItem](../interfaces/IDMT_SchematicItem.md) \| undefin
 
 # DMT\_Schematic.getSchematicPageInfo() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取原理图图页的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getSchematicPageInfo(schematicPageUuid: string): Promise<IDMT_SchematicPageItem | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -885,7 +885,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IDMT\_SchematicPageItem](../interfaces/IDMT_SchematicPageItem.md) \| undefined&gt;
 
@@ -895,31 +895,31 @@ Promise&lt;[IDMT\_SchematicPageItem](../interfaces/IDMT_SchematicPageItem.md) \|
 
 # DMT\_Schematic.modifySchematicName() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改原理图名称
 
-## Signature
+## 签名
 
 ```typescript
 modifySchematicName(schematicUuid: string, schematicName: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -959,13 +959,13 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 是否修改成功
 
-## Remarks
+## 备注
 
 如若原理图已关联复用模块（在工程库内存在同名的复用模块符号），则修改名称时将同步修改复用模块符号名称与关联 PCB 名称
 
@@ -973,31 +973,31 @@ Promise&lt;boolean&gt;
 
 # DMT\_Schematic.modifySchematicPageName() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改原理图图页名称
 
-## Signature
+## 签名
 
 ```typescript
 modifySchematicPageName(schematicPageUuid: string, schematicPageName: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1037,7 +1037,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -1047,11 +1047,11 @@ Promise&lt;boolean&gt;
 
 # DMT\_Schematic.modifySchematicPageTitleBlock() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改原理图图页明细表
 
-## Signature
+## 签名
 
 ```typescript
 modifySchematicPageTitleBlock(showTitleBlock?: boolean, titleBlockData?: {
@@ -1063,21 +1063,21 @@ modifySchematicPageTitleBlock(showTitleBlock?: boolean, titleBlockData?: {
     }): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1093,7 +1093,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否显示明细表，不定义将保持当前状态
+_（可选）_ 是否显示明细表，不定义将保持当前状态
 
 
 </td></tr>
@@ -1109,7 +1109,7 @@ titleBlockData
 
 </td><td>
 
-_(Optional)_ 需要修改的明细项及其修改的值
+_（可选）_ 需要修改的明细项及其修改的值
 
 
 </td></tr>
@@ -1117,13 +1117,13 @@ _(Optional)_ 需要修改的明细项及其修改的值
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 修改操作是否成功，如若未传入 `showTitleBlock` 和 `titleBlockData` 将返回 `false`<!-- -->；请注意，如若存在无法识别的明细项但程序并未出错，将返回 `true` 的结果，因为无法识别的明细项被忽略
 
-## Remarks
+## 备注
 
 `titleBlockData` 仅需要传入任何需要修改的明细项作为 `key`<!-- -->，并传入其需要修改的值，任何无法识别的明细项将被忽略，任何未传入的项和值将保持默认状态
 
@@ -1131,31 +1131,31 @@ Promise&lt;boolean&gt;
 
 # DMT\_Schematic.reorderSchematicPages() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 重新排序原理图图页
 
-## Signature
+## 签名
 
 ```typescript
 reorderSchematicPages(schematicUuid: string, schematicPageItemsArray: Array<IDMT_SchematicPageItem>): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1195,12 +1195,12 @@ Array&lt;[IDMT\_SchematicPageItem](../interfaces/IDMT_SchematicPageItem.md)<!-- 
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 排序操作是否成功
 
-## Remarks
+## 备注
 
 此处源原理图图页属性的数组需要通过 [DMT\_Schematic.getAllSchematicPagesInfo()](./DMT_Schematic.md) 或其它上游方法取得，完成数组排序后传入

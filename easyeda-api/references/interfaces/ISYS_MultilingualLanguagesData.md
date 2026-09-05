@@ -2,12 +2,12 @@
 
 多语言数据
 
-## Signature
+## 签名
 
 ```typescript
 interface ISYS_MultilingualLanguagesData 
 ```
 
-## Remarks
+## 备注
 
 包含同一命名空间下的多种语言的数据

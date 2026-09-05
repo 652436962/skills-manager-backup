@@ -2,31 +2,31 @@
 
 文档树 / 板子管理类
 
-## Signature
+## 签名
 
 ```typescript
 declare class DMT_Board 
 ```
 
-## Remarks
+## 备注
 
 在当前打开的工程内进行板子管理的相关操作
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -140,27 +140,27 @@ Description
 
 复制板子
 
-## Signature
+## 签名
 
 ```typescript
 copyBoard(sourceBoardName: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -184,7 +184,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -194,31 +194,31 @@ Promise&lt;string \| undefined&gt;
 
 # DMT\_Board.createBoard() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 创建板子
 
-## Signature
+## 签名
 
 ```typescript
 createBoard(schematicUuid?: string, pcbUuid?: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -234,7 +234,7 @@ string
 
 </td><td>
 
-_(Optional)_ 关联原理图 UUID
+_（可选）_ 关联原理图 UUID
 
 
 </td></tr>
@@ -250,7 +250,7 @@ string
 
 </td><td>
 
-_(Optional)_ 关联 PCB UUID
+_（可选）_ 关联 PCB UUID
 
 
 </td></tr>
@@ -258,7 +258,7 @@ _(Optional)_ 关联 PCB UUID
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -270,27 +270,27 @@ Promise&lt;string \| undefined&gt;
 
 删除板子
 
-## Signature
+## 签名
 
 ```typescript
 deleteBoard(boardName: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -314,13 +314,13 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 如若指定板子不存在，接口将返回 `false` 的结果，表示操作失败
 
@@ -330,14 +330,14 @@ Promise&lt;boolean&gt;
 
 获取工程内所有板子的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getAllBoardsInfo(): Promise<Array<IDMT_BoardItem>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IDMT\_BoardItem](../interfaces/IDMT_BoardItem.md)<!-- -->&gt;&gt;
 
@@ -349,27 +349,27 @@ Promise&lt;Array&lt;[IDMT\_BoardItem](../interfaces/IDMT_BoardItem.md)<!-- -->&g
 
 获取板子的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getBoardInfo(boardName: string): Promise<IDMT_BoardItem | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -393,7 +393,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IDMT\_BoardItem](../interfaces/IDMT_BoardItem.md) \| undefined&gt;
 
@@ -405,20 +405,20 @@ Promise&lt;[IDMT\_BoardItem](../interfaces/IDMT_BoardItem.md) \| undefined&gt;
 
 获取当前板子的详细属性
 
-## Signature
+## 签名
 
 ```typescript
 getCurrentBoardInfo(): Promise<IDMT_BoardItem | undefined>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IDMT\_BoardItem](../interfaces/IDMT_BoardItem.md) \| undefined&gt;
 
 板子的详细属性，如若为 `undefined` 则获取失败
 
-## Remarks
+## 备注
 
 将会获取当前打开且拥有最后输入焦点的原理图、PCB 所关联的板子的详细属性
 
@@ -428,27 +428,27 @@ Promise&lt;[IDMT\_BoardItem](../interfaces/IDMT_BoardItem.md) \| undefined&gt;
 
 修改板子名称
 
-## Signature
+## 签名
 
 ```typescript
 modifyBoardName(originalBoardName: string, boardName: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -488,7 +488,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 

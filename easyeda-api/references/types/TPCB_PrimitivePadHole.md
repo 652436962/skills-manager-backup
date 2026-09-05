@@ -2,17 +2,17 @@
 
 焊盘钻孔
 
-## Signature
+## 签名
 
 ```typescript
 type TPCB_PrimitivePadHole = [EPCB_PrimitivePadHoleType.ROUND, number] | [EPCB_PrimitivePadHoleType.SLOT, number, number];
 ```
-## References
+## 引用
 
 
 [EPCB\_PrimitivePadHoleType.ROUND](../enums/EPCB_PrimitivePadHoleType.md)<!-- -->, [EPCB\_PrimitivePadHoleType.SLOT](../enums/EPCB_PrimitivePadHoleType.md)
 
-## Remarks
+## 备注
 
 焊盘钻孔当前存在以下两种 [类型](../enums/EPCB_PrimitivePadHoleType.md)<!-- -->：
 

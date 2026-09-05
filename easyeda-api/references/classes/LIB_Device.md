@@ -2,27 +2,27 @@
 
 综合库 / 器件类
 
-## Signature
+## 签名
 
 ```typescript
 declare class LIB_Device 
 ```
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -148,31 +148,31 @@ Description
 
 # LIB\_Device.copy() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 复制器件
 
-## Signature
+## 签名
 
 ```typescript
 copy(deviceUuid: string, libraryUuid: string, targetLibraryUuid: string, targetClassification?: ILIB_ClassificationIndex | Array<string>, newDeviceName?: string): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -236,7 +236,7 @@ targetClassification
 
 </td><td>
 
-_(Optional)_ 目标库内的分类
+_（可选）_ 目标库内的分类
 
 
 </td></tr>
@@ -252,7 +252,7 @@ string
 
 </td><td>
 
-_(Optional)_ 新器件名称，如若目标库内存在重名器件将导致复制失败
+_（可选）_ 新器件名称，如若目标库内存在重名器件将导致复制失败
 
 
 </td></tr>
@@ -260,7 +260,7 @@ _(Optional)_ 新器件名称，如若目标库内存在重名器件将导致复�
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -270,11 +270,11 @@ Promise&lt;string \| undefined&gt;
 
 # LIB\_Device.create() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 创建器件
 
-## Signature
+## 签名
 
 ```typescript
 create(libraryUuid: string, deviceName: string, classification?: ILIB_ClassificationIndex | Array<string>, association?: {
@@ -297,21 +297,21 @@ create(libraryUuid: string, deviceName: string, classification?: ILIB_Classifica
     }, description?: string, property?: ILIB_DeviceExtendPropertyItem): Promise<string | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -359,7 +359,7 @@ classification
 
 </td><td>
 
-_(Optional)_ 分类
+_（可选）_ 分类
 
 
 </td></tr>
@@ -375,7 +375,7 @@ association
 
 </td><td>
 
-_(Optional)_ 关联符号、封装、图像，指定 `symbolType` 则创建新符号，无需新建符号则无需指定 `symbolType`<!-- -->，但请注意，如若不新建符号也不指定符号的关联信息将无法创建器件
+_（可选）_ 关联符号、封装、图像，指定 `symbolType` 则创建新符号，无需新建符号则无需指定 `symbolType`<!-- -->，但请注意，如若不新建符号也不指定符号的关联信息将无法创建器件
 
 
 </td></tr>
@@ -391,7 +391,7 @@ string
 
 </td><td>
 
-_(Optional)_ 描述
+_（可选）_ 描述
 
 
 </td></tr>
@@ -407,7 +407,7 @@ property
 
 </td><td>
 
-_(Optional)_ 其它属性，仅 `designator`<!-- -->、`addIntoBom`<!-- -->、`addIntoPcb` 存在默认值
+_（可选）_ 其它参数，仅 `designator`<!-- -->、`addIntoBom`<!-- -->、`addIntoPcb` 存在默认值
 
 
 </td></tr>
@@ -415,7 +415,7 @@ _(Optional)_ 其它属性，仅 `designator`<!-- -->、`addIntoBom`<!-- -->、`a
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;string \| undefined&gt;
 
@@ -425,31 +425,31 @@ Promise&lt;string \| undefined&gt;
 
 # LIB\_Device.delete() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 删除器件
 
-## Signature
+## 签名
 
 ```typescript
 delete(deviceUuid: string, libraryUuid: string): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -489,7 +489,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -499,31 +499,31 @@ Promise&lt;boolean&gt;
 
 # LIB\_Device.get() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取器件的所有属性
 
-## Signature
+## 签名
 
 ```typescript
 get(deviceUuid: string, libraryUuid?: string): Promise<ILIB_DeviceItem | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -555,7 +555,7 @@ string
 
 </td><td>
 
-_(Optional)_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
+_（可选）_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
 
 
 </td></tr>
@@ -563,7 +563,7 @@ _(Optional)_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](.
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| undefined&gt;
 
@@ -573,31 +573,31 @@ Promise&lt;[ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| undefined&gt;
 
 # LIB\_Device.getByLcscIds() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 使用立创 C 编号获取器件
 
-## Signature
+## 签名
 
 ```typescript
 getByLcscIds<T extends boolean>(lcscIds: string, libraryUuid?: string, allowMultiMatch?: T): Promise<T extends true ? ILIB_DeviceSearchItem | undefined : Array<ILIB_DeviceSearchItem>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -629,7 +629,7 @@ string
 
 </td><td>
 
-_(Optional)_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
+_（可选）_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
 
 
 </td></tr>
@@ -645,7 +645,7 @@ T
 
 </td><td>
 
-_(Optional)_ 是否允许单个立创 C 编号匹配多个结果
+_（可选）_ 是否允许单个立创 C 编号匹配多个结果
 
 
 </td></tr>
@@ -653,13 +653,13 @@ _(Optional)_ 是否允许单个立创 C 编号匹配多个结果
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;T extends true ? [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md) \| undefined : Array&lt;[ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)<!-- -->&gt;&gt;
 
 搜索到的器件属性
 
-## Remarks
+## 备注
 
 默认情况下，如果在同一个库内匹配到多个相同 C 编号的器件，将只会返回第一个结果；
 
@@ -671,31 +671,31 @@ Promise&lt;T extends true ? [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSe
 
 # LIB\_Device.getByLcscIds() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 使用立创 C 编号批量获取器件
 
-## Signature
+## 签名
 
 ```typescript
 getByLcscIds(lcscIds: Array<string>, libraryUuid?: string, allowMultiMatch?: boolean): Promise<Array<ILIB_DeviceSearchItem>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -727,7 +727,7 @@ string
 
 </td><td>
 
-_(Optional)_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
+_（可选）_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
 
 
 </td></tr>
@@ -743,7 +743,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否允许单个立创 C 编号匹配多个结果
+_（可选）_ 是否允许单个立创 C 编号匹配多个结果
 
 
 </td></tr>
@@ -751,13 +751,13 @@ _(Optional)_ 是否允许单个立创 C 编号匹配多个结果
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)<!-- -->&gt;&gt;
 
 搜索到的器件属性的列表
 
-## Remarks
+## 备注
 
 默认情况下，如果在同一个库内匹配到多个相同 C 编号的器件，将只会返回第一个结果；
 
@@ -769,11 +769,11 @@ Promise&lt;Array&lt;[ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem
 
 # LIB\_Device.modify() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改器件
 
-## Signature
+## 签名
 
 ```typescript
 modify(deviceUuid: string, libraryUuid: string, deviceName?: string, classification?: ILIB_ClassificationIndex | Array<string> | null, association?: {
@@ -808,21 +808,21 @@ modify(deviceUuid: string, libraryUuid: string, deviceName?: string, classificat
     }): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -870,7 +870,7 @@ string
 
 </td><td>
 
-_(Optional)_ 器件名称
+_（可选）_ 器件名称
 
 
 </td></tr>
@@ -886,7 +886,7 @@ classification
 
 </td><td>
 
-_(Optional)_ 分类
+_（可选）_ 分类
 
 
 </td></tr>
@@ -902,7 +902,7 @@ association
 
 </td><td>
 
-_(Optional)_ 关联符号、封装、图像
+_（可选）_ 关联符号、封装、图像
 
 
 </td></tr>
@@ -918,7 +918,7 @@ string \| null
 
 </td><td>
 
-_(Optional)_ 描述
+_（可选）_ 描述
 
 
 </td></tr>
@@ -934,7 +934,7 @@ property
 
 </td><td>
 
-_(Optional)_ 其它属性
+_（可选）_ 其它参数
 
 
 </td></tr>
@@ -942,13 +942,13 @@ _(Optional)_ 其它属性
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
 操作是否成功
 
-## Remarks
+## 备注
 
 如希望清除某些属性，则将其的值设置为 `null`
 
@@ -956,31 +956,31 @@ Promise&lt;boolean&gt;
 
 # LIB\_Device.search() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 搜索器件
 
-## Signature
+## 签名
 
 ```typescript
 search(key: string, libraryUuid?: string, classification?: ILIB_ClassificationIndex | Array<string>, symbolType?: ELIB_SymbolType, itemsOfPage?: number, page?: number): Promise<Array<ILIB_DeviceSearchItem>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1012,7 +1012,7 @@ string
 
 </td><td>
 
-_(Optional)_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
+_（可选）_ 库 UUID，默认为系统库，可以使用 [LIB\_LibrariesList](./LIB_LibrariesList.md) 内的接口获取
 
 
 </td></tr>
@@ -1028,7 +1028,7 @@ classification
 
 </td><td>
 
-_(Optional)_ 分类，默认为全部
+_（可选）_ 分类，默认为全部
 
 
 </td></tr>
@@ -1044,7 +1044,7 @@ symbolType
 
 </td><td>
 
-_(Optional)_ 符号类型，默认为全部
+_（可选）_ 符号类型，默认为全部
 
 
 </td></tr>
@@ -1060,7 +1060,7 @@ number
 
 </td><td>
 
-_(Optional)_ 一页搜索结果的数量
+_（可选）_ 一页搜索结果的数量
 
 
 </td></tr>
@@ -1076,7 +1076,7 @@ number
 
 </td><td>
 
-_(Optional)_ 页数
+_（可选）_ 页数
 
 
 </td></tr>
@@ -1084,7 +1084,7 @@ _(Optional)_ 页数
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)<!-- -->&gt;&gt;
 

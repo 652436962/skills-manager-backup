@@ -2,13 +2,13 @@
 
 尺寸标注坐标集
 
-## Signature
+## 签名
 
 ```typescript
 type TPCB_PrimitiveDimensionCoordinateSet = [number, number, number, number, number, number] | [number, number, number, number, number, number, number, number];
 ```
 
-## Remarks
+## 备注
 
 尺寸标注坐标集存在以下三种 [尺寸标注类型](../enums/EPCB_PrimitiveDimensionType.md)<!-- -->：
 

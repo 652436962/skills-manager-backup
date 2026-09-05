@@ -2,27 +2,27 @@
 
 区域图元区域规则类型
 
-## Signature
+## 签名
 
 ```typescript
 declare enum EPCB_PrimitiveRegionRuleType 
 ```
 
-## Enumeration Members
+## 枚举成员
 
 <table><thead><tr><th>
 
-Member
+成员
 
 
 </th><th>
 
-Value
+值
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -140,6 +140,6 @@ NO\_WIRES
 </td></tr>
 </tbody></table>
 
-## Remarks
+## 备注
 
 [FOLLOW\_REGION\_RULE](./EPCB_PrimitiveRegionRuleType.md) 即为约束区域

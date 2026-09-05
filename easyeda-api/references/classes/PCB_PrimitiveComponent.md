@@ -2,28 +2,28 @@
 
 PCB &amp; 封装 / 器件图元类
 
-## Signature
+## 签名
 
 ```typescript
 declare class PCB_PrimitiveComponent implements IPCB_PrimitiveAPI 
 ```
-**Implements:** [IPCB\_PrimitiveAPI](../interfaces/IPCB_PrimitiveAPI.md)
+**实现自：**[IPCB\_PrimitiveAPI](../interfaces/IPCB_PrimitiveAPI.md)
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -139,20 +139,6 @@ Description
 
 
 </td></tr>
-<tr><td>
-
-[placeComponentWithMouse(component)](./PCB_PrimitiveComponent.md)
-
-
-</td><td>
-
-
-</td><td>
-
-**_(BETA)_** 使用鼠标放置器件
-
-
-</td></tr>
 </tbody></table>
 
 ---
@@ -163,38 +149,34 @@ Description
 
 # PCB\_PrimitiveComponent.create() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 创建器件
 
-## Signature
+## 签名
 
 ```typescript
 create(component: {
         libraryUuid: string;
         uuid: string;
-    } | ILIB_DeviceItem | ILIB_DeviceSearchItem | {
-        libraryType: ELIB_LibraryType.FOOTPRINT;
-        libraryUuid: string;
-        uuid: string;
-    } | ILIB_FootprintItem | ILIB_FootprintSearchItem, layer: TPCB_LayersOfComponent, x: number, y: number, rotation?: number, primitiveLock?: boolean): Promise<IPCB_PrimitiveComponent | undefined>;
+    } | ILIB_DeviceItem, layer: TPCB_LayersOfComponent, x: number, y: number, rotation?: number, primitiveLock?: boolean): Promise<IPCB_PrimitiveComponent | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -205,7 +187,7 @@ component
 
 </td><td>
 
-{ libraryUuid: string; uuid: string; } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md) \| { libraryType: [ELIB\_LibraryType.FOOTPRINT](../enums/ELIB_LibraryType.md)<!-- -->; libraryUuid: string; uuid: string; } \| [ILIB\_FootprintItem](../interfaces/ILIB_FootprintItem.md) \| [ILIB\_FootprintSearchItem](../interfaces/ILIB_FootprintSearchItem.md)
+{ libraryUuid: string; uuid: string; } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md)
 
 
 </td><td>
@@ -274,7 +256,7 @@ number
 
 </td><td>
 
-_(Optional)_ 旋转角度
+_（可选）_ 旋转角度
 
 
 </td></tr>
@@ -290,7 +272,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否锁定
+_（可选）_ 是否锁定
 
 
 </td></tr>
@@ -298,7 +280,7 @@ _(Optional)_ 是否锁定
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md) \| undefined&gt;
 
@@ -308,31 +290,31 @@ Promise&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md) \| undefined
 
 # PCB\_PrimitiveComponent.delete() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 删除器件
 
-## Signature
+## 签名
 
 ```typescript
 delete(primitiveIds: string | IPCB_PrimitiveComponent | Array<string> | Array<IPCB_PrimitiveComponent>): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -356,7 +338,7 @@ string \| [IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md) \| Array&lt;s
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -366,31 +348,31 @@ Promise&lt;boolean&gt;
 
 # PCB\_PrimitiveComponent.get() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取器件
 
-## Signature
+## 签名
 
 ```typescript
 get(primitiveIds: string): Promise<IPCB_PrimitiveComponent | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -414,7 +396,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md) \| undefined&gt;
 
@@ -424,31 +406,31 @@ Promise&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md) \| undefined
 
 # PCB\_PrimitiveComponent.get() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取器件
 
-## Signature
+## 签名
 
 ```typescript
 get(primitiveIds: Array<string>): Promise<Array<IPCB_PrimitiveComponent>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -472,13 +454,13 @@ Array&lt;string&gt;
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)<!-- -->&gt;&gt;
 
 器件图元对象，空数组表示获取失败
 
-## Remarks
+## 备注
 
 如若传入多个图元 ID，任意图元 ID 未匹配到不影响其它图元的返回，即可能返回少于传入的图元 ID 数量的图元对象
 
@@ -486,31 +468,31 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)<!--
 
 # PCB\_PrimitiveComponent.getAll() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取所有器件
 
-## Signature
+## 签名
 
 ```typescript
 getAll(layer?: TPCB_LayersOfComponent, primitiveLock?: boolean): Promise<Array<IPCB_PrimitiveComponent>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -526,7 +508,7 @@ layer
 
 </td><td>
 
-_(Optional)_ 层
+_（可选）_ 层
 
 
 </td></tr>
@@ -542,7 +524,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否锁定
+_（可选）_ 是否锁定
 
 
 </td></tr>
@@ -550,7 +532,7 @@ _(Optional)_ 是否锁定
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)<!-- -->&gt;&gt;
 
@@ -560,31 +542,31 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md)<!--
 
 # PCB\_PrimitiveComponent.getAllPinsByPrimitiveId() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取器件关联的所有焊盘
 
-## Signature
+## 签名
 
 ```typescript
 getAllPinsByPrimitiveId(primitiveId: string): Promise<Array<IPCB_PrimitiveComponentPad> | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -608,7 +590,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[IPCB\_PrimitiveComponentPad](./IPCB_PrimitiveComponentPad.md)<!-- -->&gt; \| undefined&gt;
 
@@ -618,31 +600,31 @@ Promise&lt;Array&lt;[IPCB\_PrimitiveComponentPad](./IPCB_PrimitiveComponentPad.m
 
 # PCB\_PrimitiveComponent.getAllPrimitiveId() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取所有器件的图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getAllPrimitiveId(layer?: TPCB_LayersOfComponent, primitiveLock?: boolean): Promise<Array<string>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -658,7 +640,7 @@ layer
 
 </td><td>
 
-_(Optional)_ 层
+_（可选）_ 层
 
 
 </td></tr>
@@ -674,7 +656,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否锁定
+_（可选）_ 是否锁定
 
 
 </td></tr>
@@ -682,7 +664,7 @@ _(Optional)_ 是否锁定
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;string&gt;&gt;
 
@@ -692,11 +674,11 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 # PCB\_PrimitiveComponent.modify() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改器件
 
-## Signature
+## 签名
 
 ```typescript
 modify(primitiveId: string | IPCB_PrimitiveComponent, property: {
@@ -719,21 +701,21 @@ modify(primitiveId: string | IPCB_PrimitiveComponent, property: {
     }): Promise<IPCB_PrimitiveComponent | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -771,75 +753,8 @@ property
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[IPCB\_PrimitiveComponent](./IPCB_PrimitiveComponent.md) \| undefined&gt;
 
 器件图元对象
-
-### placecomponentwithmouse
-
-# PCB\_PrimitiveComponent.placeComponentWithMouse() method
-
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-使用鼠标放置器件
-
-## Signature
-
-```typescript
-placeComponentWithMouse(component: {
-        libraryUuid: string;
-        uuid: string;
-    } | ILIB_DeviceItem | ILIB_DeviceSearchItem): Promise<boolean>;
-```
-
-## Parameters
-
-<table><thead><tr><th>
-
-Parameter
-
-
-</th><th>
-
-Type
-
-
-</th><th>
-
-Description
-
-
-</th></tr></thead>
-<tbody><tr><td>
-
-component
-
-
-</td><td>
-
-{ libraryUuid: string; uuid: string; } \| [ILIB\_DeviceItem](../interfaces/ILIB_DeviceItem.md) \| [ILIB\_DeviceSearchItem](../interfaces/ILIB_DeviceSearchItem.md)
-
-
-</td><td>
-
-关联库器件
-
-
-</td></tr>
-</tbody></table>
-
-
-
-## Returns
-
-Promise&lt;boolean&gt;
-
-是否找到器件
-
-## Remarks
-
-本接口模拟前端点击放置按钮，指定的器件将绑定到当前鼠标，并在用户后续点击时放置于画布
-
-本接口的返回时机并不会等待用户的放置操作，一旦器件被绑定到鼠标，本接口将立即返回 `true` 的结果

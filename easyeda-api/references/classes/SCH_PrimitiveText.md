@@ -2,28 +2,28 @@
 
 原理图 &amp; 符号 / 文本图元类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SCH_PrimitiveText implements ISCH_PrimitiveAPI 
 ```
-**Implements:** [ISCH\_PrimitiveAPI](../interfaces/ISCH_PrimitiveAPI.md)
+**实现自：**[ISCH\_PrimitiveAPI](../interfaces/ISCH_PrimitiveAPI.md)
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -135,31 +135,31 @@ Description
 
 # SCH\_PrimitiveText.create() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 创建文本
 
-## Signature
+## 签名
 
 ```typescript
 create(x: number, y: number, content: string, rotation?: number, textColor?: string | null, fontName?: string | null, fontSize?: number | null, bold?: boolean, italic?: boolean, underLine?: boolean, alignMode?: ESCH_PrimitiveTextAlignMode): Promise<ISCH_PrimitiveText | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -223,7 +223,7 @@ number
 
 </td><td>
 
-_(Optional)_ 旋转角度，可选 `0` `90` `180` `270`
+_（可选）_ 旋转角度，可选 `0` `90` `180` `270`
 
 
 </td></tr>
@@ -239,7 +239,7 @@ string \| null
 
 </td><td>
 
-_(Optional)_ 文本颜色，`null` 表示默认
+_（可选）_ 文本颜色，`null` 表示默认
 
 
 </td></tr>
@@ -255,7 +255,7 @@ string \| null
 
 </td><td>
 
-_(Optional)_ 字体名称，`null` 表示默认
+_（可选）_ 字体名称，`null` 表示默认
 
 
 </td></tr>
@@ -271,7 +271,7 @@ number \| null
 
 </td><td>
 
-_(Optional)_ 字体大小，`null` 表示默认
+_（可选）_ 字体大小，`null` 表示默认
 
 
 </td></tr>
@@ -287,7 +287,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否加粗
+_（可选）_ 是否加粗
 
 
 </td></tr>
@@ -303,7 +303,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否斜体
+_（可选）_ 是否斜体
 
 
 </td></tr>
@@ -319,7 +319,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否加下划线
+_（可选）_ 是否加下划线
 
 
 </td></tr>
@@ -335,7 +335,7 @@ alignMode
 
 </td><td>
 
-_(Optional)_ 对齐模式，`0` 左顶，`1` 中顶，`2` 右顶，`3` 左中，`4` 中中，`5` 右中，`6` 左底，`7` 中底，`8` 右底
+_（可选）_ 对齐模式，`0` 左顶，`1` 中顶，`2` 右顶，`3` 左中，`4` 中中，`5` 右中，`6` 左底，`7` 中底，`8` 右底
 
 
 </td></tr>
@@ -343,7 +343,7 @@ _(Optional)_ 对齐模式，`0` 左顶，`1` 中顶，`2` 右顶，`3` 左中，
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ISCH\_PrimitiveText](./ISCH_PrimitiveText.md) \| undefined&gt;
 
@@ -353,31 +353,31 @@ Promise&lt;[ISCH\_PrimitiveText](./ISCH_PrimitiveText.md) \| undefined&gt;
 
 # SCH\_PrimitiveText.delete() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 删除文本
 
-## Signature
+## 签名
 
 ```typescript
 delete(primitiveIds: string | ISCH_PrimitiveText | Array<string> | Array<ISCH_PrimitiveText>): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -401,7 +401,7 @@ string \| [ISCH\_PrimitiveText](./ISCH_PrimitiveText.md) \| Array&lt;string&gt; 
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -411,31 +411,31 @@ Promise&lt;boolean&gt;
 
 # SCH\_PrimitiveText.get() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取文本
 
-## Signature
+## 签名
 
 ```typescript
 get(primitiveIds: string): Promise<ISCH_PrimitiveText | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -459,7 +459,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ISCH\_PrimitiveText](./ISCH_PrimitiveText.md) \| undefined&gt;
 
@@ -469,31 +469,31 @@ Promise&lt;[ISCH\_PrimitiveText](./ISCH_PrimitiveText.md) \| undefined&gt;
 
 # SCH\_PrimitiveText.get() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取文本
 
-## Signature
+## 签名
 
 ```typescript
 get(primitiveIds: Array<string>): Promise<Array<ISCH_PrimitiveText>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -517,13 +517,13 @@ Array&lt;string&gt;
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[ISCH\_PrimitiveText](./ISCH_PrimitiveText.md)<!-- -->&gt;&gt;
 
 文本图元对象，空数组表示获取失败
 
-## Remarks
+## 备注
 
 如若传入多个图元 ID，任意图元 ID 未匹配到不影响其它图元的返回，即可能返回少于传入的图元 ID 数量的图元对象
 
@@ -531,18 +531,18 @@ Promise&lt;Array&lt;[ISCH\_PrimitiveText](./ISCH_PrimitiveText.md)<!-- -->&gt;&g
 
 # SCH\_PrimitiveText.getAll() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取所有文本
 
-## Signature
+## 签名
 
 ```typescript
 getAll(): Promise<Array<ISCH_PrimitiveText>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[ISCH\_PrimitiveText](./ISCH_PrimitiveText.md)<!-- -->&gt;&gt;
 
@@ -552,18 +552,18 @@ Promise&lt;Array&lt;[ISCH\_PrimitiveText](./ISCH_PrimitiveText.md)<!-- -->&gt;&g
 
 # SCH\_PrimitiveText.getAllPrimitiveId() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 获取所有文本的图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getAllPrimitiveId(): Promise<Array<string>>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;string&gt;&gt;
 
@@ -573,11 +573,11 @@ Promise&lt;Array&lt;string&gt;&gt;
 
 # SCH\_PrimitiveText.modify() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 修改文本
 
-## Signature
+## 签名
 
 ```typescript
 modify(primitiveId: string | ISCH_PrimitiveText, property: {
@@ -595,21 +595,21 @@ modify(primitiveId: string | ISCH_PrimitiveText, property: {
     }): Promise<ISCH_PrimitiveText | undefined>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -649,7 +649,7 @@ property
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ISCH\_PrimitiveText](./ISCH_PrimitiveText.md) \| undefined&gt;
 

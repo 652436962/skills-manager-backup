@@ -2,32 +2,32 @@
 
 文件系统文件路径
 
-## Signature
+## 签名
 
 ```typescript
 interface ISYS_FileSystemFileList 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -103,7 +103,7 @@ string
 
 </td><td>
 
-_(Optional)_ 相对路径，不包含前面的传入路径和文件名（当没有传入路径时，不存在相对路径），且前后均无斜杠
+_（可选）_ 相对路径，不包含前面的传入路径和文件名（当没有传入路径时，不存在相对路径），且前后均无斜杠
 
 
 </td></tr>
@@ -122,7 +122,7 @@ Array&lt;[ISYS\_FileSystemFileList](./ISYS_FileSystemFileList.md)<!-- -->&gt;
 
 </td><td>
 
-_(Optional)_ 目录子文件
+_（可选）_ 目录子文件
 
 
 </td></tr>
@@ -138,7 +138,7 @@ _(Optional)_ 目录子文件
 
 文件名（前后均无斜杠）
 
-## Signature
+## 签名
 
 ```typescript
 fileName: string;
@@ -150,7 +150,7 @@ fileName: string;
 
 完整路径，包含文件名的绝对路径
 
-## Signature
+## 签名
 
 ```typescript
 fullPath: string;
@@ -162,7 +162,7 @@ fullPath: string;
 
 是否为目录
 
-## Signature
+## 签名
 
 ```typescript
 isDirectory: boolean;
@@ -174,7 +174,7 @@ isDirectory: boolean;
 
 相对路径，不包含前面的传入路径和文件名（当没有传入路径时，不存在相对路径），且前后均无斜杠
 
-## Signature
+## 签名
 
 ```typescript
 relativePath?: string;
@@ -186,7 +186,7 @@ relativePath?: string;
 
 目录子文件
 
-## Signature
+## 签名
 
 ```typescript
 subFiles?: Array<ISYS_FileSystemFileList>;

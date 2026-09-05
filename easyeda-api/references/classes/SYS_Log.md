@@ -2,27 +2,27 @@
 
 系统 / 日志类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SYS_Log 
 ```
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -108,27 +108,27 @@ Description
 
 添加日志条目
 
-## Signature
+## 签名
 
 ```typescript
 add(message: string, type?: ESYS_LogType): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -160,7 +160,7 @@ type
 
 </td><td>
 
-_(Optional)_ 日志类型
+_（可选）_ 日志类型
 
 
 </td></tr>
@@ -168,7 +168,7 @@ _(Optional)_ 日志类型
 
 
 
-## Returns
+## 返回值
 
 void
 
@@ -178,14 +178,14 @@ void
 
 清空日志
 
-## Signature
+## 签名
 
 ```typescript
 clear(): void;
 ```
 
 
-## Returns
+## 返回值
 
 void
 
@@ -195,27 +195,27 @@ void
 
 导出日志
 
-## Signature
+## 签名
 
 ```typescript
 export(types?: ESYS_LogType | Array<ESYS_LogType>): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -231,7 +231,7 @@ types
 
 </td><td>
 
-_(Optional)_ 日志类型
+_（可选）_ 日志类型
 
 
 </td></tr>
@@ -239,7 +239,7 @@ _(Optional)_ 日志类型
 
 
 
-## Returns
+## 返回值
 
 void
 
@@ -249,7 +249,7 @@ void
 
 查找条目
 
-## Signature
+## 签名
 
 ```typescript
 find(message: string | Array<string | {
@@ -264,21 +264,21 @@ find(message: string | Array<string | {
     }>, types?: ESYS_LogType | Array<ESYS_LogType>): Promise<Array<ISYS_LogLine>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -310,7 +310,7 @@ types
 
 </td><td>
 
-_(Optional)_ 日志类型数组，可以在指定的日志类型内查找
+_（可选）_ 日志类型数组，可以在指定的日志类型内查找
 
 
 </td></tr>
@@ -318,13 +318,13 @@ _(Optional)_ 日志类型数组，可以在指定的日志类型内查找
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[ISYS\_LogLine](../interfaces/ISYS_LogLine.md)<!-- -->&gt;&gt;
 
 符合查找条件的日志条目数组
 
-## Remarks
+## 备注
 
 如果日志面板处于打开状态，查找操作会同时在前端展现
 
@@ -334,27 +334,27 @@ Promise&lt;Array&lt;[ISYS\_LogLine](../interfaces/ISYS_LogLine.md)<!-- -->&gt;&g
 
 筛选并获取日志条目
 
-## Signature
+## 签名
 
 ```typescript
 sort(types?: ESYS_LogType | Array<ESYS_LogType>): Promise<Array<ISYS_LogLine>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -370,7 +370,7 @@ types
 
 </td><td>
 
-_(Optional)_ 日志类型数组，可以同时指定多种日志类型，如若不指定则为全部类型
+_（可选）_ 日志类型数组，可以同时指定多种日志类型，如若不指定则为全部类型
 
 
 </td></tr>
@@ -378,12 +378,12 @@ _(Optional)_ 日志类型数组，可以同时指定多种日志类型，如若�
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;[ISYS\_LogLine](../interfaces/ISYS_LogLine.md)<!-- -->&gt;&gt;
 
 符合筛选条件的日志条目数组
 
-## Remarks
+## 备注
 
 如果日志面板处于打开状态，筛选操作会同时在前端展现

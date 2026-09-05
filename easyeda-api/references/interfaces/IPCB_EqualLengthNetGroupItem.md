@@ -2,32 +2,32 @@
 
 等长网络组属性
 
-## Signature
+## 签名
 
 ```typescript
 interface IPCB_EqualLengthNetGroupItem 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -100,7 +100,7 @@ Array&lt;string&gt;
 
 等长网络组颜色
 
-## Signature
+## 签名
 
 ```typescript
 color: {
@@ -117,7 +117,7 @@ color: {
 
 等长网络组名称
 
-## Signature
+## 签名
 
 ```typescript
 name: string;
@@ -129,7 +129,7 @@ name: string;
 
 网络名称数组
 
-## Signature
+## 签名
 
 ```typescript
 nets: Array<string>;

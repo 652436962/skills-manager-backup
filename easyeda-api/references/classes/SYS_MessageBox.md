@@ -1,36 +1,36 @@
 # SYS\_MessageBox class
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 已更名为 [SYS\_Dialog](./SYS_Dialog.md)
 
 系统 / 消息框类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SYS_MessageBox 
 ```
 
-## Remarks
+## 备注
 
 生成消息提示框
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -72,33 +72,33 @@ Description
 
 # SYS\_MessageBox.showConfirmationMessage() method
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 请使用 [SYS\_Dialog.showConfirmationMessage()](./SYS_Dialog.md) 替代
 
 显示确认框
 
-## Signature
+## 签名
 
 ```typescript
 showConfirmationMessage(content: string, title?: string, mainButtonTitle?: string, buttonTitle?: string, callbackFn?: (mainButtonClicked: boolean) => void): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -130,7 +130,7 @@ string
 
 </td><td>
 
-_(Optional)_ 确认框标题
+_（可选）_ 确认框标题
 
 
 </td></tr>
@@ -146,7 +146,7 @@ string
 
 </td><td>
 
-_(Optional)_ 主要按钮标题
+_（可选）_ 主要按钮标题
 
 
 </td></tr>
@@ -162,7 +162,7 @@ string
 
 </td><td>
 
-_(Optional)_ 主要按钮标题
+_（可选）_ 主要按钮标题
 
 
 </td></tr>
@@ -178,7 +178,7 @@ callbackFn
 
 </td><td>
 
-_(Optional)_ 回调函数，如需调用扩展内的函数，请在函数名前加上扩展的唯一 ID，以西文句号 `.` 分隔
+_（可选）_ 回调函数，如需调用扩展内的函数，请在函数名前加上扩展的唯一 ID，以西文句号 `.` 分隔
 
 
 </td></tr>
@@ -186,11 +186,11 @@ _(Optional)_ 回调函数，如需调用扩展内的函数，请在函数名前�
 
 
 
-## Returns
+## 返回值
 
 void
 
-## Remarks
+## 备注
 
 显示一个拥有确认和取消按钮的确认框
 
@@ -198,33 +198,33 @@ void
 
 # SYS\_MessageBox.showInformationMessage() method
 
-> Warning: This API is now obsolete.
+> 警告：此 API 现已弃用。
 >
 > 请使用 [SYS\_Dialog.showInformationMessage()](./SYS_Dialog.md) 替代
 
 显示消息框
 
-## Signature
+## 签名
 
 ```typescript
 showInformationMessage(content: string, title?: string, buttonTitle?: string): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -256,7 +256,7 @@ string
 
 </td><td>
 
-_(Optional)_ 消息框标题
+_（可选）_ 消息框标题
 
 
 </td></tr>
@@ -272,7 +272,7 @@ string
 
 </td><td>
 
-_(Optional)_ 按钮标题，为空则不显示按钮
+_（可选）_ 按钮标题，为空则不显示按钮
 
 
 </td></tr>
@@ -280,10 +280,10 @@ _(Optional)_ 按钮标题，为空则不显示按钮
 
 
 
-## Returns
+## 返回值
 
 void
 
-## Remarks
+## 备注
 
 显示一个文字消息提示框

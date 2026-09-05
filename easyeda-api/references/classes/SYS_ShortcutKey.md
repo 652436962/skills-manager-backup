@@ -2,31 +2,31 @@
 
 系统 / 快捷键类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SYS_ShortcutKey 
 ```
 
-## Remarks
+## 备注
 
 注册与管理系统快捷键
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -82,11 +82,11 @@ Description
 
 # SYS\_ShortcutKey.getShortcutKeys() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 查询快捷键列表
 
-## Signature
+## 签名
 
 ```typescript
 getShortcutKeys(includeSystem?: boolean): Promise<Array<{
@@ -97,21 +97,21 @@ getShortcutKeys(includeSystem?: boolean): Promise<Array<{
     }>>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -127,7 +127,7 @@ boolean
 
 </td><td>
 
-_(Optional)_ 是否包含系统快捷键
+_（可选）_ 是否包含系统快捷键
 
 
 </td></tr>
@@ -135,7 +135,7 @@ _(Optional)_ 是否包含系统快捷键
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;Array&lt;{ shortcutKey: [TSYS\_ShortcutKeys](../types/TSYS_ShortcutKeys.md)<!-- -->; title: string; documentType: Array&lt;[ESYS\_ShortcutKeyEffectiveEditorDocumentType](../enums/ESYS_ShortcutKeyEffectiveEditorDocumentType.md)<!-- -->&gt;; scene: Array&lt;[ESYS\_ShortcutKeyEffectiveEditorScene](../enums/ESYS_ShortcutKeyEffectiveEditorScene.md)<!-- -->&gt;; }&gt;&gt;
 
@@ -145,31 +145,31 @@ Promise&lt;Array&lt;{ shortcutKey: [TSYS\_ShortcutKeys](../types/TSYS_ShortcutKe
 
 # SYS\_ShortcutKey.registerShortcutKey() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 注册快捷键
 
-## Signature
+## 签名
 
 ```typescript
 registerShortcutKey(shortcutKey: TSYS_ShortcutKeys, title: string, callbackFn: (shortcutKey: TSYS_ShortcutKeys) => void | Promise<void>, documentType?: Array<ESYS_ShortcutKeyEffectiveEditorDocumentType>, scene?: Array<ESYS_ShortcutKeyEffectiveEditorScene>): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -257,7 +257,7 @@ _(Optional)_
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 
@@ -267,31 +267,31 @@ Promise&lt;boolean&gt;
 
 # SYS\_ShortcutKey.unregisterShortcutKey() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 反注册快捷键
 
-## Signature
+## 签名
 
 ```typescript
 unregisterShortcutKey(shortcutKey: TSYS_ShortcutKeys): Promise<boolean>;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -315,7 +315,7 @@ shortcutKey
 
 
 
-## Returns
+## 返回值
 
 Promise&lt;boolean&gt;
 

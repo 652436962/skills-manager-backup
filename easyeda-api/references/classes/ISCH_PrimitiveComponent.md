@@ -2,36 +2,36 @@
 
 器件图元
 
-## Signature
+## 签名
 
 ```typescript
 declare class ISCH_PrimitiveComponent implements ISCH_Primitive 
 ```
-**Implements:** [ISCH\_Primitive](../interfaces/ISCH_Primitive.md)
+**实现自：**[ISCH\_Primitive](../interfaces/ISCH_Primitive.md)
 
-## Remarks
+## 备注
 
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -73,7 +73,7 @@ string
 
 </td><td>
 
-_(Optional)_ Component 属性：位号
+_（可选）_ Component 属性：位号
 
 
 </td></tr>
@@ -115,7 +115,7 @@ string
 
 </td><td>
 
-_(Optional)_ Component 属性：名称
+_（可选）_ Component 属性：名称
 
 
 </td></tr>
@@ -136,7 +136,7 @@ _(Optional)_ Component 属性：名称
 
 </td><td>
 
-_(Optional)_ 其它参数
+_（可选）_ 其它参数
 
 
 </td></tr>
@@ -157,7 +157,7 @@ string
 
 </td><td>
 
-_(Optional)_ 图元 ID
+_（可选）_ 图元 ID
 
 
 </td></tr>
@@ -226,21 +226,21 @@ number
 </td></tr>
 </tbody></table>
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -478,7 +478,7 @@ Description
 
 </td><td>
 
-获取属性状态：子部件名称
+获取属性状态：子图块名称
 
 
 </td></tr>
@@ -844,7 +844,7 @@ Description
 
 异步
 
-## Signature
+## 签名
 
 ```typescript
 protected async: boolean;
@@ -856,7 +856,7 @@ protected async: boolean;
 
 Component 属性：位号
 
-## Signature
+## 签名
 
 ```typescript
 protected designator?: string;
@@ -868,7 +868,7 @@ protected designator?: string;
 
 是否镜像
 
-## Signature
+## 签名
 
 ```typescript
 protected mirror: boolean;
@@ -880,7 +880,7 @@ protected mirror: boolean;
 
 Component 属性：名称
 
-## Signature
+## 签名
 
 ```typescript
 protected name?: string;
@@ -892,7 +892,7 @@ protected name?: string;
 
 其它参数
 
-## Signature
+## 签名
 
 ```typescript
 protected otherProperty?: {
@@ -906,7 +906,7 @@ protected otherProperty?: {
 
 图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 protected primitiveId?: string;
@@ -918,7 +918,7 @@ protected primitiveId?: string;
 
 旋转角度
 
-## Signature
+## 签名
 
 ```typescript
 protected rotation: number;
@@ -930,7 +930,7 @@ protected rotation: number;
 
 坐标 X
 
-## Signature
+## 签名
 
 ```typescript
 protected x: number;
@@ -942,7 +942,7 @@ protected x: number;
 
 坐标 Y
 
-## Signature
+## 签名
 
 ```typescript
 protected y: number;
@@ -957,18 +957,18 @@ protected y: number;
 
 # ISCH\_PrimitiveComponent.done() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将对图元的更改应用到画布
 
-## Signature
+## 签名
 
 ```typescript
 done(): Promise<ISCH_PrimitiveComponent>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)<!-- -->&gt;
 
@@ -980,14 +980,14 @@ Promise&lt;[ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)<!-- -->&gt;
 
 获取属性状态：是否加入 BOM
 
-## Signature
+## 签名
 
 ```typescript
 getState_AddIntoBom(): boolean | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 boolean \| undefined
 
@@ -999,14 +999,14 @@ boolean \| undefined
 
 获取属性状态：是否转到 PCB
 
-## Signature
+## 签名
 
 ```typescript
 getState_AddIntoPcb(): boolean | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 boolean \| undefined
 
@@ -1018,20 +1018,19 @@ boolean \| undefined
 
 获取属性状态：关联库器件
 
-## Signature
+## 签名
 
 ```typescript
 getState_Component(): {
         libraryUuid: string;
         uuid: string;
-        name?: string;
-    } | undefined;
+    };
 ```
 
 
-## Returns
+## 返回值
 
-{ libraryUuid: string; uuid: string; name?: string; } \| undefined
+\{ libraryUuid: string; uuid: string; \}
 
 关联库器件
 
@@ -1041,14 +1040,14 @@ getState_Component(): {
 
 获取属性状态：器件类型
 
-## Signature
+## 签名
 
 ```typescript
 getState_ComponentType(): ESCH_PrimitiveComponentType;
 ```
 
 
-## Returns
+## 返回值
 
 ESCH\_PrimitiveComponentType
 
@@ -1060,14 +1059,14 @@ ESCH\_PrimitiveComponentType
 
 获取属性状态：位号
 
-## Signature
+## 签名
 
 ```typescript
 getState_Designator(): string | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 string \| undefined
 
@@ -1079,20 +1078,19 @@ string \| undefined
 
 获取属性状态：关联库封装
 
-## Signature
+## 签名
 
 ```typescript
 getState_Footprint(): {
         libraryUuid: string;
         uuid: string;
-        name?: string;
     } | undefined;
 ```
 
 
-## Returns
+## 返回值
 
-{ libraryUuid: string; uuid: string; name?: string; } \| undefined
+{ libraryUuid: string; uuid: string; } \| undefined
 
 关联库封装
 
@@ -1102,14 +1100,14 @@ getState_Footprint(): {
 
 获取属性状态：制造商
 
-## Signature
+## 签名
 
 ```typescript
 getState_Manufacturer(): string | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 string \| undefined
 
@@ -1121,14 +1119,14 @@ string \| undefined
 
 获取属性状态：制造商编号
 
-## Signature
+## 签名
 
 ```typescript
 getState_ManufacturerId(): string | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 string \| undefined
 
@@ -1140,14 +1138,14 @@ string \| undefined
 
 获取属性状态：是否镜像
 
-## Signature
+## 签名
 
 ```typescript
 getState_Mirror(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -1159,14 +1157,14 @@ boolean
 
 获取属性状态：名称
 
-## Signature
+## 签名
 
 ```typescript
 getState_Name(): string | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 string \| undefined
 
@@ -1178,14 +1176,14 @@ string \| undefined
 
 获取属性状态：网络名称
 
-## Signature
+## 签名
 
 ```typescript
 getState_Net(): string | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 string \| undefined
 
@@ -1197,7 +1195,7 @@ string \| undefined
 
 获取属性状态：其它参数
 
-## Signature
+## 签名
 
 ```typescript
 getState_OtherProperty(): {
@@ -1206,7 +1204,7 @@ getState_OtherProperty(): {
 ```
 
 
-## Returns
+## 返回值
 
 { \[key: string\]: string \| number \| boolean; } \| undefined
 
@@ -1218,14 +1216,14 @@ getState_OtherProperty(): {
 
 获取属性状态：图元 ID
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveId(): string;
 ```
 
 
-## Returns
+## 返回值
 
 string
 
@@ -1237,14 +1235,14 @@ string
 
 获取属性状态：图元类型
 
-## Signature
+## 签名
 
 ```typescript
 getState_PrimitiveType(): ESCH_PrimitiveType;
 ```
 
 
-## Returns
+## 返回值
 
 [ESCH\_PrimitiveType](../enums/ESCH_PrimitiveType.md)
 
@@ -1256,14 +1254,14 @@ getState_PrimitiveType(): ESCH_PrimitiveType;
 
 获取属性状态：旋转角度
 
-## Signature
+## 签名
 
 ```typescript
 getState_Rotation(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -1273,20 +1271,20 @@ number
 
 # ISCH\_PrimitiveComponent.getState\_SubPartName() method
 
-获取属性状态：子部件名称
+获取属性状态：子图块名称
 
-## Signature
+## 签名
 
 ```typescript
 getState_SubPartName(): string | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 string \| undefined
 
-子部件名称
+子图块名称
 
 ### getstate_supplier
 
@@ -1294,14 +1292,14 @@ string \| undefined
 
 获取属性状态：供应商
 
-## Signature
+## 签名
 
 ```typescript
 getState_Supplier(): string | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 string \| undefined
 
@@ -1313,14 +1311,14 @@ string \| undefined
 
 获取属性状态：供应商编号
 
-## Signature
+## 签名
 
 ```typescript
 getState_SupplierId(): string | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 string \| undefined
 
@@ -1332,20 +1330,19 @@ string \| undefined
 
 获取属性状态：关联库符号
 
-## Signature
+## 签名
 
 ```typescript
 getState_Symbol(): {
         libraryUuid: string;
         uuid: string;
-        name?: string;
     } | undefined;
 ```
 
 
-## Returns
+## 返回值
 
-{ libraryUuid: string; uuid: string; name?: string; } \| undefined
+{ libraryUuid: string; uuid: string; } \| undefined
 
 关联库符号
 
@@ -1355,14 +1352,14 @@ getState_Symbol(): {
 
 获取属性状态：唯一 ID
 
-## Signature
+## 签名
 
 ```typescript
 getState_UniqueId(): string | undefined;
 ```
 
 
-## Returns
+## 返回值
 
 string \| undefined
 
@@ -1374,14 +1371,14 @@ string \| undefined
 
 获取属性状态：坐标 X
 
-## Signature
+## 签名
 
 ```typescript
 getState_X(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -1393,14 +1390,14 @@ number
 
 获取属性状态：坐标 Y
 
-## Signature
+## 签名
 
 ```typescript
 getState_Y(): number;
 ```
 
 
-## Returns
+## 返回值
 
 number
 
@@ -1412,14 +1409,14 @@ number
 
 查询图元是否为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 isAsync(): boolean;
 ```
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -1429,18 +1426,18 @@ boolean
 
 # ISCH\_PrimitiveComponent.reset() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 将异步图元重置为当前画布状态
 
-## Signature
+## 签名
 
 ```typescript
 reset(): Promise<ISCH_PrimitiveComponent>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;[ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)<!-- -->&gt;
 
@@ -1450,31 +1447,31 @@ Promise&lt;[ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)<!-- -->&gt;
 
 # ISCH\_PrimitiveComponent.setState\_AddIntoBom() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：是否加入 BOM
 
-## Signature
+## 签名
 
 ```typescript
 setState_AddIntoBom(addIntoBom: boolean | undefined): ISCH_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1498,7 +1495,7 @@ boolean \| undefined
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)
 
@@ -1508,31 +1505,31 @@ boolean \| undefined
 
 # ISCH\_PrimitiveComponent.setState\_AddIntoPcb() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：是否转到 PCB
 
-## Signature
+## 签名
 
 ```typescript
 setState_AddIntoPcb(addIntoPcb: boolean | undefined): ISCH_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1556,7 +1553,7 @@ boolean \| undefined
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)
 
@@ -1566,31 +1563,31 @@ boolean \| undefined
 
 # ISCH\_PrimitiveComponent.setState\_Designator() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：位号
 
-## Signature
+## 签名
 
 ```typescript
 setState_Designator(designator: string | undefined): ISCH_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1614,7 +1611,7 @@ string \| undefined
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)
 
@@ -1624,31 +1621,31 @@ string \| undefined
 
 # ISCH\_PrimitiveComponent.setState\_Manufacturer() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：制造商
 
-## Signature
+## 签名
 
 ```typescript
 setState_Manufacturer(manufacturer: string | undefined): ISCH_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1672,7 +1669,7 @@ string \| undefined
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)
 
@@ -1682,31 +1679,31 @@ string \| undefined
 
 # ISCH\_PrimitiveComponent.setState\_ManufacturerId() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：制造商编号
 
-## Signature
+## 签名
 
 ```typescript
 setState_ManufacturerId(manufacturerId: string | undefined): ISCH_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1730,7 +1727,7 @@ string \| undefined
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)
 
@@ -1740,31 +1737,31 @@ string \| undefined
 
 # ISCH\_PrimitiveComponent.setState\_Mirror() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：是否镜像
 
-## Signature
+## 签名
 
 ```typescript
 setState_Mirror(mirror: boolean): ISCH_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1788,7 +1785,7 @@ boolean
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)
 
@@ -1798,31 +1795,31 @@ boolean
 
 # ISCH\_PrimitiveComponent.setState\_Name() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：名称
 
-## Signature
+## 签名
 
 ```typescript
 setState_Name(name: string | undefined): ISCH_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1846,7 +1843,7 @@ string \| undefined
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)
 
@@ -1856,31 +1853,31 @@ string \| undefined
 
 # ISCH\_PrimitiveComponent.setState\_Net() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：网络名称
 
-## Signature
+## 签名
 
 ```typescript
 setState_Net(net: string | undefined): ISCH_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1904,7 +1901,7 @@ string \| undefined
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)
 
@@ -1914,11 +1911,11 @@ string \| undefined
 
 # ISCH\_PrimitiveComponent.setState\_OtherProperty() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：其它参数
 
-## Signature
+## 签名
 
 ```typescript
 setState_OtherProperty(otherProperty: {
@@ -1926,21 +1923,21 @@ setState_OtherProperty(otherProperty: {
     }): ISCH_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -1964,7 +1961,7 @@ otherProperty
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)
 
@@ -1974,31 +1971,31 @@ otherProperty
 
 # ISCH\_PrimitiveComponent.setState\_Rotation() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：旋转角度
 
-## Signature
+## 签名
 
 ```typescript
 setState_Rotation(rotation: number): ISCH_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2022,7 +2019,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)
 
@@ -2032,31 +2029,31 @@ number
 
 # ISCH\_PrimitiveComponent.setState\_Supplier() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：供应商
 
-## Signature
+## 签名
 
 ```typescript
 setState_Supplier(supplier: string | undefined): ISCH_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2080,7 +2077,7 @@ string \| undefined
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)
 
@@ -2090,31 +2087,31 @@ string \| undefined
 
 # ISCH\_PrimitiveComponent.setState\_SupplierId() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：供应商编号
 
-## Signature
+## 签名
 
 ```typescript
 setState_SupplierId(supplierId: string | undefined): ISCH_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2138,7 +2135,7 @@ string \| undefined
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)
 
@@ -2148,31 +2145,31 @@ string \| undefined
 
 # ISCH\_PrimitiveComponent.setState\_UniqueId() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：唯一 ID
 
-## Signature
+## 签名
 
 ```typescript
 setState_UniqueId(uniqueId: string | undefined): ISCH_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2196,7 +2193,7 @@ string \| undefined
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)
 
@@ -2206,31 +2203,31 @@ string \| undefined
 
 # ISCH\_PrimitiveComponent.setState\_X() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：坐标 X
 
-## Signature
+## 签名
 
 ```typescript
 setState_X(x: number): ISCH_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2254,7 +2251,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)
 
@@ -2264,31 +2261,31 @@ number
 
 # ISCH\_PrimitiveComponent.setState\_Y() method
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 此 API 当前处于 BETA 预览状态，希望得到开发者的反馈。它的任何功能都可能在接下来的开发进程中被修改，请不要将它用于任何正式环境。
 
 设置属性状态：坐标 Y
 
-## Signature
+## 签名
 
 ```typescript
 setState_Y(y: number): ISCH_PrimitiveComponent;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -2312,7 +2309,7 @@ number
 
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)
 
@@ -2324,14 +2321,14 @@ number
 
 将图元转换为异步图元
 
-## Signature
+## 签名
 
 ```typescript
 toAsync(): ISCH_PrimitiveComponent;
 ```
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)
 
@@ -2343,14 +2340,14 @@ toAsync(): ISCH_PrimitiveComponent;
 
 将图元转换为同步图元
 
-## Signature
+## 签名
 
 ```typescript
 toSync(): ISCH_PrimitiveComponent;
 ```
 
 
-## Returns
+## 返回值
 
 [ISCH\_PrimitiveComponent](./ISCH_PrimitiveComponent.md)
 

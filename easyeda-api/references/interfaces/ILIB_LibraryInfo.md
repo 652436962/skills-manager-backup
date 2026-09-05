@@ -2,36 +2,36 @@
 
 库信息
 
-## Signature
+## 签名
 
 ```typescript
 interface ILIB_LibraryInfo 
 ```
 
-## Remarks
+## 备注
 
 包含库的名称以及它的 UUID
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -85,7 +85,7 @@ string
 
 库名称
 
-## Signature
+## 签名
 
 ```typescript
 name: string;
@@ -97,7 +97,7 @@ name: string;
 
 库 UUID
 
-## Signature
+## 签名
 
 ```typescript
 uuid: string;

@@ -2,32 +2,32 @@
 
 系统 / 多语言类
 
-## Signature
+## 签名
 
 ```typescript
 declare class SYS_I18n 
 ```
 
-## Remarks
+## 备注
 
 使用多语言系统展示多语言文本
 
 
-## Methods
+## 方法
 
 <table><thead><tr><th>
 
-Method
+方法名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -183,27 +183,27 @@ Description
 
 新增语言切换事件监听
 
-## Signature
+## 签名
 
 ```typescript
 addLanguageChangedEventListener(id: string, callFn: (newLanguage: string, lastLanguage: string) => void | Promise<void>, onlyOnce: boolean): void;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -257,7 +257,7 @@ boolean
 
 
 
-## Returns
+## 返回值
 
 void
 
@@ -267,14 +267,14 @@ void
 
 查询所有支持的语言
 
-## Signature
+## 签名
 
 ```typescript
 getAllSupportedLanguages(): Array<string>;
 ```
 
 
-## Returns
+## 返回值
 
 Array&lt;string&gt;
 
@@ -286,20 +286,20 @@ Array&lt;string&gt;
 
 获取当前语言环境
 
-## Signature
+## 签名
 
 ```typescript
 getCurrentLanguage(): Promise<string>;
 ```
 
 
-## Returns
+## 返回值
 
 Promise&lt;string&gt;
 
 语言
 
-## Remarks
+## 备注
 
 能够获取到的语言受 EDA 当前支持语言限制，其它 API 支持的语言需要显式指定 `language` 参数才能使用
 
@@ -309,27 +309,27 @@ Promise&lt;string&gt;
 
 导入多语言
 
-## Signature
+## 签名
 
 ```typescript
 importMultilingual(language: string, source: ISYS_LanguageKeyValuePairs): boolean;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -369,13 +369,13 @@ source
 
 
 
-## Returns
+## 返回值
 
 boolean
 
 导入是否成功
 
-## Remarks
+## 备注
 
 注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`
 
@@ -385,27 +385,27 @@ boolean
 
 导入多语言：指定命名空间和语言
 
-## Signature
+## 签名
 
 ```typescript
 importMultilingualLanguage(namespace: string, language: string, source: ISYS_LanguageKeyValuePairs): boolean;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -461,7 +461,7 @@ source
 
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -473,27 +473,27 @@ boolean
 
 导入多语言：指定命名空间
 
-## Signature
+## 签名
 
 ```typescript
 importMultilingualNamespace(namespace: string, source: ISYS_MultilingualLanguagesData): boolean;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -533,7 +533,7 @@ source
 
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -545,27 +545,27 @@ boolean
 
 查询事件监听是否存在
 
-## Signature
+## 签名
 
 ```typescript
 isEventListenerAlreadyExist(id: string): boolean;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -589,7 +589,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -601,27 +601,27 @@ boolean
 
 检查语言是否受支持
 
-## Signature
+## 签名
 
 ```typescript
 isLanguageSupported(language: string): boolean;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -645,7 +645,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -657,27 +657,27 @@ boolean
 
 移除事件监听
 
-## Signature
+## 签名
 
 ```typescript
 removeEventListener(id: string): boolean;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -701,7 +701,7 @@ string
 
 
 
-## Returns
+## 返回值
 
 boolean
 
@@ -713,27 +713,27 @@ boolean
 
 输出语言文本
 
-## Signature
+## 签名
 
 ```typescript
 text(tag: string, namespace?: string, language?: string, ...args: Array<any>): string;
 ```
 
-## Parameters
+## 参数名
 
 <table><thead><tr><th>
 
-Parameter
+参数
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -765,7 +765,7 @@ string
 
 </td><td>
 
-_(Optional)_ 文本命名空间，在扩展运行环境内默认为扩展的 UUID，否则为系统默认命名空间
+_（可选）_ 文本命名空间，在扩展运行环境内默认为扩展的 UUID，否则为系统默认命名空间
 
 
 </td></tr>
@@ -781,7 +781,7 @@ string
 
 </td><td>
 
-_(Optional)_ 语言，`undefined` 为 EDA 当前的显示语言
+_（可选）_ 语言，`undefined` 为 EDA 当前的显示语言
 
 
 </td></tr>
@@ -805,13 +805,13 @@ Array&lt;any&gt;
 
 
 
-## Returns
+## 返回值
 
 string
 
 语言文本
 
-## Remarks
+## 备注
 
 可以使用 `${1}` 格式的占位符表示参数；
 

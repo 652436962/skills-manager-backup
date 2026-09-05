@@ -2,32 +2,32 @@
 
 原理图图元接口
 
-## Signature
+## 签名
 
 ```typescript
 interface ISCH_PrimitiveAPI 
 ```
 
-## Properties
+## 属性
 
 <table><thead><tr><th>
 
-Property
+属性名
 
 
 </th><th>
 
-Modifiers
+修饰符
 
 
 </th><th>
 
-Type
+类型
 
 
 </th><th>
 
-Description
+描述
 
 
 </th></tr></thead>
@@ -143,7 +143,7 @@ Description
 
 # ISCH\_PrimitiveAPI.create property
 
-## Signature
+## 签名
 
 ```typescript
 create: (...args: any[]) => ISCH_Primitive | undefined | Promise<ISCH_Primitive> | Promise<ISCH_Primitive | undefined>;
@@ -153,7 +153,7 @@ create: (...args: any[]) => ISCH_Primitive | undefined | Promise<ISCH_Primitive>
 
 # ISCH\_PrimitiveAPI.delete property
 
-## Signature
+## 签名
 
 ```typescript
 delete: (primitiveIds: string | any | Array<string> | Array<any>) => boolean | Promise<boolean>;
@@ -163,7 +163,7 @@ delete: (primitiveIds: string | any | Array<string> | Array<any>) => boolean | P
 
 # ISCH\_PrimitiveAPI.get property
 
-## Signature
+## 签名
 
 ```typescript
 get: {
@@ -176,7 +176,7 @@ get: {
 
 # ISCH\_PrimitiveAPI.getAll property
 
-## Signature
+## 签名
 
 ```typescript
 getAll: (...args: any[]) => Array<ISCH_Primitive> | Promise<Array<ISCH_Primitive>>;
@@ -186,7 +186,7 @@ getAll: (...args: any[]) => Array<ISCH_Primitive> | Promise<Array<ISCH_Primitive
 
 # ISCH\_PrimitiveAPI.getAllPrimitiveId property
 
-## Signature
+## 签名
 
 ```typescript
 getAllPrimitiveId: (...args: any[]) => Array<string> | Promise<Array<string>>;
@@ -196,7 +196,7 @@ getAllPrimitiveId: (...args: any[]) => Array<string> | Promise<Array<string>>;
 
 # ISCH\_PrimitiveAPI.modify property
 
-## Signature
+## 签名
 
 ```typescript
 modify: (primitiveId: string | any, ...args: any[]) => ISCH_Primitive | undefined | Promise<ISCH_Primitive> | Promise<ISCH_Primitive | undefined>;
