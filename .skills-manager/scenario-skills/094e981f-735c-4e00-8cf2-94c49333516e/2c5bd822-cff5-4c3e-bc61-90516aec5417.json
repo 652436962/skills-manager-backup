@@ -2,9 +2,14 @@
   "schema_version": 1,
   "scenario_id": "094e981f-735c-4e00-8cf2-94c49333516e",
   "skill_id": "2c5bd822-cff5-4c3e-bc61-90516aec5417",
-  "sort_order": 5,
+  "sort_order": 7,
   "tools": {
+    "cline": true,
     "codebuddy": true,
+    "deepseek_harness": true,
+    "gemini_cli": true,
+    "github_copilot": true,
+    "grok": true,
     "opencode": true,
     "qoder": true,
     "trae_cn": true

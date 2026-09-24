@@ -41,7 +41,8 @@ ls -d "$HOME/MounRiver"* 2>/dev/null
 #### 2. 检测独立工具链包 MRS_Toolchain（Linux）
 
 ```bash
-ls -d "$HOME/MRS_Toolchain_Linux_X64_V240" 2>/dev/null
+# 通配匹配任意版本（当前 V240，后续升级版本号变化也自动覆盖）
+ls -d "$HOME"/MRS_Toolchain_Linux_X64_V* 2>/dev/null
 ```
 
 #### 3. 检测系统工具链（路径 B）
@@ -58,18 +59,19 @@ which wchisp 2>/dev/null
 | 条件 | 路径 | 说明 |
 |------|------|------|
 | MRS 已安装 | **路径 A** | 取其内置 riscv-none-embed-gcc + OpenOCD |
-| 存在 `~/MRS_Toolchain_Linux_X64_V240` | **路径 B** | 用该独立工具链包（含 GCC + OpenOCD） |
+| 存在 `~/MRS_Toolchain_Linux_X64_V*` | **路径 B** | 用该独立工具链包（含 GCC + OpenOCD）；多版本并存时取版本号最新者 |
 | 无 MRS + 工具链就绪 | **路径 B** | 纯 CLI，全部开源 |
-| 无 MRS + 工具链缺失 | **先装工具链 → 路径 B** | 按下方对应平台命令安装 |
+| 无 MRS + 工具链缺失 | **先装工具链 → 路径 B** | AI 自动从官网下载最新包（见「缺失处理」）→ 解压到 `~/`；API 不可用时提示用户手动下载 |
 
-> ⚠️ **缺失处理（重要）**：`MRS_Toolchain_Linux_X64_V240` 压缩包约 393MB、解压后约 2.7GB，**禁止自动下载**。当 Pre-flight 检测到工具链缺失时，不要执行任何下载/安装命令，直接向用户输出以下提示，待用户手动安装完成后继续：
+> ⚠️ **缺失处理（重要）**：独立工具链包命名带版本号（`MRS_Toolchain_Linux_X64_V*`，当前 V240），**不硬编码任何版本**，一律以官网 API 返回的最新版本为准。包体积大（V240 约 393MB、解压后约 2.7GB），下载耗时较长，**AI 执行下载前应先告知用户来源与体积**，然后按 Step 1「自动下载」流程操作：
+>
+> 1. 官网 API 查询最新版本 → 获取签名直链 → `curl` 下载到 `~/Downloads/`（命令见 Step 1，2026-09 验证可用）
+> 2. 下载成功后解压到 `~/`，以实际解压出的目录 `~/MRS_Toolchain_Linux_X64_V*` 为基准继续配置
+> 3. 若 API 不可用（网络不通 / 官网改版），**停止自动下载**，向用户输出以下提示，待用户告知压缩包路径后从 Step 1 步骤 2 继续：
 >
 > ```
-> 未检测到 MRS_Toolchain_Linux_X64_V240 工具链，需要手动下载安装：
-> 1. 从 GitHub release（或 MRS 官方发行说明）下载 MRS_Toolchain_Linux_X64_V240.tar.xz（约 393MB）
-> 2. 解压：tar -xJf MRS_Toolchain_Linux_X64_V240.tar.xz -C ~
-> 3. 将 Toolchain/RISC-V Embedded GCC/bin 和 OpenOCD/OpenOCD/bin 加入 PATH
-> 安装完成后告诉我，我继续后续配置。
+> 无法从官网自动获取工具链（https://mounriver.com/download），请手动下载最新版
+> MRS_Toolchain_Linux_X64_V*.tar.xz 后告诉我压缩包路径，解压与配置由我来完成。
 > ```
 
 ---
@@ -88,33 +90,58 @@ Linux 版解压后工具链路径通常为：
 
 ### 路径 B: 纯 CLI
 
-**工具链首选来源：`MRS_Toolchain_Linux_X64_V240`** —— MRS 官方 Linux x64 独立工具链包，含 `riscv-none-embed` 交叉编译链 + OpenOCD，无需安装完整 IDE。压缩包约 393MB（`.tar.xz`），解压后约 2.7GB，统一解压到 `~/MRS_Toolchain_Linux_X64_V240/`。
+**工具链首选来源：MRS 官方 Linux x64 独立工具链包 `MRS_Toolchain_Linux_X64_V*`** —— 含 `riscv-none-embed` 交叉编译链 + OpenOCD，无需安装完整 IDE。命名带版本号（当前 V240），**不硬编码具体版本**，升级后以最新 release 为准；包体积较大（V240 约 393MB，`.tar.xz`，解压后约 2.7GB），以实际为准。
 
-> 体积较大，检测到缺失时仅**提示用户手动下载**（见 Pre-flight「缺失处理」），不要自动下载。
+**解压位置：`~/`**，解压后目录为 `~/MRS_Toolchain_Linux_X64_V<版本>/`。压缩包内含同名顶层目录，执行 `tar -xJf <压缩包> -C ~` 即解压到位；解压后以实际目录名（记为 `$MRS_TC`）为基准配置 PATH 与验证，不写死版本号；若解压后目录名与 `MRS_Toolchain_Linux_X64_V*` 模式不符，应将其移到 `~/MRS_Toolchain_Linux_X64_V<实际版本>/` 后再配置。
 
-**获取方式：**
-- 随 MRS 官方发布（官网 / 发行说明）
-- GitHub 仓库 release（用户维护，上传后补充链接）
+> 来源：官网下载页 https://mounriver.com/download（「Linux → Toolchain&Debugger」区）。**AI 自动下载**：经官网 API 动态查询最新版本并获取签名直链后 curl 下载（见下）；API 不可用（网络/官网改版）时提示用户从该页面手动下载，AI 收到压缩包路径后继续。
+
+**官网 API（自动下载链路，2026-09 验证可用；路径 B 首选）：**
+- 版本查询：`GET https://api.mounriver.com/mountriver/api/version/fetchRecentOpenOcd?osType=LINUX&lang=zh`，`result[]` 中取 `version` 最大项，记录 `id` / `fileName` / `fileSize`
+- 直链获取：`GET https://api.mounriver.com/mountriver/api/version/fetchRecentOpenOcdUrl?resourceId=<id>`，`result` 为带签名直链（含 `sign/time/from` 参数，**限时有效**，获取后须立即下载；中断重试需重新获取）
+- 页面兜底：https://mounriver.com/download（人工下载入口，亦用于核对版本与文件大小）
+- GitHub 仓库 release（社区维护镜像，用户自选）
+- 若用户提供具体下载链接或版本号，一律以用户提供的为准
 
 #### 安装流程（Linux）
 
+分工：步骤 1~4 均由 AI 执行（下载前向用户说明来源与体积）；仅当 API 不可用、改由用户手动下载时，从步骤 2 开始。
+
 ```bash
-# 1. 下载 MRS_Toolchain_Linux_X64_V240.tar.xz 后解压
-tar -xJf MRS_Toolchain_Linux_X64_V240.tar.xz -C ~
+# ===== 1. AI 从官网自动下载最新版工具链（版本/文件名由 API 返回，不硬编码） =====
+# 1a. 查询版本列表（输出: <id> <version> <fileName> <fileSize>，可能多行，取 version 最大行）
+curl -sL --max-time 30 "https://api.mounriver.com/mountriver/api/version/fetchRecentOpenOcd?osType=LINUX&lang=zh" \
+  | python3 -c "import sys,json;[print(i['id'],i['version'],i['fileName'],i['fileSize']) for i in (json.load(sys.stdin).get('result') or [])]"
+# 1b. 用上一步的 <id> 获取带签名直链（限时有效，立即执行 1c）
+dlurl=$(curl -sL --max-time 30 "https://api.mounriver.com/mountriver/api/version/fetchRecentOpenOcdUrl?resourceId=<id>" \
+  | python3 -c "import sys,json;print(json.load(sys.stdin)['result'])")
+# 1c. 下载到 ~/Downloads（断点续传；392MB 需数分钟，可后台执行）
+mkdir -p "$HOME/Downloads"
+curl -L -C - --max-time 3600 -o "$HOME/Downloads/<fileName>" "$dlurl"
+ls -l "$HOME/Downloads/<fileName>"   # 校验：字节数应等于 1a 输出的 fileSize，不符则删除重下
 
-# 2. 配置 PATH（建议写入 ~/.bashrc / ~/.zshrc 持久化）
-export PATH="$HOME/MRS_Toolchain_Linux_X64_V240/Toolchain/RISC-V Embedded GCC/bin:$PATH"
-export PATH="$HOME/MRS_Toolchain_Linux_X64_V240/OpenOCD/OpenOCD/bin:$PATH"
+# ===== 2. AI 解压到指定目录 ~/（若为手动下载的包，先用其路径替换 $HOME/Downloads/<fileName>） =====
+tar -xJf "$HOME/Downloads/<fileName>" -C ~
+# 解压后取实际目录，口径与 Pre-flight 检测一致：多版本并存时取版本号最新者
+MRS_TC=$(ls -d "$HOME"/MRS_Toolchain_Linux_X64_V* | sort -V | tail -1)
+echo "MRS_TC=$MRS_TC"   # 确认解压出的实际目录
 
-# 3. 验证
-riscv-none-embed-gcc --version | head -1
+# ===== 3. AI 配置 PATH（当前会话生效） =====
+export PATH="$MRS_TC/Toolchain/RISC-V Embedded GCC/bin:$PATH"
+export PATH="$MRS_TC/OpenOCD/OpenOCD/bin:$PATH"
+# 持久化：将上面两条 export 中的 $MRS_TC 替换为第 2 步 echo 出的实际路径后，追加到 ~/.bashrc / ~/.zshrc
+
+# ===== 4. AI 验证 =====
+riscv-none-embed-gcc --version | head -1   # 应输出版本号
 openocd --version | head -1
 ```
+
+验证通过后，回到「Step 4: 验证环境」继续检查 cmake / ninja / wchisp，全部通过即完成环境安装。
 
 #### 包内目录结构
 
 ```
-~/MRS_Toolchain_Linux_X64_V240/
+~/MRS_Toolchain_Linux_X64_V<版本>/   # 版本号随包升级变化，如当前 V240
 ├── Toolchain/
 │   ├── arm-none-eabi-gcc/
 │   ├── RISC-V Embedded GCC/          # riscv-none-embed 编译链
@@ -131,7 +158,7 @@ openocd --version | head -1
 
 | 平台 | 工具 | 安装方式 |
 |------|------|---------|
-| **Linux（推荐）** | riscv-none-embed-gcc | 上述 `MRS_Toolchain_Linux_X64_V240` 流程；备选 xPack：https://github.com/xpack-dev-tools/riscv-none-embed-gcc-xpack/releases |
+| **Linux（推荐）** | riscv-none-embed-gcc | 上述独立工具链包流程（`MRS_Toolchain_Linux_X64_V*`，当前 V240）；备选 xPack：https://github.com/xpack-dev-tools/riscv-none-embed-gcc-xpack/releases |
 | **macOS** | riscv-none-embed-gcc | xPack 发行版（同上），解压后加入 PATH |
 | **所有平台** | cmake / ninja | `apt install cmake ninja-build` / `brew install cmake ninja` |
 | **所有平台** | wchisp（烧录） | `cargo install wchisp`（需 Rust）或从 https://github.com/ch32-rs/wchisp/releases 下载预编译包 |

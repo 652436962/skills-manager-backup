@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "76d5bab6-eb69-43d5-8c63-ddcc17110fd8",
+  "path": "devboard-pinout",
+  "path_key": "devboard-pinout",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

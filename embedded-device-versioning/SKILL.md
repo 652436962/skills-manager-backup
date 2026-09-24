@@ -1,6 +1,6 @@
 ---
 name: embedded-device-versioning
-description: 嵌入式设备版本号规范 skill。当用户需要设计、修改、评审固件版本号(FirmwareVersion)、硬件版本号(HardwareVersion)、通信协议版本号(ProtocolVersion)、配置文件版本号(ConfigVersion)，或编写/维护包含版本号字段的协议文档、485 通信报文、物联网上报 JSON、串口命令时使用。适用于智慧农业/工业物联网/485 组网等嵌入式设备的版本管理场景。
+description: 嵌入式设备版本号规范 skill。当用户需要设计、修改、评审固件版本号(FirmwareVersion)、硬件版本号(HardwareVersion)、通信协议版本号(ProtocolVersion)、配置文件版本号(ConfigVersion)，编写/维护包含版本号字段的协议文档、485 通信报文、物联网上报 JSON、串口命令，或新建固件程序/源文件需同步创建 README.md 与文件头版本注释时使用。适用于智慧农业/工业物联网/485 组网等嵌入式设备的版本管理场景。
 ---
 
 # 嵌入式设备版本号规范
@@ -47,7 +47,15 @@ description: 嵌入式设备版本号规范 skill。当用户需要设计、修�
 
 协议文档需要"版本号要求"章节时，直接引用 `references/versioning-spec.md` 中的【协议文档里可直接粘贴的版本号要求段落】，保持各文档间口径一致。
 
-### 4. 维护版本文件（CHANGELOG）
+### 4. 新建程序文件时，先附带 README
+
+新建固件程序/工程或 `.c/.h` 源文件时，必须同步创建 README 说明，禁止只交代码不带说明：
+
+- **新建程序/工程**：根目录创建 `README.md`，写明程序用途、当前四类版本号、编译烧录方法、协议/配置文档索引，并链接 `CHANGELOG.md`
+- **新建源文件**：文件头添加 readme 注释块，说明模块功能、作者日期、对应固件版本，`main.c` 等主程序文件须附适配硬件版本（`@hardware`）；注释块版本号必须与 `version.h`/CHANGELOG 一致，禁止手写与发版记录不符的版本号
+- 模板与同步流程见 `references/readme-spec.md`
+
+### 5. 维护版本文件（CHANGELOG）
 
 每个程序/项目在根目录维护 `CHANGELOG.md`，逐版本记录修改内容并关联 git 提交：
 
@@ -56,7 +64,7 @@ description: 嵌入式设备版本号规范 skill。当用户需要设计、修�
 - 版本号变化必须在 CHANGELOG 有对应条目，禁止无记录改版本
 - 格式与工作流详见 `references/changelog-spec.md`
 
-### 5. 检查禁用项
+### 6. 检查禁用项
 
 - 禁止小写 `v`（应为大写 `V`）
 - 禁止 `beta/alpha/rc` 等后缀用于量产/对外协议版本（测试样机内部可带，对外上报去掉）
@@ -64,6 +72,7 @@ description: 嵌入式设备版本号规范 skill。当用户需要设计、修�
 - 禁止协议不兼容变更却不升主版本号
 - 禁止将版本号字符串当数值直接比较（如 `"V1.10"` 与 `"V1.9"` 的字典序陷阱）
 - 禁止版本号变更但 CHANGELOG 无对应记录
+- 禁止新建程序/源文件时不附带 README 说明（README.md 或文件头注释块）
 
 ## 补充建议（经验补充）
 
@@ -83,3 +92,4 @@ description: 嵌入式设备版本号规范 skill。当用户需要设计、修�
 - `references/versioning-spec.md`：四类版本号完整规范、协议文档可粘贴段落、C 结构体/JSON 示例、版本变更决策表、兼容性矩阵
 - `references/change-impacts.md`：版本变更影响分析模板（含示例）
 - `references/changelog-spec.md`：版本文件(CHANGELOG)条目格式、git 关联约定、维护工作流与常用命令
+- `references/readme-spec.md`：README.md 与源文件头注释块模板、新建流程、版本同步与校验清单

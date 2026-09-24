@@ -1,17 +1,16 @@
 {
   "schema_version": 1,
   "scenario_id": "094e981f-735c-4e00-8cf2-94c49333516e",
-  "skill_id": "77314554-02f0-4b26-b824-0d969fa6aa48",
-  "sort_order": 12,
+  "skill_id": "76d5bab6-eb69-43d5-8c63-ddcc17110fd8",
+  "sort_order": 2,
   "tools": {
-    "cline": false,
+    "cline": true,
     "codebuddy": true,
     "deepseek_harness": true,
-    "gemini_cli": false,
+    "gemini_cli": true,
     "github_copilot": true,
-    "grok": false,
+    "grok": true,
     "opencode": true,
-    "qoder": true,
-    "uos_ai": true
+    "qoder": true
   }
 }

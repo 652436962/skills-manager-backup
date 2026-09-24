@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  交互式引脚图 · 通用模板
+  使用说明（见 SKILL.md 完整流程）:
+    1. 复制本文件到目标板卡目录, 重命名为 <板卡名>_board.html
+    2. 全局替换占位符: __BOARD_NAME__ / __CHIP__ / __TITLE__
+    3. 按实际板卡照片/布局图调整 svg 内的板框坐标
+    4. 每个元件复制一份 <g class="part" ...> 块, 填入 data-* 属性
+    5. JS 自动读取 data-* 渲染详情, 无需改动 <script> 部分
+  分类未使用时可删除对应 CSS 变量/图例项; 新增分类需同步 3 处(见 data-spec.md)
+  ============================================================
+-->
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>__TITLE__</title>
+<style>
+  :root{
+    --bg:#0b0d11; --panel:#15171d; --line:rgba(255,255,255,.08);
+    --txt:#e8eaed; --sub:#8b92a0; --acc:#3aaf85;
+    /* 分类配色: 与底部图例、JS categoryLabel 映射一一对应 */
+    --cat-mcu:#8a8a8a; --cat-display:#5a9fd4; --cat-sensor:#5ad49f;
+    --cat-wireless:#d4c85a; --cat-storage:#d49f5a; --cat-audio:#d45a8a;
+    --cat-input:#9aa0aa; --cat-debug:#d45a5a; --cat-interface:#5ab4d4;
+    --cat-camera:#b45ad4;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    width:100%;min-height:100vh;background:radial-gradient(1000px 600px at 50% 10%, #1a1e28 0%, var(--bg) 60%);
+    font-family:'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;color:var(--txt);
+    display:flex;flex-direction:column;align-items:center;padding:24px;gap:18px
+  }
+  header{text-align:center}
+  header h1{font-size:22px;font-weight:600;letter-spacing:.6px}
+  header p{color:var(--sub);font-size:13px;margin-top:4px}
+
+  /* 正反面切换: 单面板卡可删除此块与下方按钮、JS 切换逻辑 */
+  .face-switch{display:flex;gap:6px;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px}
+  .face-switch button{
+    border:none;background:transparent;color:var(--sub);font-size:13px;font-family:inherit;
+    padding:6px 24px;border-radius:999px;cursor:pointer;transition:all .18s
+  }
+  .face-switch button.on{background:var(--acc);color:#fff}
+  .face-switch button:hover:not(.on){color:var(--txt)}
+
+  .wrap{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;justify-content:center;width:100%;max-width:1200px}
+
+  /* SVG 容器 */
+  .board-wrap{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;flex:none}
+  svg{cursor:crosshair}
+  .part{transition:all .18s;cursor:pointer}
+  /* SVG 示意图模式: 元件自身图形就是视觉 + 交互体 */
+  .part:hover{filter:brightness(1.35) drop-shadow(0 0 6px rgba(255,255,255,.25));stroke-width:2.2}
+  .part.on{filter:brightness(1.5) drop-shadow(0 0 10px rgba(255,255,255,.35));stroke-width:2.8}
+
+  /* 手绘立体模式: 热点层 (.hit) 平时透明, hover/on 时高亮; 描边层 (.outline) 平时隐藏 */
+  .part .hit{fill:rgba(255,255,255,0);stroke:none}
+  .part:hover .hit{fill:rgba(255,255,255,.12)}
+  .part.on .hit{fill:rgba(255,255,255,.22)}
+  .part .outline{fill:none;stroke-width:2;opacity:0;transition:opacity .18s}
+  .part:hover .outline{opacity:1}
+  .part.on .outline{opacity:1;stroke-width:2.8}
+
+  /* 信息面板 */
+  .info{
+    background:var(--panel);border:1px solid var(--line);border-radius:16px;
+    width:320px;min-height:480px;padding:20px;display:flex;flex-direction:column;gap:14px;
+    flex:none
+  }
+  .info h2{font-size:15px;font-weight:600;color:var(--sub);text-transform:uppercase;letter-spacing:1px}
+  .info .placeholder{color:var(--sub);text-align:center;margin:auto;font-size:14px}
+  .info .tag{
+    display:inline-block;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:600;
+    background:rgba(255,255,255,.08);color:var(--txt);border:1px solid rgba(255,255,255,.12)
+  }
+  .info .field{margin-bottom:10px}
+  .info .field label{display:block;font-size:11px;color:var(--sub);text-transform:uppercase;letter-spacing:.8px;margin-bottom:3px}
+  .info .field div{font-size:14px;line-height:1.5}
+  .info .field .pins{font-family:'Consolas','SF Mono',monospace;font-size:12px;color:#a0d0ff;background:rgba(90,180,212,.08);padding:6px 10px;border-radius:6px;border:1px solid rgba(90,180,212,.18)}
+  .info .field .conflict{font-family:'Consolas','SF Mono',monospace;font-size:12px;color:#ffb8b8;background:rgba(212,90,90,.08);padding:6px 10px;border-radius:6px;border:1px solid rgba(212,90,90,.18)}
+
+  /* 图例 */
+  .legend{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:4px}
+  .legend span{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--sub)}
+  .legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
+
+  @media(max-width:900px){
+    .wrap{flex-direction:column;align-items:center}
+    .info{width:100%;max-width:520px;min-height:auto}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>__BOARD_NAME__ <span style="color:var(--acc)">__CHIP__</span> 开发板 · 交互式引脚图</h1>
+  <p>切换正/反面视图，点击元件通过 data-* 属性读取板载资源信息</p>
+</header>
+
+<!-- 正反面切换: 单面板卡可删除 -->
+<div class="face-switch">
+  <button id="btnFront" class="on">正面</button>
+  <button id="btnBack">反面</button>
+</div>
+
+<div class="wrap">
+
+<div class="board-wrap">
+<!-- viewBox 与 width/height 可按板卡比例调整 -->
+<svg width="520" height="560" viewBox="0 0 560 580" xmlns="http://www.w3.org/2000/svg">
+  <!-- 定义: 立体效果滤镜/渐变（手绘立体必备, 见 data-spec.md 第 9 节） -->
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- 大投影: 模组/卡座等大元件 -->
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+    <!-- 小投影: 按钮/接口/芯片 -->
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+    <!-- 板身渐变: 上亮下暗 -->
+    <linearGradient id="pcbGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#242932"/>
+      <stop offset="0.55" stop-color="#191d25"/>
+      <stop offset="1" stop-color="#12151b"/>
+    </linearGradient>
+    <!-- 金属渐变: 亮→中灰→暗 -->
+    <linearGradient id="metalGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e6e7ea"/>
+      <stop offset="0.45" stop-color="#b6b8bf"/>
+      <stop offset="1" stop-color="#7e8088"/>
+    </linearGradient>
+    <!-- 芯片渐变: 深灰→黑 -->
+    <linearGradient id="chipGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3c3d43"/>
+      <stop offset="1" stop-color="#131418"/>
+    </linearGradient>
+    <!-- 按钮凸起渐变: 左上亮右下暗 -->
+    <radialGradient id="btnGrad" cx="0.35" cy="0.3" r="1">
+      <stop offset="0" stop-color="#45464e"/>
+      <stop offset="0.6" stop-color="#26272e"/>
+      <stop offset="1" stop-color="#15161b"/>
+    </radialGradient>
+    <!-- 屏幕玻璃反光: 对角渐隐 -->
+    <linearGradient id="glassGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="rgba(255,255,255,.10)"/>
+      <stop offset="0.35" stop-color="rgba(255,255,255,0)"/>
+      <stop offset="1" stop-color="rgba(255,255,255,.05)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 板框 (手绘立体): 厚度层 + 渐变主面 + 顶部环境光 -->
+  <rect x="23" y="24" width="520" height="540" rx="22" fill="#0b0d11"/>
+  <rect x="20" y="20" width="520" height="540" rx="22" fill="url(#pcbGrad)" stroke="#3a3f4a" stroke-width="1.5"/>
+  <rect x="20" y="20" width="520" height="70" rx="22" fill="rgba(255,255,255,.045)"/>
+
+  <!-- 安装孔 -->
+  <g fill="none" stroke="#b89a5e" stroke-width="2.5">
+    <circle cx="45" cy="45" r="10"/><circle cx="515" cy="45" r="10"/>
+    <circle cx="45" cy="535" r="10"/><circle cx="515" cy="535" r="10"/>
+  </g>
+
+  <!-- ====== 元件层 (SVG 手绘立体) ======
+       纯 SVG 手绘, 不嵌入照片/图片。每个元件 = 视觉图形 + 交互热点两层:
+         - 视觉图形: 用 rect/circle/path/text 按板卡照片画, 渐变/阴影/高光
+           模拟立体（见 data-spec.md 第 9 节画法表）。必须 pointer-events="none"。
+         - 交互热点: <rect class="hit"> 透明命中区 + <rect class="outline">
+           高亮描边, 平时透明, hover/选中时由 CSS 高亮。
+
+       data-* 属性规范详见 references/data-spec.md:
+         data-category : 必填, 取下图例中的分类值
+         data-name     : 必填, 元件名称
+         data-desc     : 必填, 功能描述
+         data-pins     : 建议, 相关引脚(逗号分隔)
+         data-conflict : 建议, 引脚冲突, 无冲突写 "无"
+
+       多面视图(如正面/反面): 拆成多个 <g class="face"> 视图组,
+       默认显示 id="face-front", 切换按钮与 JS 已就绪, 无需改脚本;
+       单面板卡可删除 face 分组、切换按钮与 JS 切换逻辑。
+  ============================================================ -->
+
+  <!-- 正面视图 -->
+  <g id="face-front" class="face">
+    <!-- 示例: 主控芯片 (深色底座 + 芯片渐变 + 顶部高光 + 引脚 + 型号) -->
+    <g class="part" data-category="mcu" data-name="示例 MCU" data-desc="填入主控型号与核心参数"
+       data-pins="LQFP100, 全部 GPIO 可复用" data-conflict="无">
+      <rect x="234" y="284" width="120" height="120" rx="3" fill="#0c0d10" filter="url(#softShadow)" pointer-events="none"/>
+      <rect x="230" y="280" width="120" height="120" rx="3" fill="url(#chipGrad)" stroke="#3c3f47" stroke-width="0.8" pointer-events="none"/>
+      <g fill="#c6c8ce" pointer-events="none">
+        <rect x="234" y="284" width="3" height="10" rx="1"/><rect x="242" y="284" width="3" height="10" rx="1"/>
+        <rect x="250" y="284" width="3" height="10" rx="1"/><rect x="258" y="284" width="3" height="10" rx="1"/>
+        <rect x="266" y="284" width="3" height="10" rx="1"/><rect x="274" y="284" width="3" height="10" rx="1"/>
+      </g>
+      <ellipse cx="244" cy="292" rx="14" ry="5" fill="rgba(255,255,255,.14)" pointer-events="none"/>
+      <text x="290" y="325" text-anchor="middle" fill="#aaa" font-size="11" font-weight="600" pointer-events="none">MCU</text>
+      <text x="290" y="342" text-anchor="middle" fill="#888" font-size="9" pointer-events="none">SILK</text>
+      <rect class="outline" x="230" y="280" width="120" height="120" rx="3" stroke="#8a8a8a"/>
+      <rect class="hit" x="230" y="280" width="120" height="120" rx="3"/>
+    </g>
+
+    <!-- 丝印文字 -->
+    <text x="280" y="548" text-anchor="middle" fill="#333" font-size="9" font-family="sans-serif">__BOARD_NAME__</text>
+  </g>
+
+  <!-- 反面视图 -->
+  <g id="face-back" class="face" style="display:none">
+    <!-- 示例: 按键 (凹槽底座 + 径向渐变凸起 + 高光) -->
+    <g class="part" data-category="input" data-name="示例按键" data-desc="通用用户按键"
+       data-pins="GPIO 输入 (见丝印)" data-conflict="无">
+      <rect x="258" y="451" width="50" height="42" rx="8" fill="#0c0e12" stroke="#2e333c" stroke-width="1" filter="url(#softShadow)" pointer-events="none"/>
+      <rect x="262" y="455" width="42" height="34" rx="10" fill="url(#btnGrad)" stroke="#4a4f58" stroke-width="1" pointer-events="none"/>
+      <ellipse cx="276" cy="465" rx="11" ry="4.5" fill="rgba(255,255,255,.22)" pointer-events="none"/>
+      <text x="283" y="508" text-anchor="middle" fill="#888" font-size="8" pointer-events="none">SW</text>
+      <rect class="outline" x="258" y="451" width="50" height="42" rx="8" stroke="#9aa0aa"/>
+      <rect class="hit" x="258" y="451" width="50" height="42" rx="8"/>
+    </g>
+  </g>
+</svg>
+</div>
+
+<!-- 信息面板 -->
+<aside class="info" id="infoPanel">
+  <h2>元件详情</h2>
+  <div class="placeholder">点击开发板上的元件<br>通过 <code>data-*</code> 属性查看详情</div>
+</aside>
+
+</div>
+
+<!-- 图例: 删掉未使用的分类 -->
+<div class="legend">
+  <span><i style="background:var(--cat-mcu)"></i>主控</span>
+  <span><i style="background:var(--cat-display)"></i>显示</span>
+  <span><i style="background:var(--cat-sensor)"></i>传感器</span>
+  <span><i style="background:var(--cat-wireless)"></i>无线</span>
+  <span><i style="background:var(--cat-storage)"></i>存储</span>
+  <span><i style="background:var(--cat-audio)"></i>音频</span>
+  <span><i style="background:var(--cat-input)"></i>按键</span>
+  <span><i style="background:var(--cat-debug)"></i>调试</span>
+  <span><i style="background:var(--cat-interface)"></i>接口</span>
+  <span><i style="background:var(--cat-camera)"></i>摄像头</span>
+</div>
+
+<script>
+const panel = document.getElementById('infoPanel');
+const parts = document.querySelectorAll('.part');
+
+function showInfo(el){
+  parts.forEach(p=>p.classList.remove('on'));
+  el.classList.add('on');
+
+  const d = el.dataset;
+  const catColor = getComputedStyle(document.documentElement).getPropertyValue(`--cat-${d.category||'mcu'}`).trim() || '#8a8a8a';
+
+  panel.innerHTML = `
+    <h2 style="color:${catColor}">${d.name || '未知元件'}</h2>
+    <div>
+      <span class="tag" style="border-color:${catColor};color:${catColor}">${categoryLabel(d.category)}</span>
+      ${d.conflict && d.conflict !== '无' ? '<span class="tag" style="border-color:#d45a5a;color:#d45a5a">冲突</span>' : ''}
+    </div>
+    <div class="field">
+      <label>功能描述</label>
+      <div>${d.desc || '-'}</div>
+    </div>
+    ${d.pins ? `<div class="field"><label>相关引脚</label><div class="pins">${d.pins}</div></div>` : ''}
+    ${d.conflict && d.conflict !== '无' ? `<div class="field"><label>引脚冲突</label><div class="conflict">${d.conflict}</div></div>` : ''}
+    <div class="field" style="margin-top:auto">
+      <label>原始 data-* 属性</label>
+      <div class="pins" style="color:#ccc;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);white-space:pre-wrap;font-size:11px">${Object.entries(d).map(([k,v])=>`data-${k}="${v}"`).join('\n')}</div>
+    </div>
+  `;
+}
+
+/* 新增分类时, 在此处与 CSS :root、底部图例三处同步 */
+function categoryLabel(c){
+  const map = {mcu:'主控',display:'显示',sensor:'传感器',wireless:'无线',storage:'存储',audio:'音频',input:'按键',debug:'调试',interface:'接口',camera:'摄像头'};
+  return map[c] || c;
+}
+
+parts.forEach(p => {
+  p.addEventListener('click', e => { e.stopPropagation(); showInfo(p); });
+});
+
+document.addEventListener('click', () => {
+  parts.forEach(p=>p.classList.remove('on'));
+  panel.innerHTML = `<h2>元件详情</h2><div class="placeholder">点击开发板上的元件<br>通过 <code>data-*</code> 属性查看详情</div>`;
+});
+
+/* 正/反面切换: 单面板卡可删除此段 */
+const btnFront = document.getElementById('btnFront');
+const btnBack  = document.getElementById('btnBack');
+
+function switchFace(name){
+  document.querySelectorAll('.face').forEach(f => {
+    f.style.display = (f.id === 'face-' + name) ? '' : 'none';
+  });
+  btnFront.classList.toggle('on', name === 'front');
+  btnBack.classList.toggle('on', name === 'back');
+  /* 切换时重置选中态与面板 */
+  parts.forEach(p=>p.classList.remove('on'));
+  panel.innerHTML = `<h2>元件详情</h2><div class="placeholder">点击开发板上的元件<br>通过 <code>data-*</code> 属性查看详情</div>`;
+}
+btnFront.addEventListener('click', () => switchFace('front'));
+btnBack.addEventListener('click', () => switchFace('back'));
+</script>
+</body>
+</html>
