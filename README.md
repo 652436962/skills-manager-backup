@@ -23,6 +23,10 @@ skills/                      # ~/.skills-manager/skills（中央仓库根目录�
 ├── easyeda-api/             # EasyEDA Pro 原理图/PCB 设计 API
 ├── emberinter/              # EmberInterDebugTool 串口调试
 ├── zmk-project-init/        # ZMK 键盘固件项目初始化
+├── devboard-pinout/         # 开发板交互式引脚图生成
+├── deveco-cli/              # HarmonyOS DevEco CLI（devecocli）
+├── embedded-device-versioning/ # 嵌入式设备版本号规范
+├── manage-skills/           # Skills Manager 技能库管理
 ├── find-skills/             # 查找并安装 Agent Skill
 ├── force-zh-reply/          # 强制简体中文回复
 ├── html2markdown/           # 网页文章转 Markdown
@@ -43,6 +47,10 @@ skills/                      # ~/.skills-manager/skills（中央仓库根目录�
 | `easyeda-api` | EasyEDA Pro API：原理图 / PCB 设计、封装/符号库管理、项目操作、EDA 内实时调试与扩展开发（含完整 API 参考与 WebSocket 桥接） | EasyEDA、嘉立创 EDA、原理图、PCB、封装、扩展开发 |
 | `emberinter` | EmberInterDebugTool CLI：串口监视、设备通信、固件验证、AT 命令测试、嵌入式日志分析 | 串口监视、AT 命令、固件验证、串口日志 |
 | `zmk-project-init` | ZMK 键盘固件项目：创建无线/有线键盘工程、添加自定义 shield、配置/编译/烧录 | ZMK、键盘固件、机械键盘、shield |
+| `devboard-pinout` | 为开发板/核心板生成「HTML + SVG + data 属性」交互式引脚图：收集官方引脚资料 → 绘制 SVG 板卡 → 元件/引脚详情点击交互 → 与官方引脚表校验 | 引脚图、板卡资源查询页、交互式引脚图、给 XX 板做个引脚图 |
+| `deveco-cli` | 用 `devecocli` 开发 HarmonyOS 应用：工程脚手架、构建、运行、调试、设备/模拟器、日志、文档检索与 UI 测试 | HarmonyOS、鸿蒙、DevEco、ArkTS、ArkUI、devecocli |
+| `embedded-device-versioning` | 嵌入式设备版本号规范：设计/评审固件版本、硬件版本、通信协议版本、配置文件版本，及含版本号字段的协议文档、485 报文、物联网 JSON | 版本号、固件版本、协议版本、485 报文、版本管理 |
+| `manage-skills` | 通过 skills-manager-cli 管理共享技能库：安装/更新/移除、按 Agent 部署、预设组织、标签、搜索与 adopt | 管理 skill、装 skill、部署到某 Agent、预设、技能库 |
 | `find-skills` | 发现并安装 Agent Skill：当用户寻找能做某事的功能或表达扩展 Agent 能力的意愿时使用 | "我该如何做 X"、"帮我找一个能做 X 的 skill"、"有没有做 X 的 skill" |
 | `force-zh-reply` | 让 AI 在整个对话中主要使用简体中文回复，代码与专业英文术语保留原样，不受用户输入外文影响 | 常驻生效，无特定触发词 |
 
