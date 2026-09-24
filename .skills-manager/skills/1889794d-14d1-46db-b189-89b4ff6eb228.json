@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "1889794d-14d1-46db-b189-89b4ff6eb228",
+  "path": "deveco-cli",
+  "path_key": "deveco-cli",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}
