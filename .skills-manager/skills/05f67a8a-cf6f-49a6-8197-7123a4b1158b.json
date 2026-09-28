@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "05f67a8a-cf6f-49a6-8197-7123a4b1158b",
+  "path": "collaboration-standard",
+  "path_key": "collaboration-standard",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}
