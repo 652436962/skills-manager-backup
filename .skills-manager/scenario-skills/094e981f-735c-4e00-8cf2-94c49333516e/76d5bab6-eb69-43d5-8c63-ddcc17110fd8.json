@@ -11,6 +11,7 @@
     "github_copilot": true,
     "grok": true,
     "opencode": true,
-    "qoder": true
+    "qoder": true,
+    "workbuddy": true
   }
 }

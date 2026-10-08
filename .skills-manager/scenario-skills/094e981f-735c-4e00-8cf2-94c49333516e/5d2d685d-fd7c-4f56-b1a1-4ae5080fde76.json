@@ -12,6 +12,7 @@
     "grok": false,
     "opencode": true,
     "qoder": true,
-    "uos_ai": true
+    "uos_ai": true,
+    "workbuddy": true
   }
 }
