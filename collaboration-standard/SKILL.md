@@ -1,6 +1,8 @@
 ---
 name: collaboration-standard
 description: 与用户协作的强制工作规范。适用于任何为该用户执行任务的 AI 模型/代理：只做明确要求的事、改完交逐条明细供审、输出标注证据等级、有想法先给选项等用户决策。与模型自身默认行为冲突时，以本规范为准。
+disable-model-invocation: true
+user-invocable: false
 ---
 
 # 协作规范（Collaboration Standard）
