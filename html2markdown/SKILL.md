@@ -64,6 +64,37 @@ python3 ~/.workbuddy/skills/html2markdown/scripts/convert.py \
 | `<blockquote>` | 缓冲后按行加 `> ` 前缀，避免正文掉到引用块外 |
 | 标题锚点 `<a hidden class=anchor>#</a>` | 整体丢弃，标题末尾不留 `#` |
 | `&nbsp;` / 零宽空格 / 行首多余空格 | 统一清理 |
+| 知乎专栏 `<div class="RichText ztext Post-RichText …">` | 先用 `scripts/extract_zhihu.py` 抽出正文再转换（见下节） |
+
+### 1.1 知乎专栏 / 反爬 SPA 站点（wget 返回 403 时）
+
+知乎对无 Cookie 请求直接返回 **403**（`wget` 退出码 8、`curl` 得到 650 字节的 403 页）。可靠做法是用 Jina Reader 代理拿回**完整渲染好的原始 HTML**，再走结构化转换：
+
+```bash
+# 步骤1: 用 Jina Reader 取原始 HTML（不要用带 proxy 的环境）
+curl -sS -m 60 -H "X-Return-Format: html" -o ./zhihu_html.html \
+  "https://r.jina.ai/https://zhuanlan.zhihu.com/p/14617156741"
+# 检查：应为几十~几百 KB，且能 grep 到 class="...RichText..."
+
+# 步骤2: 抽出正文容器 + 清理知乎噪音链接，包成 <div id="js_content">
+python3 ~/.workbuddy/skills/html2markdown/scripts/extract_zhihu.py \
+  ./zhihu_html.html ./zhihu_body.html
+
+# 步骤3: 常规结构化转换
+python3 ~/.workbuddy/skills/html2markdown/scripts/convert_papermod.py \
+  --html-file ./zhihu_body.html --url "文章URL" --out 输出.md
+```
+
+`extract_zhihu.py` 做三件事：按 `<div>` 嵌套配对截取 `Post-RichText` 容器（排除作者卡、评论、推荐位）；把 `zhida.zhihu.com/search?...` 这类关键词跳转链接**还原成纯文字**；把 `link.zhihu.com/?target=` / `link.juejin.cn/?target=` 的**多重跳转解码成真实 URL**。不清理的话，表格单元格里会塞进几 KB 的 JWT token，正文几乎不可读。
+
+zhimg 图床对无 User-Agent 的请求返回 403/567，但浏览器正常加载，**不要据此判定图片失效**；验证时带浏览器 UA：
+
+```bash
+curl -s -o /dev/null -w '%{http_code}\n' -m 15 \
+  -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0 Safari/537.36" 图片URL
+```
+
+其他反爬站点（掘金、简书、CSDN 付费页等）同样可先试 `https://r.jina.ai/<URL>` + `X-Return-Format: html`，再决定是否需要改写正文容器选择器。
 
 ### 2. 检查结果
 
