@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "b620806a-43a1-4a55-98a4-7ee5f8c62727",
+  "path": "figcraft-ui-mockup",
+  "path_key": "figcraft-ui-mockup",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}
