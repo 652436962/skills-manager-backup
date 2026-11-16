@@ -3,5 +3,18 @@
   "scenario_id": "094e981f-735c-4e00-8cf2-94c49333516e",
   "skill_id": "0eb27328-a796-4cd2-b7ff-9a426139c236",
   "sort_order": 1,
-  "tools": {}
+  "tools": {
+    "claude_code": true,
+    "cline": true,
+    "codebuddy": true,
+    "codex": true,
+    "deepseek_harness": true,
+    "gemini_cli": true,
+    "github_copilot": true,
+    "grok": true,
+    "kiro": true,
+    "opencode": true,
+    "qoder": true,
+    "workbuddy": true
+  }
 }
