@@ -6,6 +6,17 @@ disable-model-invocation: false
 
 # SerialRUN 命令行
 
+## 使用方式
+
+直接描述你的串口操作需求，系统会自动调用对应命令。
+
+| 需求示例 | 自动处理 |
+| -------- | -------- |
+| "列出本机有哪些串口" | 调用串口列举，显示可用设备 |
+| "给设备发一条 AT 指令" | 连接串口发送数据并读取应答 |
+| "抓一下串口日志" | 启动监听/抓包，记录收发数据 |
+| "回放录好的串口脚本" | 调用脚本录放功能重放 |
+
 ## 概述
 
 SerialRUN（<https://github.com/YaoIsAI/SerialRUN>）是面向嵌入式开发者的跨平台串口工具，GUI 与 CLI 同源。命令行部分由 `serialrun-cli` 提供；安装 deb 包后 `serialrun`、`serialrun-cli`、`serialrun-mcp` 三个命令**参数完全一致**，可互换使用。本文以 `serialrun` 为简称。

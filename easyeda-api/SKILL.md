@@ -24,6 +24,16 @@ metadata:
 
 # EasyEDA Pro API Skill
 
+## 使用方式
+
+直接描述你的嘉立创EDA 操作需求，系统会自动通过 API 完成。
+
+| 需求示例 | 自动处理 |
+| -------- | -------- |
+| "帮我画一个 STM32 最小系统原理图" | 通过 API 创建符号/元件并连线 |
+| "把这个原理图转成 PCB" | 调用原理图转 PCB 流程并布局 |
+| "导出 Gerber 制造文件" | 调用导出 API 生成制造文件 |
+
 > **⚠️ Product Naming**: 嘉立创EDA's English name is **EasyEDA** — they are the SAME product. Always use "EasyEDA" for English and "嘉立创EDA" for Chinese. Never use other variants like "EasyEDA Pro" (unless versioned), "EASYEDA", "easyeda", etc.
 
 Control EasyEDA Pro (嘉立创EDA专业版) programmatically through AI. This skill provides:

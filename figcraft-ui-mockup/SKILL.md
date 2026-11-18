@@ -5,6 +5,16 @@ description: 用 FigCraft（figcraft-cli）把软件界面、截图或源码还�
 
 # FigCraft 界面还原
 
+## 使用方式
+
+直接描述你的界面还原需求，系统会自动按 FigCraft 流程生成设计稿。
+
+| 需求示例 | 自动处理 |
+| -------- | -------- |
+| "用 FigCraft 把这个界面画出来" | 写 Python 生成脚本 → figcraft-cli 执行 → 导出 PNG 自检 |
+| "根据这张截图生成 .figcraft 设计稿" | 还原布局，一屏一个 Page，共用外壳做组件实例 |
+| "把这几个界面画到一页里" | 拒绝并纠正：每屏独立 Page，不并排塞画板 |
+
 把一款软件（或几张截图）画成 FigCraft 设计稿：Python 生成脚本 → figcraft-cli 执行 → 导出 PNG 自检 → 交付 .figcraft + PNG + 脚本。
 
 ## 0. 三条硬约束（开工前先默读，违反就是返工）

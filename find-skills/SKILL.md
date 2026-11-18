@@ -5,6 +5,16 @@ description: 当用户提出诸如"我该如何做 X"、"帮我找一个能做 X
 
 # 查找 Skill
 
+## 使用方式
+
+直接描述你想找的能力，系统会自动搜索并推荐可安装的 skill。
+
+| 需求示例 | 自动处理 |
+| -------- | -------- |
+| "有没有能做 PDF 转 Markdown 的 skill" | 搜索生态，返回候选 skill 及安装量 |
+| "我该如何做 X？" | 判断 X 是否已有现成 skill，给出安装引用 |
+| "帮我安装 XX skill" | 调用 `skills install` 安装并提示部署 |
+
 此 skill 帮助你从开放的 Agent Skill 生态系统中发现并安装 skill。
 
 ## 何时使用此 Skill

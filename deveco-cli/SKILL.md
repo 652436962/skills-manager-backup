@@ -6,6 +6,17 @@ description: >-
 
 # DevEco CLI
 
+## 使用方式
+
+直接描述你的 HarmonyOS 开发需求，系统会自动调用 devecocli 对应命令。
+
+| 需求示例 | 自动处理 |
+| -------- | -------- |
+| "搭建 HarmonyOS 开发环境" | 调用 `devecocli init` / `devecocli skills` |
+| "编译这个鸿蒙项目" | 调用 `devecocli build` |
+| "把应用装到真机上跑" | 调用 `devecocli device` + `devecocli run` |
+| "看下运行日志" | 调用 `devecocli log` |
+
 `devecocli` wraps DevEco Studio's `hvigor`, `ohpm`, `hdc`, emulator toolchain, and bundled skills installer.
 
 Available commands: `build`, `check`, `run`, `update`, `device`, `emulator`, `ui`, `skills`, `log`, `create`, `init`, `serve`, `docs`, `signature`, `auth`.
@@ -108,7 +119,6 @@ Auto-generate HarmonyOS signing materials (local p12/csr + cloud cert + test pro
 - Error handling (aligned with DevEco Studio JAR): 401→re-login, 403→no AGC permission, `205389872`→cert limit, `205389904`→not Harmony user, `205389938`→provision limit, invalid `.cer`→retry.
 *Ex*: `devecocli signature generate --product default`
 
-
 ### `devecocli log`
 Fetch hilog or crash logs. Req `--device <name|serial>` on multi-device hosts.
 - `--crash`: Dump crash logs.
@@ -142,7 +152,6 @@ Inspect UI on a connected device. All subcommands accept `--device <name|serial>
 - `--format json` pairs well with `jq`.
 - `--mode full`: full layout tree, no filtering.
 - `--mode simplified` (default): folds meaningless wrapper containers (non-root, no `id`, no text, not interactive) by lifting their surviving children up. `--depth` truncates after folding.
-
 
 ## 2. Setup
 

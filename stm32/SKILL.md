@@ -7,6 +7,16 @@ description: "STM32 系列单片机开发入口 skill。自动索引子 skill �
 
 针对 STM32 全系列（F1/F4/L4/G0/H7 等）的端到端开发技能集。
 
+## 使用方式
+
+直接描述你的开发需求，系统会自动按需调用对应的子 skill。
+
+| 需求示例 | 自动处理 |
+| -------- | -------- |
+| "帮我搭建 STM32 开发环境" | 调用 `stm32-dev-setup` |
+| "创建一个 STM32L431 用 HAL 库驱动 UART 的项目" | 调用 `stm32-project-init` |
+| "代码烧进去不运行，帮忙看看" | 调用 `stm32-debug` |
+
 ## 子 Skill 索引
 
 | Skill | 文件 | 功能 |
@@ -25,11 +35,3 @@ stm32-dev-setup               stm32-project-init             stm32-debug
 1. **stm32-dev-setup**：检测 Shell 环境，安装交叉编译工具链、st-link、openocd
 2. **stm32-project-init**：收集芯片型号、开发模式、时钟方案、外设需求，生成 CMake 项目
 3. **stm32-debug**：开发过程中排查编译错误、运行时 crash、外设驱动问题
-
-## 使用方式
-
-直接描述你的开发需求，系统会自动按需调用对应的子 skill。例如：
-
-- "帮我搭建 STM32 开发环境" → 调用 `stm32-dev-setup`
-- "创建一个 STM32L431 用 HAL 库驱动 UART 的项目" → 调用 `stm32-project-init`
-- "代码烧进去不运行，帮忙看看" → 调用 `stm32-debug`

@@ -7,6 +7,16 @@ description: "nRF528xx 系列单片机开发入口 skill。自动索引子 skill
 
 针对 Nordic nRF528xx 系列（nRF52832, nRF52840, nRF52810 等）的端到端开发技能集。
 
+## 使用方式
+
+直接描述你的开发需求，系统会自动按需调用对应的子 skill。
+
+| 需求示例 | 自动处理 |
+| -------- | -------- |
+| "帮我搭建 nRF52840 的开发环境" | 调用 `nrf-connect-sdk-setup` |
+| "创建一个用 SPI 驱动 OLED 的项目" | 调用 `nrf-connect-project-init` |
+| "代码编译报错 undefined reference to gpio_pin_configure" | 调用 `nrf-528xx-debug` |
+
 ## 子 Skill 索引
 
 | Skill | 文件 | 功能 |
@@ -25,11 +35,3 @@ nrf-connect-sdk-setup          nrf-connect-project-init         nrf-528xx-debug
 1. **nrf-connect-sdk-setup**：检查所需工具链，安装缺失的组件，配置环境变量
 2. **nrf-connect-project-init**：检测芯片型号，收集硬件配置，生成 CMake 项目，编译烧录
 3. **nrf-528xx-debug**：在开发过程中排查编译错误、运行时崩溃、外设驱动等问题
-
-## 使用方式
-
-直接描述你的开发需求，系统会自动按需调用对应的子 skill。例如：
-
-- "帮我搭建 nRF52840 的开发环境" → 调用 `nrf-connect-sdk-setup`
-- "创建一个用 SPI 驱动 OLED 的项目" → 调用 `nrf-connect-project-init`
-- "代码编译报错 undefined reference to gpio_pin_configure" → 调用 `nrf-528xx-debug`

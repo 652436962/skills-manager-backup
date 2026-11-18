@@ -3,6 +3,47 @@ name: manage-skills
 description: Manage the user's shared agent-skill library via skills-manager-cli — install, update, remove, deploy or undeploy skills per agent, manage presets, organize tags, search, and adopt existing skills. Use this whenever the user wants Claude Code, Codex, Cursor, or another agent to gain or lose a skill, wants to organize the central library, or asks what is installed or deployed. Prefer this over direct agent-folder installs because Skills Manager preserves source metadata, preset membership, updates, and cross-agent deployment state.
 ---
 
+## 使用方式
+
+直接描述你的 skill 管理需求，系统会自动调用 skills-manager-cli。
+
+| 需求示例 | 自动处理 |
+| -------- | -------- |
+| "帮我安装这个 skill" | 调用 `skills install`（本地目录 / git / skills.sh） |
+| "把这个 skill 部署到 Codex" | 调用 `skills deploy --agent codex` |
+| "更新所有 skill" | 先 `skills check --all`，再 `skills update --all` |
+| "我有哪些 skill" | 调用 `skills list` / `skills status` |
+
+"$SM" skills install vercel-labs/agent-skills@react-best-practices
+
+# Any git URL (use /tree/branch/subpath form when the skill lives in a sub-directory)
+"$SM" skills install https://github.com/anthropics/skills.git
+"$SM" skills install https://github.com/foo/bar/tree/main/skills/baz
+
+# Local folder
+"$SM" skills install ./my-skill
+
+# Force a source type when the ref is ambiguous
+"$SM" skills install foo/bar --skillssh
+"$SM" skills install ./looks-like/owner-repo --local
+```
+
+**Default is library-only** — the skill enters the DB but doesn't appear in any agent yet. Prefer an explicit follow-up deployment so scope is unambiguous:
+
+```bash
+"$SM" skills deploy <skill> --agent claude_code --agent codex
+```
+
+`--sync` and `--sync-preset` remain legacy shortcuts for the exclusive active-preset workflow.
+
+**Ref resolution** is deterministic, no path-existence guessing:
+1. Starts with `./`, `../`, `/`, or `~/` → local path
+2. Contains `://`, ends in `.git`, or starts with `git@` → git URL
+3. Matches `owner/repo`, `owner/repo/skill`, or `owner/repo@skill` → skillssh
+4. Otherwise → error; pass `--local` / `--git` / `--skillssh` to disambiguate
+
+**Always verify after install** with `skills list` or `skills show <name>` so you can confirm the skill landed and report the preset / sync state back to the user.
+
 ## Before doing anything
 
 1. **Resolve the CLI first, then use the path it prints.** Run this once (POSIX
@@ -82,35 +123,6 @@ Internally, presets are still stored as scenarios for backward-compatible Git Ba
 
 ```bash
 # From skills.sh marketplace
-"$SM" skills install vercel-labs/agent-skills@react-best-practices
-
-# Any git URL (use /tree/branch/subpath form when the skill lives in a sub-directory)
-"$SM" skills install https://github.com/anthropics/skills.git
-"$SM" skills install https://github.com/foo/bar/tree/main/skills/baz
-
-# Local folder
-"$SM" skills install ./my-skill
-
-# Force a source type when the ref is ambiguous
-"$SM" skills install foo/bar --skillssh
-"$SM" skills install ./looks-like/owner-repo --local
-```
-
-**Default is library-only** — the skill enters the DB but doesn't appear in any agent yet. Prefer an explicit follow-up deployment so scope is unambiguous:
-
-```bash
-"$SM" skills deploy <skill> --agent claude_code --agent codex
-```
-
-`--sync` and `--sync-preset` remain legacy shortcuts for the exclusive active-preset workflow.
-
-**Ref resolution** is deterministic, no path-existence guessing:
-1. Starts with `./`, `../`, `/`, or `~/` → local path
-2. Contains `://`, ends in `.git`, or starts with `git@` → git URL
-3. Matches `owner/repo`, `owner/repo/skill`, or `owner/repo@skill` → skillssh
-4. Otherwise → error; pass `--local` / `--git` / `--skillssh` to disambiguate
-
-**Always verify after install** with `skills list` or `skills show <name>` so you can confirm the skill landed and report the preset / sync state back to the user.
 
 ## Search
 
