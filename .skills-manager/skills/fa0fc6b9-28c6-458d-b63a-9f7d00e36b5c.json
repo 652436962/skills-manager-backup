@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "fa0fc6b9-28c6-458d-b63a-9f7d00e36b5c",
+  "path": "changelog-version-doc",
+  "path_key": "changelog-version-doc",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}
