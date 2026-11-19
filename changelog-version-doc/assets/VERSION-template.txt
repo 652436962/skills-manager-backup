@@ -1,0 +1,4 @@
+VERSION=x.y.z
+GIT_COMMIT=<代码发布提交短号>
+GIT_TAG=vx.y.z
+BUILD_DATE=YYYY-MM-DD

@@ -81,6 +81,7 @@ agent_created: true
 8. **代码/报文用围栏代码块**，保留原始大小写、`!`、`%`、十六进制前缀，不要"顺手美化"。
 9. **结尾写修改文件**：`**修改文件：** \`文件A\`, \`文件B\``（仅文档变更时可省略）。
 10. 日期统一 `YYYY-MM-DD`，中文标点，版本号 `Vx.y.z`。
+11. **git 号只记录代码发布提交**；补号提交、文档提交不写进自身。需要部署包可见时，用 `VERSION` 文件记录 `GIT_COMMIT` / `GIT_TAG`（见 3.1）。
 
 ## 3. 发版流程（git 号怎么进文档）
 
@@ -92,6 +93,25 @@ git 号无法写进它自己的提交，必须两步：
 4. **单独提交文档**：`docs: CHANGELOG V1.3.6 补 git 号`
    - 不要用 `git commit --amend`：amend 会改掉 hash，文档里写的就失效了
 5. 同步代码里的版本常量（如 `SOFTWARE_VERSION_STRING`）
+
+### 3.1 VERSION 文件（可选）
+
+如果部署包/设备上也需要看到 git 号，在代码提交后新增 `VERSION`：
+
+```text
+VERSION=1.3.0
+GIT_COMMIT=cc511b9
+GIT_TAG=v1.3.0
+BUILD_DATE=2026-11-19
+```
+
+规则：
+
+- `GIT_COMMIT` 只写代码发布提交短号，不写“补 CHANGELOG 号”或“加 VERSION”这类文档提交；
+- `GIT_TAG` 写版本标签，如 `v1.3.0`；
+- 打包脚本把 `VERSION` 放进部署包，安装到设备可读路径（例如 `/lechi/display/VERSION`）；
+- 模板：`assets/VERSION-template.txt`；
+- 示例：`assets/CHANGELOG-example.md`。
 
 ## 4. 新增一个版本（清单）
 
@@ -158,5 +178,7 @@ python3 scripts/sync_changelog_index.py docs/CHANGELOG.md
 ## 8. 参考
 
 - 模板：`assets/CHANGELOG-template.md`（新建 CHANGELOG 时复制起步）
+- VERSION 模板：`assets/VERSION-template.txt`
+- 含 git 号的完整示例：`assets/CHANGELOG-example.md`
 - 脚本：`scripts/sync_changelog_index.py`（索引/锚点重建，先看 `--dry-run` 再落盘）
 - 目标文档：由调用方指定路径，默认 `docs/CHANGELOG.md`
