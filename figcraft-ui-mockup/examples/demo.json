@@ -1,0 +1,683 @@
+[
+ {
+  "command": "page.select",
+  "params": {
+   "index": 0
+  }
+ },
+ {
+  "command": "page.rename",
+  "params": {
+   "name": "组件"
+  }
+ },
+ {
+  "command": "node.create",
+  "params": {
+   "x": 0,
+   "y": 0,
+   "width": 1024,
+   "height": 56,
+   "props": {
+    "cornerRadius": 0,
+    "fill": "none"
+   },
+   "name": "Chrome / 顶栏",
+   "type": "frame"
+  },
+  "as": "C-Chrome / 顶栏"
+ },
+ {
+  "command": "shape.rectangle",
+  "params": {
+   "x": 0,
+   "y": 0,
+   "width": 1024,
+   "height": 56,
+   "props": {
+    "cornerRadius": 0,
+    "fill": "#151B23"
+   },
+   "name": "背景",
+   "parent": {
+    "$ref": "C-Chrome / 顶栏"
+   }
+  }
+ },
+ {
+  "command": "shape.rectangle",
+  "params": {
+   "x": 0,
+   "y": 55,
+   "width": 1024,
+   "height": 1,
+   "props": {
+    "cornerRadius": 0,
+    "fill": "#232C38"
+   },
+   "name": "下边线",
+   "parent": {
+    "$ref": "C-Chrome / 顶栏"
+   }
+  }
+ },
+ {
+  "command": "shape.rectangle",
+  "params": {
+   "x": 16,
+   "y": 14,
+   "width": 28,
+   "height": 28,
+   "props": {
+    "cornerRadius": 8,
+    "fill": "none"
+   },
+   "name": "Logo",
+   "parent": {
+    "$ref": "C-Chrome / 顶栏"
+   }
+  }
+ },
+ {
+  "command": "text.create",
+  "params": {
+   "text": "示例控制台",
+   "x": 56,
+   "y": 14,
+   "props": {
+    "fontSize": 15,
+    "fontFamily": "Noto Sans CJK SC",
+    "fontStyle": "Medium",
+    "fill": "#E9EFF6"
+   },
+   "parent": {
+    "$ref": "C-Chrome / 顶栏"
+   }
+  }
+ },
+ {
+  "command": "text.create",
+  "params": {
+   "text": "Demo Console",
+   "x": 56,
+   "y": 34,
+   "props": {
+    "fontSize": 9.5,
+    "fontFamily": "Noto Sans CJK SC",
+    "fontStyle": "Regular",
+    "fill": "#5D6A79"
+   },
+   "parent": {
+    "$ref": "C-Chrome / 顶栏"
+   }
+  }
+ },
+ {
+  "command": "component.create",
+  "params": {
+   "ids": [
+    {
+     "$ref": "C-Chrome / 顶栏"
+    }
+   ]
+  },
+  "as": "C-Chrome / 顶栏#main"
+ },
+ {
+  "command": "node.create",
+  "params": {
+   "x": 0,
+   "y": 0,
+   "width": 180,
+   "height": 584,
+   "props": {
+    "cornerRadius": 0,
+    "fill": "none"
+   },
+   "name": "Chrome / 侧栏",
+   "type": "frame"
+  },
+  "as": "C-Chrome / 侧栏"
+ },
+ {
+  "command": "shape.rectangle",
+  "params": {
+   "x": 0,
+   "y": 0,
+   "width": 180,
+   "height": 584,
+   "props": {
+    "cornerRadius": 0,
+    "fill": "#111820"
+   },
+   "name": "背景",
+   "parent": {
+    "$ref": "C-Chrome / 侧栏"
+   }
+  }
+ },
+ {
+  "command": "text.create",
+  "params": {
+   "text": "概览",
+   "x": 24,
+   "y": 18,
+   "props": {
+    "fontSize": 12.5,
+    "fontFamily": "Noto Sans CJK SC",
+    "fontStyle": "Regular",
+    "fill": "#94A2B1"
+   },
+   "parent": {
+    "$ref": "C-Chrome / 侧栏"
+   }
+  }
+ },
+ {
+  "command": "text.create",
+  "params": {
+   "text": "设备",
+   "x": 24,
+   "y": 58,
+   "props": {
+    "fontSize": 12.5,
+    "fontFamily": "Noto Sans CJK SC",
+    "fontStyle": "Regular",
+    "fill": "#94A2B1"
+   },
+   "parent": {
+    "$ref": "C-Chrome / 侧栏"
+   }
+  }
+ },
+ {
+  "command": "text.create",
+  "params": {
+   "text": "日志",
+   "x": 24,
+   "y": 98,
+   "props": {
+    "fontSize": 12.5,
+    "fontFamily": "Noto Sans CJK SC",
+    "fontStyle": "Regular",
+    "fill": "#94A2B1"
+   },
+   "parent": {
+    "$ref": "C-Chrome / 侧栏"
+   }
+  }
+ },
+ {
+  "command": "shape.rectangle",
+  "params": {
+   "x": 179,
+   "y": 0,
+   "width": 1,
+   "height": 584,
+   "props": {
+    "cornerRadius": 0,
+    "fill": "#1D2733"
+   },
+   "name": "右边线",
+   "parent": {
+    "$ref": "C-Chrome / 侧栏"
+   }
+  }
+ },
+ {
+  "command": "component.create",
+  "params": {
+   "ids": [
+    {
+     "$ref": "C-Chrome / 侧栏"
+    }
+   ]
+  },
+  "as": "C-Chrome / 侧栏#main"
+ },
+ {
+  "command": "node.create",
+  "params": {
+   "x": 0,
+   "y": 0,
+   "width": 88,
+   "height": 32,
+   "props": {
+    "cornerRadius": 7,
+    "fills": [
+     {
+      "type": "linearGradient",
+      "stops": [
+       "#1E2A38",
+       "#16202B"
+      ],
+      "from": [
+       0,
+       0
+      ],
+      "to": [
+       0,
+       1
+      ]
+     }
+    ],
+    "stroke": "#2B3745",
+    "strokeWeight": 1,
+    "strokeAlign": "inside"
+   },
+   "name": "Button / 默认",
+   "type": "frame"
+  },
+  "as": "C-Button / 默认"
+ },
+ {
+  "command": "text.create",
+  "params": {
+   "text": "按钮",
+   "x": 0,
+   "y": 8,
+   "props": {
+    "fontSize": 11.5,
+    "fontFamily": "Noto Sans CJK SC",
+    "fontStyle": "Medium",
+    "fill": "#C7D3E1",
+    "textAlign": "center",
+    "textAutoResize": "height",
+    "textAlignVertical": "top"
+   },
+   "width": 88,
+   "parent": {
+    "$ref": "C-Button / 默认"
+   }
+  }
+ },
+ {
+  "command": "component.create",
+  "params": {
+   "ids": [
+    {
+     "$ref": "C-Button / 默认"
+    }
+   ]
+  },
+  "as": "C-Button / 默认#main"
+ },
+ {
+  "command": "page.add",
+  "params": {
+   "name": "系统概览"
+  },
+  "as": "P1"
+ },
+ {
+  "command": "page.select",
+  "params": {
+   "id": {
+    "$ref": "P1"
+   }
+  }
+ },
+ {
+  "command": "node.create",
+  "params": {
+   "x": 0,
+   "y": 0,
+   "width": 1024,
+   "height": 640,
+   "props": {
+    "cornerRadius": 0,
+    "fill": "#0E131A"
+   },
+   "name": "SCR-系统概览",
+   "type": "frame"
+  },
+  "as": "SCR-系统概览"
+ },
+ {
+  "command": "edit.copy",
+  "params": {
+   "ids": [
+    {
+     "$ref": "C-Chrome / 顶栏#main"
+    }
+   ]
+  }
+ },
+ {
+  "command": "edit.paste",
+  "params": {
+   "parent": {
+    "$ref": "SCR-系统概览"
+   },
+   "x": 0,
+   "y": 0
+  }
+ },
+ {
+  "command": "object.rename",
+  "params": {
+   "name": "顶栏"
+  }
+ },
+ {
+  "command": "select.none",
+  "params": {}
+ },
+ {
+  "command": "edit.copy",
+  "params": {
+   "ids": [
+    {
+     "$ref": "C-Chrome / 侧栏#main"
+    }
+   ]
+  }
+ },
+ {
+  "command": "edit.paste",
+  "params": {
+   "parent": {
+    "$ref": "SCR-系统概览"
+   },
+   "x": 0,
+   "y": 56
+  }
+ },
+ {
+  "command": "object.rename",
+  "params": {
+   "name": "侧栏"
+  }
+ },
+ {
+  "command": "select.none",
+  "params": {}
+ },
+ {
+  "command": "node.create",
+  "params": {
+   "x": 0,
+   "y": 0,
+   "width": 1024,
+   "height": 640,
+   "props": {
+    "cornerRadius": 0,
+    "fill": "none"
+   },
+   "name": "内容",
+   "parent": {
+    "$ref": "SCR-系统概览"
+   },
+   "type": "frame"
+  },
+  "as": "SCR-系统概览-content"
+ },
+ {
+  "command": "text.create",
+  "params": {
+   "text": "系统概览",
+   "x": 204,
+   "y": 84,
+   "props": {
+    "fontSize": 20,
+    "fontFamily": "Noto Sans CJK SC",
+    "fontStyle": "Bold",
+    "fill": "#EEF4FA"
+   },
+   "parent": {
+    "$ref": "SCR-系统概览-content"
+   }
+  }
+ },
+ {
+  "command": "edit.copy",
+  "params": {
+   "ids": [
+    {
+     "$ref": "C-Button / 默认#main"
+    }
+   ]
+  }
+ },
+ {
+  "command": "edit.paste",
+  "params": {
+   "parent": {
+    "$ref": "SCR-系统概览-content"
+   },
+   "x": 204,
+   "y": 120
+  }
+ },
+ {
+  "command": "object.rename",
+  "params": {
+   "name": "按钮-刷新"
+  }
+ },
+ {
+  "command": "select.children",
+  "params": {}
+ },
+ {
+  "command": "node.set",
+  "params": {
+   "characters": "刷新"
+  }
+ },
+ {
+  "command": "select.none",
+  "params": {}
+ },
+ {
+  "command": "node.create",
+  "params": {
+   "x": 204,
+   "y": 176,
+   "width": 780,
+   "height": 120,
+   "props": {
+    "cornerRadius": 12,
+    "fill": "#151D26",
+    "stroke": "#212C38",
+    "strokeWeight": 1,
+    "strokeAlign": "inside"
+   },
+   "name": "卡片 / 设备状态",
+   "parent": {
+    "$ref": "SCR-系统概览-content"
+   },
+   "type": "frame"
+  },
+  "as": "card1"
+ },
+ {
+  "command": "page.add",
+  "params": {
+   "name": "设备信息"
+  },
+  "as": "P2"
+ },
+ {
+  "command": "page.select",
+  "params": {
+   "id": {
+    "$ref": "P2"
+   }
+  }
+ },
+ {
+  "command": "node.create",
+  "params": {
+   "x": 0,
+   "y": 0,
+   "width": 1024,
+   "height": 640,
+   "props": {
+    "cornerRadius": 0,
+    "fill": "#0E131A"
+   },
+   "name": "SCR-设备信息",
+   "type": "frame"
+  },
+  "as": "SCR-设备信息"
+ },
+ {
+  "command": "edit.copy",
+  "params": {
+   "ids": [
+    {
+     "$ref": "C-Chrome / 顶栏#main"
+    }
+   ]
+  }
+ },
+ {
+  "command": "edit.paste",
+  "params": {
+   "parent": {
+    "$ref": "SCR-设备信息"
+   },
+   "x": 0,
+   "y": 0
+  }
+ },
+ {
+  "command": "object.rename",
+  "params": {
+   "name": "顶栏"
+  }
+ },
+ {
+  "command": "select.none",
+  "params": {}
+ },
+ {
+  "command": "edit.copy",
+  "params": {
+   "ids": [
+    {
+     "$ref": "C-Chrome / 侧栏#main"
+    }
+   ]
+  }
+ },
+ {
+  "command": "edit.paste",
+  "params": {
+   "parent": {
+    "$ref": "SCR-设备信息"
+   },
+   "x": 0,
+   "y": 56
+  }
+ },
+ {
+  "command": "object.rename",
+  "params": {
+   "name": "侧栏"
+  }
+ },
+ {
+  "command": "select.none",
+  "params": {}
+ },
+ {
+  "command": "node.create",
+  "params": {
+   "x": 0,
+   "y": 0,
+   "width": 1024,
+   "height": 640,
+   "props": {
+    "cornerRadius": 0,
+    "fill": "none"
+   },
+   "name": "内容",
+   "parent": {
+    "$ref": "SCR-设备信息"
+   },
+   "type": "frame"
+  },
+  "as": "SCR-设备信息-content"
+ },
+ {
+  "command": "text.create",
+  "params": {
+   "text": "设备信息",
+   "x": 204,
+   "y": 84,
+   "props": {
+    "fontSize": 20,
+    "fontFamily": "Noto Sans CJK SC",
+    "fontStyle": "Bold",
+    "fill": "#EEF4FA"
+   },
+   "parent": {
+    "$ref": "SCR-设备信息-content"
+   }
+  }
+ },
+ {
+  "command": "edit.copy",
+  "params": {
+   "ids": [
+    {
+     "$ref": "C-Button / 默认#main"
+    }
+   ]
+  }
+ },
+ {
+  "command": "edit.paste",
+  "params": {
+   "parent": {
+    "$ref": "SCR-设备信息-content"
+   },
+   "x": 204,
+   "y": 120
+  }
+ },
+ {
+  "command": "object.rename",
+  "params": {
+   "name": "按钮-导出"
+  }
+ },
+ {
+  "command": "select.children",
+  "params": {}
+ },
+ {
+  "command": "node.set",
+  "params": {
+   "characters": "导出"
+  }
+ },
+ {
+  "command": "select.none",
+  "params": {}
+ },
+ {
+  "command": "node.create",
+  "params": {
+   "x": 204,
+   "y": 176,
+   "width": 780,
+   "height": 120,
+   "props": {
+    "cornerRadius": 12,
+    "fill": "#151D26",
+    "stroke": "#212C38",
+    "strokeWeight": 1,
+    "strokeAlign": "inside"
+   },
+   "name": "卡片 / 硬件",
+   "parent": {
+    "$ref": "SCR-设备信息-content"
+   },
+   "type": "frame"
+  },
+  "as": "card2"
+ }
+]
